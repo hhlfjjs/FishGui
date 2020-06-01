@@ -1,0 +1,9 @@
+base referer
+rect $classFG__Screen.html#b2 228,108 401,135
+rect $classFG__Object.html#b1 249,209 380,236
+rect $classFG__OSAdaptor.html#a3 453,7 621,33
+rect $classFG__OSAdaptor.html#a4 458,57 616,84
+rect $group__OSAdaptor.html#ga1 488,108 586,135
+rect $classFG__Object.html#b6 474,159 600,185
+rect $group__Framework.html#ga0 469,209 605,236
+rect $classFG__TimerManager.html#a1 450,260 624,287

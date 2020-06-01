@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_TimerManager.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_TimerManager.cpp</h1><a href="FG__TimerManager_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_TimerManager.cpp - 定时器管理器类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00041 <span class="preprocessor">#include "<a class="code" href="FG__TimerManager_8h.html">FG_TimerManager.h</a>"</span>
+00042 <span class="preprocessor">#include "<a class="code" href="FG__Object_8h.html">FG_Object.h</a>"</span>
+00043 
+00044 <span class="preprocessor">#if defined(WIN32) &amp;&amp; defined(_DEBUG)</span>
+00045 <span class="preprocessor"></span>    <span class="comment">/* Trace memory allocation in windows debug version */</span>
+00046 <span class="preprocessor">    #include &lt;crtdbg.h&gt;</span>
+00047     <span class="keyword">static</span> <span class="keywordtype">char</span> THIS_FILE[] = __FILE__;
+00048 <span class="preprocessor">    #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)</span>
+00049 <span class="preprocessor"></span><span class="preprocessor">#endif  </span><span class="comment">/* _DEBUG */</span>
+00050     
+<a name="l00051"></a><a class="code" href="group__Framework.html#ga3">00051</a> <a class="code" href="classFG__TimerManager.html">FG_TimerManager</a> * <a class="code" href="group__Framework.html#ga0">FG_GetTimerManager</a>(<span class="keywordtype">void</span>)
+00052 {
+00053     <span class="keywordflow">return</span> <a class="code" href="classFG__TimerManager.html#e0">FG_TimerManager::GetTimerManager</a>();
+00054 }
+00055 
+00056 <span class="comment">//##ModelId=40BB6F970366</span>
+<a name="l00057"></a><a class="code" href="classFG__Timer.html#a1">00057</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Timer.html#a1">FG_Timer::Tick</a>(<span class="keywordtype">void</span>)
+00058 {
+00059     <span class="comment">// 修改定时器的计数器</span>
+00060     <a class="code" href="classFG__Timer.html#o2">m_dwCount</a> -= 50;
+00061     
+00062     <span class="keywordflow">if</span> (<a class="code" href="classFG__Timer.html#o2">m_dwCount</a> &lt;= 0)
+00063     {
+00064         <span class="comment">// 计数器到期</span>
+00065         <a class="code" href="classFG__Timer.html#o2">m_dwCount</a> = <a class="code" href="classFG__Timer.html#o1">m_dwInterval</a>;
+00066         <a class="code" href="structFG__Message.html">FG_Message</a> Msg(<a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>, <a class="code" href="classFG__Timer.html#o0">m_TimerID</a>);
+00067         m_pTarget-&gt;<a class="code" href="classFG__Object.html#a20">Message</a>(&amp; Msg);
+00068         <span class="comment">// 发送消息给目标对象</span>
+00069     }
+00070 }
+00071 
+00072 <span class="comment">//##ModelId=3F5C57A2039C</span>
+<a name="l00073"></a><a class="code" href="classFG__TimerManager.html#v0">00073</a> <a class="code" href="classFG__TimerManager.html">FG_TimerManager</a> * <a class="code" href="classFG__TimerManager.html#v0">FG_TimerManager::m_pTimerManager</a> = <a class="code" href="group__Utility.html#ga11">NULL</a>;
+00074 
+00075 <span class="comment">//##ModelId=3F5C57A203B7</span>
+<a name="l00076"></a><a class="code" href="classFG__TimerManager.html#e0">00076</a> <a class="code" href="classFG__TimerManager.html">FG_TimerManager</a> * <a class="code" href="classFG__TimerManager.html#e0">FG_TimerManager::GetTimerManager</a>(<span class="keywordtype">void</span>)
+00077 {
+00078     <span class="keywordflow">if</span> (! <a class="code" href="classFG__TimerManager.html#v0">m_pTimerManager</a>)
+00079     {
+00080         <a class="code" href="classFG__TimerManager.html#v0">m_pTimerManager</a> = <span class="keyword">new</span> <a class="code" href="classFG__TimerManager.html#b0">FG_TimerManager</a>();
+00081     }
+00082     <span class="keywordflow">return</span> <a class="code" href="classFG__TimerManager.html#v0">m_pTimerManager</a>;
+00083 }
+00084 
+00085 <span class="comment">//##ModelId=3F71AB2000E8</span>
+<a name="l00086"></a><a class="code" href="classFG__TimerManager.html#e1">00086</a> <span class="keywordtype">void</span> <a class="code" href="classFG__TimerManager.html#e1">FG_TimerManager::DeleteTimerManager</a>(<span class="keywordtype">void</span>)
+00087 {
+00088     <span class="keywordflow">if</span> (<a class="code" href="classFG__TimerManager.html#v0">m_pTimerManager</a>)
+00089         <span class="keyword">delete</span> <a class="code" href="classFG__TimerManager.html#v0">m_pTimerManager</a>;
+00090 }
+00091 
+<a name="l00092"></a><a class="code" href="classFG__TimerManager.html#b0">00092</a> <a class="code" href="classFG__TimerManager.html#b0">FG_TimerManager::FG_TimerManager</a>()
+00093 {
+00094     <a class="code" href="group__OSAdaptor.html#ga1">FG_GetAdaptor</a>()-&gt;<a class="code" href="classFG__OSAdaptor.html#a1">SetMsgObserver</a>(<a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>, <span class="keyword">this</span>);
+00095 }
+00096 
+<a name="l00097"></a><a class="code" href="classFG__TimerManager.html#a0">00097</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__TimerManager.html#a0">FG_TimerManager::StartTimer</a>(<a class="code" href="classFG__Object.html">FG_Object</a> * pTarget, <a class="code" href="group__Utility.html#ga0">BYTE</a> timerID, <a class="code" href="group__Utility.html#ga2">DWORD</a> dwInterval)
+00098 {
+00099     FG_TIMERLIST::iterator i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>();
+00100     <a class="code" href="classFG__CheckTimer.html">FG_CheckTimer</a> check(pTarget, timerID);
+00101     
+00102     <span class="keywordflow">if</span> (<a class="code" href="group__Utility.html#ga10">FG_ListFind_If</a>(i, check))
+00103         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00104 
+00105     <a class="code" href="classFG__Timer.html">FG_Timer</a> * pTimer = <span class="keyword">new</span> <a class="code" href="classFG__Timer.html">FG_Timer</a>(pTarget, timerID, dwInterval);
+00106     <span class="keywordflow">if</span> (! pTimer)
+00107         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00108     <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a4">Add</a>(pTimer);
+00109     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00110 }
+00111 
+00112 <span class="comment">//##ModelId=3F5DAA150033</span>
+<a name="l00113"></a><a class="code" href="classFG__TimerManager.html#a1">00113</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__TimerManager.html#a1">FG_TimerManager::KillTimer</a>(<a class="code" href="classFG__Object.html">FG_Object</a> * pTarget, <a class="code" href="group__Utility.html#ga0">BYTE</a> timerID)
+00114 {
+00115     FG_TIMERLIST::iterator i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>();
+00116     <a class="code" href="classFG__CheckTimer.html">FG_CheckTimer</a> check(pTarget, timerID);
+00117     
+00118     <span class="keywordflow">if</span> (<a class="code" href="group__Utility.html#ga10">FG_ListFind_If</a>(i, check))
+00119     {
+00120         <span class="keyword">delete</span> i;
+00121         <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a3">Remove</a>(i);
+00122         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00123     }
+00124     <span class="keywordflow">else</span>
+00125         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00126 }
+00127 
+00128 <span class="comment">//##ModelId=3F71AB20011A</span>
+<a name="l00129"></a><a class="code" href="classFG__TimerManager.html#a2">00129</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__TimerManager.html#a2">FG_TimerManager::KillObjectTimer</a>(<a class="code" href="classFG__Object.html">FG_Object</a> * pTarget)
+00130 {
+00131     FG_TIMERLIST::iterator i, j;
+00132     <span class="keywordflow">for</span> (i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>(); ! i.IsDone(); i = j)
+00133     {
+00134         j = i;
+00135         ++ j;
+00136         <span class="keywordflow">if</span> (i-&gt;m_pTarget == pTarget)
+00137         {
+00138             <span class="keyword">delete</span> i;
+00139             <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a3">Remove</a>(i);
+00140         }
+00141     }
+00142     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00143 }
+00144 
+00145 <span class="comment">//##ModelId=3F71AB20014C</span>
+<a name="l00146"></a><a class="code" href="classFG__TimerManager.html#a3">00146</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__TimerManager.html#a3">FG_TimerManager::IsTimerStart</a>(<a class="code" href="classFG__Object.html">FG_Object</a> * pTarget, <a class="code" href="group__Utility.html#ga0">BYTE</a> timerID)
+00147 {
+00148     FG_TIMERLIST::iterator i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>();
+00149     <a class="code" href="classFG__CheckTimer.html">FG_CheckTimer</a> check(pTarget, timerID);
+00150     
+00151     <span class="keywordflow">if</span> (<a class="code" href="group__Utility.html#ga10">FG_ListFind_If</a>(i, check))
+00152             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00153     <span class="keywordflow">else</span>
+00154         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00155 }
+00156 
+00157 <span class="comment">//##ModelId=3F5DAA150051</span>
+<a name="l00158"></a><a class="code" href="classFG__TimerManager.html#a4">00158</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__TimerManager.html#a4">FG_TimerManager::KillAllTimer</a>()
+00159 {
+00160     FG_TIMERLIST::iterator i;
+00161     <span class="keywordflow">for</span> (i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>(); ! i.IsDone(); ++ i)
+00162         <span class="keyword">delete</span> i;
+00163     <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a6">RemoveAll</a>();
+00164     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00165 }
+00166 
+00167 <span class="comment">//##ModelId=3F5C57A30138</span>
+<a name="l00168"></a><a class="code" href="classFG__TimerManager.html#a5">00168</a> <span class="keywordtype">void</span> <a class="code" href="classFG__TimerManager.html#a5">FG_TimerManager::OSMessage</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg)
+00169 {
+00170     FG_TIMERLIST::iterator i, j;
+00171     <span class="keywordflow">for</span> (i = <a class="code" href="classFG__TimerManager.html#r0">m_TimerList</a>.<a class="code" href="classFG__SList.html#a2">First</a>(); ! i.IsDone(); i = j)
+00172     {   
+00173         j = i;
+00174         ++ j;
+00175         i-&gt;Tick();
+00176     }
+00177 }
+00178 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:41 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

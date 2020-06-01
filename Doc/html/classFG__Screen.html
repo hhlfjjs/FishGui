@@ -1,0 +1,836 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Screen class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Screen类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Screen
+<p><center><img src="classFG__Screen.png" usemap="#FG_Screen_map" border="0" alt=""></center>
+<map name="FG_Screen_map">
+<area href="classFG__Container.html" alt="FG_Container" shape="rect" coords="0,56,132,80">
+<area href="classFG__OSMsgObserver.html" alt="FG_OSMsgObserver" shape="rect" coords="142,56,274,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,132,24">
+</map>
+FG_Screen合作图：<p><center><img src="classFG__Screen__coll__graph.png" border="0" usemap="#FG__Screen__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Screen__coll__map">
+<area href="classFG__Container.html" shape="rect" coords="144,369,269,593" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="255,209,383,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="79,17,220,145" alt="">
+<area href="classFG__OSMsgObserver.html" shape="rect" coords="407,433,561,529" alt="">
+<area href="classFG__Factory.html" shape="rect" coords="585,377,721,585" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Screen-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+屏幕类. 
+<p>
+该类为单件类，代表物理屏幕设备，在屏幕上可以放置多个可相互覆盖的窗口 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a>第<a class="el" href="FG__Screen_8h-source.html#l00053">53</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#a0">AddWindow</a> (<a class="el" href="classFG__Window.html">FG_Window</a> *pWindow)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">在屏幕上添加一个窗口.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#a1">RemoveWindow</a> (<a class="el" href="classFG__Window.html">FG_Window</a> *pWindow)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">从屏幕上删除一个窗口  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#a2">OSMessage</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">用于接收系统消息的接口.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Factory.html">FG_Factory</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#a3">GetFactory</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到当前使用的工厂对象  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#a4">SetFactory</a> (<a class="el" href="classFG__Factory.html">FG_Factory</a> *pFactory)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置当前使用的工厂对象.  <a href="#a4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Screen.html">FG_Screen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#e0">GetScreen</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到屏幕类的唯一实例对象的全局访问点函数  <a href="#e0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#e1">DeleteScreen</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除屏幕类的唯一实例对象.  <a href="#e1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b0">OnDrawRequest</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">窗口发送的要求重画消息<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>的处理函数  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b1">OnDrawTimer</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">用于减少重画次数的定时器消息（<a class="el" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a>）的处理函数.  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b2">DrawAllWindow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">依次重画所有窗口.  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b3">FG_Screen</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">屏幕类的构造函数，用户不能直接调用.  <a href="#b3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b4">~FG_Screen</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">析构函数，用户不能直接调用.  <a href="#b4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#b5">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b5"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Factory.html">FG_Factory</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#p0">m_pFactory</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向当前使用的工厂对象的指针.  <a href="#p0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__Container.html">FG_Container</a> ::<a class="el" href="classFG__Screen.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Screen.html">FG_Screen</a> ::<a class="el" href="classFG__Screen.html#v1">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom>{ <a class="el" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a> =  0xff
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定时器ID  <a href="#y1">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Screen.html">FG_Screen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#v0">m_pScreen</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向唯一的屏幕类的实例对象的指针，用于实现单件类.  <a href="#v0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Screen.html#v1">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v1"></a><br><br></td></tr>
+</table>
+<hr><h2>成员枚举类型文档</h2>
+<a class="anchor" name="y1" doxytag="FG_Screen::@7" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> anonymous enum<code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定时器ID 
+<p>
+<dl compact><dt><b>枚举值: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="y1y0" doxytag="TIMERID_DRAW" ></a>TIMERID_DRAW</em>&nbsp;</td><td>
+用于减少重画次数的定时器ID. </td></tr>
+</table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a>第<a class="el" href="FG__Screen_8h-source.html#l00151">151</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="b3" doxytag="FG_Screen::FG_Screen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Screen::FG_Screen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+屏幕类的构造函数，用户不能直接调用. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>屏幕占据的矩形区域，左上角坐标总是（0, 0），右下角坐标为（<a class="el" href="group__Utility.html#ga3">SCREEN_WIDTH</a>, <a class="el" href="group__Utility.html#ga4">SCREEN_HEIGHT</a>） </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00101">101</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00132">FG_Object::BGColor()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>、<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>、<a class="el" href="FG__Common_8h-source.html#l00113">FS_NONE</a>、<a class="el" href="FG__Screen_8h-source.html#l00145">m_pFactory</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00098">FG_OSAdaptor::SetMsgObserver()</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00075">GetScreen()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_b3_cgraph.png" border="0" usemap="#classFG__Screen_b3_cgraph_map" alt=""></center>
+<map name="classFG__Screen_b3_cgraph_map">
+<area href="classFG__Object.html#a8" shape="rect" coords="252,7,380,33" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="267,57,365,84" alt="">
+<area href="classFG__OSAdaptor.html#a1" shape="rect" coords="215,108,417,135" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="467,57,637,84" alt="">
+</map>
+<a class="anchor" name="b4" doxytag="FG_Screen::~FG_Screen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Screen::~<a class="el" href="classFG__Screen.html">FG_Screen</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+析构函数，用户不能直接调用. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00113">113</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8h-source.html#l00145">m_pFactory</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Screen::AddWindow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Screen::AddWindow </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Window.html">FG_Window</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pWindow</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+在屏幕上添加一个窗口. 
+<p>
+代理调用<a class="el" href="classFG__Container.html#b0">FG_Container::AddChild</a>，需要发送焦点切换消息 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pWindow</em>&nbsp;</td><td>要添加的窗口对象的指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>添加操作是否成功 true 成功 false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00119">119</a>行定义。
+<p>
+参考 <a class="el" href="FG__Container_8cpp-source.html#l00059">FG_Container::AddChild()</a>、<a class="el" href="group__Utility.html#gga15a35">FFS_GET</a>、<a class="el" href="group__Utility.html#gga15a36">FFS_LOSE</a>、<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>、<a class="el" href="FG__Message_8h-source.html#l00194">FG_Message::wData</a>及<a class="el" href="FG__Message_8h-source.html#l00192">FG_Message::wType</a>.
+<p>
+参考自 <a class="el" href="MyApp_8cpp-source.html#l00060">MyApp::InitApplication()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00202">MainWindow::OnFactory()</a>、<a class="el" href="Win1_8cpp-source.html#l00114">Win1::OnOpen()</a>及<a class="el" href="MainWindow_8cpp-source.html#l00196">MainWindow::OnOpen()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_a0_cgraph.png" border="0" usemap="#classFG__Screen_a0_cgraph_map" alt=""></center>
+<map name="classFG__Screen_a0_cgraph_map">
+<area href="classFG__Container.html#b0" shape="rect" coords="219,32,365,58" alt="">
+<area href="classFG__BList.html#a6" shape="rect" coords="427,6,520,33" alt="">
+<area href="classFG__Object.html#a11" shape="rect" coords="415,57,532,84" alt="">
+</map>
+<a class="anchor" name="e1" doxytag="FG_Screen::DeleteScreen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::DeleteScreen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [static]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除屏幕类的唯一实例对象. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00094">94</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00057">m_pScreen</a>.
+<p>
+参考自 <a class="el" href="FG__Application_8cpp-source.html#l00053">FG_Application::OSMessage()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b2" doxytag="FG_Screen::DrawAllWindow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::DrawAllWindow </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+依次重画所有窗口. 
+<p>
+通过发送<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>消息要求窗口重画自己 
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00195">195</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>及<a class="el" href="FG__Object_8h-source.html#l00320">FG_Object::OnDraw()</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00188">OnDrawTimer()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00159">OSMessage()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00140">RemoveWindow()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_b2_cgraph.png" border="0" usemap="#classFG__Screen_b2_cgraph_map" alt=""></center>
+<map name="classFG__Screen_b2_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="239,7,407,33" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="244,57,401,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="273,108,372,135" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="260,159,385,185" alt="">
+</map>
+<a class="anchor" name="a3" doxytag="FG_Screen::GetFactory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Factory.html">FG_Factory</a>* FG_Screen::GetFactory </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到当前使用的工厂对象 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>指向当前使用的工厂对象的指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a>第<a class="el" href="FG__Screen_8h-source.html#l00099">99</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8h-source.html#l00145">m_pFactory</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00064">FG_GetFactory()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b5" doxytag="FG_Screen::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_Screen::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Container.html#b3">FG_Container</a>。
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="e0" doxytag="FG_Screen::GetScreen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Screen.html">FG_Screen</a> * FG_Screen::GetScreen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [static]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到屏幕类的唯一实例对象的全局访问点函数 
+<p>
+注册为<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>和<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>消息的观察者 <dl compact><dt><b>返回:</b></dt><dd>指向屏幕类的唯一实例对象的指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00075">75</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00101">FG_Screen()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00057">m_pScreen</a>、<a class="el" href="FG__Common_8h-source.html#l00062">SCREEN_HEIGHT</a>及<a class="el" href="FG__Common_8h-source.html#l00061">SCREEN_WIDTH</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00064">FG_GetFactory()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00059">FG_GetScreen()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00069">FG_SetFactory()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_e0_cgraph.png" border="0" usemap="#classFG__Screen_e0_cgraph_map" alt=""></center>
+<map name="classFG__Screen_e0_cgraph_map">
+<area href="classFG__Screen.html#b3" shape="rect" coords="211,57,357,84" alt="">
+<area href="classFG__Object.html#a8" shape="rect" coords="444,7,572,33" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="459,57,557,84" alt="">
+<area href="classFG__OSAdaptor.html#a1" shape="rect" coords="407,108,609,135" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="659,57,829,84" alt="">
+</map>
+<a class="anchor" name="b0" doxytag="FG_Screen::OnDrawRequest" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::OnDrawRequest </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+窗口发送的要求重画消息<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>的处理函数 
+<p>
+对于窗口对象发来的重画请求，并不直接重画，而是启动一个时间为<a class="el" href="group__Utility.html#ga8">SCREEN_DRAW_INTERVAL</a>（50毫秒）的定时器， 定时器到期时才执行重画操作，该定时器在删除之前只能被成功一次，因此50 毫秒内的只会发生一次重画操作， 提高了重画的效率，不会引起闪烁感 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向要求重画消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00179">179</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00100">SCREEN_DRAW_INTERVAL</a>、<a class="el" href="FG__Object_8h-source.html#l00241">FG_Object::StartTimer()</a>及<a class="el" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_b0_cgraph.png" border="0" usemap="#classFG__Screen_b0_cgraph_map" alt=""></center>
+<map name="classFG__Screen_b0_cgraph_map">
+<area href="classFG__Object.html#b0" shape="rect" coords="242,59,381,85" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="454,20,590,47" alt="">
+<area href="classFG__TimerManager.html#a0" shape="rect" coords="430,96,614,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="662,7,889,33" alt="">
+<area href="classFG__SList.html#a4" shape="rect" coords="729,57,822,84" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="729,108,822,135" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="728,159,824,185" alt="">
+</map>
+<a class="anchor" name="b1" doxytag="FG_Screen::OnDrawTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::OnDrawTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+用于减少重画次数的定时器消息（<a class="el" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a>）的处理函数. 
+<p>
+依次重画所有的窗口 
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00188">188</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00195">DrawAllWindow()</a>、<a class="el" href="FG__Object_8h-source.html#l00254">FG_Object::KillTimer()</a>及<a class="el" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_b1_cgraph.png" border="0" usemap="#classFG__Screen_b1_cgraph_map" alt=""></center>
+<map name="classFG__Screen_b1_cgraph_map">
+<area href="classFG__Screen.html#b2" shape="rect" coords="228,108,401,135" alt="">
+<area href="classFG__Object.html#b1" shape="rect" coords="249,209,380,236" alt="">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="453,7,621,33" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="458,57,616,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="488,108,586,135" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="474,159,600,185" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="469,209,605,236" alt="">
+<area href="classFG__TimerManager.html#a1" shape="rect" coords="450,260,624,287" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_Screen::OSMessage" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::OSMessage </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+用于接收系统消息的接口. 
+<p>
+注册为操作系统的接收者的对象通过该接口来接收系统消息 
+<p>
+Implements <a class="el" href="classFG__OSMsgObserver.html#a1">FG_OSMsgObserver</a>.
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00159">159</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00195">DrawAllWindow()</a>、<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>、<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>、<a class="el" href="FG__Message_8h-source.html#l00201">FG_Message::Point</a>及<a class="el" href="FG__Message_8h-source.html#l00192">FG_Message::wType</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_a2_cgraph.png" border="0" usemap="#classFG__Screen_a2_cgraph_map" alt=""></center>
+<map name="classFG__Screen_a2_cgraph_map">
+<area href="classFG__Screen.html#b2" shape="rect" coords="220,83,393,109" alt="">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="441,7,609,33" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="446,57,604,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="476,108,574,135" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="462,159,588,185" alt="">
+</map>
+<a class="anchor" name="a1" doxytag="FG_Screen::RemoveWindow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Screen::RemoveWindow </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Window.html">FG_Window</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pWindow</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+从屏幕上删除一个窗口 
+<p>
+代理调用<a class="el" href="classFG__Container.html#b1">FG_Container::RemoveChild</a>，需要发送焦点切换消息 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pWindow</em>&nbsp;</td><td>要删除的窗口对象的指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>删除操作是否成功 true 成功 false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00140">140</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00195">DrawAllWindow()</a>、<a class="el" href="group__Utility.html#gga15a35">FFS_GET</a>、<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>及<a class="el" href="FG__Container_8cpp-source.html#l00068">FG_Container::RemoveChild()</a>.
+<p>
+参考自 <a class="el" href="Win2_8cpp-source.html#l00122">Win2::OnCancel()</a>、<a class="el" href="Win1_8cpp-source.html#l00120">Win1::OnClose()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00202">MainWindow::OnFactory()</a>及<a class="el" href="Win2_8cpp-source.html#l00116">Win2::OnOK()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Screen_a1_cgraph.png" border="0" usemap="#classFG__Screen_a1_cgraph_map" alt=""></center>
+<map name="classFG__Screen_a1_cgraph_map">
+<area href="classFG__Screen.html#b2" shape="rect" coords="241,108,415,134" alt="">
+<area href="classFG__Container.html#b1" shape="rect" coords="243,184,413,210" alt="">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="463,6,631,33" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="468,57,625,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="497,108,596,134" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="484,158,609,185" alt="">
+<area href="classFG__BList.html#a5" shape="rect" coords="488,209,605,236" alt="">
+</map>
+<a class="anchor" name="a4" doxytag="FG_Screen::SetFactory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Screen::SetFactory </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Factory.html">FG_Factory</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pFactory</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置当前使用的工厂对象. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pFactory</em>&nbsp;</td><td>要设置的工厂对象的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00085">85</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8h-source.html#l00145">m_pFactory</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00069">FG_SetFactory()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v1" doxytag="FG_Screen::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__Screen.html#v1">FG_Screen::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classFG__Screen.html#b0">FG_Screen::OnDrawRequest</a>  },
+    { <a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>,  <a class="code" href="classFG__Screen.html#y1y0">TIMERID_DRAW</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classFG__Screen.html#b1">FG_Screen::OnDrawTimer</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Container.html#v0">FG_Container</a>。
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_Screen::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__Screen.html#t0">FG_Screen::m_MsgMap</a> = { &amp; <a class="el" href="classFG__Container.html">FG_Container</a> ::<a class="el" href="classFG__Screen.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Screen.html">FG_Screen</a> ::<a class="el" href="classFG__Screen.html#v1">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Container.html#t0">FG_Container</a>。
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_Screen::m_pFactory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Factory.html">FG_Factory</a>* <a class="el" href="classFG__Screen.html#p0">FG_Screen::m_pFactory</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向当前使用的工厂对象的指针. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a>第<a class="el" href="FG__Screen_8h-source.html#l00145">145</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00101">FG_Screen()</a>、<a class="el" href="FG__Screen_8h-source.html#l00099">GetFactory()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00085">SetFactory()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00113">~FG_Screen()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="v0" doxytag="FG_Screen::m_pScreen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Screen.html">FG_Screen</a> * <a class="el" href="classFG__Screen.html#v0">FG_Screen::m_pScreen</a> = 0<code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向唯一的屏幕类的实例对象的指针，用于实现单件类. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a>第<a class="el" href="FG__Screen_8cpp-source.html#l00057">57</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00094">DeleteScreen()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00075">GetScreen()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Screen_8h-source.html">FG_Screen.h</a><li><a class="el" href="FG__Screen_8cpp-source.html">FG_Screen.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:20 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

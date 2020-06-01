@@ -1,0 +1,608 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Button class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Button类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Button_8h-source.html">FG_Button.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Button
+<p><center><img src="classFG__Button.png" usemap="#FG_Button_map" border="0" alt=""></center>
+<map name="FG_Button_map">
+<area href="classFG__TextWidget.html" alt="FG_TextWidget" shape="rect" coords="0,112,97,136">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="0,56,97,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,97,24">
+<area href="classMyButton.html" alt="MyButton" shape="rect" coords="0,224,97,248">
+</map>
+FG_Button合作图：<p><center><img src="classFG__Button__coll__graph.png" border="0" usemap="#FG__Button__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Button__coll__map">
+<area href="classFG__TextWidget.html" shape="rect" coords="116,369,241,561" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="255,209,383,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="79,17,220,145" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Button-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+按钮控件类 
+<p>
+该类的对象放在窗口上作为按钮使用 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Button_8h-source.html">FG_Button.h</a>第<a class="el" href="FG__Button_8h-source.html#l00048">48</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#a0">FG_Button</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">按钮控件的构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b0">OnDraw</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>消息的处理函数  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b1">OnKeyDown</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">键盘按下消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>）的处理函数  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b2">OnKeyUp</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">键盘弹起消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>）的处理函数  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b3">OnLButtonDown</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">鼠标左键按下消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>，<a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>）的处理函数.  <a href="#b3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b4">OnLButtonUp</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">鼠标左键弹起消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>，<a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>）的处理函数.  <a href="#b4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b5">OnTimerUp</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">保证按钮控件总能弹起的定时器消息（<a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a>）的处理函数  <a href="#b5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#b6">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b6"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__Button.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Button.html">FG_Button</a> ::<a class="el" href="classFG__Button.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom>{ <a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a> =  0xff
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">保证按钮控件总能弹起的定时器ID  <a href="#y1">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Button.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>成员枚举类型文档</h2>
+<a class="anchor" name="y1" doxytag="FG_Button::@5" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> anonymous enum<code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保证按钮控件总能弹起的定时器ID 
+<p>
+为了防止键盘或鼠标的弹起消息丢失造成按钮无法弹起，用一个定时器来在这种情况下弹起按钮 <dl compact><dt><b>枚举值: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="y1y0" doxytag="TIMERID_UP" ></a>TIMERID_UP</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8h-source.html">FG_Button.h</a>第<a class="el" href="FG__Button_8h-source.html#l00114">114</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Button::FG_Button" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Button::FG_Button </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+按钮控件的构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>按钮上的文本，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>按钮控件占据的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>按钮控件的唯一标识 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8h-source.html">FG_Button.h</a>第<a class="el" href="FG__Button_8h-source.html#l00058">58</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="b6" doxytag="FG_Button::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_Button::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#b0">FG_TextWidget</a>。
+<p>
+被<a class="el" href="classMyButton.html#b1">MyButton</a>重载。
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00043">43</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="b0" doxytag="FG_Button::OnDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Button::OnDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>消息的处理函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器接口的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__Object.html#b6">FG_Object</a>。
+<p>
+被<a class="el" href="classMyButton.html#b0">MyButton</a>重载。
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00053">53</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00180">FG_OSAdaptor::DrawDotRect()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00141">FG_OSAdaptor::DrawText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">FG_Object::GetClientRect()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">FG_OSAdaptor::GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">FG_OSAdaptor::GetTextWidth()</a>、<a class="el" href="FG__Object_8h-source.html#l00217">FG_Object::IsFocus()</a>、<a class="el" href="FG__Object_8h-source.html#l00320">FG_Object::OnDraw()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b0_cgraph.png" border="0" usemap="#classFG__Button_b0_cgraph_map" alt=""></center>
+<map name="classFG__Button_b0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="203,6,371,33" alt="">
+<area href="classFG__OSAdaptor.html#a12" shape="rect" coords="196,57,377,84" alt="">
+<area href="classFG__OSAdaptor.html#a7" shape="rect" coords="208,108,365,134" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="208,158,365,185" alt="">
+<area href="classFG__Object.html#a3" shape="rect" coords="207,209,367,236" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="212,260,361,286" alt="">
+<area href="classFG__OSAdaptor.html#a9" shape="rect" coords="193,310,380,337" alt="">
+<area href="classFG__OSAdaptor.html#a8" shape="rect" coords="195,361,379,388" alt="">
+<area href="classFG__Object.html#a19" shape="rect" coords="224,412,349,438" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="224,462,349,489" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="203,513,371,540" alt="">
+</map>
+<a class="anchor" name="b1" doxytag="FG_Button::OnKeyDown" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Button::OnKeyDown </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+键盘按下消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>）的处理函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向键盘消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00078">78</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00179">FG_Object::FrameStyle()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Message_8h-source.html#l00101">FVK_ENTER</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b1_cgraph.png" border="0" usemap="#classFG__Button_b1_cgraph_map" alt=""></center>
+<map name="classFG__Button_b1_cgraph_map">
+<area href="classFG__Object.html#a14" shape="rect" coords="223,7,369,33" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="217,57,375,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="424,57,555,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="655,7,753,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="604,57,804,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="615,108,793,135" alt="">
+</map>
+<a class="anchor" name="b2" doxytag="FG_Button::OnKeyUp" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Button::OnKeyUp </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+键盘弹起消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>）的处理函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向键盘消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00093">93</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga16a38">FBN_PRESSED</a>、<a class="el" href="FG__Object_8h-source.html#l00179">FG_Object::FrameStyle()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Message_8h-source.html#l00101">FVK_ENTER</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>、<a class="el" href="FG__Object_8cpp-source.html#l00230">FG_Object::NotifyParent()</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b2_cgraph.png" border="0" usemap="#classFG__Button_b2_cgraph_map" alt=""></center>
+<map name="classFG__Button_b2_cgraph_map">
+<area href="classFG__Object.html#a14" shape="rect" coords="207,7,353,33" alt="">
+<area href="classFG__Object.html#b3" shape="rect" coords="205,57,355,84" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="201,108,359,135" alt="">
+<area href="classFG__Object.html#a10" shape="rect" coords="428,57,519,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="408,108,539,135" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="639,57,737,84" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="588,108,788,135" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="599,159,777,185" alt="">
+</map>
+<a class="anchor" name="b3" doxytag="FG_Button::OnLButtonDown" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Button::OnLButtonDown </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+鼠标左键按下消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>，<a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>）的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向鼠标消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00109">109</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00098">BUTTON_UP_INTERVAL</a>、<a class="el" href="FG__Object_8h-source.html#l00179">FG_Object::FrameStyle()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>、<a class="el" href="FG__Object_8h-source.html#l00241">FG_Object::StartTimer()</a>及<a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b3_cgraph.png" border="0" usemap="#classFG__Button_b3_cgraph_map" alt=""></center>
+<map name="classFG__Button_b3_cgraph_map">
+<area href="classFG__Object.html#a14" shape="rect" coords="244,7,391,33" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="239,57,396,84" alt="">
+<area href="classFG__Object.html#b0" shape="rect" coords="248,108,387,135" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="471,57,601,84" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="468,108,604,135" alt="">
+<area href="classFG__TimerManager.html#a0" shape="rect" coords="444,159,628,185" alt="">
+</map>
+<a class="anchor" name="b4" doxytag="FG_Button::OnLButtonUp" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Button::OnLButtonUp </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+鼠标左键弹起消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>，<a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>）的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向鼠标消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00121">121</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga16a38">FBN_PRESSED</a>、<a class="el" href="FG__Object_8h-source.html#l00179">FG_Object::FrameStyle()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Object_8h-source.html#l00254">FG_Object::KillTimer()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00230">FG_Object::NotifyParent()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>及<a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b4_cgraph.png" border="0" usemap="#classFG__Button_b4_cgraph_map" alt=""></center>
+<map name="classFG__Button_b4_cgraph_map">
+<area href="classFG__Object.html#a14" shape="rect" coords="228,57,375,84" alt="">
+<area href="classFG__Object.html#b1" shape="rect" coords="236,108,367,135" alt="">
+<area href="classFG__Object.html#b3" shape="rect" coords="227,159,376,185" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="223,209,380,236" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="448,32,584,59" alt="">
+<area href="classFG__TimerManager.html#a1" shape="rect" coords="429,108,603,135" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="652,7,879,33" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="719,57,812,84" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="717,108,813,135" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="707,159,824,185" alt="">
+<area href="classFG__Object.html#a10" shape="rect" coords="471,159,561,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="451,209,581,236" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="716,209,815,236" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="665,260,865,287" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="676,311,855,337" alt="">
+</map>
+<a class="anchor" name="b5" doxytag="FG_Button::OnTimerUp" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Button::OnTimerUp </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保证按钮控件总能弹起的定时器消息（<a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a>）的处理函数 
+<p>
+<ul>
+<li>设置按钮为凸起状态</li><li>要求重画</li><li>删除定时器</li><li>发送通知消息 </li></ul>
+
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00134">134</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga16a38">FBN_PRESSED</a>、<a class="el" href="FG__Object_8h-source.html#l00179">FG_Object::FrameStyle()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Object_8h-source.html#l00254">FG_Object::KillTimer()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00230">FG_Object::NotifyParent()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>及<a class="el" href="classFG__Button.html#y1y0">TIMERID_UP</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Button_b5_cgraph.png" border="0" usemap="#classFG__Button_b5_cgraph_map" alt=""></center>
+<map name="classFG__Button_b5_cgraph_map">
+<area href="classFG__Object.html#a14" shape="rect" coords="214,57,361,84" alt="">
+<area href="classFG__Object.html#b1" shape="rect" coords="222,108,353,135" alt="">
+<area href="classFG__Object.html#b3" shape="rect" coords="213,159,362,185" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="209,209,366,236" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="434,32,570,59" alt="">
+<area href="classFG__TimerManager.html#a1" shape="rect" coords="416,108,589,135" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="638,7,865,33" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="705,57,798,84" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="704,108,800,135" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="693,159,810,185" alt="">
+<area href="classFG__Object.html#a10" shape="rect" coords="457,159,548,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="437,209,568,236" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="702,209,801,236" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="652,260,852,287" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="662,311,841,337" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v0" doxytag="FG_Button::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__Button.html#v0">FG_Button::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp;  <a class="code" href="classFG__Button.html#b0">FG_Button::OnDraw</a>  },
+    { <a class="code" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="code" href="group__Utility.html#gga13a29">FKS_DOWN</a>, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Button.html#b1">FG_Button::OnKeyDown</a>  },
+    { <a class="code" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="code" href="group__Utility.html#gga13a30">FKS_UP</a>, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Button.html#b2">FG_Button::OnKeyUp</a>  },
+    { <a class="code" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="code" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Button.html#b3">FG_Button::OnLButtonDown</a>  },
+    { <a class="code" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="code" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Button.html#b4">FG_Button::OnLButtonUp</a>  },
+    { <a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>,  <a class="code" href="classFG__Button.html#y1y0">FG_Button::TIMERID_UP</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classFG__Button.html#b5">FG_Button::OnTimerUp</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#v0">FG_TextWidget</a>。
+<p>
+被<a class="el" href="classMyButton.html#v0">MyButton</a>重载。
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00043">43</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_Button::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__Button.html#t0">FG_Button::m_MsgMap</a> = { &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__Button.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Button.html">FG_Button</a> ::<a class="el" href="classFG__Button.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#t0">FG_TextWidget</a>。
+<p>
+被<a class="el" href="classMyButton.html#t0">MyButton</a>重载。
+<p>
+在文件<a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a>第<a class="el" href="FG__Button_8cpp-source.html#l00043">43</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Button_8h-source.html">FG_Button.h</a><li><a class="el" href="FG__Button_8cpp-source.html">FG_Button.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:39:11 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

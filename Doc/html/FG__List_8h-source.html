@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_List.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_List.h</h1><a href="FG__List_8h.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_list.h - 单、双向链表容器及迭代器头文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00039 <span class="preprocessor">#ifndef _FG_LIST_H_</span>
+00040 <span class="preprocessor"></span><span class="preprocessor">#define _FG_LIST_H_</span>
+00041 <span class="preprocessor"></span>
+00042 <span class="comment">//##ModelId=3FD88507008D</span>
+00047 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00048"></a><a class="code" href="structFG__SList__Node.html">00048</a> <span class="keyword">struct </span><a class="code" href="structFG__SList__Node.html">FG_SList_Node</a>
+00049 {
+00050     <span class="comment">//##ModelId=3FD8850802FC</span>
+<a name="l00055"></a><a class="code" href="structFG__SList__Node.html#a0">00055</a> <span class="comment"></span>    <a class="code" href="structFG__SList__Node.html#a0">FG_SList_Node</a>() : <a class="code" href="structFG__SList__Node.html#o0">m_pItem</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>), m_pNext(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00056     
+00057     <span class="comment">//##ModelId=40925B4D03DE</span>
+<a name="l00063"></a><a class="code" href="structFG__SList__Node.html#a1">00063</a> <span class="comment"></span>    <a class="code" href="structFG__SList__Node.html#a0">FG_SList_Node</a>(ITEM * <span class="keyword">const</span> pItem) : <a class="code" href="structFG__SList__Node.html#o0">m_pItem</a>(pItem), m_pNext(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00064     
+00065     <span class="comment">//##ModelId=3FD8850802CA</span>
+<a name="l00066"></a><a class="code" href="structFG__SList__Node.html#o0">00066</a>     ITEM          * <a class="code" href="structFG__SList__Node.html#o0">m_pItem</a>;            
+00067     <span class="comment">//##ModelId=3FD8850802E1</span>
+<a name="l00068"></a><a class="code" href="structFG__SList__Node.html#o1">00068</a>     <a class="code" href="structFG__SList__Node.html">FG_SList_Node</a> * m_pNext;            
+00069 };
+00070 
+00071 <span class="comment">//##ModelId=3FD885060262</span>
+00076 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00077"></a><a class="code" href="structFG__BList__Node.html">00077</a> <span class="keyword">struct </span><a class="code" href="structFG__BList__Node.html">FG_BList_Node</a>
+00078 {
+00079     <span class="comment">//##ModelId=3FD8850701E2</span>
+<a name="l00084"></a><a class="code" href="structFG__BList__Node.html#a0">00084</a> <span class="comment"></span>    <a class="code" href="structFG__BList__Node.html#a0">FG_BList_Node</a>() : m_pItem(<a class="code" href="group__Utility.html#ga11">NULL</a>), <a class="code" href="structFG__BList__Node.html#o1">m_pPrev</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>), m_pNext(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00085 
+00086     <span class="comment">//##ModelId=40925B4C02E2</span>
+<a name="l00092"></a><a class="code" href="structFG__BList__Node.html#a1">00092</a> <span class="comment"></span>    <a class="code" href="structFG__BList__Node.html#a0">FG_BList_Node</a>(ITEM * <span class="keyword">const</span> pItem) : m_pItem(pItem), <a class="code" href="structFG__BList__Node.html#o1">m_pPrev</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>), m_pNext(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00093     
+00094     <span class="comment">//##ModelId=3FD88507018A</span>
+<a name="l00095"></a><a class="code" href="structFG__BList__Node.html#o0">00095</a>     ITEM          * m_pItem;            
+00096     <span class="comment">//##ModelId=3FD8850701A7</span>
+<a name="l00097"></a><a class="code" href="structFG__BList__Node.html#o1">00097</a>     <a class="code" href="structFG__BList__Node.html">FG_BList_Node</a> * <a class="code" href="structFG__BList__Node.html#o1">m_pPrev</a>;            
+00098     <span class="comment">//##ModelId=3FD8850701C7</span>
+<a name="l00099"></a><a class="code" href="structFG__BList__Node.html#o2">00099</a>     <a class="code" href="structFG__BList__Node.html">FG_BList_Node</a> * m_pNext;            
+00100 };
+00101 
+00102 <span class="comment">//##ModelId=3FD8850602EF</span>
+00108 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> NODE, <span class="keyword">class</span> ITEM&gt;
+<a name="l00109"></a><a class="code" href="classFG__ForwardIterator.html">00109</a> <span class="keyword">class </span><a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a>
+00110 {
+00111 <span class="keyword">public</span>:
+00112     <span class="comment">//##ModelId=3FD8850702DC</span>
+<a name="l00114"></a><a class="code" href="classFG__ForwardIterator.html#a0">00114</a> <span class="comment"></span>    <a class="code" href="classFG__ForwardIterator.html#a0">FG_ForwardIterator</a>() : <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00115     
+00116     <span class="comment">//##ModelId=3FD8850702E6</span>
+<a name="l00121"></a><a class="code" href="classFG__ForwardIterator.html#a1">00121</a> <span class="comment"></span>    <a class="code" href="classFG__ForwardIterator.html#a0">FG_ForwardIterator</a>(NODE * <span class="keyword">const</span> pNode) : <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>(pNode) {}
+00122 
+00123     <span class="comment">//##ModelId=3FD8850702F0</span>
+<a name="l00129"></a><a class="code" href="classFG__ForwardIterator.html#a2">00129</a> <span class="comment"></span>    ITEM &amp; <a class="code" href="classFG__ForwardIterator.html#a2">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> * (<a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pItem); }
+00130 
+00131     <span class="comment">//##ModelId=3FD8850702FA</span>
+<a name="l00137"></a><a class="code" href="classFG__ForwardIterator.html#a3">00137</a> <span class="comment"></span>    ITEM * <a class="code" href="classFG__ForwardIterator.html#a3">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pItem; }
+00138 
+00139     <span class="comment">//##ModelId=3FD885070304</span>
+<a name="l00145"></a><a class="code" href="classFG__ForwardIterator.html#a4">00145</a> <span class="comment"></span>    <a class="code" href="classFG__ForwardIterator.html#a4">operator ITEM *</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pItem; }
+00146 
+00147     <span class="comment">//##ModelId=3FD885070305</span>
+<a name="l00153"></a><a class="code" href="classFG__ForwardIterator.html#a5">00153</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__ForwardIterator.html#a5">IsDone</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ! <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>; }
+00154 
+00155     <span class="comment">//##ModelId=3FD88507030E</span>
+<a name="l00161"></a><a class="code" href="classFG__ForwardIterator.html#a6">00161</a> <span class="comment"></span>    <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a> &amp; <a class="code" href="classFG__ForwardIterator.html#a6">operator++</a>()
+00162     {
+00163         <span class="keywordflow">if</span> (<a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>)
+00164             <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a> = <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pNext;
+00165         <span class="keywordflow">return</span> * <span class="keyword">this</span>;
+00166     }
+00167 
+00168     <span class="comment">//##ModelId=3FD885070318</span>
+<a name="l00174"></a><a class="code" href="classFG__ForwardIterator.html#a7">00174</a> <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a> <a class="code" href="classFG__ForwardIterator.html#a6">operator++</a>(<span class="keywordtype">int</span>)
+00175     {
+00176         <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a> tmp = * <span class="keyword">this</span>;
+00177         <span class="keywordflow">if</span> (<a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>) <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a> = <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pNext;
+00178         <span class="keywordflow">return</span> tmp;
+00179     }
+00180 
+00181     <span class="comment">//##ModelId=3FD885070323</span>
+<a name="l00188"></a><a class="code" href="classFG__ForwardIterator.html#a8">00188</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__ForwardIterator.html#a8">operator==</a>(<span class="keyword">const</span> <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a> == i.<a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>; }
+00189 
+00190     <span class="comment">//##ModelId=3FD885070336</span>
+<a name="l00197"></a><a class="code" href="classFG__ForwardIterator.html#a9">00197</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__ForwardIterator.html#a9">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a> != i.<a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>; }
+00198 
+00199     <span class="comment">//##ModelId=3FD88507034A</span>
+<a name="l00206"></a><a class="code" href="classFG__ForwardIterator.html#a10">00206</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__ForwardIterator.html#a8">operator==</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pItem == p; }
+00207 
+00208     <span class="comment">//##ModelId=3FD88507035E</span>
+<a name="l00215"></a><a class="code" href="classFG__ForwardIterator.html#a11">00215</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__ForwardIterator.html#a9">operator!=</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>-&gt;m_pItem != p; }
+00216 
+00217 <span class="keyword">protected</span>:
+00218     <span class="comment">//##ModelId=3FD8850702C9</span>
+<a name="l00219"></a><a class="code" href="classFG__ForwardIterator.html#p0">00219</a>     NODE * <a class="code" href="classFG__ForwardIterator.html#p0">m_pNode</a>;                 
+00220 };
+00221 
+00222 <span class="comment">//##ModelId=3FD88506029F</span>
+00227 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00228"></a><a class="code" href="classFG__BackIterator.html">00228</a> <span class="keyword">class </span><a class="code" href="classFG__BackIterator.html">FG_BackIterator</a>
+00229 {
+00230 <span class="keyword">public</span>:
+00231     <span class="comment">//##ModelId=3FD8850602D2</span>
+<a name="l00233"></a><a class="code" href="classFG__BackIterator.html#w0">00233</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="structFG__BList__Node.html">FG_BList_Node&lt;ITEM&gt;</a> <a class="code" href="structFG__BList__Node.html">node</a>;
+00234 
+00235     <span class="comment">//##ModelId=3FD885070228</span>
+<a name="l00237"></a><a class="code" href="classFG__BackIterator.html#a0">00237</a> <span class="comment"></span>    <a class="code" href="classFG__BackIterator.html#a0">FG_BackIterator</a>() : m_pNode(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00238 
+00239     <span class="comment">//##ModelId=3FD885070232</span>
+<a name="l00244"></a><a class="code" href="classFG__BackIterator.html#a1">00244</a> <span class="comment"></span>    <a class="code" href="classFG__BackIterator.html#a0">FG_BackIterator</a>(<a class="code" href="structFG__BList__Node.html">node</a> * <span class="keyword">const</span> pNode) : m_pNode(pNode) {}
+00245 
+00246     <span class="comment">//##ModelId=3FD88507023C</span>
+<a name="l00252"></a><a class="code" href="classFG__BackIterator.html#a2">00252</a> <span class="comment"></span>    ITEM &amp; <a class="code" href="classFG__BackIterator.html#a2">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> * (m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o0">m_pItem</a>); }
+00253 
+00254     <span class="comment">//##ModelId=3FD885070246</span>
+<a name="l00260"></a><a class="code" href="classFG__BackIterator.html#a3">00260</a> <span class="comment"></span>    ITEM * <a class="code" href="classFG__BackIterator.html#a3">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o0">m_pItem</a>; }
+00261 
+00262     <span class="comment">//##ModelId=3FD885070250</span>
+<a name="l00268"></a><a class="code" href="classFG__BackIterator.html#a4">00268</a> <span class="comment"></span>    <a class="code" href="classFG__BackIterator.html#a4">operator ITEM *</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o0">m_pItem</a>; }
+00269 
+00270     <span class="comment">//##ModelId=3FD885070251</span>
+<a name="l00276"></a><a class="code" href="classFG__BackIterator.html#a5">00276</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BackIterator.html#a5">IsDone</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ! m_pNode; }
+00277 
+00278     <span class="comment">//##ModelId=3FD88507025A</span>
+<a name="l00284"></a><a class="code" href="classFG__BackIterator.html#a6">00284</a> <span class="comment"></span>    <a class="code" href="classFG__BackIterator.html">FG_BackIterator</a> &amp; <a class="code" href="classFG__BackIterator.html#a6">operator++</a>()
+00285     {
+00286         <span class="keywordflow">if</span> (m_pNode)
+00287             m_pNode = m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o1">m_pPrev</a>;
+00288         <span class="keywordflow">return</span> * <span class="keyword">this</span>;
+00289     }
+00290 
+00291     <span class="comment">//##ModelId=3FD885070264</span>
+<a name="l00297"></a><a class="code" href="classFG__BackIterator.html#a7">00297</a> <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="classFG__BackIterator.html">FG_BackIterator</a> <a class="code" href="classFG__BackIterator.html#a6">operator++</a>(<span class="keywordtype">int</span>)
+00298     {
+00299         <a class="code" href="classFG__BackIterator.html">FG_BackIterator</a> tmp = * <span class="keyword">this</span>;
+00300         <span class="keywordflow">if</span> (m_pNode) m_pNode = m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o1">m_pPrev</a>;
+00301         <span class="keywordflow">return</span> tmp;
+00302     }
+00303 
+00304     <span class="comment">//##ModelId=3FD88507026F</span>
+<a name="l00311"></a><a class="code" href="classFG__BackIterator.html#a8">00311</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BackIterator.html#a8">operator==</a>(<span class="keyword">const</span> <a class="code" href="classFG__BackIterator.html">FG_BackIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode == i.<a class="code" href="classFG__BackIterator.html#r0">m_pNode</a>; }
+00312 
+00313     <span class="comment">//##ModelId=3FD885070282</span>
+<a name="l00320"></a><a class="code" href="classFG__BackIterator.html#a9">00320</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BackIterator.html#a9">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classFG__BackIterator.html">FG_BackIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode != i.<a class="code" href="classFG__BackIterator.html#r0">m_pNode</a>; }
+00321 
+00322     <span class="comment">//##ModelId=3FD885070296</span>
+<a name="l00329"></a><a class="code" href="classFG__BackIterator.html#a10">00329</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BackIterator.html#a8">operator==</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o0">m_pItem</a> == p; }
+00330 
+00331     <span class="comment">//##ModelId=3FD8850702A1</span>
+<a name="l00338"></a><a class="code" href="classFG__BackIterator.html#a11">00338</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BackIterator.html#a9">operator!=</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;<a class="code" href="structFG__BList__Node.html#o0">m_pItem</a> != p; }
+00339 
+00340 <span class="keyword">private</span>:
+00341     <span class="comment">//##ModelId=3FD885070215</span>
+<a name="l00342"></a><a class="code" href="classFG__BackIterator.html#r0">00342</a>     <a class="code" href="structFG__BList__Node.html">node</a> * m_pNode;                 
+00343 };
+00344 
+00345 <span class="comment">//##ModelId=3FD885060385</span>
+00352 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00353"></a><a class="code" href="classFG__LoopIterator.html">00353</a> <span class="keyword">class </span><a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a>
+00354 {
+00355 <span class="keyword">public</span>:
+00356     <span class="comment">//##ModelId=3FD88508011B</span>
+<a name="l00362"></a><a class="code" href="classFG__LoopIterator.html#a0">00362</a> <span class="comment"></span>    <a class="code" href="classFG__LoopIterator.html#a0">FG_LoopIterator</a>(<a class="code" href="structFG__BList__Node.html">FG_BList_Node&lt;ITEM&gt;</a> * <span class="keyword">const</span> pFirst, ITEM * <span class="keyword">const</span> pStart)
+00363         : <a class="code" href="classFG__LoopIterator.html#p0">m_pFirst</a>(pFirst), <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>(pStart), <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a>(false)
+00364     {
+00365         m_pNode = <a class="code" href="classFG__LoopIterator.html#p0">m_pFirst</a>;
+00366         <span class="keywordflow">while</span> (m_pNode &amp;&amp; m_pNode-&gt;m_pItem != <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>) m_pNode = m_pNode-&gt;m_pNext;
+00367         <span class="keywordflow">if</span> (! m_pNode)
+00368             <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a> = <span class="keyword">true</span>;
+00369         <span class="keywordflow">else</span>
+00370         {
+00371             m_pNode = m_pNode-&gt;m_pNext;
+00372             <span class="keywordflow">if</span> (! m_pNode)
+00373                 m_pNode = m_pFirst;
+00374         }
+00375     }
+00376 
+00377     <span class="comment">//##ModelId=3FD88508012F</span>
+<a name="l00383"></a><a class="code" href="classFG__LoopIterator.html#a1">00383</a> <span class="comment"></span>    ITEM &amp; <a class="code" href="classFG__LoopIterator.html#a1">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> * (m_pNode-&gt;m_pItem); }
+00384     
+00385     <span class="comment">//##ModelId=3FD885080139</span>
+<a name="l00391"></a><a class="code" href="classFG__LoopIterator.html#a2">00391</a> <span class="comment"></span>    ITEM * <a class="code" href="classFG__LoopIterator.html#a2">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;m_pItem; }
+00392 
+00393     <span class="comment">//##ModelId=3FD885080143</span>
+<a name="l00399"></a><a class="code" href="classFG__LoopIterator.html#a3">00399</a> <span class="comment"></span>    <a class="code" href="classFG__LoopIterator.html#a3">operator ITEM *</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;m_pItem; }
+00400 
+00401     <span class="comment">//##ModelId=3FD88508014D</span>
+<a name="l00407"></a><a class="code" href="classFG__LoopIterator.html#a4">00407</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__LoopIterator.html#a4">IsDone</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a>; }
+00408 
+00409     <span class="comment">//##ModelId=3FD88508014E</span>
+<a name="l00415"></a><a class="code" href="classFG__LoopIterator.html#a5">00415</a> <span class="comment"></span>    <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a> &amp; <a class="code" href="classFG__LoopIterator.html#a5">operator++</a>()
+00416     {
+00417         <span class="keywordflow">if</span> (! <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a>)
+00418         {
+00419             m_pNode = m_pNode-&gt;m_pNext;
+00420             <span class="keywordflow">if</span> (! m_pNode)
+00421                 m_pNode = <a class="code" href="classFG__LoopIterator.html#p0">m_pFirst</a>;
+00422             <span class="keywordflow">if</span> ((m_pNode-&gt;m_pNext &amp;&amp; m_pNode-&gt;m_pNext-&gt;m_pItem == <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>) ||
+00423                 (! m_pNode-&gt;m_pNext &amp;&amp; m_pFirst-&gt;m_pItem == <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>))
+00424                 <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a> = <span class="keyword">true</span>;
+00425         }
+00426         <span class="keywordflow">return</span> * <span class="keyword">this</span>;
+00427     }
+00428 
+00429     <span class="comment">//##ModelId=3FD885080157</span>
+<a name="l00435"></a><a class="code" href="classFG__LoopIterator.html#a6">00435</a> <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a> <a class="code" href="classFG__LoopIterator.html#a5">operator++</a>(<span class="keywordtype">int</span>)
+00436     {
+00437         <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a> tmp = * <span class="keyword">this</span>;
+00438         <span class="keywordflow">if</span> (! <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a>)
+00439         {
+00440             m_pNode = m_pNode-&gt;m_pNext;
+00441             <span class="keywordflow">if</span> (! m_pNode)
+00442                 m_pNode = <a class="code" href="classFG__LoopIterator.html#p0">m_pFirst</a>;
+00443             <span class="keywordflow">if</span> ((m_pNode-&gt;m_pNext &amp;&amp; m_pNode-&gt;m_pNext-&gt;m_pItem == <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>) ||
+00444                 (! m_pNode-&gt;m_pNext &amp;&amp; m_pFirst-&gt;m_pItem == <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>))
+00445                 <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a> = <span class="keyword">true</span>;
+00446         }
+00447         <span class="keywordflow">return</span> tmp;
+00448     }
+00449 
+00450     <span class="comment">//##ModelId=3FD88508016B</span>
+<a name="l00457"></a><a class="code" href="classFG__LoopIterator.html#a7">00457</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__LoopIterator.html#a7">operator==</a>(<span class="keyword">const</span> <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode == i.<a class="code" href="classFG__LoopIterator.html#p1">m_pNode</a>; }
+00458 
+00459     <span class="comment">//##ModelId=3FD88508017F</span>
+<a name="l00466"></a><a class="code" href="classFG__LoopIterator.html#a8">00466</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__LoopIterator.html#a8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator</a> &amp; i)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode != i.<a class="code" href="classFG__LoopIterator.html#p1">m_pNode</a>; }
+00467 
+00468     <span class="comment">//##ModelId=3FD885080193</span>
+<a name="l00475"></a><a class="code" href="classFG__LoopIterator.html#a9">00475</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__LoopIterator.html#a7">operator==</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;m_pItem == p; }
+00476 
+00477     <span class="comment">//##ModelId=3FD8850801A7</span>
+<a name="l00484"></a><a class="code" href="classFG__LoopIterator.html#a10">00484</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__LoopIterator.html#a8">operator!=</a>(ITEM * <span class="keyword">const</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pNode-&gt;m_pItem != p; }
+00485 
+00486 <span class="keyword">protected</span>:
+00487     <span class="comment">//##ModelId=409265B703D8</span>
+<a name="l00488"></a><a class="code" href="classFG__LoopIterator.html#p0">00488</a>     <a class="code" href="structFG__BList__Node.html">FG_BList_Node&lt;ITEM&gt;</a> * <a class="code" href="classFG__LoopIterator.html#p0">m_pFirst</a>;     
+00490     <span class="comment">//##ModelId=409265B80069</span>
+<a name="l00491"></a><a class="code" href="classFG__LoopIterator.html#p1">00491</a>     <a class="code" href="structFG__BList__Node.html">FG_BList_Node&lt;ITEM&gt;</a> * m_pNode;      
+00493     <span class="comment">//##ModelId=3FD885080072</span>
+<a name="l00494"></a><a class="code" href="classFG__LoopIterator.html#p2">00494</a>     ITEM                * <a class="code" href="classFG__LoopIterator.html#p2">m_pStart</a>;     
+00496     <span class="comment">//##ModelId=3FD885080085</span>
+<a name="l00502"></a><a class="code" href="classFG__LoopIterator.html#p3">00502</a> <span class="comment"></span>    <span class="keywordtype">bool</span>                  <a class="code" href="classFG__LoopIterator.html#p3">m_IsDone</a>;
+00503 };
+00504 
+00505 <span class="comment">//##ModelId=3FD885070015</span>
+00510 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00511"></a><a class="code" href="classFG__SList.html">00511</a> <span class="keyword">class </span><a class="code" href="classFG__SList.html">FG_SList</a>
+00512 {
+00513 <span class="keyword">public</span>:
+00514     <span class="comment">//##ModelId=3FD885070047</span>
+<a name="l00516"></a><a class="code" href="classFG__SList.html#w0">00516</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="structFG__SList__Node.html">FG_SList_Node&lt;ITEM&gt;</a>                     node;
+00517     
+00518     <span class="comment">//##ModelId=3FD88507005B</span>
+<a name="l00520"></a><a class="code" href="classFG__SList.html#w1">00520</a> <span class="comment"></span>    <span class="keyword">typedef</span> ITEM                                    item;
+00521     
+00522     <span class="comment">//##ModelId=3FD88507006F</span>
+<a name="l00524"></a><a class="code" href="classFG__SList.html#w2">00524</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator&lt;FG_SList_Node&lt;ITEM&gt;</a>, ITEM&gt; iterator;
+00525 
+00526     <span class="comment">//##ModelId=3FD885080265</span>
+<a name="l00528"></a><a class="code" href="classFG__SList.html#a0">00528</a> <span class="comment"></span>    <a class="code" href="classFG__SList.html#a0">FG_SList</a>() : m_First(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00529     
+00530     <span class="comment">//##ModelId=3FD88508026F</span>
+<a name="l00535"></a><a class="code" href="classFG__SList.html#a1">00535</a> <span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="classFG__SList.html#a1">~FG_SList</a>()
+00536     {
+00537         <a class="code" href="classFG__SList.html#a6">RemoveAll</a>();
+00538     }
+00539 
+00540     <span class="comment">//##ModelId=3FD885080271</span>
+<a name="l00545"></a><a class="code" href="classFG__SList.html#a2">00545</a> <span class="comment"></span>    iterator <a class="code" href="classFG__SList.html#a2">First</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_First.m_pNext; }
+00546 
+00547     <span class="comment">//##ModelId=3FD885080279</span>
+<a name="l00555"></a><a class="code" href="classFG__SList.html#a3">00555</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__SList.html#a3">Remove</a>(<span class="keyword">const</span> iterator i) { <span class="keywordflow">return</span> <a class="code" href="classFG__SList.html#a3">Remove</a>((item *)i); }
+00556     
+00557     <span class="comment">//##ModelId=3FD88508028D</span>
+<a name="l00565"></a><a class="code" href="classFG__SList.html#a4">00565</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__SList.html#a4">Add</a>(item * <span class="keyword">const</span> pItem)
+00566     {
+00567         node * pNode = &amp; m_First;
+00568         <span class="keywordflow">while</span> (pNode-&gt;m_pNext) pNode = pNode-&gt;m_pNext;
+00569 
+00570         pNode-&gt;m_pNext = <span class="keyword">new</span> <a class="code" href="classFG__SList.html#w0">node</a>(pItem);
+00571         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00572     }
+00573     
+00574     <span class="comment">//##ModelId=3FD885080298</span>
+<a name="l00583"></a><a class="code" href="classFG__SList.html#a5">00583</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__SList.html#a3">Remove</a>(item * <span class="keyword">const</span> pItem)
+00584     {
+00585         node * pNode = &amp; m_First;
+00586         <span class="keywordflow">while</span> (pNode-&gt;m_pNext)
+00587         {
+00588             <span class="keywordflow">if</span> (pNode-&gt;m_pNext-&gt;m_pItem == pItem)
+00589             {
+00590                 node * pRemove = pNode-&gt;m_pNext;
+00591                 pNode-&gt;m_pNext = pRemove-&gt;m_pNext;
+00592                 <span class="keyword">delete</span> pRemove;
+00593                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00594             }
+00595             pNode = pNode-&gt;m_pNext;
+00596         }
+00597         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00598     }
+00599 
+00600     <span class="comment">//##ModelId=3FD8850802AB</span>
+<a name="l00607"></a><a class="code" href="classFG__SList.html#a6">00607</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__SList.html#a6">RemoveAll</a>()
+00608     {
+00609         node * pNode = m_First.m_pNext;
+00610         <span class="keywordflow">while</span> (pNode)
+00611         {
+00612             node * pRemove = pNode;
+00613             pNode = pRemove-&gt;m_pNext;
+00614             <span class="keyword">delete</span> pRemove;
+00615         }
+00616         m_First.m_pNext = <a class="code" href="group__Utility.html#ga11">NULL</a>;
+00617         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00618     }
+00619 
+00620 <span class="keyword">protected</span>:
+00621     <span class="comment">//##ModelId=3FD885080252</span>
+<a name="l00626"></a><a class="code" href="classFG__SList.html#p0">00626</a> <span class="comment"></span>    node m_First;
+00627 };
+00628 
+00629 <span class="comment">//##ModelId=3FD8850601C2</span>
+00634 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00635"></a><a class="code" href="classFG__BList.html">00635</a> <span class="keyword">class </span><a class="code" href="classFG__BList.html">FG_BList</a>
+00636 {
+00637 <span class="keyword">public</span>:
+00638     <span class="comment">//##ModelId=3FD8850601EB</span>
+<a name="l00640"></a><a class="code" href="classFG__BList.html#w0">00640</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="structFG__BList__Node.html">FG_BList_Node&lt;ITEM&gt;</a>                             node;
+00641 
+00642     <span class="comment">//##ModelId=3FD8850601FF</span>
+<a name="l00644"></a><a class="code" href="classFG__BList.html#w1">00644</a> <span class="comment"></span>    <span class="keyword">typedef</span> ITEM                                            item;
+00645 
+00646     <span class="comment">//##ModelId=3FD885060213</span>
+<a name="l00648"></a><a class="code" href="classFG__BList.html#w2">00648</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="classFG__ForwardIterator.html">FG_ForwardIterator&lt;FG_BList_Node&lt;ITEM&gt;</a>, ITEM&gt;   forward_iterator;
+00649 
+00650     <span class="comment">//##ModelId=3FD885060227</span>
+<a name="l00652"></a><a class="code" href="classFG__BList.html#w3">00652</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="classFG__BackIterator.html">FG_BackIterator&lt;ITEM&gt;</a>                           back_iterator;
+00653 
+00654     <span class="comment">//##ModelId=3FD88506023A</span>
+<a name="l00656"></a><a class="code" href="classFG__BList.html#w4">00656</a> <span class="comment"></span>    <span class="keyword">typedef</span> <a class="code" href="classFG__LoopIterator.html">FG_LoopIterator&lt;ITEM&gt;</a>                           loop_iterator;
+00657 
+00658     <span class="comment">//##ModelId=3FD885070123</span>
+<a name="l00663"></a><a class="code" href="classFG__BList.html#a0">00663</a> <span class="comment"></span>    <a class="code" href="classFG__BList.html#a0">FG_BList</a>() : m_pFirst(<a class="code" href="group__Utility.html#ga11">NULL</a>), m_pLast(<a class="code" href="group__Utility.html#ga11">NULL</a>) {}
+00664 
+00665     <span class="comment">//##ModelId=3FD885070124</span>
+<a name="l00670"></a><a class="code" href="classFG__BList.html#a1">00670</a> <span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="classFG__BList.html#a1">~FG_BList</a>()
+00671     {
+00672         <a class="code" href="classFG__BList.html#a8">RemoveAll</a>();
+00673     }
+00674 
+00675     <span class="comment">//##ModelId=3FD88507012D</span>
+<a name="l00683"></a><a class="code" href="classFG__BList.html#a2">00683</a> <span class="comment"></span>    loop_iterator <a class="code" href="classFG__BList.html#a2">Loop</a>(item * <span class="keyword">const</span> pItem)<span class="keyword"> const</span>
+00684 <span class="keyword">    </span>{
+00685         <span class="keywordflow">return</span> <a class="code" href="classFG__BList.html#w4">loop_iterator</a>(m_pFirst, pItem);
+00686     }
+00687 
+00688     <span class="comment">//##ModelId=3FD885070141</span>
+<a name="l00693"></a><a class="code" href="classFG__BList.html#a3">00693</a> <span class="comment"></span>    forward_iterator <a class="code" href="classFG__BList.html#a3">First</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pFirst; }
+00694     
+00695     <span class="comment">//##ModelId=3FD885070142</span>
+<a name="l00700"></a><a class="code" href="classFG__BList.html#a4">00700</a> <span class="comment"></span>    back_iterator <a class="code" href="classFG__BList.html#a4">Last</a>()     <span class="keyword">const</span> { <span class="keywordflow">return</span> m_pLast; }
+00701 
+00709     <span class="keyword">template</span> &lt;<span class="keyword">class</span> ITERATOR&gt;
+<a name="l00710"></a><a class="code" href="classFG__BList.html#a5">00710</a>     <span class="keywordtype">bool</span> <a class="code" href="classFG__BList.html#a5">Remove</a>(<span class="keyword">const</span> ITERATOR i) { <span class="keywordflow">return</span> <a class="code" href="classFG__BList.html#a5">Remove</a>((item *)i); }
+00711 
+00712     <span class="comment">//##ModelId=3FD88507014B</span>
+<a name="l00720"></a><a class="code" href="classFG__BList.html#a6">00720</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BList.html#a6">Add</a>(item * <span class="keyword">const</span> pItem)
+00721     {
+00722         <span class="keywordflow">if</span> (! m_pFirst &amp;&amp; ! m_pLast)
+00723         {
+00724             <span class="comment">// 容器为空</span>
+00725             m_pFirst = m_pLast = <span class="keyword">new</span> <a class="code" href="classFG__BList.html#w0">node</a>(pItem);
+00726         }
+00727         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_pFirst &amp;&amp; m_pLast)
+00728         {
+00729             <span class="comment">// 容器不为空，调整链表指针</span>
+00730             node * pNode = <span class="keyword">new</span> <a class="code" href="classFG__BList.html#w0">node</a>(pItem);
+00731             pNode-&gt;m_pPrev = m_pLast;
+00732             m_pLast-&gt;m_pNext = pNode;
+00733             m_pLast = pNode;
+00734         }
+00735         <span class="keywordflow">else</span>
+00736         {
+00737             <span class="comment">// 不可能发生的情况</span>
+00738             <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00739         }
+00740         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00741     }
+00742 
+00743     <span class="comment">//##ModelId=3FD885070160</span>
+<a name="l00752"></a><a class="code" href="classFG__BList.html#a7">00752</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BList.html#a5">Remove</a>(item * <span class="keyword">const</span> pItem)
+00753     {
+00754         node * pNode = m_pLast;
+00755 
+00756         <span class="keywordflow">while</span> (pNode)
+00757         {
+00758             <span class="keywordflow">if</span> (pNode-&gt;m_pItem == pItem)
+00759             {
+00760                 <span class="comment">// 调整链表指针</span>
+00761                 node * pPrev = pNode-&gt;m_pPrev;
+00762                 node * pNext = pNode-&gt;m_pNext;
+00763 
+00764                 <span class="keywordflow">if</span> (pPrev)
+00765                     pPrev-&gt;m_pNext = pNext;
+00766                 <span class="keywordflow">else</span>
+00767                     m_pFirst = pNext;
+00768 
+00769                 <span class="keywordflow">if</span> (pNext)
+00770                     pNext-&gt;m_pPrev = pPrev;
+00771                 <span class="keywordflow">else</span>
+00772                     m_pLast = pPrev;
+00773 
+00774                 <span class="keyword">delete</span> pNode;
+00775                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00776             }
+00777             <span class="keywordflow">else</span>
+00778             {
+00779                 pNode = pNode-&gt;m_pPrev;
+00780             }
+00781         }
+00782         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00783     }
+00784 
+00785     <span class="comment">//##ModelId=3FD885070174</span>
+<a name="l00792"></a><a class="code" href="classFG__BList.html#a8">00792</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__BList.html#a8">RemoveAll</a>()
+00793     {
+00794         node * pNext, * pNode = m_pFirst;
+00795 
+00796         <span class="keywordflow">while</span> (pNode)
+00797         {
+00798             pNext = pNode-&gt;m_pNext;
+00799             <span class="keyword">delete</span> pNode;
+00800             pNode = pNext;
+00801         }
+00802         m_pFirst = m_pLast = <a class="code" href="group__Utility.html#ga11">NULL</a>;
+00803         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00804     }
+00805 
+00806 
+00807 <span class="keyword">private</span>:
+00808     <span class="comment">//##ModelId=3FD8850700F2</span>
+<a name="l00809"></a><a class="code" href="classFG__BList.html#r0">00809</a>     node * m_pFirst;    
+00810     <span class="comment">//##ModelId=3FD885070106</span>
+<a name="l00811"></a><a class="code" href="classFG__BList.html#r1">00811</a>     node * m_pLast;     
+00812 };
+00813 
+00822 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ITERATOR, <span class="keyword">class</span> ITEM&gt;
+<a name="l00823"></a><a class="code" href="group__Utility.html#ga9">00823</a> <span class="keywordtype">bool</span> <a class="code" href="group__Utility.html#ga9">FG_ListFind</a>(ITERATOR &amp; i, <span class="keyword">const</span> ITEM * pItem)
+00824 {
+00825     <span class="keywordflow">for</span> (; ! i.IsDone(); ++ i)
+00826     {
+00827         <span class="keywordflow">if</span> (i == pItem)
+00828             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00829     }
+00830     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00831 }
+00832 
+00833 <span class="comment">//##ModelId=3FD88506033F</span>
+00840 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ITEM&gt;
+<a name="l00841"></a><a class="code" href="classFG__ListCheck.html">00841</a> <span class="keyword">class </span><a class="code" href="classFG__ListCheck.html">FG_ListCheck</a>
+00842 {
+00843 <span class="keyword">public</span>:
+00844     <span class="comment">//##ModelId=3FD885070372</span>
+00853 <span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classFG__ListCheck.html#a0">FindIt</a>(<span class="keyword">const</span> ITEM * pItem) = 0;
+00854 };
+00855 
+00865 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ITERATOR, <span class="keyword">class</span> ITEM&gt;
+<a name="l00866"></a><a class="code" href="group__Utility.html#ga10">00866</a> <span class="keywordtype">bool</span> <a class="code" href="group__Utility.html#ga10">FG_ListFind_If</a>(ITERATOR &amp; i, <a class="code" href="classFG__ListCheck.html">FG_ListCheck&lt;ITEM&gt;</a> &amp; check)
+00867 {
+00868     <span class="keywordflow">for</span> (; ! i.IsDone(); ++ i)
+00869     {
+00870         <span class="keywordflow">if</span> (check.<a class="code" href="classFG__ListCheck.html#a0">FindIt</a>(i))
+00871             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00872     }
+00873     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00874 }
+00875 
+00876 <span class="preprocessor">#endif  </span><span class="comment">/* _FG_LIST_H_ */</span>
+00877 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:40 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Message.h File Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Message.h文件参考</h1><hr><a name="_details"></a><h2>详细描述</h2>
+消息类型定义头文件. 
+<p>
+该文件中定义FishGUI框架系统中用到的所有的消息类型和消息结构
+<p>
+在文件<a class="el" href="FG__Message_8h-source.html">FG_Message.h</a>中定义。
+<p>
+<code>#include "<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>"</code><br>
+
+<p>
+FG_Message.h包含/依赖关系图：<p><center><img src="FG__Message_8h__incl.png" border="0" usemap="#FG_Message.h_map" alt="Include dependency graph"></center>
+<map name="FG_Message.h_map">
+<area href="FG__Point_8h.html" shape="rect" coords="17,17,92,44" alt="">
+</map>
+
+<p>
+此图展示直接或间接包含该文件的文件：<p><center><img src="FG__Message_8h__dep__incl.png" border="0" usemap="#FG_Message.hdep_map" alt="Included by dependency graph"></center>
+<map name="FG_Message.hdep_map">
+<area href="FG__Utility_8h.html" shape="rect" coords="17,17,92,44" alt="">
+</map>
+
+<p>
+<a href="FG__Message_8h-source.html">浏览该文件的源代码。</a><table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>组合类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>struct &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Message.html">FG_Message</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息结构. </em> <a href="structFG__Message.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td colspan=2><br><h2>枚举</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga12">FG_MSG_TYPE</a> { <br>
+&nbsp;&nbsp;<a class="el" href="group__Utility.html#gga12a17">FG_MSG_STARTUP</a>, 
+<a class="el" href="group__Utility.html#gga12a18">FG_MSG_HALT</a>, 
+<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 
+<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, 
+<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>, 
+<a class="el" href="group__Utility.html#gga12a23">FG_MAX_SYS_MSG</a>, 
+<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>, 
+<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, 
+<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>
+<br>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息类型的枚举类型.  <a href="group__Utility.html#ga12">更多...</a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga13">FG_KEY_STATUS</a> { <a class="el" href="group__Utility.html#gga13a28">FKS_NONE</a> =  0, 
+<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>, 
+<a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">键盘状态  <a href="group__Utility.html#ga13">更多...</a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga14">FG_MOUSE_STATUS</a> { <a class="el" href="group__Utility.html#gga14a31">FMS_NONE</a> =  0, 
+<a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>, 
+<a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">鼠标状态.  <a href="group__Utility.html#ga14">更多...</a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga15">FG_FOCUS_STATUS</a> { <a class="el" href="group__Utility.html#gga15a34">FFS_NONE</a> =  0, 
+<a class="el" href="group__Utility.html#gga15a35">FFS_GET</a>, 
+<a class="el" href="group__Utility.html#gga15a36">FFS_LOSE</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">焦点状态  <a href="group__Utility.html#ga15">更多...</a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a> { <br>
+&nbsp;&nbsp;<a class="el" href="group__Utility.html#gga16a37">FN_NONE</a> =  0, 
+<a class="el" href="group__Utility.html#gga16a38">FBN_PRESSED</a>, 
+<a class="el" href="group__Utility.html#gga16a39">FCN_CHECKED</a>, 
+<a class="el" href="group__Utility.html#gga16a40">FCN_UNCHECKED</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="group__Utility.html#gga16a41">FRN_CHECKED</a>, 
+<a class="el" href="group__Utility.html#gga16a42">FRN_UNCHECKED</a>
+<br>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">通知消息ID.  <a href="group__Utility.html#ga16">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>变量</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga0">FVK_0</a> = 0x30</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'0'  <a href="group__Virtual__Key.html#ga0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga1">FVK_1</a> = 0x31</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'1'  <a href="group__Virtual__Key.html#ga1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga2">FVK_2</a> = 0x32</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'2'  <a href="group__Virtual__Key.html#ga2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga3">FVK_3</a> = 0x33</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'3'  <a href="group__Virtual__Key.html#ga3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga4">FVK_4</a> = 0x34</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'4'  <a href="group__Virtual__Key.html#ga4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga5">FVK_5</a> = 0x35</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'5'  <a href="group__Virtual__Key.html#ga5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga6">FVK_6</a> = 0x36</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'6'  <a href="group__Virtual__Key.html#ga6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga7">FVK_7</a> = 0x37</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'7'  <a href="group__Virtual__Key.html#ga7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga8">FVK_8</a> = 0x38</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'8'  <a href="group__Virtual__Key.html#ga8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga9">FVK_9</a> = 0x39</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'9'  <a href="group__Virtual__Key.html#ga9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga10">FVK_A</a> = 0x41</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'A'  <a href="group__Virtual__Key.html#ga10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga11">FVK_Z</a> = 0x5a</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">'Z'  <a href="group__Virtual__Key.html#ga11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga12">FVK_ENTER</a> = 0x8000</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ENTER.  <a href="group__Virtual__Key.html#ga12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga13">FVK_DELETE</a> = 0x8001</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">DELETE.  <a href="group__Virtual__Key.html#ga13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga14">FVK_LEFT</a> = 0x8002</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">LEFT.  <a href="group__Virtual__Key.html#ga14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga15">FVK_RIGHT</a> = 0x8003</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">RIGHT.  <a href="group__Virtual__Key.html#ga15"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Virtual__Key.html#ga16">FVK_TAB</a> = 0x8004</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TAB.  <a href="group__Virtual__Key.html#ga16"></a><br><br></td></tr>
+</table>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:35:31 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

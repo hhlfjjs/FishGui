@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Object.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Object.cpp</h1><a href="FG__Object_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Object.cpp - 窗口元素类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00041 <span class="preprocessor">#include "../OSAdaptor/FG_OSAdaptor.h"</span>
+00042 <span class="preprocessor">#include "<a class="code" href="FG__Container_8h.html">FG_Container.h</a>"</span>
+00043 
+00044 <span class="comment">// message map of base object</span>
+00045 <span class="comment">//##ModelId=3F5C4D4103CC</span>
+<a name="l00046"></a><a class="code" href="classFG__Object.html#t0">00046</a> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="code" href="classFG__Object.html#t0">FG_Object::m_MsgMap</a> = { <a class="code" href="group__Utility.html#ga11">NULL</a>, &amp; <a class="code" href="classFG__Object.html#v0">FG_Object::m_MsgEntries</a>[0] };
+00047 <span class="comment">//##ModelId=3F5C4D41037C</span>
+<a name="l00048"></a><a class="code" href="classFG__Object.html#v0">00048</a> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="code" href="classFG__Object.html#v0">FG_Object::m_MsgEntries</a>[] =
+00049 { 
+00050     <a class="code" href="group__MsgMap__Define.html#ga2">ON_DRAW</a>        (<a class="code" href="classFG__Object.html#b6">FG_Object::OnDraw</a>)
+00051     <a class="code" href="group__MsgMap__Define.html#ga11">ON_FOCUS</a>       (<a class="code" href="classFG__Object.html#b7">FG_Object::OnFocus</a>)
+00052     { <span class="keyword">false</span>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)<a class="code" href="group__Utility.html#ga11">NULL</a> } 
+00053 };
+00054 
+00055 <span class="comment">//##ModelId=3F5C4D42001F</span>
+<a name="l00056"></a><a class="code" href="classFG__Object.html#b5">00056</a> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> * <a class="code" href="classFG__Object.html#b5">FG_Object::GetMessageMap</a>()<span class="keyword"> const</span>
+00057 <span class="keyword"></span>{
+00058     <span class="keywordflow">return</span> &amp; <a class="code" href="classFG__Object.html#t0">FG_Object::m_MsgMap</a>;
+00059 }
+00060 
+<a name="l00061"></a><a class="code" href="classFG__Object.html#b2">00061</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b2">FG_Object::DrawBorder</a>(<a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * pAdaptor)
+00062 {
+00063         <a class="code" href="structFG__Rect.html">FG_Rect</a> Rect;
+00064         <span class="keywordflow">if</span> (<a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp; <a class="code" href="group__General__Style.html#ga0">GS_TRANSPARENT</a>)
+00065                 <span class="keywordflow">return</span>;
+00066 
+00067         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a3">BeginDraw</a>(<a class="code" href="classFG__Object.html#p2">m_Rect</a>);
+00068 
+00069         <a class="code" href="structFG__Point.html">FG_Point</a> p[3];
+00070     <span class="keywordflow">switch</span>(<a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp; <a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>)
+00071     {
+00072     <span class="keywordflow">case</span>  <a class="code" href="group__Frame__Style.html#ga2">FS_RAISED</a>:
+00073         Rect = <a class="code" href="classFG__Object.html#p2">m_Rect</a>;
+00074         Rect -= 2;
+00075         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a5">FillRect</a>(Rect, <a class="code" href="classFG__Object.html#p1">m_Background</a>, <a class="code" href="classFG__Object.html#p1">m_Background</a>);
+00076 
+00077                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft;
+00078                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 1;
+00079                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop;
+00080                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 1;
+00081                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>);
+00082 
+00083                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft + 1;
+00084                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 2;
+00085                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop + 1;
+00086                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 2;
+00087                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a2">COLOR_WHITE</a>);
+00088 
+00089                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 1;
+00090                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop + 1;
+00091                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 1;
+00092                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft + 1;
+00093                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a3">COLOR_DARKGRAY</a>);
+00094 
+00095                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight;
+00096                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop;
+00097                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom;
+00098                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft;
+00099                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>);
+00100         <span class="keywordflow">break</span>;
+00101 
+00102     <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga3">FS_RECESSED</a>:
+00103         Rect = m_Rect;
+00104         Rect -= 2;
+00105         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a5">FillRect</a>(Rect, <a class="code" href="classFG__Object.html#p1">m_Background</a>, <a class="code" href="classFG__Object.html#p1">m_Background</a>);
+00106 
+00107                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 1;
+00108                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop + 1;
+00109                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 1;
+00110                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft + 1;
+00111                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>);
+00112 
+00113                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight;
+00114                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop;
+00115                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom;
+00116                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft;
+00117                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a2">COLOR_WHITE</a>);
+00118 
+00119                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft;
+00120                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 1;
+00121                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop;
+00122                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 1;
+00123                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a3">COLOR_DARKGRAY</a>);
+00124 
+00125                 p[0].<a class="code" href="structFG__Point.html#o0">x</a> = p[1].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wLeft + 1;
+00126                 p[0].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wBottom - 2;
+00127                 p[1].<a class="code" href="structFG__Point.html#o1">y</a> = p[2].<a class="code" href="structFG__Point.html#o1">y</a> = m_Rect.wTop + 1;
+00128                 p[2].<a class="code" href="structFG__Point.html#o0">x</a> = m_Rect.wRight - 2;
+00129                 pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a>(3, p, <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>);
+00130         <span class="keywordflow">break</span>;
+00131 
+00132     <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga1">FS_THIN</a>:
+00133         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a5">FillRect</a>(m_Rect, <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>, <a class="code" href="classFG__Object.html#p1">m_Background</a>);
+00134         <span class="keywordflow">break</span>;
+00135 
+00136     <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga0">FS_NONE</a>:
+00137         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a5">FillRect</a>(m_Rect, <a class="code" href="classFG__Object.html#p1">m_Background</a>, <a class="code" href="classFG__Object.html#p1">m_Background</a>);
+00138         <span class="keywordflow">break</span>;
+00139 
+00140     <span class="keywordflow">default</span>:
+00141         <span class="keywordflow">break</span>;
+00142     }
+00143 
+00144         pAdaptor-&gt;<a class="code" href="classFG__OSAdaptor.html#a4">EndDraw</a>();
+00145 }
+00146 
+<a name="l00147"></a><a class="code" href="classFG__Object.html#a3">00147</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a3">FG_Object::GetClientRect</a>(<a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect)<span class="keyword"> const</span>
+00148 <span class="keyword"></span>{
+00149     <span class="comment">// 根据边框风格除去不同的边框大小</span>
+00150         <span class="keywordflow">switch</span> (<a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp; <a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>)
+00151         {
+00152         <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga2">FS_RAISED</a>:
+00153         <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga3">FS_RECESSED</a>:
+00154                 rect = <a class="code" href="classFG__Object.html#p2">m_Rect</a>;
+00155                 rect -= 2;
+00156                 <span class="keywordflow">break</span>;
+00157         <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga1">FS_THIN</a>:
+00158                 rect = m_Rect;
+00159                 rect -= 1;
+00160                 <span class="keywordflow">break</span>;
+00161         <span class="keywordflow">case</span> <a class="code" href="group__Frame__Style.html#ga0">FS_NONE</a>:
+00162                 rect = m_Rect;
+00163                 <span class="keywordflow">break</span>;
+00164         <span class="keywordflow">default</span>:
+00165                 rect.<a class="code" href="structFG__Rect.html#a2">Set</a>(0, 0, 0, 0);
+00166                 <span class="keywordflow">break</span>;
+00167         }
+00168 }
+00169 
+<a name="l00170"></a><a class="code" href="classFG__Object.html#a20">00170</a> <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#a20">FG_Object::Message</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg)
+00171 {
+00172     <span class="comment">// 通过虚函数得到该类的消息映射表指针</span>
+00173     <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> * pMsgMap = <a class="code" href="classFG__Object.html#b5">GetMessageMap</a>();
+00174 
+00175     <span class="comment">// 从本类向基类循环查找消息映射表，直到找到该消息，或到达最后的基类</span>
+00176     <span class="keywordflow">for</span> ( ; pMsgMap; pMsgMap = pMsgMap-&gt;<a class="code" href="structFG__MSGMAP.html#o0">m_pBaseMsgMap</a>)
+00177     {
+00178         <span class="comment">// 在一个消息映射表中查找该消息</span>
+00179         <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> * lpEntry = pMsgMap-&gt;<a class="code" href="structFG__MSGMAP.html#a0">FindMsgCallback</a>(pMsg-&gt;<a class="code" href="structFG__Message.html#o0">wType</a>, pMsg-&gt;<a class="code" href="structFG__Message.html#o1">wData</a>, pMsg-&gt;<a class="code" href="structFG__Message.html#o2">wID</a>);
+00180         <span class="keywordflow">if</span> (lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>)
+00181         {
+00182             <span class="comment">// 根据消息类型分发消息</span>
+00183             <span class="keywordflow">switch</span> (pMsg-&gt;<a class="code" href="structFG__Message.html#o0">wType</a>)
+00184             {
+00185             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>:
+00186                 {
+00187                     <a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * pAdaptor = <a class="code" href="group__OSAdaptor.html#ga1">FG_GetAdaptor</a>();
+00188                     <span class="keywordflow">if</span> (! pAdaptor)
+00189                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00190                     <span class="comment">// 把消息处理函数的指针强制转换成正确的类型</span>
+00191                     <a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a> pfn = (<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>;
+00192                     <span class="comment">// 调用消息处理函数</span>
+00193                     (this-&gt;*pfn)(pAdaptor);
+00194                 }
+00195                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00196             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>:
+00197             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>:
+00198                 {
+00199                     <a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a> pfn = (<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>;
+00200                     <span class="keywordflow">return</span> (this-&gt;*pfn)(pMsg);
+00201                 }
+00202             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>:
+00203             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>:
+00204                 {
+00205                     <a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a> pfn = (<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>;
+00206                     (this-&gt;*pfn)(pMsg);
+00207                 }
+00208                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00209             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>:
+00210             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>:
+00211                 (this-&gt;*(lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>))();
+00212                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00213             <span class="keywordflow">case</span> <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>:
+00214                 <span class="keywordflow">if</span> (lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o2">m_wID</a>)
+00215                     (this-&gt;*(lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>))();
+00216                 <span class="keywordflow">else</span>
+00217                 {
+00218                     <a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a> pfn = (<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)lpEntry-&gt;<a class="code" href="structFG__MSGMAP__ENTRY.html#o3">m_Callback</a>;
+00219                     (this-&gt;*pfn)(pMsg);
+00220                 }
+00221                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+00222             <span class="keywordflow">default</span>:
+00223                 <span class="keywordflow">return</span> <span class="keyword">false</span>;;
+00224             }
+00225         }
+00226     }
+00227     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+00228 }
+00229 
+<a name="l00230"></a><a class="code" href="classFG__Object.html#b3">00230</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b3">FG_Object::NotifyParent</a>(<a class="code" href="group__Utility.html#ga1">WORD</a> wNotification)
+00231 {
+00232     <span class="keywordflow">if</span> (<a class="code" href="classFG__Object.html#p5">m_pParent</a>)
+00233     {
+00234         <a class="code" href="structFG__Message.html">FG_Message</a> Msg(<a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, wNotification, <a class="code" href="classFG__Object.html#a10">ID</a>());
+00235         <a class="code" href="classFG__Object.html#p5">m_pParent</a>-&gt;<a class="code" href="classFG__Object.html#a20">Message</a>(&amp; Msg);
+00236     }
+00237 }
+00238 
+<a name="l00239"></a><a class="code" href="classFG__Object.html#b4">00239</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b4">FG_Object::RequestDraw</a>()
+00240 {
+00241     <span class="keywordflow">if</span> (<a class="code" href="classFG__Object.html#p5">m_pParent</a>)
+00242     {
+00243         <a class="code" href="structFG__Message.html">FG_Message</a> Msg(<a class="code" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>);
+00244         Msg.<a class="code" href="structFG__Message.html#o4">lData</a> = (<a class="code" href="group__Utility.html#ga2">DWORD</a>)<span class="keyword">this</span>;
+00245         <a class="code" href="classFG__Object.html#p5">m_pParent</a>-&gt;<a class="code" href="classFG__Object.html#a20">Message</a>(&amp; Msg);
+00246     }
+00247 }
+00248 
+00249 <span class="comment">//##ModelId=3F6EAC8F0128</span>
+<a name="l00250"></a><a class="code" href="classFG__Object.html#b7">00250</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b7">FG_Object::OnFocus</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg)
+00251 {
+00252     <span class="keywordflow">if</span> (pMsg-&gt;<a class="code" href="structFG__Message.html#o1">wData</a> == <a class="code" href="group__Utility.html#gga15a36">FFS_LOSE</a>)
+00253         <a class="code" href="classFG__Object.html#a18">ResetFocus</a>();
+00254     <span class="keywordflow">else</span>
+00255         <a class="code" href="classFG__Object.html#a17">SetFocus</a>();
+00256 
+00257     <a class="code" href="classFG__Object.html#b4">RequestDraw</a>();
+00258 }
+00259 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:40 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

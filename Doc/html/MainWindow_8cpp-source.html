@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: MainWindow.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>MainWindow.cpp</h1><a href="MainWindow_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        MainWindow.cpp - 用户定义的主窗口类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00040 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+00041 <span class="preprocessor">#include &lt;string.h&gt;</span>
+00042 <span class="preprocessor">#include "../OSAdaptor/FG_OSAdaptor.h"</span>
+00043 <span class="preprocessor">#include "<a class="code" href="MyFactory_8h.html">MyFactory.h</a>"</span>
+00044 <span class="preprocessor">#include "<a class="code" href="MainWindow_8h.html">MainWindow.h</a>"</span>
+00045 <span class="preprocessor">#include "<a class="code" href="Win1_8h.html">Win1.h</a>"</span>
+00046 
+<a name="l00047"></a><a class="code" href="classMainWindow.html#b7">00047</a> <a class="code" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>(<a class="code" href="classMainWindow.html">MainWindow</a>, <a class="code" href="classFG__Window.html">FG_Window</a>)
+00048     <a class="code" href="group__MsgMap__Define.html#ga12">ON_NOTIFY</a>       (FRN_CHECKED, MainWindow::OnRadioChecked)
+00049     <a class="code" href="group__MsgMap__Define.html#ga12">ON_NOTIFY</a>       (FCN_CHECKED, MainWindow::OnCheckChanged)
+00050     <a class="code" href="group__MsgMap__Define.html#ga12">ON_NOTIFY</a>       (FCN_UNCHECKED, MainWindow::OnCheckChanged)
+00051     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_START, MainWindow::OnStart)
+00052     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_STOP, MainWindow::OnStop)
+00053     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_OPEN, MainWindow::OnOpen)
+00054     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_FACTORY, MainWindow::OnFactory)
+00055     <a class="code" href="group__MsgMap__Define.html#ga10">ON_TIMER</a>        (ID_ANIMATION_TIMER, MainWindow::OnTimer)
+00056 <a class="code" href="group__MsgMap__Define.html#ga15">END_MESSAGE_MAP</a>()
+00057 
+00058 
+00065 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>(50, 50, 600, 400);
+00066 
+00067 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga1">RECT_Group1</a>(300, 80, 585, 200);
+00068 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga2">RECT_Radio1</a>(320, 100, 400, 120);
+00069 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga3">RECT_Radio2</a>(410, 100, 490, 120);
+00070 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga4">RECT_Radio3</a>(500, 100, 580, 120);
+00071 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga5">RECT_Radio4</a>(320, 125, 400, 145);
+00072 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga6">RECT_Radio5</a>(410, 125, 490, 145);
+00073 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga7">RECT_Radio6</a>(500, 125, 580, 145);
+00074 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga8">RECT_Label1</a>(350, 160, 400, 180);
+00075 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga9">RECT_Edit1</a>(450, 160, 560, 180);
+00076 
+00077 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga8">RECT_Group2</a>(300, 220, 585, 320);
+00078 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga9">RECT_Check1</a>(340, 240, 430, 260);
+00079 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga10">RECT_Check2</a>(450, 240, 540, 260);
+00080 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga13">RECT_Label2</a>(350, 280, 400, 300);
+00081 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga14">RECT_Edit2</a>(450, 280, 560, 300);
+00082 
+00083 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga5">RECT_Open</a>(320, 340, 445, 365);
+00084 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga16">RECT_Factory</a>(460, 340, 570, 365);
+00085 
+00086 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__MainWindow__Rect.html#ga17">RECT_Group3</a>(65, 80, 285, 380);
+00087 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga2">RECT_Bitmap</a>(102, 140, 248, 275);
+00088 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga3">RECT_Start</a>(85, 315, 165, 340);
+00089 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga4">RECT_Stop</a>(185, 315, 265, 340);
+00094 <span class="comment">//##ModelId=3F57F6DE01EE</span>
+<a name="l00095"></a><a class="code" href="classMainWindow.html#a0">00095</a> <a class="code" href="classMainWindow.html#a0">MainWindow::MainWindow</a>(<a class="code" href="group__Utility.html#ga1">WORD</a> wID) : m_iBmpNum(0), m_bStart(false), m_bNewFactory(false), <a class="code" href="classFG__Window.html">FG_Window</a>("主窗口", wID, <a class="code" href="group__Frame__Style.html#ga2">FS_RAISED</a>)
+00096 {
+00097     m_Rect.<a class="code" href="structFG__Rect.html#a2">Set</a>(<a class="code" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, <a class="code" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>.<a class="code" href="structFG__Rect.html#o1">wTop</a>, <a class="code" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>.<a class="code" href="structFG__Rect.html#o2">wRight</a>, <a class="code" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>.<a class="code" href="structFG__Rect.html#o3">wBottom</a>);
+00098 
+00099     <a class="code" href="classFG__Factory.html">FG_Factory</a> * pF = <a class="code" href="group__Framework.html#ga1">FG_GetFactory</a>();
+00100     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a6">CreateGroup</a>(<span class="stringliteral">"组1"</span>, <a class="code" href="group__MainWindow__Rect.html#ga1">RECT_Group1</a>));
+00101     <a class="code" href="classFG__RadioButton.html">FG_RadioButton</a> * pRadio1 = pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"100 [A]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga2">RECT_Radio1</a>, <a class="code" href="group__Utility.html#ga11">NULL</a>, <a class="code" href="classMainWindow.html#w15w0">ID_RADIO1</a>);
+00102     pRadio1-&gt;<a class="code" href="classFG__RadioButton.html#a2">SetChecked</a>(<span class="keyword">true</span>);
+00103     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pRadio1);
+00104     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"200 [B]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga3">RECT_Radio2</a>, pRadio1, <a class="code" href="classMainWindow.html#w15w1">ID_RADIO2</a>));
+00105     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"300 [C]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga4">RECT_Radio3</a>, pRadio1, <a class="code" href="classMainWindow.html#w15w2">ID_RADIO3</a>));
+00106     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"400 [D]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga5">RECT_Radio4</a>, pRadio1, <a class="code" href="classMainWindow.html#w15w3">ID_RADIO4</a>));
+00107     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"500 [E]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga6">RECT_Radio5</a>, pRadio1, <a class="code" href="classMainWindow.html#w15w4">ID_RADIO5</a>));
+00108     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a8">CreateRadioButton</a>(<span class="stringliteral">"600 [F]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga7">RECT_Radio6</a>, pRadio1, <a class="code" href="classMainWindow.html#w15w5">ID_RADIO6</a>));
+00109     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a7">CreateLabel</a>(<span class="stringliteral">"编辑框1："</span>, <a class="code" href="group__MainWindow__Rect.html#ga8">RECT_Label1</a>));
+00110     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a5">CreateEdit</a>(<span class="stringliteral">"100"</span>, <a class="code" href="group__MainWindow__Rect.html#ga9">RECT_Edit1</a>, 3, <a class="code" href="classMainWindow.html#w15w6">ID_EDIT1</a>));
+00111 
+00112     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a6">CreateGroup</a>(<span class="stringliteral">"组2"</span>, <a class="code" href="group__MainWindow__Rect.html#ga10">RECT_Group2</a>));
+00113     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a4">CreateCheckBox</a>(<span class="stringliteral">"选择1 [G]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga11">RECT_Check1</a>, <a class="code" href="classMainWindow.html#w15w7">ID_CHECK1</a>));
+00114     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a4">CreateCheckBox</a>(<span class="stringliteral">"选择2 [H]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga12">RECT_Check2</a>, <a class="code" href="classMainWindow.html#w15w8">ID_CHECK2</a>));
+00115     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a7">CreateLabel</a>(<span class="stringliteral">"编辑框2："</span>, <a class="code" href="group__MainWindow__Rect.html#ga13">RECT_Label2</a>));
+00116 
+00117     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"打开窗口1 [O]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga15">RECT_Open</a>, <a class="code" href="classMainWindow.html#w15w10">ID_OPEN</a>));
+00118     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"圆角按钮 [Y]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga16">RECT_Factory</a>, <a class="code" href="classMainWindow.html#w15w11">ID_FACTORY</a>));
+00119 
+00120     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a6">CreateGroup</a>(<span class="stringliteral">"动画1"</span>, <a class="code" href="group__MainWindow__Rect.html#ga17">RECT_Group3</a>));
+00121     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a2">CreateBitmap</a>(<span class="stringliteral">"baby30"</span>, <a class="code" href="group__MainWindow__Rect.html#ga18">RECT_Bitmap</a>, <a class="code" href="classMainWindow.html#w15w14">ID_BITMAP</a>, <a class="code" href="group__Frame__Style.html#ga3">FS_RECESSED</a>));
+00122     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"启动 [S]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga19">RECT_Start</a>, <a class="code" href="classMainWindow.html#w15w12">ID_START</a>));
+00123     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"停止 [T]"</span>, <a class="code" href="group__MainWindow__Rect.html#ga20">RECT_Stop</a>, <a class="code" href="classMainWindow.html#w15w13">ID_STOP</a>));
+00124 
+00125     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a5">CreateEdit</a>(<span class="stringliteral">"---"</span>, <a class="code" href="group__MainWindow__Rect.html#ga14">RECT_Edit2</a>, 13, <a class="code" href="classMainWindow.html#w15w9">ID_EDIT2</a>));
+00126 
+00127     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'A'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w0">ID_RADIO1</a>);
+00128     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'B'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w1">ID_RADIO2</a>);
+00129     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'C'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w2">ID_RADIO3</a>);
+00130     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'D'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w3">ID_RADIO4</a>);
+00131     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'E'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w4">ID_RADIO5</a>);
+00132     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'F'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w5">ID_RADIO6</a>);
+00133     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'G'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w7">ID_CHECK1</a>);
+00134     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'H'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w8">ID_CHECK2</a>);
+00135     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'O'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w10">ID_OPEN</a>);
+00136     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'Y'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w11">ID_FACTORY</a>);
+00137     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'S'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w12">ID_START</a>);
+00138     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'T'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classMainWindow.html#w15w13">ID_STOP</a>);
+00139 }
+00140 
+00141 <span class="comment">//##ModelId=3F6EAC940143</span>
+<a name="l00142"></a><a class="code" href="classMainWindow.html#b0">00142</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b0">MainWindow::OnRadioChecked</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg)
+00143 {
+00144     <span class="keywordtype">char</span> buf[4];
+00145     sprintf(buf, <span class="stringliteral">"%d"</span>, (pMsg-&gt;<a class="code" href="structFG__Message.html#o2">wID</a> - <a class="code" href="classMainWindow.html#w15w0">ID_RADIO1</a> + 1) * 100);
+00146 
+00147     <a class="code" href="classFG__Edit.html">FG_Edit</a> * pEdit = (<a class="code" href="classFG__Edit.html">FG_Edit</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w6">ID_EDIT1</a>);
+00148     <span class="keywordflow">if</span> (pEdit)
+00149         pEdit-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(buf);
+00150 }
+00151 
+00152 <span class="comment">//##ModelId=3F6EAC940157</span>
+<a name="l00153"></a><a class="code" href="classMainWindow.html#b1">00153</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b1">MainWindow::OnCheckChanged</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg)
+00154 {
+00155     <a class="code" href="classFG__CheckBox.html">FG_CheckBox</a> * pCheck1 = (<a class="code" href="classFG__CheckBox.html">FG_CheckBox</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w7">ID_CHECK1</a>);
+00156     <a class="code" href="classFG__CheckBox.html">FG_CheckBox</a> * pCheck2 = (<a class="code" href="classFG__CheckBox.html">FG_CheckBox</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w8">ID_CHECK2</a>);
+00157 
+00158     <span class="keywordflow">if</span> (pCheck1 &amp;&amp; pCheck2)
+00159     {
+00160         <span class="keywordtype">char</span> buf[14];
+00161         strcpy(buf, <span class="stringliteral">"-"</span>);
+00162         <span class="keywordflow">if</span> (pCheck1-&gt;<a class="code" href="classFG__CheckBox.html#a1">IsChecked</a>())
+00163             strcat(buf, <span class="stringliteral">"选择1"</span>);
+00164         strcat(buf, <span class="stringliteral">"-"</span>);
+00165         <span class="keywordflow">if</span> (pCheck2-&gt;<a class="code" href="classFG__CheckBox.html#a1">IsChecked</a>())
+00166             strcat(buf, <span class="stringliteral">"选择2"</span>);
+00167         strcat(buf, <span class="stringliteral">"-"</span>);
+00168         
+00169         <a class="code" href="classFG__Edit.html">FG_Edit</a> * pEdit = (<a class="code" href="classFG__Edit.html">FG_Edit</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w9">ID_EDIT2</a>);
+00170         <span class="keywordflow">if</span> (pEdit)
+00171             pEdit-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(buf);
+00172     }
+00173 }
+00174 
+00175 <span class="comment">//##ModelId=3F71AB030245</span>
+<a name="l00176"></a><a class="code" href="classMainWindow.html#b2">00176</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b2">MainWindow::OnStart</a>(<span class="keywordtype">void</span>)
+00177 {
+00178     <span class="keywordflow">if</span> (! <a class="code" href="classMainWindow.html#p1">m_bStart</a>)
+00179     {
+00180         <a class="code" href="classFG__Object.html#b0">StartTimer</a>(<a class="code" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>, 200);
+00181         <a class="code" href="classMainWindow.html#p1">m_bStart</a> = <span class="keyword">true</span>;
+00182     }
+00183 }
+00184 
+00185 <span class="comment">//##ModelId=3F71AB030277</span>
+<a name="l00186"></a><a class="code" href="classMainWindow.html#b3">00186</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b3">MainWindow::OnStop</a>(<span class="keywordtype">void</span>)
+00187 {
+00188     <span class="keywordflow">if</span> (<a class="code" href="classMainWindow.html#p1">m_bStart</a>)
+00189     {
+00190         <a class="code" href="classFG__Object.html#b1">KillTimer</a>(<a class="code" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>);
+00191         <a class="code" href="classMainWindow.html#p1">m_bStart</a> = <span class="keyword">false</span>;
+00192     }
+00193 }
+00194 
+00195 <span class="comment">//##ModelId=3F71AB0302A9</span>
+<a name="l00196"></a><a class="code" href="classMainWindow.html#b4">00196</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b4">MainWindow::OnOpen</a>(<span class="keywordtype">void</span>)
+00197 {
+00198     <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a0">AddWindow</a>(<span class="keyword">new</span> <a class="code" href="classWin1.html">Win1</a>());
+00199 }
+00200 
+00201 <span class="comment">//##ModelId=3F71AB0302DB</span>
+<a name="l00202"></a><a class="code" href="classMainWindow.html#b5">00202</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b5">MainWindow::OnFactory</a>(<span class="keywordtype">void</span>)
+00203 {
+00204     <a class="code" href="classMainWindow.html">MainWindow</a> * pWindow;
+00205 
+00206     <span class="keywordflow">if</span> (<a class="code" href="classMainWindow.html#p2">m_bNewFactory</a>)
+00207     {
+00208         <a class="code" href="group__Framework.html#ga2">FG_SetFactory</a>(<span class="keyword">new</span> <a class="code" href="classFG__Factory.html">FG_Factory</a>());
+00209 
+00210         <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a1">RemoveWindow</a>(<span class="keyword">this</span>);
+00211         <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a0">AddWindow</a>(pWindow = <span class="keyword">new</span> <a class="code" href="classMainWindow.html#a0">MainWindow</a>());
+00212         
+00213         pWindow-&gt;<a class="code" href="classMainWindow.html#p2">m_bNewFactory</a> = <span class="keyword">false</span>;
+00214     
+00215         <a class="code" href="classFG__Button.html">FG_Button</a> * pButton = (<a class="code" href="classFG__Button.html">FG_Button</a> *)pWindow-&gt;<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w11">ID_FACTORY</a>);
+00216         <span class="keywordflow">if</span> (pButton)
+00217             pButton-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"圆角按钮 [Y]"</span>);
+00218     }
+00219     <span class="keywordflow">else</span>
+00220     {
+00221         <a class="code" href="group__Framework.html#ga2">FG_SetFactory</a>(<span class="keyword">new</span> <a class="code" href="classMyFactory.html">MyFactory</a>());
+00222 
+00223         <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a1">RemoveWindow</a>(<span class="keyword">this</span>);
+00224         <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a0">AddWindow</a>(pWindow = <span class="keyword">new</span> <a class="code" href="classMainWindow.html#a0">MainWindow</a>());
+00225         
+00226         pWindow-&gt;<a class="code" href="classMainWindow.html#p2">m_bNewFactory</a> = <span class="keyword">true</span>;
+00227     
+00228         <a class="code" href="classFG__Button.html">FG_Button</a> * pButton = (<a class="code" href="classFG__Button.html">FG_Button</a> *)pWindow-&gt;<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w11">ID_FACTORY</a>);
+00229         <span class="keywordflow">if</span> (pButton)
+00230             pButton-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"方形按钮 [Y]"</span>);
+00231     }
+00232 }
+00233 
+00234 <span class="comment">//##ModelId=3F71AB03030D</span>
+<a name="l00235"></a><a class="code" href="classMainWindow.html#b6">00235</a> <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#b6">MainWindow::OnTimer</a>(<span class="keywordtype">void</span>)
+00236 {
+00237     <span class="keywordflow">if</span> (<a class="code" href="classMainWindow.html#p1">m_bStart</a>)
+00238     {
+00239         <span class="keywordflow">if</span> (++ <a class="code" href="classMainWindow.html#p0">m_iBmpNum</a> &gt;= 3)
+00240             <a class="code" href="classMainWindow.html#p0">m_iBmpNum</a> = 0;
+00241         <a class="code" href="classFG__Bitmap.html">FG_Bitmap</a> * pBitmap = (<a class="code" href="classFG__Bitmap.html">FG_Bitmap</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(<a class="code" href="classMainWindow.html#w15w14">ID_BITMAP</a>);
+00242         <span class="keywordflow">switch</span> (<a class="code" href="classMainWindow.html#p0">m_iBmpNum</a>)
+00243         {
+00244         <span class="keywordflow">case</span> 0:
+00245             pBitmap-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"baby30"</span>);
+00246             <span class="keywordflow">break</span>;
+00247         <span class="keywordflow">case</span> 1:
+00248             pBitmap-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"baby31"</span>);
+00249             <span class="keywordflow">break</span>;
+00250         <span class="keywordflow">case</span> 2:
+00251             pBitmap-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"baby32"</span>);
+00252             <span class="keywordflow">break</span>;
+00253         }
+00254     }
+00255 }
+00256 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:42 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

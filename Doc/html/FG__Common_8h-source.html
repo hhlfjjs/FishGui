@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Common.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Common.h</h1><a href="FG__Common_8h.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Common.h - FishGUI公共类型定义头文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00041 <span class="preprocessor">#ifndef FISHGUI_H_HEADER_INCLUDED_C0B126F2</span>
+00042 <span class="preprocessor"></span><span class="preprocessor">#define FISHGUI_H_HEADER_INCLUDED_C0B126F2</span>
+00043 <span class="preprocessor"></span>
+00044 <span class="preprocessor">#ifndef NULL</span>
+00045 <span class="preprocessor"></span>
+<a name="l00046"></a><a class="code" href="group__Utility.html#ga11">00046</a> <span class="preprocessor">    #define NULL               0</span>
+00047 <span class="preprocessor"></span><span class="preprocessor">#endif </span><span class="comment">/* NULL */</span>
+00048 
+00049 <span class="comment">//##ModelId=3F4F05EF033B</span>
+<a name="l00051"></a><a class="code" href="group__Utility.html#ga0">00051</a> <span class="comment"></span><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>           <a class="code" href="group__Utility.html#ga0">BYTE</a>;
+00052 
+00053 <span class="comment">//##ModelId=3F4F05EF036D</span>
+<a name="l00055"></a><a class="code" href="group__Utility.html#ga1">00055</a> <span class="comment"></span><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>          <a class="code" href="group__Utility.html#ga1">WORD</a>;
+00056 
+00057 <span class="comment">//##ModelId=3F4F05EF034F</span>
+<a name="l00059"></a><a class="code" href="group__Utility.html#ga2">00059</a> <span class="comment"></span><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>           <a class="code" href="group__Utility.html#ga2">DWORD</a>;
+00060 
+<a name="l00061"></a><a class="code" href="group__Utility.html#ga3">00061</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga3">SCREEN_WIDTH</a>         = 800;      
+<a name="l00062"></a><a class="code" href="group__Utility.html#ga4">00062</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga4">SCREEN_HEIGHT</a>        = 600;      
+00066 <span class="preprocessor">#if defined(WIN32)</span>
+00067 <span class="preprocessor"></span>    <span class="comment">//##ModelId=3F4F05EF0345</span>
+<a name="l00072"></a><a class="code" href="group__Color.html#ga0">00072</a> <span class="comment"></span>    <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>           <a class="code" href="group__Color.html#ga0">COLORVAL</a>;
+00073 
+00074     <span class="comment">// color define</span>
+<a name="l00075"></a><a class="code" href="group__Color.html#ga1">00075</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>      = 0x000000;         
+<a name="l00076"></a><a class="code" href="group__Color.html#ga2">00076</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>       = 0xc0c0c0;         
+<a name="l00077"></a><a class="code" href="group__Color.html#ga3">00077</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a2">COLOR_WHITE</a>      = 0xffffff;         
+<a name="l00078"></a><a class="code" href="group__Color.html#ga4">00078</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a3">COLOR_DARKGRAY</a>   = 0x808080;         
+<a name="l00079"></a><a class="code" href="group__Color.html#ga5">00079</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a4">COLOR_BLUE</a>       = 0xbf0000;         
+<a name="l00080"></a><a class="code" href="group__Color.html#ga6">00080</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a5">COLOR_BLUE1</a>      = 0xff0000;         
+<a name="l00081"></a><a class="code" href="group__Color.html#ga7">00081</a>     <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a6">COLOR_RED</a>        = 0x0000ff;         
+00082 <span class="preprocessor">#elif defined(HAVE_LIBX11)</span>
+00083 <span class="preprocessor"></span>    <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>           <a class="code" href="group__Color.html#ga0">COLORVAL</a>;
+00084 
+00085     <span class="comment">// color define, set later</span>
+00086     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>;
+00087     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>;
+00088     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a2">COLOR_WHITE</a>;
+00089     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a3">COLOR_DARKGRAY</a>;
+00090     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a4">COLOR_BLUE</a>;
+00091     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a5">COLOR_BLUE1</a>;
+00092     <span class="keyword">extern</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="FG__X11Adaptor_8cpp.html#a6">COLOR_RED</a>;
+00093 <span class="preprocessor">#endif </span><span class="comment">/* WIN32 */</span>
+00094 
+<a name="l00096"></a><a class="code" href="group__Utility.html#ga5">00096</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga5">TITLE_HEIGHT</a>         = 20;       
+<a name="l00098"></a><a class="code" href="group__Utility.html#ga6">00098</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga6">BUTTON_UP_INTERVAL</a>   = 1000;     
+<a name="l00099"></a><a class="code" href="group__Utility.html#ga7">00099</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga7">EDIT_CURSOR_INTERVAL</a> = 500;      
+<a name="l00100"></a><a class="code" href="group__Utility.html#ga8">00100</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Utility.html#ga8">SCREEN_DRAW_INTERVAL</a> = 50;       
+<a name="l00107"></a><a class="code" href="group__General__Style.html#ga0">00107</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__General__Style.html#ga0">GS_TRANSPARENT</a>       = 0x8000;       
+<a name="l00108"></a><a class="code" href="group__General__Style.html#ga1">00108</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__General__Style.html#ga1">GS_FOCUS</a>             = 0x4000;       
+<a name="l00113"></a><a class="code" href="group__Frame__Style.html#ga0">00113</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Frame__Style.html#ga0">FS_NONE</a>              = 0x0001;       
+<a name="l00114"></a><a class="code" href="group__Frame__Style.html#ga1">00114</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Frame__Style.html#ga1">FS_THIN</a>              = 0x0002;       
+<a name="l00115"></a><a class="code" href="group__Frame__Style.html#ga2">00115</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Frame__Style.html#ga2">FS_RAISED</a>            = 0x0004;       
+<a name="l00116"></a><a class="code" href="group__Frame__Style.html#ga3">00116</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Frame__Style.html#ga3">FS_RECESSED</a>          = 0x0008;       
+<a name="l00117"></a><a class="code" href="group__Frame__Style.html#ga4">00117</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>              = 0x000f;       
+<a name="l00122"></a><a class="code" href="group__Text__Justification__Style.html#ga0">00122</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Text__Justification__Style.html#ga0">TS_RIGHT</a>             = 0x0010;       
+<a name="l00123"></a><a class="code" href="group__Text__Justification__Style.html#ga1">00123</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>              = 0x0020;       
+<a name="l00124"></a><a class="code" href="group__Text__Justification__Style.html#ga2">00124</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Text__Justification__Style.html#ga2">TS_CENTER</a>            = 0x0040;       
+<a name="l00125"></a><a class="code" href="group__Text__Justification__Style.html#ga3">00125</a> <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="group__Text__Justification__Style.html#ga3">TS_MASK</a>              = 0x0070;       
+00130 <span class="preprocessor">#endif </span><span class="comment">/* FISHGUI_H_HEADER_INCLUDED_C0B126F2 */</span>
+00131 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:40 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

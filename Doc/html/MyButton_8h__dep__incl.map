@@ -1,0 +1,4 @@
+base referer
+rect $MyFactory_8h.html 20,92 100,118
+rect $MainWindow_8cpp.html 6,17 113,44
+rect $MyButton_8cpp.html 124,92 212,118

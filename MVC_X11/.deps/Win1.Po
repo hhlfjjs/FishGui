@@ -1,0 +1,99 @@
+Win1.o : \
+ ../Source/MVC_Application/Win1.cpp /usr/include/stdio.h \
+ /usr/include/iso/stdio_iso.h /usr/include/sys/feature_tests.h \
+ /usr/include/sys/isa_defs.h /usr/include/sys/va_list.h \
+ /usr/include/stdio_tag.h /usr/include/stdio_impl.h \
+ /usr/include/stdlib.h /usr/include/iso/stdlib_iso.h \
+ /usr/include/string.h /usr/include/iso/string_iso.h \
+ /usr/include/time.h /usr/include/sys/types.h \
+ /usr/include/sys/machtypes.h /usr/include/sys/int_types.h \
+ /usr/include/sys/select.h /usr/include/sys/time.h \
+ /usr/include/iso/time_iso.h /usr/include/sys/time_impl.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/FG_OSAdaptor.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Utility.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Common.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Point.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Rect.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_String.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_List.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Message.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_OSMsgObserver.h \
+ ../Source/MVC_Application/../../Source/OSAdaptor/FG_OSDrawInterface.h \
+ ../Source/MVC_Application/Win1.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Framework.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Utility.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Application.h \
+ ../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSAdaptor.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Object.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_MsgMap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_TimerManager.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Window.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Container.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Widget.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_KeyMap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Screen.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_TextWidget.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Button.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Bitmap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Label.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Group.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Edit.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_CheckBox.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_RadioButton.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Factory.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Model.h \
+ ../Source/MVC_Application/MyModel.h
+../Source/MVC_Application/Win1.cpp :
+/usr/include/stdio.h :
+/usr/include/iso/stdio_iso.h :
+/usr/include/sys/feature_tests.h :
+/usr/include/sys/isa_defs.h :
+/usr/include/sys/va_list.h :
+/usr/include/stdio_tag.h :
+/usr/include/stdio_impl.h :
+/usr/include/stdlib.h :
+/usr/include/iso/stdlib_iso.h :
+/usr/include/string.h :
+/usr/include/iso/string_iso.h :
+/usr/include/time.h :
+/usr/include/sys/types.h :
+/usr/include/sys/machtypes.h :
+/usr/include/sys/int_types.h :
+/usr/include/sys/select.h :
+/usr/include/sys/time.h :
+/usr/include/iso/time_iso.h :
+/usr/include/sys/time_impl.h :
+../Source/MVC_Application/../../Source/OSAdaptor/FG_OSAdaptor.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Utility.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Common.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Point.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Rect.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_String.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_List.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_Message.h :
+../Source/MVC_Application/../../Source/OSAdaptor/../Utility/FG_OSMsgObserver.h :
+../Source/MVC_Application/../../Source/OSAdaptor/FG_OSDrawInterface.h :
+../Source/MVC_Application/Win1.h :
+../Source/MVC_Application/../../Source/Framework/FG_Framework.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Utility.h :
+../Source/MVC_Application/../../Source/Framework/FG_Application.h :
+../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSAdaptor.h :
+../Source/MVC_Application/../../Source/Framework/FG_Object.h :
+../Source/MVC_Application/../../Source/Framework/FG_MsgMap.h :
+../Source/MVC_Application/../../Source/Framework/FG_TimerManager.h :
+../Source/MVC_Application/../../Source/Framework/FG_Window.h :
+../Source/MVC_Application/../../Source/Framework/FG_Container.h :
+../Source/MVC_Application/../../Source/Framework/FG_Widget.h :
+../Source/MVC_Application/../../Source/Framework/FG_KeyMap.h :
+../Source/MVC_Application/../../Source/Framework/FG_Screen.h :
+../Source/MVC_Application/../../Source/Framework/FG_TextWidget.h :
+../Source/MVC_Application/../../Source/Framework/FG_Button.h :
+../Source/MVC_Application/../../Source/Framework/FG_Bitmap.h :
+../Source/MVC_Application/../../Source/Framework/FG_Label.h :
+../Source/MVC_Application/../../Source/Framework/FG_Group.h :
+../Source/MVC_Application/../../Source/Framework/FG_Edit.h :
+../Source/MVC_Application/../../Source/Framework/FG_CheckBox.h :
+../Source/MVC_Application/../../Source/Framework/FG_RadioButton.h :
+../Source/MVC_Application/../../Source/Framework/FG_Factory.h :
+../Source/MVC_Application/../../Source/Framework/FG_Model.h :
+../Source/MVC_Application/MyModel.h :

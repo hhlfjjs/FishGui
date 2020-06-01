@@ -1,0 +1,966 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_X11DrawInterface class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_X11DrawInterface类参考<br>
+<small>
+[<a class="el" href="group__OSAdaptor.html">操作系统适配层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_X11DrawInterface
+<p><center><img src="classFG__X11DrawInterface.png" usemap="#FG_X11DrawInterface_map" border="0" alt=""></center>
+<map name="FG_X11DrawInterface_map">
+<area href="classFG__OSDrawInterface.html" alt="FG_OSDrawInterface" shape="rect" coords="0,0,139,24">
+</map>
+FG_X11DrawInterface合作图：<p><center><img src="classFG__X11DrawInterface__coll__graph.png" border="0" usemap="#FG__X11DrawInterface__coll__map" alt="Collaboration graph"></center>
+<map name="FG__X11DrawInterface__coll__map">
+<area href="classFG__OSDrawInterface.html" shape="rect" coords="6,17,164,289" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__X11DrawInterface-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+X11的绘图接口类. 
+<p>
+该类封装X11的绘图过程 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00051">51</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a0">FG_X11DrawInterface</a> (Window win, Display *display, int screen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11的绘图接口类的构造函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a1">~FG_X11DrawInterface</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11的绘图接口类的析构函数.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a2">BeginDraw</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">开始重画  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a3">EndDraw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">结束重画  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a4">FillRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> ForeColor, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> background)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">填充矩形.  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a5">Line</a> (const short x1, const short y1, const short x2, const short y2, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画线  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a6">DrawText</a> (const char *Text, const short x, const short y, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制文本  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a7">GetTextWidth</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的宽度  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a8">GetTextHeight</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的高度  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a9">DrawBitmap</a> (const char *pBmpName, const short x1, const short y1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制位图  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a10">DrawPolyLine</a> (const short n, const <a class="el" href="structFG__Point.html">FG_Point</a> *vert, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制折线  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#a11">DrawDotRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制点划线矩形  <a href="#a11"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Window&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p0">m_Win</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11窗口结构.  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Display *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p1">m_Display</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11显示设备.  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p2">m_Depth</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">颜色深度.  <a href="#p2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>GC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p3">m_GC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘图设备  <a href="#p3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>GC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">缓冲区绘图设备  <a href="#p4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Pixmap&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p5">m_Buffer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">缓冲区的位图  <a href="#p5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Colormap&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p6">m_CMap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">颜色表.  <a href="#p6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>XFontSet&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11DrawInterface.html#p7">m_FontSet</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">字体组  <a href="#p7"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_X11DrawInterface::FG_X11DrawInterface" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_X11DrawInterface::FG_X11DrawInterface </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">Window&nbsp;</td>
+          <td class="mdname" nowrap> <em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>Display *&nbsp;</td>
+          <td class="mdname" nowrap> <em>display</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>screen</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11的绘图接口类的构造函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">49</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00062">COLOR_BLUE</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00063">COLOR_BLUE1</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00061">COLOR_DARKGRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00059">COLOR_GRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00064">COLOR_RED</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00060">COLOR_WHITE</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00115">m_CMap</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00109">m_CopyGC</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00103">m_Depth</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">m_FontSet</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="FG__Common_8h-source.html#l00062">SCREEN_HEIGHT</a>及<a class="el" href="FG__Common_8h-source.html#l00061">SCREEN_WIDTH</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_X11DrawInterface::~FG_X11DrawInterface" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_X11DrawInterface::~<a class="el" href="classFG__X11DrawInterface.html">FG_X11DrawInterface</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11的绘图接口类的析构函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">93</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00109">m_CopyGC</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">m_FontSet</a>及<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a2" doxytag="FG_X11DrawInterface::BeginDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::BeginDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+开始重画 
+<p>
+该函数执行之后，所有的绘图操作都在一个缓冲区上进行，直到对应的<a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface::EndDraw</a>调用才把缓冲区内容刷新到屏幕上 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>需要重画的无效区域 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a2">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00102">102</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="FG_X11DrawInterface::DrawBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::DrawBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pBmpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制位图 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pBmpName</em>&nbsp;</td><td>要绘制的位图名 </td></tr>
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>位图左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>位图左上角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00170">170</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00115">m_CMap</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>及<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a11" doxytag="FG_X11DrawInterface::DrawDotRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::DrawDotRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制点划线矩形 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要绘制的矩形 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>矩形的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a11">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">214</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Rect_8h-source.html#l00254">FG_Rect::Height()</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">FG_Rect::Width()</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11DrawInterface_a11_cgraph.png" border="0" usemap="#classFG__X11DrawInterface_a11_cgraph_map" alt=""></center>
+<map name="classFG__X11DrawInterface_a11_cgraph_map">
+<area href="structFG__Rect.html#a21" shape="rect" coords="283,6,387,33" alt="">
+<area href="structFG__Rect.html#a20" shape="rect" coords="284,57,385,84" alt="">
+</map>
+<a class="anchor" name="a10" doxytag="FG_X11DrawInterface::DrawPolyLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::DrawPolyLine </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Point.html">FG_Point</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>vert</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制折线 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>n</em>&nbsp;</td><td>该折线包含的点数 </td></tr>
+    <tr><td valign=top><em>vert</em>&nbsp;</td><td>所有点的数组 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>折线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a10">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00203">203</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>及<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="FG_X11DrawInterface::DrawText" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::DrawText </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制文本 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要绘制的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>文本左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>文本左上角的纵坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>文本的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a6">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">144</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00161">GetTextHeight()</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">m_FontSet</a>及<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11DrawInterface_a6_cgraph.png" border="0" usemap="#classFG__X11DrawInterface_a6_cgraph_map" alt=""></center>
+<map name="classFG__X11DrawInterface_a6_cgraph_map">
+<area href="classFG__X11DrawInterface.html#a8" shape="rect" coords="257,7,479,33" alt="">
+</map>
+<a class="anchor" name="a3" doxytag="FG_X11DrawInterface::EndDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::EndDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+结束重画 
+<p>
+该函数把缓冲区内容刷新到屏幕上 
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">112</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00254">FG_Rect::Height()</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00109">m_CopyGC</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00094">m_Win</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">FG_Rect::Width()</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11DrawInterface_a3_cgraph.png" border="0" usemap="#classFG__X11DrawInterface_a3_cgraph_map" alt=""></center>
+<map name="classFG__X11DrawInterface_a3_cgraph_map">
+<area href="structFG__Rect.html#a21" shape="rect" coords="259,6,363,33" alt="">
+<area href="structFG__Rect.html#a20" shape="rect" coords="260,57,361,84" alt="">
+</map>
+<a class="anchor" name="a4" doxytag="FG_X11DrawInterface::FillRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::FillRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>ForeColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>background</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+填充矩形. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要填充的矩形 </td></tr>
+    <tr><td valign=top><em>ForeColor</em>&nbsp;</td><td>前景色 </td></tr>
+    <tr><td valign=top><em>background</em>&nbsp;</td><td>背景色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a4">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">125</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Rect_8h-source.html#l00254">FG_Rect::Height()</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">FG_Rect::Width()</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11DrawInterface_a4_cgraph.png" border="0" usemap="#classFG__X11DrawInterface_a4_cgraph_map" alt=""></center>
+<map name="classFG__X11DrawInterface_a4_cgraph_map">
+<area href="structFG__Rect.html#a21" shape="rect" coords="251,6,355,33" alt="">
+<area href="structFG__Rect.html#a20" shape="rect" coords="252,57,353,84" alt="">
+</map>
+<a class="anchor" name="a8" doxytag="FG_X11DrawInterface::GetTextHeight" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_X11DrawInterface::GetTextHeight </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的高度 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算高度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的高度的像素数 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a8">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00161">161</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">m_FontSet</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">DrawText()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_X11DrawInterface::GetTextWidth" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_X11DrawInterface::GetTextWidth </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的宽度 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算宽度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的宽度的像素数 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a7">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00152">152</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">m_FontSet</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_X11DrawInterface::Line" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11DrawInterface::Line </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+画线 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>x2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>y2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a5">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a>第<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00137">137</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">m_Buffer</a>、<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">m_Display</a>及<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">m_GC</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p5" doxytag="FG_X11DrawInterface::m_Buffer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Pixmap <a class="el" href="classFG__X11DrawInterface.html#p5">FG_X11DrawInterface::m_Buffer</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+缓冲区的位图 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00112">112</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00170">DrawBitmap()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00203">DrawPolyLine()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">DrawText()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">EndDraw()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FillRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00137">Line()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">~FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p6" doxytag="FG_X11DrawInterface::m_CMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Colormap <a class="el" href="classFG__X11DrawInterface.html#p6">FG_X11DrawInterface::m_CMap</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+颜色表. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00115">115</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00170">DrawBitmap()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p4" doxytag="FG_X11DrawInterface::m_CopyGC" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> GC <a class="el" href="classFG__X11DrawInterface.html#p4">FG_X11DrawInterface::m_CopyGC</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+缓冲区绘图设备 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00109">109</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">EndDraw()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">~FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p2" doxytag="FG_X11DrawInterface::m_Depth" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classFG__X11DrawInterface.html#p2">FG_X11DrawInterface::m_Depth</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+颜色深度. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00103">103</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p1" doxytag="FG_X11DrawInterface::m_Display" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Display* <a class="el" href="classFG__X11DrawInterface.html#p1">FG_X11DrawInterface::m_Display</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11显示设备. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00097">97</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00170">DrawBitmap()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00203">DrawPolyLine()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">DrawText()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">EndDraw()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FillRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00137">Line()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">~FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p7" doxytag="FG_X11DrawInterface::m_FontSet" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> XFontSet <a class="el" href="classFG__X11DrawInterface.html#p7">FG_X11DrawInterface::m_FontSet</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+字体组 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00118">118</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">DrawText()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00161">GetTextHeight()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00152">GetTextWidth()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">~FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p3" doxytag="FG_X11DrawInterface::m_GC" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> GC <a class="el" href="classFG__X11DrawInterface.html#p3">FG_X11DrawInterface::m_GC</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘图设备 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00106">106</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00203">DrawPolyLine()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00144">DrawText()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00049">FG_X11DrawInterface()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FillRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00137">Line()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00093">~FG_X11DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_X11DrawInterface::m_Win" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Window <a class="el" href="classFG__X11DrawInterface.html#p0">FG_X11DrawInterface::m_Win</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11窗口结构. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a>第<a class="el" href="FG__X11DrawInterface_8h-source.html#l00094">94</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">EndDraw()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__X11DrawInterface_8h-source.html">FG_X11DrawInterface.h</a><li><a class="el" href="FG__X11DrawInterface_8cpp-source.html">FG_X11DrawInterface.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:53 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

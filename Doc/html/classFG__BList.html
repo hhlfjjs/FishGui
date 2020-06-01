@@ -1,0 +1,678 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI:  TemplateFG_BList&lt; ITEM &gt; class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_BList&lt; ITEM &gt;模板类参考<br>
+<small>
+[<a class="el" href="group__Utility.html">应用包</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__List_8h-source.html">FG_List.h</a>&gt;</code>
+<p>
+<a href="classFG__BList-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+<h3>template&lt;class ITEM&gt;<br>
+ class FG_BList&lt; ITEM &gt;</h3>
+
+双向链表容器类. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ITEM</em>&nbsp;</td><td>其中保存的对象类型，容器中保存指向ITEM对象的指针，并且不负责对象的释放 </td></tr>
+  </table>
+</dl>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00635">635</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="structFG__BList__Node.html">FG_BList_Node</a>&lt; ITEM &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#w0">node</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类中的节点类型.  <a href="#w0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef ITEM&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#w1">item</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类中的节点中保存的对象的类型.  <a href="#w1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classFG__ForwardIterator.html">FG_ForwardIterator</a>&lt;<br>
+ <a class="el" href="structFG__BList__Node.html">FG_BList_Node</a>&lt; ITEM &gt;, ITEM &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#w2">forward_iterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类中使用的正向迭代器类型.  <a href="#w2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classFG__BackIterator.html">FG_BackIterator</a>&lt; ITEM &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#w3">back_iterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类中使用的反向迭代器类型.  <a href="#w3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classFG__LoopIterator.html">FG_LoopIterator</a>&lt; ITEM &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#w4">loop_iterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类中使用的循环迭代器类型.  <a href="#w4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a0">FG_BList</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类的缺省构造函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a1">~FG_BList</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类的析构函数.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__LoopIterator.html">loop_iterator</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a2">Loop</a> (<a class="el" href="classFG__BList.html#w1">item</a> *const pItem) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回循环迭代器  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__ForwardIterator.html">forward_iterator</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a3">First</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回指向第一个对象的正向迭代器  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__BackIterator.html">back_iterator</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a4">Last</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回指向最后一个对象的反向迭代器  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>template&lt;class ITERATOR&gt; bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a5">Remove</a> (const ITERATOR i)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除一个对象.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a6">Add</a> (<a class="el" href="classFG__BList.html#w1">item</a> *const pItem)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">添加一个对象.  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a7">Remove</a> (<a class="el" href="classFG__BList.html#w1">item</a> *const pItem)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除一个对象.  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#a8">RemoveAll</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除容器中的所有对象.  <a href="#a8"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__BList.html#w0">node</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#r0">m_pFirst</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向双向链表中的第一个节点的指针.  <a href="#r0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__BList.html#w0">node</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html#r1">m_pLast</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向双向链表中的最后一个节点的指针.  <a href="#r1"></a><br><br></td></tr>
+</table>
+<hr><h2>成员类型定义文档</h2>
+<a class="anchor" name="w3" doxytag="FG_BList::back_iterator" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classFG__BackIterator.html">FG_BackIterator</a>&lt;ITEM&gt; <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BackIterator.html">back_iterator</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类中使用的反向迭代器类型. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00652">652</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="w2" doxytag="FG_BList::forward_iterator" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classFG__ForwardIterator.html">FG_ForwardIterator</a>&lt;<a class="el" href="structFG__BList__Node.html">FG_BList_Node</a>&lt;ITEM&gt;, ITEM&gt; <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__ForwardIterator.html">forward_iterator</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类中使用的正向迭代器类型. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00648">648</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="w1" doxytag="FG_BList::item" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> typedef ITEM <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BList.html#w1">item</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类中的节点中保存的对象的类型. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00644">644</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="w4" doxytag="FG_BList::loop_iterator" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classFG__LoopIterator.html">FG_LoopIterator</a>&lt;ITEM&gt; <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__LoopIterator.html">loop_iterator</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类中使用的循环迭代器类型. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00656">656</a>行定义。
+<p>
+参考自 <a class="el" href="FG__List_8h-source.html#l00683">FG_BList&lt; FG_Object &gt;::Loop()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="w0" doxytag="FG_BList::node" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="structFG__BList__Node.html">FG_BList_Node</a>&lt;ITEM&gt; <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BList.html#w0">node</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类中的节点类型. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00640">640</a>行定义。
+<p>
+参考自 <a class="el" href="FG__List_8h-source.html#l00720">FG_BList&lt; FG_Object &gt;::Add()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_BList::FG_BList" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BList.html">FG_BList</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类的缺省构造函数. 
+<p>
+初始化前驱和后继指针 
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00663">663</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_BList::~FG_BList" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::~<a class="el" href="classFG__BList.html">FG_BList</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+双向链表容器类的析构函数. 
+<p>
+删除所有的节点对象，但是不负责删除节点中保存的ITEM对象 
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00670">670</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a6" doxytag="FG_BList::Add" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::Add </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__BList.html#w1">item</a> *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pItem</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+添加一个对象. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pItem</em>&nbsp;</td><td>指向要添加的对象 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>添加操作是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00720">720</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Container_8cpp-source.html#l00059">FG_Container::AddChild()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="FG_BList::First" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__ForwardIterator.html">forward_iterator</a> <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::First </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回指向第一个对象的正向迭代器 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>指向第一个对象的正向迭代器 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00693">693</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Container_8cpp-source.html#l00047">FG_Container::GetChild()</a>及<a class="el" href="FG__Container_8cpp-source.html#l00076">FG_Container::RemoveAllChild()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_BList::Last" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__BackIterator.html">back_iterator</a> <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::Last </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回指向最后一个对象的反向迭代器 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>指向最后一个对象的反向迭代器 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00700">700</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="FG_BList::Loop" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__LoopIterator.html">loop_iterator</a> <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::Loop </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__BList.html#w1">item</a> *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pItem</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回循环迭代器 
+<p>
+循环迭代器从起始对象指针开始遍历，直到容器中的最后一个对象， 然后再从容器中的第一个元素开始遍历，直到起始对象（包括起始对象） <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pItem</em>&nbsp;</td><td>指向循环遍历的起始对象的指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>循环迭代器 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00683">683</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_BList::Remove" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::Remove </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__BList.html#w1">item</a> *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pItem</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除一个对象. 
+<p>
+要在容器中寻找该对象 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pItem</em>&nbsp;</td><td>指向要删除的对象 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>删除操作是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00752">752</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_BList::Remove" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITERATOR&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::Remove </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const ITERATOR&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>i</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除一个对象. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>i</em>&nbsp;</td><td>指向要删除的对象的迭代器 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>删除操作是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00710">710</a>行定义。
+<p>
+参考自 <a class="el" href="FG__List_8h-source.html#l00710">FG_BList&lt; FG_Object &gt;::Remove()</a>及<a class="el" href="FG__Container_8cpp-source.html#l00068">FG_Container::RemoveChild()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="FG_BList::RemoveAll" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::RemoveAll </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除容器中的所有对象. 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>删除操作是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00792">792</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Container_8cpp-source.html#l00076">FG_Container::RemoveAllChild()</a>及<a class="el" href="FG__List_8h-source.html#l00670">FG_BList&lt; FG_Object &gt;::~FG_BList()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="r0" doxytag="FG_BList::m_pFirst" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__BList.html#w0">node</a>* <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BList.html#r0">m_pFirst</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向双向链表中的第一个节点的指针. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00809">809</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="r1" doxytag="FG_BList::m_pLast" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" colspan="4">
+template&lt;class ITEM&gt; </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__BList.html#w0">node</a>* <a class="el" href="classFG__BList.html">FG_BList</a>&lt; ITEM &gt;::<a class="el" href="classFG__BList.html#r1">m_pLast</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向双向链表中的最后一个节点的指针. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>第<a class="el" href="FG__List_8h-source.html#l00811">811</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__List_8h-source.html">FG_List.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:55 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

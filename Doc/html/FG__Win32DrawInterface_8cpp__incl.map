@@ -1,0 +1,11 @@
+base referer
+rect $FG__Win32DrawInterface_8h.html 169,316 327,342
+rect $FG__OSDrawInterface_8h.html 177,241 319,268
+rect $FG__Utility_8h.html 185,166 311,193
+rect $FG__Common_8h.html 15,17 111,44
+rect $FG__String_8h.html 61,92 139,118
+rect $FG__Point_8h.html 211,17 285,44
+rect $FG__Rect_8h.html 213,92 283,118
+rect $FG__Message_8h.html 307,92 403,118
+rect $FG__List_8h.html 427,92 491,118
+rect $FG__OSMsgObserver_8h.html 515,92 653,118

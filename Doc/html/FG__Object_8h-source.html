@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Object.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Object.h</h1><a href="FG__Object_8h.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Object.h - 窗口元素类的头文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00039 <span class="preprocessor">#ifndef FG_OBJECT_H_HEADER_INCLUDED_C0AD453B</span>
+00040 <span class="preprocessor"></span><span class="preprocessor">#define FG_OBJECT_H_HEADER_INCLUDED_C0AD453B</span>
+00041 <span class="preprocessor"></span>
+00042 <span class="preprocessor">#include "../Utility/FG_Utility.h"</span>
+00043 <span class="preprocessor">#include "<a class="code" href="FG__MsgMap_8h.html">FG_MsgMap.h</a>"</span>
+00044 <span class="preprocessor">#include "<a class="code" href="FG__TimerManager_8h.html">FG_TimerManager.h</a>"</span>
+00045 
+00046 <span class="comment">//##ModelId=3F52B635008C</span>
+<a name="l00051"></a><a class="code" href="classFG__Object.html">00051</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="classFG__Object.html">FG_Object</a>
+00052 {
+00053 <span class="keyword">public</span>:
+00054     <span class="comment">//##ModelId=3F58382100BB</span>
+<a name="l00062"></a><a class="code" href="classFG__Object.html#a0">00062</a> <span class="comment"></span>    <a class="code" href="classFG__Object.html#a0">FG_Object</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wID = 0, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wStyle = FS_NONE)
+00063         : <a class="code" href="classFG__Object.html#p0">m_ForeColor</a>(<a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>), <a class="code" href="classFG__Object.html#p1">m_Background</a>(<a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>), <a class="code" href="classFG__Object.html#p3">m_wStyle</a>(wStyle), m_wID(wID), <a class="code" href="classFG__Object.html#p5">m_pParent</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>)
+00064         {}
+00065 
+00066     <span class="comment">//##ModelId=3F52BE4E0368</span>
+<a name="l00076"></a><a class="code" href="classFG__Object.html#a1">00076</a> <span class="comment"></span>    <a class="code" href="classFG__Object.html#a0">FG_Object</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; Rect, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wID = 0, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wStyle = FS_NONE)
+00077         : <a class="code" href="classFG__Object.html#p0">m_ForeColor</a>(<a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>), <a class="code" href="classFG__Object.html#p1">m_Background</a>(<a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>),
+00078           <a class="code" href="classFG__Object.html#p2">m_Rect</a>(Rect), <a class="code" href="classFG__Object.html#p3">m_wStyle</a>(wStyle), m_wID(wID), <a class="code" href="classFG__Object.html#p5">m_pParent</a>(<a class="code" href="group__Utility.html#ga11">NULL</a>)
+00079         {}
+00080 
+00081     <span class="comment">//##ModelId=3F52BE4F01BB</span>
+<a name="l00086"></a><a class="code" href="classFG__Object.html#a2">00086</a> <span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="classFG__Object.html#a2">~FG_Object</a>() { <a class="code" href="group__Framework.html#ga0">FG_GetTimerManager</a>()-&gt;<a class="code" href="classFG__TimerManager.html#a2">KillObjectTimer</a>(<span class="keyword">this</span>); }
+00087     
+00088     <span class="comment">//##ModelId=3F52BE4F0251</span>
+00095 <span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a3">GetClientRect</a>(<a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect) <span class="keyword">const</span>;
+00096 
+00097     <span class="comment">//##ModelId=3F52BE4F02E7</span>
+<a name="l00104"></a><a class="code" href="classFG__Object.html#a4">00104</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#a4">IsContains</a>(<span class="keyword">const</span> <a class="code" href="structFG__Point.html">FG_Point</a> Test)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__Object.html#p2">m_Rect</a>.<a class="code" href="structFG__Rect.html#a4">Contains</a>(Test); }
+00105     
+00106     <span class="comment">//##ModelId=3F52BE4F0391</span>
+<a name="l00111"></a><a class="code" href="classFG__Object.html#a5">00111</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a6">ForeColor</a>(<span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color) { <a class="code" href="classFG__Object.html#p0">m_ForeColor</a> = color; }
+00112 
+00113     <span class="comment">//##ModelId=3F52BE50003F</span>
+<a name="l00118"></a><a class="code" href="classFG__Object.html#a6">00118</a> <span class="comment"></span>    <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="classFG__Object.html#a6">ForeColor</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__Object.html#p0">m_ForeColor</a>; }
+00119     
+00120     <span class="comment">//##ModelId=3F52BE5000AE</span>
+<a name="l00125"></a><a class="code" href="classFG__Object.html#a7">00125</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a8">BGColor</a>(<span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color) { <a class="code" href="classFG__Object.html#p1">m_Background</a> = color; }
+00126 
+00127     <span class="comment">//##ModelId=3F52BE500144</span>
+<a name="l00132"></a><a class="code" href="classFG__Object.html#a8">00132</a> <span class="comment"></span>    <a class="code" href="group__Color.html#ga0">COLORVAL</a> <a class="code" href="classFG__Object.html#a8">BGColor</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__Object.html#p1">m_Background</a>; }
+00133 
+00134     <span class="comment">//##ModelId=3F52BE500252</span>
+<a name="l00139"></a><a class="code" href="classFG__Object.html#a9">00139</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a10">ID</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wID) { m_wID = wID;}
+00140 
+00141     <span class="comment">//##ModelId=3F52BE5001C6</span>
+<a name="l00146"></a><a class="code" href="classFG__Object.html#a10">00146</a> <span class="comment"></span>    <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Object.html#a10">ID</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_wID;}
+00147 
+00148     <span class="comment">//##ModelId=3F52BE500375</span>
+<a name="l00153"></a><a class="code" href="classFG__Object.html#a11">00153</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a12">Parent</a>(<a class="code" href="classFG__Object.html">FG_Object</a> * <span class="keyword">const</span> object) { <a class="code" href="classFG__Object.html#p5">m_pParent</a> = object; }
+00154 
+00155     <span class="comment">//##ModelId=3F52BE5002E8</span>
+<a name="l00160"></a><a class="code" href="classFG__Object.html#a12">00160</a> <span class="comment"></span>    <a class="code" href="classFG__Object.html">FG_Object</a> * <a class="code" href="classFG__Object.html#a12">Parent</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__Object.html#p5">m_pParent</a>; }
+00161 
+00162     <span class="comment">//##ModelId=3F52BE51018B</span>
+<a name="l00167"></a><a class="code" href="classFG__Object.html#a13">00167</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a14">FrameStyle</a>(<a class="code" href="group__Utility.html#ga1">WORD</a> wStyle)
+00168     {
+00169         wStyle &amp;= <a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>;
+00170         <a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp;= ~<a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>;
+00171         <a class="code" href="classFG__Object.html#p3">m_wStyle</a> |= wStyle;
+00172     }
+00173 
+00174     <span class="comment">//##ModelId=3F52BE510236</span>
+<a name="l00179"></a><a class="code" href="classFG__Object.html#a14">00179</a> <span class="comment"></span>    <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Object.html#a14">FrameStyle</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (<a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp; <a class="code" href="group__Frame__Style.html#ga4">FS_MASK</a>); }
+00180 
+00181     <span class="comment">//##ModelId=3F52BE51036C</span>
+<a name="l00186"></a><a class="code" href="classFG__Object.html#a15">00186</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a16">Style</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wStyle) { <a class="code" href="classFG__Object.html#p3">m_wStyle</a> = wStyle; }
+00187 
+00188     <span class="comment">//##ModelId=3F52BE5102CC</span>
+<a name="l00193"></a><a class="code" href="classFG__Object.html#a16">00193</a> <span class="comment"></span>    <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Object.html#a16">Style</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFG__Object.html#p3">m_wStyle</a>; }
+00194 
+00195     <span class="comment">//##ModelId=3F6EAC8F00F6</span>
+<a name="l00201"></a><a class="code" href="classFG__Object.html#a17">00201</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a17">SetFocus</a>(<span class="keywordtype">void</span>) { <a class="code" href="classFG__Object.html#p3">m_wStyle</a> |= <a class="code" href="group__General__Style.html#ga1">GS_FOCUS</a>; }
+00202 
+00203     <span class="comment">//##ModelId=3F6EAC8F0100</span>
+<a name="l00209"></a><a class="code" href="classFG__Object.html#a18">00209</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#a18">ResetFocus</a>(<span class="keywordtype">void</span>) { <a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp;= ~<a class="code" href="group__General__Style.html#ga1">GS_FOCUS</a>; }
+00210 
+00211     <span class="comment">//##ModelId=3F6EAC8F0114</span>
+<a name="l00217"></a><a class="code" href="classFG__Object.html#a19">00217</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#a19">IsFocus</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (<a class="code" href="classFG__Object.html#p3">m_wStyle</a> &amp; <a class="code" href="group__General__Style.html#ga1">GS_FOCUS</a>) != 0; }
+00218 
+00219     <span class="comment">//##ModelId=3F58382102A6</span>
+00229 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#a20">Message</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg);
+00230 
+00231 <span class="keyword">protected</span>:
+00232     <span class="comment">//##ModelId=3F5DAA1402B2</span>
+<a name="l00241"></a><a class="code" href="classFG__Object.html#b0">00241</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#b0">StartTimer</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga0">BYTE</a> timerID, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> dwInterval)
+00242     {
+00243         <span class="keywordflow">return</span> <a class="code" href="group__Framework.html#ga0">FG_GetTimerManager</a>()-&gt;<a class="code" href="classFG__TimerManager.html#a0">StartTimer</a>(<span class="keyword">this</span>, timerID, dwInterval);
+00244     }
+00245     
+00246     <span class="comment">//##ModelId=3F5DAA140320</span>
+<a name="l00254"></a><a class="code" href="classFG__Object.html#b1">00254</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Object.html#b1">KillTimer</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga0">BYTE</a> timerID)
+00255     {
+00256         <span class="keywordflow">return</span> <a class="code" href="group__Framework.html#ga0">FG_GetTimerManager</a>()-&gt;<a class="code" href="classFG__TimerManager.html#a1">KillTimer</a>(<span class="keyword">this</span>, timerID);
+00257     }
+00258 
+00259     <span class="comment">//##ModelId=3F52BE520038</span>
+00264 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b2">DrawBorder</a>(<a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * pAdaptor);
+00265 
+00266     <span class="comment">//##ModelId=3F603B980280</span>
+00271 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b3">NotifyParent</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wNotification);
+00272 
+00273     <span class="comment">//##ModelId=3F603B9802BC</span>
+00277 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b4">RequestDraw</a>();
+00278 
+00279 <span class="keyword">protected</span>:
+00280     <span class="comment">//##ModelId=3F52BE4E01E1</span>
+<a name="l00281"></a><a class="code" href="classFG__Object.html#p0">00281</a>     <a class="code" href="group__Color.html#ga0">COLORVAL</a>    <a class="code" href="classFG__Object.html#p0">m_ForeColor</a>;        
+00282     <span class="comment">//##ModelId=3F52BE4E02BF</span>
+<a name="l00283"></a><a class="code" href="classFG__Object.html#p1">00283</a>     <a class="code" href="group__Color.html#ga0">COLORVAL</a>    <a class="code" href="classFG__Object.html#p1">m_Background</a>;       
+00284     <span class="comment">//##ModelId=3F52BE4E02DD</span>
+<a name="l00285"></a><a class="code" href="classFG__Object.html#p2">00285</a>     <a class="code" href="structFG__Rect.html">FG_Rect</a>     <a class="code" href="classFG__Object.html#p2">m_Rect</a>;             
+00287     <span class="comment">//##ModelId=3F52BE4E02F1</span>
+<a name="l00288"></a><a class="code" href="classFG__Object.html#p3">00288</a>     <a class="code" href="group__Utility.html#ga1">WORD</a>        <a class="code" href="classFG__Object.html#p3">m_wStyle</a>;           
+00290     <span class="comment">//##ModelId=3F52BE4E0305</span>
+<a name="l00291"></a><a class="code" href="classFG__Object.html#p4">00291</a>     <a class="code" href="group__Utility.html#ga1">WORD</a>        m_wID;              
+00293     <span class="comment">//##ModelId=3F52BE4E034D</span>
+<a name="l00294"></a><a class="code" href="classFG__Object.html#p5">00294</a>     <a class="code" href="classFG__Object.html">FG_Object</a> * <a class="code" href="classFG__Object.html#p5">m_pParent</a>;          
+00296 <span class="comment">//    DECLARE_MESSAGE_MAP()</span>
+00297 <span class="keyword">private</span>:
+00298     <span class="comment">//##ModelId=3F5C4D41037C</span>
+00299     <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>    <a class="code" href="classFG__Object.html#v0">m_MsgEntries</a>[];     
+00301 <span class="keyword">protected</span>:
+00302     <span class="comment">//##ModelId=3F5C4D4103CC</span>
+00303     <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a>          <a class="code" href="classFG__Object.html#t0">m_MsgMap</a>;           
+00305     <span class="comment">//##ModelId=3F5C4D42001F</span>
+00311 <span class="comment"></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> * <a class="code" href="classFG__Object.html#b5">GetMessageMap</a>() <span class="keyword">const</span>;
+00312 
+00313 <span class="keyword">protected</span>:
+00314     <span class="comment">//##ModelId=3F52BE4F01E3</span>
+<a name="l00320"></a><a class="code" href="classFG__Object.html#b6">00320</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b6">OnDraw</a>(<a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * pAdaptor)
+00321     {
+00322         <a class="code" href="classFG__Object.html#b2">DrawBorder</a>(pAdaptor);
+00323     }
+00324 
+00325     <span class="comment">//##ModelId=3F6EAC8F0128</span>
+00330 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Object.html#b7">OnFocus</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg);
+00331 };
+00332 
+00333 <span class="comment">//##ModelId=3FD884F403D9</span>
+<a name="l00338"></a><a class="code" href="classFG__CheckObjectID.html">00338</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="classFG__CheckObjectID.html">FG_CheckObjectID</a> : <span class="keyword">public</span> <a class="code" href="classFG__ListCheck.html">FG_ListCheck</a>&lt;FG_Object&gt;
+00339 {
+00340 <span class="keyword">public</span>:
+00341     <span class="comment">//##ModelId=3FD884F600C5</span>
+<a name="l00346"></a><a class="code" href="classFG__CheckObjectID.html#a0">00346</a> <span class="comment"></span>    <a class="code" href="classFG__CheckObjectID.html#a0">FG_CheckObjectID</a>(<span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wID) : m_wID(wID) {}
+00347 
+00348     <span class="comment">//##ModelId=3FD884F600CF</span>
+<a name="l00357"></a><a class="code" href="classFG__CheckObjectID.html#a1">00357</a> <span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classFG__CheckObjectID.html#a1">FindIt</a>(<span class="keyword">const</span> <a class="code" href="classFG__Object.html">FG_Object</a> * pObj)
+00358     {
+00359         <span class="keywordflow">return</span> pObj-&gt;<a class="code" href="classFG__Object.html#a9">ID</a>() == m_wID;
+00360     }
+00361 
+00362 <span class="keyword">private</span>:
+00363     <span class="comment">//##ModelId=3FD884F600A8</span>
+<a name="l00364"></a><a class="code" href="classFG__CheckObjectID.html#r0">00364</a>     <a class="code" href="group__Utility.html#ga1">WORD</a> m_wID;                 
+00365 };
+00366 
+00367 <span class="preprocessor">#endif </span><span class="comment">/* FG_OBJECT_H_HEADER_INCLUDED_C0AD453B */</span>
+00368 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:40 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

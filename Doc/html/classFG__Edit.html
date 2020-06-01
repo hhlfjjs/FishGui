@@ -1,0 +1,844 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Edit class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Edit类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Edit
+<p><center><img src="classFG__Edit.png" usemap="#FG_Edit_map" border="0" alt=""></center>
+<map name="FG_Edit_map">
+<area href="classFG__Label.html" alt="FG_Label" shape="rect" coords="0,168,97,192">
+<area href="classFG__TextWidget.html" alt="FG_TextWidget" shape="rect" coords="0,112,97,136">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="0,56,97,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,97,24">
+</map>
+FG_Edit合作图：<p><center><img src="classFG__Edit__coll__graph.png" border="0" usemap="#FG__Edit__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Edit__coll__map">
+<area href="classFG__Label.html" shape="rect" coords="116,369,241,513" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="255,209,383,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="79,17,220,145" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Edit-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+编辑控件类 
+<p>
+该控件可以放置在窗口上，用户通过该控件可以输入文字 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00048">48</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#a0">FG_Edit</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wLimit, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="el" href="group__Frame__Style.html#ga3">FS_RECESSED</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">编辑控件的构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#a1">CanGetFocus</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回控件能否得到焦点的标志  <a href="#a1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b0">OnDraw</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b1">OnKeyDown</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">键盘按下消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>）的处理函数  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b2">OnMouse</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">鼠标消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>）的处理函数.  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b3">OnCursorTimer</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光标闪烁的定时器消息（<a class="el" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a>）的处理函数  <a href="#b3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b4">OnFocus</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">焦点切换消息<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>的处理函数  <a href="#b4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#b5">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b5"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#p0">m_wLimit</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">编辑控件中能输入的最大的字符个数  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#p1">m_wCursorPos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光标的当前位置  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#p2">m_bDrawCursor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光标是否显示，true表示显示，false表示不显示  <a href="#p2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__Label.html">FG_Label</a> ::<a class="el" href="classFG__Edit.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Edit.html">FG_Edit</a> ::<a class="el" href="classFG__Edit.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom>{ <a class="el" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a> =  0xff
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">控制光标闪烁的定时器ID  <a href="#y1">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#d0">InsertChar</a> (<a class="el" href="group__Utility.html#ga1">WORD</a> wKey)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">在编辑控件的当前光标位置插入一个字符.  <a href="#d0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#d1">DeleteChar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除当前光标后的一个字符.  <a href="#d1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#d2">DrawWithCursor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重画文本（包括光标）.  <a href="#d2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Edit.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>成员枚举类型文档</h2>
+<a class="anchor" name="y1" doxytag="FG_Edit::@6" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> anonymous enum<code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+控制光标闪烁的定时器ID 
+<p>
+<dl compact><dt><b>枚举值: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="y1y0" doxytag="TIMERID_CURSOR" ></a>TIMERID_CURSOR</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00117">117</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Edit::FG_Edit" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Edit::FG_Edit </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wLimit</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="el" href="group__Frame__Style.html#ga3">FS_RECESSED</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+编辑控件的构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>编辑控件中显示的初始文本 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>编辑控件占据的巨型区域 </td></tr>
+    <tr><td valign=top><em>wLimit</em>&nbsp;</td><td>编辑控件中能输入的最大字符数 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>编辑控件的唯一标识，缺省为0 </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>编辑控件的<a class="el" href="group__Style.html">风格</a>，缺省为<a class="el" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="el" href="group__Frame__Style.html#ga3">FS_RECESSED</a></td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00060">60</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00132">FG_Object::BGColor()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00060">COLOR_WHITE</a>、<a class="el" href="FG__Common_8h-source.html#l00099">EDIT_CURSOR_INTERVAL</a>、<a class="el" href="FG__Edit_8h-source.html#l00111">m_bDrawCursor</a>、<a class="el" href="FG__Edit_8h-source.html#l00109">m_wCursorPos</a>、<a class="el" href="FG__Object_8h-source.html#l00241">FG_Object::StartTimer()</a>、<a class="el" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_a0_cgraph.png" border="0" usemap="#classFG__Edit_a0_cgraph_map" alt=""></center>
+<map name="classFG__Edit_a0_cgraph_map">
+<area href="classFG__Object.html#a8" shape="rect" coords="184,8,312,35" alt="">
+<area href="classFG__Object.html#b0" shape="rect" coords="178,59,317,85" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="390,20,526,47" alt="">
+<area href="classFG__TimerManager.html#a0" shape="rect" coords="366,96,550,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="598,7,825,33" alt="">
+<area href="classFG__SList.html#a4" shape="rect" coords="665,57,758,84" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="665,108,758,135" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="664,159,760,185" alt="">
+</map>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a1" doxytag="FG_Edit::CanGetFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Edit::CanGetFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回控件能否得到焦点的标志 
+<p>
+编辑控件能得到焦点 <dl compact><dt><b>返回:</b></dt><dd>true 该控件能得到焦点 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Label.html#a1">FG_Label</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00068">68</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="d1" doxytag="FG_Edit::DeleteChar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::DeleteChar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除当前光标后的一个字符. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00191">191</a>行定义。
+<p>
+参考 <a class="el" href="FG__String_8h-source.html#l00082">FG_String::DataGet()</a>、<a class="el" href="FG__String_8cpp-source.html#l00086">FG_String::DataSet()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00214">DrawWithCursor()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__Edit_8h-source.html#l00109">m_wCursorPos</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00108">OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_d1_cgraph.png" border="0" usemap="#classFG__Edit_d1_cgraph_map" alt=""></center>
+<map name="classFG__Edit_d1_cgraph_map">
+<area href="classFG__String.html#a4" shape="rect" coords="432,57,554,84" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="220,57,342,84" alt="">
+<area href="classFG__Edit.html#d2" shape="rect" coords="202,158,360,185" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="206,108,356,134" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="197,209,365,236" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="414,158,572,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="621,158,752,185" alt="">
+<area href="classFG__String.html#a5" shape="rect" coords="436,209,550,236" alt="">
+</map>
+<a class="anchor" name="d2" doxytag="FG_Edit::DrawWithCursor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::DrawWithCursor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重画文本（包括光标）. 
+<p>
+把光标设置为显示，然后要求重画
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00214">214</a>行定义。
+<p>
+参考 <a class="el" href="FG__Edit_8h-source.html#l00111">m_bDrawCursor</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00191">DeleteChar()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00174">InsertChar()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00108">OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_d2_cgraph.png" border="0" usemap="#classFG__Edit_d2_cgraph_map" alt=""></center>
+<map name="classFG__Edit_d2_cgraph_map">
+<area href="classFG__Object.html#b4" shape="rect" coords="225,57,383,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="432,57,563,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="663,7,761,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="612,57,812,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="623,108,801,135" alt="">
+</map>
+<a class="anchor" name="b5" doxytag="FG_Edit::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_Edit::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Label.html#b1">FG_Label</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="d0" doxytag="FG_Edit::InsertChar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::InsertChar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wKey</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+在编辑控件的当前光标位置插入一个字符. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wKey</em>&nbsp;</td><td>要插入的字符的<a class="el" href="group__Virtual__Key.html">虚拟键码</a> </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00174">174</a>行定义。
+<p>
+参考 <a class="el" href="FG__Edit_8cpp-source.html#l00214">DrawWithCursor()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__Edit_8h-source.html#l00109">m_wCursorPos</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00108">OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_d0_cgraph.png" border="0" usemap="#classFG__Edit_d0_cgraph_map" alt=""></center>
+<map name="classFG__Edit_d0_cgraph_map">
+<area href="classFG__Edit.html#d2" shape="rect" coords="197,7,355,33" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="201,108,351,135" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="201,57,351,84" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="192,159,360,185" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="409,7,567,33" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="616,7,747,33" alt="">
+<area href="classFG__String.html#a4" shape="rect" coords="427,108,549,135" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="427,57,549,84" alt="">
+<area href="classFG__String.html#a5" shape="rect" coords="431,159,545,185" alt="">
+</map>
+<a class="anchor" name="b3" doxytag="FG_Edit::OnCursorTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::OnCursorTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+光标闪烁的定时器消息（<a class="el" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a>）的处理函数 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00145">145</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00217">FG_Object::IsFocus()</a>、<a class="el" href="FG__Edit_8h-source.html#l00111">m_bDrawCursor</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_b3_cgraph.png" border="0" usemap="#classFG__Edit_b3_cgraph_map" alt=""></center>
+<map name="classFG__Edit_b3_cgraph_map">
+<area href="classFG__Object.html#a19" shape="rect" coords="233,7,359,33" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="217,57,375,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="424,57,555,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="655,7,753,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="604,57,804,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="615,108,793,135" alt="">
+</map>
+<a class="anchor" name="b0" doxytag="FG_Edit::OnDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::OnDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__Label.html#b0">FG_Label</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00073">73</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">FG_Object::GetClientRect()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">FG_OSAdaptor::GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">FG_OSAdaptor::GetTextWidth()</a>、<a class="el" href="FG__Object_8h-source.html#l00217">FG_Object::IsFocus()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00134">FG_OSAdaptor::Line()</a>、<a class="el" href="FG__Edit_8h-source.html#l00111">m_bDrawCursor</a>、<a class="el" href="FG__Edit_8h-source.html#l00109">m_wCursorPos</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_b0_cgraph.png" border="0" usemap="#classFG__Edit_b0_cgraph_map" alt=""></center>
+<map name="classFG__Edit_b0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="365,6,533,33" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="371,57,528,84" alt="">
+<area href="classFG__Object.html#a3" shape="rect" coords="369,108,529,134" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="375,361,524,388" alt="">
+<area href="classFG__OSAdaptor.html#a9" shape="rect" coords="356,412,543,438" alt="">
+<area href="classFG__OSAdaptor.html#a8" shape="rect" coords="357,462,541,489" alt="">
+<area href="classFG__Object.html#a19" shape="rect" coords="180,462,305,489" alt="">
+<area href="classFG__OSAdaptor.html#a6" shape="rect" coords="179,513,307,540" alt="">
+<area href="classFG__Label.html#b0" shape="rect" coords="184,260,301,286" alt="">
+<area href="classFG__OSDrawInterface.html#a2" shape="rect" coords="601,6,801,33" alt="">
+<area href="classFG__OSDrawInterface.html#a3" shape="rect" coords="607,57,796,84" alt="">
+<area href="structFG__Rect.html#a2" shape="rect" coords="657,108,745,134" alt="">
+<area href="classFG__String.html#a4" shape="rect" coords="640,336,763,362" alt="">
+<area href="classFG__OSDrawInterface.html#a8" shape="rect" coords="592,412,811,438" alt="">
+<area href="classFG__OSDrawInterface.html#a7" shape="rect" coords="593,462,809,489" alt="">
+<area href="classFG__OSDrawInterface.html#a5" shape="rect" coords="368,513,531,540" alt="">
+<area href="classFG__OSAdaptor.html#a7" shape="rect" coords="371,209,528,236" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="387,260,512,286" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="365,158,533,185" alt="">
+</map>
+<a class="anchor" name="b4" doxytag="FG_Edit::OnFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Edit::OnFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+焦点切换消息<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>的处理函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向焦点切换消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__Object.html#b7">FG_Object</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00155">155</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga15a35">FFS_GET</a>、<a class="el" href="FG__Edit_8h-source.html#l00111">m_bDrawCursor</a>、<a class="el" href="FG__Object_8cpp-source.html#l00250">FG_Object::OnFocus()</a>及<a class="el" href="FG__Message_8h-source.html#l00194">FG_Message::wData</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_b4_cgraph.png" border="0" usemap="#classFG__Edit_b4_cgraph_map" alt=""></center>
+<map name="classFG__Edit_b4_cgraph_map">
+<area href="classFG__Object.html#b7" shape="rect" coords="184,57,315,84" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="364,7,521,33" alt="">
+<area href="classFG__Object.html#a18" shape="rect" coords="368,57,517,84" alt="">
+<area href="classFG__Object.html#a17" shape="rect" coords="376,108,509,135" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="571,7,701,33" alt="">
+</map>
+<a class="anchor" name="b1" doxytag="FG_Edit::OnKeyDown" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Edit::OnKeyDown </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+键盘按下消息（<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>，<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>）的处理函数 
+<p>
+特殊处理<a class="el" href="group__Virtual__Key.html#ga13">FVK_DELETE</a>、<a class="el" href="group__Virtual__Key.html#ga14">FVK_LEFT</a>、<a class="el" href="group__Virtual__Key.html#ga15">FVK_RIGHT</a>等键，输入数字0--9 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向键盘消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00108">108</a>行定义。
+<p>
+参考 <a class="el" href="FG__Edit_8cpp-source.html#l00191">DeleteChar()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00214">DrawWithCursor()</a>、<a class="el" href="FG__Message_8h-source.html#l00087">FVK_0</a>、<a class="el" href="FG__Message_8h-source.html#l00096">FVK_9</a>、<a class="el" href="FG__Message_8h-source.html#l00102">FVK_DELETE</a>、<a class="el" href="FG__Message_8h-source.html#l00103">FVK_LEFT</a>、<a class="el" href="FG__Message_8h-source.html#l00104">FVK_RIGHT</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00174">InsertChar()</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>、<a class="el" href="FG__Edit_8h-source.html#l00109">m_wCursorPos</a>、<a class="el" href="FG__Edit_8h-source.html#l00107">m_wLimit</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Edit_b1_cgraph.png" border="0" usemap="#classFG__Edit_b1_cgraph_map" alt=""></center>
+<map name="classFG__Edit_b1_cgraph_map">
+<area href="classFG__Edit.html#d1" shape="rect" coords="203,108,331,135" alt="">
+<area href="classFG__Edit.html#d2" shape="rect" coords="387,209,544,236" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="381,260,549,287" alt="">
+<area href="classFG__Edit.html#d0" shape="rect" coords="205,159,328,185" alt="">
+<area href="classFG__String.html#a4" shape="rect" coords="616,32,739,59" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="616,133,739,160" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="391,108,540,135" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="599,197,756,224" alt="">
+<area href="classFG__String.html#a5" shape="rect" coords="620,260,735,287" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="391,159,540,185" alt="">
+</map>
+<a class="anchor" name="b2" doxytag="FG_Edit::OnMouse" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Edit::OnMouse </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+鼠标消息（<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>）的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向鼠标消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00166">166</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p2" doxytag="FG_Edit::m_bDrawCursor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classFG__Edit.html#p2">FG_Edit::m_bDrawCursor</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+光标是否显示，true表示显示，false表示不显示 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00111">111</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00214">DrawWithCursor()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00060">FG_Edit()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00145">OnCursorTimer()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">OnDraw()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00155">OnFocus()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="v0" doxytag="FG_Edit::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__Edit.html#v0">FG_Edit::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp;  <a class="code" href="classFG__Edit.html#b0">FG_Edit::OnDraw</a>  },
+    { <a class="code" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="code" href="group__Utility.html#gga13a29">FKS_DOWN</a>, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Edit.html#b1">FG_Edit::OnKeyDown</a>  },
+    { <a class="code" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp;  <a class="code" href="classFG__Edit.html#b2">FG_Edit::OnMouse</a>  },
+    { <a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>,  <a class="code" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classFG__Edit.html#b3">FG_Edit::OnCursorTimer</a>  },
+    { <a class="code" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classFG__Edit.html#b4">FG_Edit::OnFocus</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Label.html#v0">FG_Label</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_Edit::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__Edit.html#t0">FG_Edit::m_MsgMap</a> = { &amp; <a class="el" href="classFG__Label.html">FG_Label</a> ::<a class="el" href="classFG__Edit.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Edit.html">FG_Edit</a> ::<a class="el" href="classFG__Edit.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Label.html#t0">FG_Label</a>。
+<p>
+在文件<a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a>第<a class="el" href="FG__Edit_8cpp-source.html#l00051">51</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="p1" doxytag="FG_Edit::m_wCursorPos" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> <a class="el" href="classFG__Edit.html#p1">FG_Edit::m_wCursorPos</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+光标的当前位置 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00109">109</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00191">DeleteChar()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00060">FG_Edit()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00174">InsertChar()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">OnDraw()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00108">OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_Edit::m_wLimit" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> <a class="el" href="classFG__Edit.html#p0">FG_Edit::m_wLimit</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+编辑控件中能输入的最大的字符个数 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a>第<a class="el" href="FG__Edit_8h-source.html#l00107">107</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00108">OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Edit_8h-source.html">FG_Edit.h</a><li><a class="el" href="FG__Edit_8cpp-source.html">FG_Edit.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:53 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

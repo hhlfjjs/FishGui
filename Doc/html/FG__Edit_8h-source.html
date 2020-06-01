@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Edit.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Edit.h</h1><a href="FG__Edit_8h.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Edit.h - 编辑控件类的头文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00038 <span class="preprocessor">#ifndef FG_EDIT_H_HEADER_INCLUDED_C0A79742</span>
+00039 <span class="preprocessor"></span><span class="preprocessor">#define FG_EDIT_H_HEADER_INCLUDED_C0A79742</span>
+00040 <span class="preprocessor"></span>
+00041 <span class="preprocessor">#include "<a class="code" href="FG__Label_8h.html">FG_Label.h</a>"</span>
+00042 
+00043 <span class="comment">//##ModelId=3F37D6F50106</span>
+<a name="l00048"></a><a class="code" href="classFG__Edit.html">00048</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="classFG__Edit.html">FG_Edit</a> : <span class="keyword">public</span> <a class="code" href="classFG__Label.html">FG_Label</a>
+00049 {
+00050 <span class="keyword">public</span>:
+00051     <span class="comment">//##ModelId=3F65E8E20322</span>
+00060 <span class="comment"></span>        <a class="code" href="classFG__Edit.html#a0">FG_Edit</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text, <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; Rect, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wLimit, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wID = 0, <span class="keyword">const</span> <a class="code" href="group__Utility.html#ga1">WORD</a> wStyle = <a class="code" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="code" href="group__Frame__Style.html#ga3">FS_RECESSED</a>);
+00061 
+00062     <span class="comment">//##ModelId=3F6EAC8F0074</span>
+<a name="l00068"></a><a class="code" href="classFG__Edit.html#a1">00068</a> <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Edit.html#a1">CanGetFocus</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }
+00069 
+00070 <span class="keyword">protected</span>:
+00071     <span class="comment">//##ModelId=3F65E8E20368</span>
+00076 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#b0">OnDraw</a>(<a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * pAdaptor);
+00077 
+00078     <span class="comment">//##ModelId=3F65E8E2037C</span>
+00084 <span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="classFG__Edit.html#b1">OnKeyDown</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg);
+00085 
+00086     <span class="comment">//##ModelId=3F65E8E2039A</span>
+00091 <span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="classFG__Edit.html#b2">OnMouse</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg);
+00092 
+00093     <span class="comment">//##ModelId=3F65E8E203AF</span>
+00097 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#b3">OnCursorTimer</a>(<span class="keywordtype">void</span>);
+00098 
+00099     <span class="comment">//##ModelId=3F65E8E203B9</span>
+00104 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#b4">OnFocus</a>(<a class="code" href="structFG__Message.html">FG_Message</a> * pMsg);
+00105 
+00106     <span class="comment">//##ModelId=3F65E8E202C9</span>
+<a name="l00107"></a><a class="code" href="classFG__Edit.html#p0">00107</a>         <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Edit.html#p0">m_wLimit</a>;                  
+00108     <span class="comment">//##ModelId=3F65E8E202E7</span>
+<a name="l00109"></a><a class="code" href="classFG__Edit.html#p1">00109</a>         <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Edit.html#p1">m_wCursorPos</a>;              
+00110     <span class="comment">//##ModelId=3F65E8E20304</span>
+<a name="l00111"></a><a class="code" href="classFG__Edit.html#p2">00111</a>         <span class="keywordtype">bool</span> <a class="code" href="classFG__Edit.html#p2">m_bDrawCursor</a>;             
+00113 <span class="keyword">private</span>:
+00114     <span class="comment">//##ModelId=3F65E8E20296</span>
+00117 <span class="comment"></span>    <span class="keyword">enum</span>
+00118     {
+00119         <a class="code" href="classFG__Edit.html#y1y0">TIMERID_CURSOR</a> = 0xff
+00120     };
+00121 
+00122     <span class="comment">//##ModelId=3F65E8E203D7</span>
+00127 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#d0">InsertChar</a>(<a class="code" href="group__Utility.html#ga1">WORD</a> wKey);
+00128 
+00129     <span class="comment">//##ModelId=3F65E8E30003</span>
+00132 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#d1">DeleteChar</a>();
+00133 
+00134     <span class="comment">//##ModelId=3F65E8E30017</span>
+00139 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="classFG__Edit.html#d2">DrawWithCursor</a>();
+00140 
+00141     <a class="code" href="group__MsgMap__Define.html#ga0">DECLARE_MESSAGE_MAP</a>()
+00142 };
+00143 
+00144 <span class="preprocessor">#endif </span><span class="comment">/* FG_EDIT_H_HEADER_INCLUDED_C0A79742 */</span>
+00145 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:40 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

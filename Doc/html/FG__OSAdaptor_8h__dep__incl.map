@@ -1,0 +1,12 @@
+base referer
+rect $MainWindow_8cpp.html 7,92 113,118
+rect $FG__Application_8h.html 137,92 244,118
+rect $FG__MsgMap_8h.html 268,92 361,118
+rect $FG__TimerManager_8h.html 385,92 511,118
+rect $FG__Screen_8h.html 585,92 671,118
+rect $FG__Window_8cpp.html 537,17 639,44
+rect $FG__Button_8cpp.html 695,92 791,118
+rect $FG__Object_8cpp.html 815,92 911,118
+rect $FG__OSAdaptor_8cpp.html 937,17 1057,44
+rect $FG__Win32Adaptor_8h.html 985,92 1111,118
+rect $FG__X11Adaptor_8h.html 1135,92 1241,118

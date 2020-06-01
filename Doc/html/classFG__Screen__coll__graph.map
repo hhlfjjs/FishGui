@@ -1,0 +1,6 @@
+base referer
+rect $classFG__Container.html 144,369 269,593
+rect $structFG__MSGMAP.html 255,209 383,305
+rect $structFG__MSGMAP__ENTRY.html 79,17 220,145
+rect $classFG__OSMsgObserver.html 407,433 561,529
+rect $classFG__Factory.html 585,377 721,585

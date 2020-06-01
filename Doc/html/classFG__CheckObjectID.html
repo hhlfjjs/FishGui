@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_CheckObjectID class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_CheckObjectID类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_CheckObjectID
+<p><center><img src="classFG__CheckObjectID.png" usemap="#FG_CheckObjectID_map" border="0" alt=""></center>
+<map name="FG_CheckObjectID_map">
+<area href="classFG__ListCheck.html" alt="FG_ListCheck< FG_Object >" shape="rect" coords="0,0,176,24">
+</map>
+FG_CheckObjectID合作图：<p><center><img src="classFG__CheckObjectID__coll__graph.png" border="0" usemap="#FG__CheckObjectID__coll__map" alt="Collaboration graph"></center>
+<map name="FG__CheckObjectID__coll__map">
+<area href="classFG__ListCheck.html" shape="rect" coords="7,161,185,241" alt="">
+<area href="classFG__ListCheck.html" shape="rect" coords="24,17,168,97" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__CheckObjectID-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+按照标识查找窗口元素的检查类 
+<p>
+用于算法函数按照标识查找窗口元素 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00338">338</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__CheckObjectID.html#a0">FG_CheckObjectID</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> wID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__CheckObjectID.html#a1">FindIt</a> (const <a class="el" href="classFG__Object.html">FG_Object</a> *pObj)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">检查对象是否满足条件  <a href="#a1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__CheckObjectID.html#r0">m_wID</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">保存要查找的窗口元素的唯一标识  <a href="#r0"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_CheckObjectID::FG_CheckObjectID" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_CheckObjectID::FG_CheckObjectID </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wID</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>要查找的窗口元素的唯一标识 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00346">346</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a1" doxytag="FG_CheckObjectID::FindIt" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual bool FG_CheckObjectID::FindIt </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pObj</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+检查对象是否满足条件 
+<p>
+通过比较窗口元素的ID来决定该窗口元素是否满足条件 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pObj</em>&nbsp;</td><td>要检查的窗口元素指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>是否满足条件<br>
+ true 满足条件<br>
+ false 不满足条件 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__ListCheck.html#a0">FG_ListCheck&lt; FG_Object &gt;</a>.
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00357">357</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00139">FG_Object::ID()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__CheckObjectID_a1_cgraph.png" border="0" usemap="#classFG__CheckObjectID_a1_cgraph_map" alt=""></center>
+<map name="classFG__CheckObjectID_a1_cgraph_map">
+<area href="classFG__Object.html#a9" shape="rect" coords="225,7,316,33" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="r0" doxytag="FG_CheckObjectID::m_wID" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> <a class="el" href="classFG__CheckObjectID.html#r0">FG_CheckObjectID::m_wID</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保存要查找的窗口元素的唯一标识 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00364">364</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Object_8h-source.html">FG_Object.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:27 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

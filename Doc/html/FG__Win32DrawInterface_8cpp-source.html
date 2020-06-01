@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Win32DrawInterface.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Win32DrawInterface.cpp</h1><a href="FG__Win32DrawInterface_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Win32DrawInterface.cpp - Win32的绘图接口类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00040 <span class="preprocessor">#include "stdio.h"</span>
+00041 <span class="preprocessor">#include "windows.h"</span>
+00042 <span class="preprocessor">#include "<a class="code" href="FG__Win32DrawInterface_8h.html">FG_Win32DrawInterface.h</a>"</span>
+00043 
+00044 <span class="preprocessor">#if defined(WIN32) &amp;&amp; defined(_DEBUG)</span>
+00045 <span class="preprocessor"></span>    <span class="comment">/* Trace memory allocation in windows debug version */</span>
+00046 <span class="preprocessor">    #include &lt;crtdbg.h&gt;</span>
+00047     <span class="keyword">static</span> <span class="keywordtype">char</span> THIS_FILE[] = __FILE__;
+00048 <span class="preprocessor">    #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)</span>
+00049 <span class="preprocessor"></span><span class="preprocessor">#endif  </span><span class="comment">/* _DEBUG */</span>
+00050     
+00051 <span class="comment">//##ModelId=3F71AB2E0279</span>
+<a name="l00052"></a><a class="code" href="classFG__Win32DrawInterface.html#a1">00052</a> <a class="code" href="classFG__Win32DrawInterface.html#a1">FG_Win32DrawInterface::~FG_Win32DrawInterface</a>()
+00053 {
+00054     <span class="comment">// 删除绘图资源</span>
+00055     DeleteDC(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>);
+00056     DeleteObject(<a class="code" href="classFG__Win32DrawInterface.html#p2">m_hBitmap</a>);
+00057     DeleteObject(<a class="code" href="classFG__Win32DrawInterface.html#p3">m_hFont</a>);
+00058 }
+00059     
+00060 <span class="comment">//##ModelId=3F4EDED00326</span>
+<a name="l00061"></a><a class="code" href="classFG__Win32DrawInterface.html#a3">00061</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a3">FG_Win32DrawInterface::BeginDraw</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect)
+00062 {
+00063     <span class="keywordflow">if</span> (! m_iDrawCount)
+00064     {
+00065         <span class="keywordflow">if</span> (! <a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00066         {
+00067             <span class="comment">// 创建绘图缓冲区</span>
+00068             <a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a> = CreateCompatibleDC(<a class="code" href="classFG__Win32DrawInterface.html#p0">m_hDC</a>);
+00069             <a class="code" href="classFG__Win32DrawInterface.html#p2">m_hBitmap</a> = CreateCompatibleBitmap(<a class="code" href="classFG__Win32DrawInterface.html#p0">m_hDC</a>, <a class="code" href="group__Utility.html#ga3">SCREEN_WIDTH</a>, <a class="code" href="group__Utility.html#ga4">SCREEN_HEIGHT</a>);
+00070             SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, <a class="code" href="classFG__Win32DrawInterface.html#p2">m_hBitmap</a>);
+00071     
+00072             <a class="code" href="classFG__Win32DrawInterface.html#p3">m_hFont</a> = CreateFont(15, 0, 0, 0, FW_NORMAL, 0, 0, 0, DEFAULT_CHARSET, 
+00073                                  OUT_CHARACTER_PRECIS, CLIP_CHARACTER_PRECIS, 
+00074                                  DEFAULT_QUALITY, DEFAULT_PITCH, <span class="stringliteral">"宋体"</span>);
+00075             SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, <a class="code" href="classFG__Win32DrawInterface.html#p3">m_hFont</a>);
+00076         }
+00077 
+00078         <span class="comment">// 初始无效区</span>
+00079         m_Invalid = rect;
+00080     }
+00081     <span class="keywordflow">else</span>
+00082     {
+00083         <span class="comment">// 组合无效区</span>
+00084         m_Invalid |= rect;
+00085     }
+00086     m_iDrawCount ++;
+00087 }
+00088 
+00089 <span class="comment">//##ModelId=3F4EDED003A8</span>
+<a name="l00090"></a><a class="code" href="classFG__Win32DrawInterface.html#a4">00090</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a4">FG_Win32DrawInterface::EndDraw</a>()
+00091 {
+00092     m_iDrawCount --;
+00093     <span class="keywordflow">if</span> (! m_iDrawCount)
+00094     {
+00095         <span class="comment">// 把缓冲区内容刷新到屏幕上</span>
+00096         BitBlt(<a class="code" href="classFG__Win32DrawInterface.html#p0">m_hDC</a>, m_Invalid.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, m_Invalid.<a class="code" href="structFG__Rect.html#o1">wTop</a>, m_Invalid.<a class="code" href="structFG__Rect.html#a20">Width</a>(), m_Invalid.<a class="code" href="structFG__Rect.html#a21">Height</a>(), <a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, 
+00097             m_Invalid.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, m_Invalid.<a class="code" href="structFG__Rect.html#o1">wTop</a>, SRCCOPY);
+00098     }
+00099 }
+00100 
+00101 <span class="comment">//##ModelId=3F4EDED003E4</span>
+<a name="l00102"></a><a class="code" href="classFG__Win32DrawInterface.html#a5">00102</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a5">FG_Win32DrawInterface::FillRect</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> ForeColor, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> background)
+00103 {
+00104     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00105     {
+00106         <span class="comment">// 创建绘图所用资源</span>
+00107         HPEN hPen = CreatePen(PS_SOLID, 1, ForeColor);
+00108         HBRUSH hBrush = CreateSolidBrush(background);
+00109 
+00110         HPEN hPenOld = (HPEN)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPen);
+00111         HBRUSH hBrushOld = (HBRUSH)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hBrush);
+00112 
+00113         Rectangle(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, rect.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, rect.<a class="code" href="structFG__Rect.html#o1">wTop</a>, rect.<a class="code" href="structFG__Rect.html#o2">wRight</a> + 1, rect.<a class="code" href="structFG__Rect.html#o3">wBottom</a> + 1);
+00114 
+00115         <span class="comment">// 删除绘图资源</span>
+00116         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPenOld);
+00117         DeleteObject(hPen);
+00118         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hBrushOld);
+00119         DeleteObject(hBrush);
+00120     }
+00121 }
+00122 
+00123 <span class="comment">//##ModelId=3F4EDED10133</span>
+<a name="l00124"></a><a class="code" href="classFG__Win32DrawInterface.html#a6">00124</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a6">FG_Win32DrawInterface::Line</a>(<span class="keyword">const</span> <span class="keywordtype">short</span> x1, <span class="keyword">const</span> <span class="keywordtype">short</span> y1, <span class="keyword">const</span> <span class="keywordtype">short</span> x2, <span class="keyword">const</span> <span class="keywordtype">short</span> y2, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00125 {
+00126     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00127     {
+00128         <span class="comment">// 创建绘图所用资源</span>
+00129         HPEN hPen = CreatePen(PS_SOLID, 1, color);
+00130 
+00131         HPEN hPenOld = (HPEN)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPen);
+00132 
+00133         MoveToEx(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, x1, y1, <a class="code" href="group__Utility.html#ga11">NULL</a>);
+00134         LineTo(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, x2, y2);
+00135         <span class="comment">// Win32的画线函数不画最后一点，和FishGUI的定义不同</span>
+00136                 <span class="comment">// 这里需要加画最后一点</span>
+00137         SetPixel(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, x2, y2, color);
+00138 
+00139         <span class="comment">// 删除绘图资源</span>
+00140         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPenOld);
+00141         DeleteObject(hPen);
+00142     }
+00143 }
+00144 
+00145 <span class="comment">//##ModelId=3F4EDED1031E</span>
+<a name="l00146"></a><a class="code" href="classFG__Win32DrawInterface.html#a7">00146</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a7">FG_Win32DrawInterface::DrawText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text, <span class="keyword">const</span> <span class="keywordtype">short</span> x, <span class="keyword">const</span> <span class="keywordtype">short</span> y, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00147 {
+00148     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00149     {
+00150         SetTextColor(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, color);
+00151         SetBkMode(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, TRANSPARENT);
+00152         TextOut(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, x, y, Text, strlen(Text));
+00153     }
+00154 }
+00155 
+00156 <span class="comment">//##ModelId=3F4EDED200DA</span>
+<a name="l00157"></a><a class="code" href="classFG__Win32DrawInterface.html#a8">00157</a> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Win32DrawInterface.html#a8">FG_Win32DrawInterface::GetTextWidth</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text)
+00158 {
+00159     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00160     {
+00161         SIZE size;
+00162         GetTextExtentPoint(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, Text, strlen(Text), &amp; size);
+00163         <span class="keywordflow">return</span> (<a class="code" href="group__Utility.html#ga1">WORD</a>)size.cx;
+00164     }
+00165     <span class="keywordflow">else</span>
+00166         <span class="keywordflow">return</span> 0;
+00167 }
+00168 
+00169 <span class="comment">//##ModelId=3F4EDED20184</span>
+<a name="l00170"></a><a class="code" href="classFG__Win32DrawInterface.html#a9">00170</a> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__Win32DrawInterface.html#a9">FG_Win32DrawInterface::GetTextHeight</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text)
+00171 {
+00172     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00173     {
+00174         SIZE size;
+00175         GetTextExtentPoint(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, Text, strlen(Text), &amp; size);
+00176         <span class="keywordflow">return</span> (<a class="code" href="group__Utility.html#ga1">WORD</a>)size.cy;
+00177     }
+00178     <span class="keywordflow">else</span>
+00179         <span class="keywordflow">return</span> 0;
+00180 }
+00181 
+00182 <span class="comment">//##ModelId=3F4EDED20239</span>
+<a name="l00183"></a><a class="code" href="classFG__Win32DrawInterface.html#a10">00183</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a10">FG_Win32DrawInterface::DrawBitmap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * pBmpName, <span class="keyword">const</span> <span class="keywordtype">short</span> x1, <span class="keyword">const</span> <span class="keywordtype">short</span> y1)
+00184 {
+00185     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00186     {
+00187         HBITMAP hBitmap1 = (HBITMAP)LoadImage(<a class="code" href="group__Utility.html#ga11">NULL</a>, pBmpName, IMAGE_BITMAP, 0, 0,
+00188                                     LR_DEFAULTSIZE | LR_LOADFROMFILE);
+00189         <span class="keywordflow">if</span> (hBitmap1)
+00190         {
+00191             BITMAP info;
+00192             GetObject(hBitmap1, <span class="keyword">sizeof</span>(BITMAP), &amp; info);
+00193 
+00194             HDC hMemDC1 = CreateCompatibleDC(<a class="code" href="classFG__Win32DrawInterface.html#p0">m_hDC</a>);
+00195             SelectObject(hMemDC1, hBitmap1);
+00196             BitBlt(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, x1, y1, x1 + info.bmWidth - 1, y1 + info.bmHeight - 1, hMemDC1, 0, 0, SRCCOPY);
+00197             DeleteDC(hMemDC1);
+00198             DeleteObject(hBitmap1);
+00199         }
+00200     }
+00201 }
+00202 
+00203 <span class="comment">//##ModelId=3F6193B201F2</span>
+<a name="l00204"></a><a class="code" href="classFG__Win32DrawInterface.html#a11">00204</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a11">FG_Win32DrawInterface::DrawPolyLine</a>(<span class="keyword">const</span> <span class="keywordtype">short</span> n, <span class="keyword">const</span> <a class="code" href="structFG__Point.html">FG_Point</a> * vert, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00205 {
+00206     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00207     {
+00208         <span class="comment">// 创建绘图所用资源</span>
+00209         HPEN hPen = CreatePen(PS_SOLID, 1, color);
+00210 
+00211         HPEN hPenOld = (HPEN)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPen);
+00212 
+00213         POINT * lppt = <span class="keyword">new</span> POINT[n];
+00214         <span class="keywordflow">for</span> (<span class="keywordtype">short</span> i = 0; i &lt; n; i ++)
+00215         {
+00216             lppt[i].x = vert[i].<a class="code" href="structFG__Point.html#o0">x</a>;
+00217             lppt[i].y = vert[i].<a class="code" href="structFG__Point.html#o1">y</a>;
+00218         }
+00219 
+00220         Polyline(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, lppt, n);
+00221         SetPixel(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, lppt[n - 1].x, lppt[n - 1].y, color);
+00222 
+00223         <span class="keyword">delete</span> [] lppt;
+00224 
+00225         <span class="comment">// 删除绘图资源</span>
+00226         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPenOld);
+00227         DeleteObject(hPen);
+00228     }
+00229 }
+00230 
+00231 <span class="comment">//##ModelId=3F6EAC820075</span>
+<a name="l00232"></a><a class="code" href="classFG__Win32DrawInterface.html#a12">00232</a> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32DrawInterface.html#a12">FG_Win32DrawInterface::DrawDotRect</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00233 {
+00234     <span class="keywordflow">if</span> (<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>)
+00235     {
+00236         <span class="comment">// 创建绘图所用资源</span>
+00237         HPEN hPen = CreatePen(PS_DOT, 1, color);
+00238 
+00239         HPEN hPenOld = (HPEN)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPen);
+00240         HBRUSH hBrushOld = (HBRUSH)SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, GetStockObject(NULL_BRUSH));
+00241 
+00242         Rectangle(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, rect.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, rect.<a class="code" href="structFG__Rect.html#o1">wTop</a>, rect.<a class="code" href="structFG__Rect.html#o2">wRight</a> + 1, rect.<a class="code" href="structFG__Rect.html#o3">wBottom</a> + 1);
+00243 
+00244         <span class="comment">// 删除绘图资源</span>
+00245         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hPenOld);
+00246         DeleteObject(hPen);
+00247         SelectObject(<a class="code" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a>, hBrushOld);
+00248     }
+00249 }
+00250 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:41 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

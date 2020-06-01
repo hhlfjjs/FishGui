@@ -1,0 +1,581 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Factory class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Factory类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Factory
+<p><center><img src="classFG__Factory.png" usemap="#FG_Factory_map" border="0" alt=""></center>
+<map name="FG_Factory_map">
+<area href="classMyFactory.html" alt="MyFactory" shape="rect" coords="0,56,80,80">
+</map>
+<a href="classFG__Factory-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+工厂类 
+<p>
+负责封装所有控件的创建过程，用户可覆盖此类中的接口函数，改为创建不同的控件类型 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00055">55</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a0">FG_Factory</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a1">~FG_Factory</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">虚析构函数.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__Bitmap.html">FG_Bitmap</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a2">CreateBitmap</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>|<a class="el" href="group__General__Style.html#ga0">GS_TRANSPARENT</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建位图控件  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__Button.html">FG_Button</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a3">CreateButton</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建按钮控件  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__CheckBox.html">FG_CheckBox</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a4">CreateCheckBox</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建选择按钮控件  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__Edit.html">FG_Edit</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a5">CreateEdit</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wLimit, <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="el" href="group__Frame__Style.html#ga3">FS_RECESSED</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建编辑控件  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__Group.html">FG_Group</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a6">CreateGroup</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建分组控件  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__Label.html">FG_Label</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a7">CreateLabel</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>|<a class="el" href="group__General__Style.html#ga0">GS_TRANSPARENT</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建文字标签  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classFG__RadioButton.html">FG_RadioButton</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Factory.html#a8">CreateRadioButton</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, <a class="el" href="classFG__RadioButton.html">FG_RadioButton</a> *const pSameGroup=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">创建收音机按钮控件  <a href="#a8"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Factory::FG_Factory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Factory::FG_Factory </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00061">61</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Factory::~FG_Factory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual FG_Factory::~<a class="el" href="classFG__Factory.html">FG_Factory</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+虚析构函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00066">66</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a2" doxytag="FG_Factory::CreateBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__Bitmap.html">FG_Bitmap</a>* FG_Factory::CreateBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>|<a class="el" href="group__General__Style.html#ga0">GS_TRANSPARENT</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建位图控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>位图控件的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>位图控件所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>位图控件的唯一标识 </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>位图控件的<a class="el" href="group__Style.html">风格</a> </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的位图控件 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00077">77</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>及<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="FG_Factory::CreateButton" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__Button.html">FG_Button</a>* FG_Factory::CreateButton </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建按钮控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>按钮控件的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>按钮所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>按钮的唯一标识 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的按钮指针 </dd></dl>
+
+<p>
+被<a class="el" href="classMyFactory.html#a0">MyFactory</a>重载。
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00090">90</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_Factory::CreateCheckBox" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__CheckBox.html">FG_CheckBox</a>* FG_Factory::CreateCheckBox </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建选择按钮控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>选择按钮控件的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>选择按钮所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>选择按钮的唯一标识 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的选择按钮指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00103">103</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_Factory::CreateEdit" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__Edit.html">FG_Edit</a>* FG_Factory::CreateEdit </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wLimit</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Text__Justification__Style.html#ga1">TS_LEFT</a>|<a class="el" href="group__Frame__Style.html#ga3">FS_RECESSED</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建编辑控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>编辑控件的初始文本，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>编辑控件所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wLimit</em>&nbsp;</td><td>编辑控件能容纳的最大字符个数 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>编辑控件的唯一标识 </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>编辑控件的<a class="el" href="group__Style.html">风格</a> </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的编辑控件指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00118">118</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="FG_Factory::CreateGroup" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__Group.html">FG_Group</a>* FG_Factory::CreateGroup </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建分组控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>分组控件的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>分组控件所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>分组控件的唯一标识 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的分组控件指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00131">131</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_Factory::CreateLabel" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__Label.html">FG_Label</a>* FG_Factory::CreateLabel </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>|<a class="el" href="group__General__Style.html#ga0">GS_TRANSPARENT</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建文字标签 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>文字标签的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>文字标签所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>文字标签的唯一标识 </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>文字标签的<a class="el" href="group__Style.html">风格</a> </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的文字标签指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00145">145</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="FG_Factory::CreateRadioButton" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classFG__RadioButton.html">FG_RadioButton</a>* FG_Factory::CreateRadioButton </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="classFG__RadioButton.html">FG_RadioButton</a> *const&nbsp;</td>
+          <td class="mdname" nowrap> <em>pSameGroup</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+创建收音机按钮控件 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>收音机按钮控件的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>收音机按钮所在的矩形区域 </td></tr>
+    <tr><td valign=top><em>pSameGroup</em>&nbsp;</td><td>同组的收音机按钮，通过链表把一组收音机按钮连接起来 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>收音机按钮的唯一标识 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>创建出的收音机按钮指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a>第<a class="el" href="FG__Factory_8h-source.html#l00159">159</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Factory_8h-source.html">FG_Factory.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:39:00 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

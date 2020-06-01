@@ -1,0 +1,10 @@
+base referer
+rect $classFG__Edit.html#d2 197,7 355,33
+rect $classFG__TextWidget.html#a1 201,108 351,135
+rect $classFG__TextWidget.html#a2 201,57 351,84
+rect $classFG__TextWidget.html#a3 192,159 360,185
+rect $classFG__Object.html#b4 409,7 567,33
+rect $classFG__Object.html#a20 616,7 747,33
+rect $classFG__String.html#a4 427,108 549,135
+rect $classFG__String.html#a3 427,57 549,84
+rect $classFG__String.html#a5 431,159 545,185

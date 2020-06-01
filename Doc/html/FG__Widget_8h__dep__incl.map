@@ -1,0 +1,6 @@
+base referer
+rect $FG__Window_8h.html 216,92 304,119
+rect $FG__KeyMap_8h.html 191,167 281,193
+rect $FG__Framework_8h.html 100,17 207,44
+rect $FG__TextWidget_8h.html 7,167 116,193
+rect $FG__Widget_8cpp.html 235,17 333,44

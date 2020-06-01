@@ -1,0 +1,4 @@
+base referer
+rect $FG__OSAdaptor_8h.html 6,17 113,44
+rect $FG__Win32DrawInterface_8h.html 137,17 294,44
+rect $FG__X11DrawInterface_8h.html 318,17 460,44

@@ -1,0 +1,609 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_TimerManager class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_TimerManager类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_TimerManager
+<p><center><img src="classFG__TimerManager.png" usemap="#FG_TimerManager_map" border="0" alt=""></center>
+<map name="FG_TimerManager_map">
+<area href="classFG__OSMsgObserver.html" alt="FG_OSMsgObserver" shape="rect" coords="0,0,132,24">
+</map>
+FG_TimerManager合作图：<p><center><img src="classFG__TimerManager__coll__graph.png" border="0" usemap="#FG__TimerManager__coll__map" alt="Collaboration graph"></center>
+<map name="FG__TimerManager__coll__map">
+<area href="classFG__OSMsgObserver.html" shape="rect" coords="7,57,161,153" alt="">
+<area href="classFG__SList.html" shape="rect" coords="185,17,303,193" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__TimerManager-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+定时器管理器类 
+<p>
+管理系统中的所有定时器，单件类。 
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a>第<a class="el" href="FG__TimerManager_8h-source.html#l00088">88</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a0">StartTimer</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *pTarget, <a class="el" href="group__Utility.html#ga0">BYTE</a> timerID, <a class="el" href="group__Utility.html#ga2">DWORD</a> dwInterval)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a1">KillTimer</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *pTarget, <a class="el" href="group__Utility.html#ga0">BYTE</a> timerID)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a2">KillObjectTimer</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *pTarget)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a3">IsTimerStart</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *pTarget, <a class="el" href="group__Utility.html#ga0">BYTE</a> timerID)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a4">KillAllTimer</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#a5">OSMessage</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">用于接收系统消息的接口.  <a href="#a5"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__TimerManager.html">FG_TimerManager</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#e0">GetTimerManager</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到定时器管理器的唯一实例对象的全局访问点函数  <a href="#e0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#e1">DeleteTimerManager</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除定时器管理器的唯一实例对象.  <a href="#e1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#b0">FG_TimerManager</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#b1">~FG_TimerManager</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">析构函数.  <a href="#b1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classFG__SList.html">FG_SList</a>&lt; <a class="el" href="classFG__Timer.html">FG_Timer</a> &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#y0">FG_TIMERLIST</a></td></tr>
+
+<tr><td colspan=2><br><h2>私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__SList.html">FG_TIMERLIST</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#r0">m_TimerList</a></td></tr>
+
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__TimerManager.html">FG_TimerManager</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TimerManager.html#v0">m_pTimerManager</a> = 0</td></tr>
+
+</table>
+<hr><h2>成员类型定义文档</h2>
+<a class="anchor" name="y0" doxytag="FG_TimerManager::FG_TIMERLIST" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classFG__SList.html">FG_SList</a>&lt;<a class="el" href="classFG__Timer.html">FG_Timer</a>&gt; <a class="el" href="classFG__SList.html">FG_TimerManager::FG_TIMERLIST</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保存定时器的容器类型 
+<p>
+在文件<a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a>第<a class="el" href="FG__TimerManager_8h-source.html#l00134">134</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="b0" doxytag="FG_TimerManager::FG_TimerManager" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_TimerManager::FG_TimerManager </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数 
+<p>
+用户不能直接访问 
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00092">92</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00098">FG_OSAdaptor::SetMsgObserver()</a>.
+<p>
+参考自 <a class="el" href="FG__TimerManager_8cpp-source.html#l00076">GetTimerManager()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_b0_cgraph.png" border="0" usemap="#classFG__TimerManager_b0_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_b0_cgraph_map">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="349,6,448,33" alt="">
+<area href="classFG__OSAdaptor.html#a1" shape="rect" coords="297,57,500,84" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="549,6,720,33" alt="">
+</map>
+<a class="anchor" name="b1" doxytag="FG_TimerManager::~FG_TimerManager" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_TimerManager::~<a class="el" href="classFG__TimerManager.html">FG_TimerManager</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+析构函数. 
+<p>
+用户不能直接访问，删除所有的定时器 
+<p>
+在文件<a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a>第<a class="el" href="FG__TimerManager_8h-source.html#l00130">130</a>行定义。
+<p>
+参考 <a class="el" href="FG__TimerManager_8cpp-source.html#l00158">KillAllTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_b1_cgraph.png" border="0" usemap="#classFG__TimerManager_b1_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_b1_cgraph_map">
+<area href="classFG__TimerManager.html#a4" shape="rect" coords="305,32,495,58" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="561,6,657,33" alt="">
+<area href="classFG__SList.html#a6" shape="rect" coords="544,57,675,84" alt="">
+</map>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="e1" doxytag="FG_TimerManager::DeleteTimerManager" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_TimerManager::DeleteTimerManager </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [static]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除定时器管理器的唯一实例对象. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00086">86</a>行定义。
+<p>
+参考 <a class="el" href="FG__TimerManager_8cpp-source.html#l00073">m_pTimerManager</a>.
+<p>
+参考自 <a class="el" href="FG__Application_8cpp-source.html#l00053">FG_Application::OSMessage()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="e0" doxytag="FG_TimerManager::GetTimerManager" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__TimerManager.html">FG_TimerManager</a> * FG_TimerManager::GetTimerManager </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [static]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到定时器管理器的唯一实例对象的全局访问点函数 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>指向定时器管理器的唯一实例对象的指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00076">76</a>行定义。
+<p>
+参考 <a class="el" href="FG__TimerManager_8cpp-source.html#l00092">FG_TimerManager()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00073">m_pTimerManager</a>.
+<p>
+参考自 <a class="el" href="FG__TimerManager_8cpp-source.html#l00051">FG_GetTimerManager()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_e0_cgraph.png" border="0" usemap="#classFG__TimerManager_e0_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_e0_cgraph_map">
+<area href="classFG__TimerManager.html#b0" shape="rect" coords="293,32,523,58" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="624,6,723,33" alt="">
+<area href="classFG__OSAdaptor.html#a1" shape="rect" coords="572,57,775,84" alt="">
+</map>
+<a class="anchor" name="a3" doxytag="FG_TimerManager::IsTimerStart" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_TimerManager::IsTimerStart </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="group__Utility.html#ga0">BYTE</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>timerID</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00146">146</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00051">BYTE</a>、<a class="el" href="FG__List_8h-source.html#l00866">FG_ListFind_If()</a>、<a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>及<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a3_cgraph.png" border="0" usemap="#classFG__TimerManager_a3_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a3_cgraph_map">
+<area href="group__Utility.html#ga10" shape="rect" coords="262,6,356,33" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="261,57,357,84" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="406,6,537,33" alt="">
+</map>
+<a class="anchor" name="a4" doxytag="FG_TimerManager::KillAllTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_TimerManager::KillAllTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00158">158</a>行定义。
+<p>
+参考 <a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>、<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>及<a class="el" href="FG__List_8h-source.html#l00607">FG_SList&lt; ITEM &gt;::RemoveAll()</a>.
+<p>
+参考自 <a class="el" href="FG__TimerManager_8h-source.html#l00130">~FG_TimerManager()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a4_cgraph.png" border="0" usemap="#classFG__TimerManager_a4_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a4_cgraph_map">
+<area href="classFG__SList.html#a2" shape="rect" coords="273,6,369,33" alt="">
+<area href="classFG__SList.html#a6" shape="rect" coords="256,57,387,84" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_TimerManager::KillObjectTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_TimerManager::KillObjectTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pTarget</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00129">129</a>行定义。
+<p>
+参考 <a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>、<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>及<a class="el" href="FG__List_8h-source.html#l00555">FG_SList&lt; ITEM &gt;::Remove()</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00086">FG_Object::~FG_Object()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a2_cgraph.png" border="0" usemap="#classFG__TimerManager_a2_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a2_cgraph_map">
+<area href="classFG__SList.html#a2" shape="rect" coords="289,6,385,33" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="279,57,396,84" alt="">
+</map>
+<a class="anchor" name="a1" doxytag="FG_TimerManager::KillTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_TimerManager::KillTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="group__Utility.html#ga0">BYTE</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>timerID</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00113">113</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00051">BYTE</a>、<a class="el" href="FG__List_8h-source.html#l00866">FG_ListFind_If()</a>、<a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>、<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>及<a class="el" href="FG__List_8h-source.html#l00555">FG_SList&lt; ITEM &gt;::Remove()</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00254">FG_Object::KillTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a1_cgraph.png" border="0" usemap="#classFG__TimerManager_a1_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a1_cgraph_map">
+<area href="group__Utility.html#ga10" shape="rect" coords="253,7,346,33" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="252,57,348,84" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="241,108,358,135" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="406,7,537,33" alt="">
+</map>
+<a class="anchor" name="a5" doxytag="FG_TimerManager::OSMessage" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_TimerManager::OSMessage </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+用于接收系统消息的接口. 
+<p>
+注册为操作系统的接收者的对象通过该接口来接收系统消息 
+<p>
+Implements <a class="el" href="classFG__OSMsgObserver.html#a1">FG_OSMsgObserver</a>.
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00168">168</a>行定义。
+<p>
+参考 <a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>及<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a5_cgraph.png" border="0" usemap="#classFG__TimerManager_a5_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a5_cgraph_map">
+<area href="classFG__SList.html#a2" shape="rect" coords="261,7,357,33" alt="">
+</map>
+<a class="anchor" name="a0" doxytag="FG_TimerManager::StartTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_TimerManager::StartTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="group__Utility.html#ga0">BYTE</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>timerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="group__Utility.html#ga2">DWORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>dwInterval</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00097">97</a>行定义。
+<p>
+参考 <a class="el" href="FG__List_8h-source.html#l00565">FG_SList&lt; ITEM &gt;::Add()</a>、<a class="el" href="FG__Common_8h-source.html#l00051">BYTE</a>、<a class="el" href="FG__Common_8h-source.html#l00059">DWORD</a>、<a class="el" href="FG__List_8h-source.html#l00866">FG_ListFind_If()</a>、<a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>及<a class="el" href="FG__TimerManager_8h-source.html#l00137">m_TimerList</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00241">FG_Object::StartTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TimerManager_a0_cgraph.png" border="0" usemap="#classFG__TimerManager_a0_cgraph_map" alt=""></center>
+<map name="classFG__TimerManager_a0_cgraph_map">
+<area href="classFG__SList.html#a4" shape="rect" coords="252,7,345,33" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="252,57,345,84" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="251,108,347,135" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="396,57,527,84" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v0" doxytag="FG_TimerManager::m_pTimerManager" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__TimerManager.html">FG_TimerManager</a> * <a class="el" href="classFG__TimerManager.html#v0">FG_TimerManager::m_pTimerManager</a> = 0<code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向唯一的定时器管理器实例对象的指针 
+<p>
+在文件<a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a>第<a class="el" href="FG__TimerManager_8cpp-source.html#l00073">73</a>行定义。
+<p>
+参考自 <a class="el" href="FG__TimerManager_8cpp-source.html#l00086">DeleteTimerManager()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00076">GetTimerManager()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="r0" doxytag="FG_TimerManager::m_TimerList" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__SList.html">FG_TIMERLIST</a> <a class="el" href="classFG__TimerManager.html#r0">FG_TimerManager::m_TimerList</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保存定时器的容器变量 
+<p>
+在文件<a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a>第<a class="el" href="FG__TimerManager_8h-source.html#l00137">137</a>行定义。
+<p>
+参考自 <a class="el" href="FG__TimerManager_8cpp-source.html#l00146">IsTimerStart()</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00158">KillAllTimer()</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00129">KillObjectTimer()</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00113">KillTimer()</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00168">OSMessage()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00097">StartTimer()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__TimerManager_8h-source.html">FG_TimerManager.h</a><li><a class="el" href="FG__TimerManager_8cpp-source.html">FG_TimerManager.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:36:52 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

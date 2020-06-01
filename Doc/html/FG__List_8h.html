@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_List.h File Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_List.h文件参考</h1><hr><a name="_details"></a><h2>详细描述</h2>
+单、双向链表容器及迭代器头文件 
+<p>
+
+<p>
+在文件<a class="el" href="FG__List_8h-source.html">FG_List.h</a>中定义。
+<p>
+
+<p>
+此图展示直接或间接包含该文件的文件：<p><center><img src="FG__List_8h__dep__incl.png" border="0" usemap="#FG_List.hdep_map" alt="Included by dependency graph"></center>
+<map name="FG_List.hdep_map">
+<area href="FG__Utility_8h.html" shape="rect" coords="7,17,81,44" alt="">
+</map>
+
+<p>
+<a href="FG__List_8h-source.html">浏览该文件的源代码。</a><table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>组合类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>struct &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__SList__Node.html">FG_SList_Node</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">单向链表的节点结构 </em> <a href="structFG__SList__Node.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>struct &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__BList__Node.html">FG_BList_Node</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表的节点结构. </em> <a href="structFG__BList__Node.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__ForwardIterator.html">FG_ForwardIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">正向迭代器类. </em> <a href="classFG__ForwardIterator.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BackIterator.html">FG_BackIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">反向迭代器类 </em> <a href="classFG__BackIterator.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__LoopIterator.html">FG_LoopIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">循环迭代器类. </em> <a href="classFG__LoopIterator.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__SList.html">FG_SList</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">单向链表容器类 </em> <a href="classFG__SList.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__BList.html">FG_BList</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">双向链表容器类. </em> <a href="classFG__BList.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__ListCheck.html">FG_ListCheck</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">用于<a class="el" href="group__Utility.html#ga10">FG_ListFind_If</a>算法的检查接口类. </em> <a href="classFG__ListCheck.html#_details">更多...</a><em><br><br></td></tr>
+<tr><td colspan=2><br><h2>函数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>template&lt;class ITERATOR, class ITEM&gt; bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga9">FG_ListFind</a> (ITERATOR &amp;i, const ITEM *pItem)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">在容器中搜寻符合要求的对象的算法.  <a href="group__Utility.html#ga9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>template&lt;class ITERATOR, class ITEM&gt; bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__Utility.html#ga10">FG_ListFind_If</a> (ITERATOR &amp;i, <a class="el" href="classFG__ListCheck.html">FG_ListCheck</a>&lt; ITEM &gt; &amp;check)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">在容器中搜寻符合要求的对象的算法.  <a href="group__Utility.html#ga10"></a><br><br></td></tr>
+</table>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:35:30 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

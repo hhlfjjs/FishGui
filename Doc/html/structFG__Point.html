@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Point struct Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Point结构参考<br>
+<small>
+[<a class="el" href="group__Utility.html">应用包</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>&gt;</code>
+<p>
+<a href="structFG__Point-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+像素点结构. 
+<p>
+定义屏幕上使用的像素点的结构 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00048">48</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Point.html#a0">operator!=</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;InPoint) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">比较两个点是否不同  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Point.html#a1">operator==</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;InPoint) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">比较两个点是否相同  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__Point.html">FG_Point</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Point.html#a2">operator+</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;Point) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">两个点相加.  <a href="#a2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>公有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Point.html#o0">x</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">像素点的横坐标.  <a href="#o0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Point.html#o1">y</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">像素点的纵坐标.  <a href="#o1"></a><br><br></td></tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Point::operator!=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Point::operator!= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>InPoint</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+比较两个点是否不同 
+<p>
+!=运算符，比较本像素点和另外一个像素点是否不同（即横坐标和纵坐标至少有一个不同） <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>InPoint</em>&nbsp;</td><td>被比较的像素点 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true: 两个点不同 false: 两个点相同 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00062">62</a>行定义。
+<p>
+参考 <a class="el" href="FG__Point_8h-source.html#l00051">x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">y</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="FG_Point::operator+" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__Point.html">FG_Point</a> FG_Point::operator+ </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Point</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+两个点相加. 
+<p>
++运算符，本像素点和另外一个像素点相加（即横坐标和纵坐标分别相加） <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Point</em>&nbsp;</td><td>被相加的像素点 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回相加结果 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00094">94</a>行定义。
+<p>
+参考 <a class="el" href="FG__Point_8h-source.html#l00051">x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">y</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Point::operator==" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Point::operator== </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>InPoint</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+比较两个点是否相同 
+<p>
+==运算符，比较本像素点和另外一个像素点是否相同（即横坐标和纵坐标都相同） <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>InPoint</em>&nbsp;</td><td>被比较的像素点 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true: 两个点相同 false: 两个点不同 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00078">78</a>行定义。
+<p>
+参考 <a class="el" href="FG__Point_8h-source.html#l00051">x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">y</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="o0" doxytag="FG_Point::x" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Point.html#o0">FG_Point::x</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+像素点的横坐标. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00051">51</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">FG_Rect::Contains()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00204">FG_Win32DrawInterface::DrawPolyLine()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Point_8h-source.html#l00062">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">FG_Rect::operator+()</a>、<a class="el" href="FG__Point_8h-source.html#l00094">operator+()</a>、<a class="el" href="FG__Point_8h-source.html#l00078">operator==()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00190">FG_X11Adaptor::process_event()</a>、<a class="el" href="FG__Rect_8h-source.html#l00095">FG_Rect::Set()</a>及<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00138">FG_Win32Adaptor::WndProc()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="o1" doxytag="FG_Point::y" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Point.html#o1">FG_Point::y</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+像素点的纵坐标. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Point_8h-source.html">FG_Point.h</a>第<a class="el" href="FG__Point_8h-source.html#l00053">53</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">FG_Rect::Contains()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00204">FG_Win32DrawInterface::DrawPolyLine()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Point_8h-source.html#l00062">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">FG_Rect::operator+()</a>、<a class="el" href="FG__Point_8h-source.html#l00094">operator+()</a>、<a class="el" href="FG__Point_8h-source.html#l00078">operator==()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00190">FG_X11Adaptor::process_event()</a>、<a class="el" href="FG__Rect_8h-source.html#l00095">FG_Rect::Set()</a>及<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00138">FG_Win32Adaptor::WndProc()</a>.    </td>
+  </tr>
+</table>
+<hr>该结构的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Point_8h-source.html">FG_Point.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:21 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

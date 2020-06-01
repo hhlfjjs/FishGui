@@ -1,0 +1,16 @@
+base referer
+rect $FG__Framework_8h.html 236,241 343,268
+rect $FG__Factory_8h.html 167,316 252,342
+rect $MyFactory_8h.html 119,92 199,118
+rect $MyButton_8h.html 45,166 120,193
+rect $MainWindow_8cpp.html 185,17 292,44
+rect $MainWindow_8h.html 195,166 285,193
+rect $Win1_8h.html 392,166 443,193
+rect $MyButton_8cpp.html 7,92 95,118
+rect $MyApp_8cpp.html 276,92 351,118
+rect $MyApp_8h.html 309,166 368,193
+rect $Win1_8cpp.html 425,92 489,118
+rect $Win2_8h.html 467,166 517,193
+rect $Win2_8cpp.html 513,92 577,118
+rect $FG__Screen_8cpp.html 113,241 212,268
+rect $FG__RadioButton_8cpp.html 327,316 455,342

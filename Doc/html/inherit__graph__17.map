@@ -1,0 +1,4 @@
+base referer
+rect $classFG__OSDrawInterface.html 17,32 148,58
+rect $classFG__Win32DrawInterface.html 197,6 344,33
+rect $classFG__X11DrawInterface.html 205,57 336,84

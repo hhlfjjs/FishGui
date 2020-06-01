@@ -1,0 +1,4 @@
+base referer
+rect $classFG__ListCheck.html 17,32 196,58
+rect $classFG__CheckCanGetFocus.html 245,6 395,33
+rect $classFG__CheckObjectID.html 260,57 380,84

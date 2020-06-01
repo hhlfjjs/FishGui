@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Win32Adaptor.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Win32Adaptor.h</h1><a href="FG__Win32Adaptor_8h.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_Win32Adaptor.h - Win32的适配器类的头文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00038 <span class="preprocessor">#ifndef FG_WIN32ADAPTOR_H_HEADER_INCLUDED_C0B1A8C2</span>
+00039 <span class="preprocessor"></span><span class="preprocessor">#define FG_WIN32ADAPTOR_H_HEADER_INCLUDED_C0B1A8C2</span>
+00040 <span class="preprocessor"></span>
+00041 <span class="preprocessor">#include "windows.h"</span>
+00042 <span class="preprocessor">#include "<a class="code" href="FG__OSAdaptor_8h.html">FG_OSAdaptor.h</a>"</span>
+00043 <span class="keyword">class </span><a class="code" href="classFG__Win32DrawInterface.html">FG_Win32DrawInterface</a>;
+00044 
+00045 <span class="comment">//##ModelId=3F49CC120210</span>
+<a name="l00050"></a><a class="code" href="classFG__Win32Adaptor.html">00050</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="classFG__Win32Adaptor.html">FG_Win32Adaptor</a> : <span class="keyword">public</span> <a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a>
+00051 {
+00052 <span class="keyword">public</span>:
+00053     <span class="comment">//##ModelId=3F4E099D01F1</span>
+00062 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Win32Adaptor.html#a0">InitInstance</a>();
+00063 
+00064     <span class="comment">//##ModelId=3F4E09F802BB</span>
+00072 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Win32Adaptor.html#a1">ExitInstance</a>();
+00073 
+00074     <span class="comment">//##ModelId=3F4E09F8031F</span>
+00082 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="classFG__Win32Adaptor.html#a2">Execute</a>();
+00083 
+00084     <span class="comment">//##ModelId=3F6EAFFE01EA</span>
+<a name="l00089"></a><a class="code" href="classFG__Win32Adaptor.html#a3">00089</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Win32Adaptor.html#a3">SetInst</a>(HINSTANCE hInst) { <a class="code" href="classFG__Win32Adaptor.html#p0">m_hInst</a> = hInst; }
+00090 
+00091     <span class="comment">//##ModelId=3F6EAFFE024E</span>
+<a name="l00096"></a><a class="code" href="classFG__Win32Adaptor.html#a4">00096</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Win32Adaptor.html#a4">SetPrevInst</a>(HINSTANCE hPrevInst) { <a class="code" href="classFG__Win32Adaptor.html#p1">m_hPrevInst</a> = hPrevInst; }
+00097 
+00098     <span class="comment">//##ModelId=3F6EAFFE02B2</span>
+<a name="l00103"></a><a class="code" href="classFG__Win32Adaptor.html#a5">00103</a> <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Win32Adaptor.html#a5">SetCmdShow</a>(<span class="keywordtype">int</span> nCmdShow) { <a class="code" href="classFG__Win32Adaptor.html#p2">m_nCmdShow</a> = nCmdShow; }
+00104 
+00105     <span class="comment">//##ModelId=40925CB0009F</span>
+00111 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classFG__Win32Adaptor.html#a6">SetBmpPath</a>(<span class="keywordtype">char</span> * pPath, <span class="keywordtype">int</span> len);
+00112 
+00113     <span class="comment">//##ModelId=40925CB000E5</span>
+00121 <span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFG__Win32Adaptor.html#a7">DrawBitmap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * pBmpName, <span class="keyword">const</span> <span class="keywordtype">short</span> x1, <span class="keyword">const</span> <span class="keywordtype">short</span> y1);
+00122 
+00123 <span class="keyword">protected</span>:
+<a name="l00124"></a><a class="code" href="classFG__Win32Adaptor.html#n0">00124</a>     <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classFG__OSAdaptor.html">FG_OSAdaptor</a>;
+00125 
+00126     <span class="comment">//##ModelId=3F4EB7140009</span>
+<a name="l00128"></a><a class="code" href="classFG__Win32Adaptor.html#b0">00128</a> <span class="comment"></span>    <a class="code" href="classFG__Win32Adaptor.html#b0">FG_Win32Adaptor</a>() : <a class="code" href="classFG__Win32Adaptor.html#p0">m_hInst</a>(0), <a class="code" href="classFG__Win32Adaptor.html#p1">m_hPrevInst</a>(0), <a class="code" href="classFG__Win32Adaptor.html#p2">m_nCmdShow</a>() {}
+00129 
+00130     <span class="comment">//##ModelId=3F6EAFFE00F0</span>
+<a name="l00132"></a><a class="code" href="classFG__Win32Adaptor.html#p0">00132</a> <span class="comment"></span>    HINSTANCE <a class="code" href="classFG__Win32Adaptor.html#p0">m_hInst</a>, <a class="code" href="classFG__Win32Adaptor.html#p1">m_hPrevInst</a>;         
+00134     <span class="comment">//##ModelId=3F6EAFFE0172</span>
+<a name="l00135"></a><a class="code" href="classFG__Win32Adaptor.html#p2">00135</a>     <span class="keywordtype">int</span> <a class="code" href="classFG__Win32Adaptor.html#p2">m_nCmdShow</a>;                         
+00137     <span class="comment">//##ModelId=40925CAF03E7</span>
+<a name="l00138"></a><a class="code" href="classFG__Win32Adaptor.html#p3">00138</a>     <span class="keywordtype">char</span> <a class="code" href="classFG__Win32Adaptor.html#p3">m_BmpPath</a>[MAX_PATH + 1];           
+00140     <span class="comment">//##ModelId=3F6EAFFE0335</span>
+00150 <span class="comment"></span>    <span class="keyword">static</span> <span class="keywordtype">long</span> FAR WINAPI <a class="code" href="classFG__Win32Adaptor.html#f0">WndProc</a>(HWND hWnd, UINT uMessage, UINT wParam, LONG lParam);
+00151 };
+00152 
+00153 <span class="preprocessor">#endif </span><span class="comment">/* FG_WIN32ADAPTOR_H_HEADER_INCLUDED_C0B1A8C2 */</span>
+00154 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:41 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

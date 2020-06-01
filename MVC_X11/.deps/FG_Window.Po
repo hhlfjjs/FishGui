@@ -1,0 +1,38 @@
+FG_Window.o : \
+ ../Source/Framework/FG_Window.cpp \
+ ../Source/Framework/../OSAdaptor/FG_OSAdaptor.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_Utility.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_Common.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_Point.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_Rect.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_String.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_List.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_Message.h \
+ ../Source/Framework/../OSAdaptor/../Utility/FG_OSMsgObserver.h \
+ ../Source/Framework/../OSAdaptor/FG_OSDrawInterface.h \
+ ../Source/Framework/FG_Screen.h \
+ ../Source/Framework/../Utility/FG_Utility.h \
+ ../Source/Framework/FG_Window.h ../Source/Framework/FG_Container.h \
+ ../Source/Framework/FG_Object.h ../Source/Framework/FG_MsgMap.h \
+ ../Source/Framework/FG_TimerManager.h ../Source/Framework/FG_Widget.h \
+ ../Source/Framework/FG_KeyMap.h
+../Source/Framework/FG_Window.cpp :
+../Source/Framework/../OSAdaptor/FG_OSAdaptor.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_Utility.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_Common.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_Point.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_Rect.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_String.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_List.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_Message.h :
+../Source/Framework/../OSAdaptor/../Utility/FG_OSMsgObserver.h :
+../Source/Framework/../OSAdaptor/FG_OSDrawInterface.h :
+../Source/Framework/FG_Screen.h :
+../Source/Framework/../Utility/FG_Utility.h :
+../Source/Framework/FG_Window.h :
+../Source/Framework/FG_Container.h :
+../Source/Framework/FG_Object.h :
+../Source/Framework/FG_MsgMap.h :
+../Source/Framework/FG_TimerManager.h :
+../Source/Framework/FG_Widget.h :
+../Source/Framework/FG_KeyMap.h :

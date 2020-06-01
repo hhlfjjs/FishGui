@@ -1,0 +1,849 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Win32DrawInterface class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Win32DrawInterface类参考<br>
+<small>
+[<a class="el" href="group__OSAdaptor.html">操作系统适配层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Win32DrawInterface
+<p><center><img src="classFG__Win32DrawInterface.png" usemap="#FG_Win32DrawInterface_map" border="0" alt=""></center>
+<map name="FG_Win32DrawInterface_map">
+<area href="classFG__OSDrawInterface.html" alt="FG_OSDrawInterface" shape="rect" coords="0,0,151,24">
+</map>
+FG_Win32DrawInterface合作图：<p><center><img src="classFG__Win32DrawInterface__coll__graph.png" border="0" usemap="#FG__Win32DrawInterface__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Win32DrawInterface__coll__map">
+<area href="classFG__OSDrawInterface.html" shape="rect" coords="16,17,173,289" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Win32DrawInterface-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+Win32的绘图接口类. 
+<p>
+该类封装Win32的绘图过程 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00048">48</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a0">FG_Win32DrawInterface</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Win32的绘图接口类的构造函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a1">~FG_Win32DrawInterface</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Win32的绘图接口类的析构函数.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a2">SetHDC</a> (const HDC hdc)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置Win32的绘图设备句柄.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a3">BeginDraw</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">开始重画  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a4">EndDraw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">结束重画  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a5">FillRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> ForeColor, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> background)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">填充矩形.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a6">Line</a> (const short x1, const short y1, const short x2, const short y2, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画线  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a7">DrawText</a> (const char *Text, const short x, const short y, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制文本  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a8">GetTextWidth</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的宽度  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a9">GetTextHeight</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的高度  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a10">DrawBitmap</a> (const char *pBmpName, const short x1, const short y1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制位图  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a11">DrawPolyLine</a> (const short n, const <a class="el" href="structFG__Point.html">FG_Point</a> *vert, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制折线  <a href="#a11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#a12">DrawDotRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制点划线矩形  <a href="#a12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HDC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#p0">m_hDC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Win32绘图设备句柄.  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HDC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#p1">m_hMemDC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">兼容的内存绘图设备句柄，用作绘图缓冲区  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HBITMAP&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#p2">m_hBitmap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">内存缓冲区所用的位图句柄.  <a href="#p2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HFONT&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32DrawInterface.html#p3">m_hFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">字体句柄  <a href="#p3"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Win32DrawInterface::FG_Win32DrawInterface" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Win32DrawInterface::FG_Win32DrawInterface </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Win32的绘图接口类的构造函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00053">53</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Win32DrawInterface::~FG_Win32DrawInterface" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Win32DrawInterface::~<a class="el" href="classFG__Win32DrawInterface.html">FG_Win32DrawInterface</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Win32的绘图接口类的析构函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00052">52</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00104">m_hBitmap</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00107">m_hFont</a>及<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a3" doxytag="FG_Win32DrawInterface::BeginDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::BeginDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+开始重画 
+<p>
+该函数执行之后，所有的绘图操作都在一个缓冲区上进行，直到对应的<a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface::EndDraw</a>调用才把缓冲区内容刷新到屏幕上 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>需要重画的无效区域 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a2">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00061">61</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00104">m_hBitmap</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00098">m_hDC</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00107">m_hFont</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>、<a class="el" href="FG__Common_8h-source.html#l00062">SCREEN_HEIGHT</a>及<a class="el" href="FG__Common_8h-source.html#l00061">SCREEN_WIDTH</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a10" doxytag="FG_Win32DrawInterface::DrawBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::DrawBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pBmpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制位图 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pBmpName</em>&nbsp;</td><td>要绘制的位图名 </td></tr>
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>位图左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>位图左上角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00183">183</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00098">m_hDC</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>及<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a12" doxytag="FG_Win32DrawInterface::DrawDotRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::DrawDotRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制点划线矩形 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要绘制的矩形 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>矩形的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a11">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">232</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a11" doxytag="FG_Win32DrawInterface::DrawPolyLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::DrawPolyLine </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Point.html">FG_Point</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>vert</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制折线 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>n</em>&nbsp;</td><td>该折线包含的点数 </td></tr>
+    <tr><td valign=top><em>vert</em>&nbsp;</td><td>所有点的数组 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>折线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a10">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00204">204</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_Win32DrawInterface::DrawText" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::DrawText </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制文本 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要绘制的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>文本左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>文本左上角的纵坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>文本的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a6">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00146">146</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>及<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_Win32DrawInterface::EndDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::EndDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+结束重画 
+<p>
+该函数把缓冲区内容刷新到屏幕上 
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">90</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00254">FG_Rect::Height()</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00098">m_hDC</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">FG_Rect::Width()</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Win32DrawInterface_a4_cgraph.png" border="0" usemap="#classFG__Win32DrawInterface_a4_cgraph_map" alt=""></center>
+<map name="classFG__Win32DrawInterface_a4_cgraph_map">
+<area href="structFG__Rect.html#a21" shape="rect" coords="277,6,381,33" alt="">
+<area href="structFG__Rect.html#a20" shape="rect" coords="279,57,380,84" alt="">
+</map>
+<a class="anchor" name="a5" doxytag="FG_Win32DrawInterface::FillRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::FillRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>ForeColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>background</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+填充矩形. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要填充的矩形 </td></tr>
+    <tr><td valign=top><em>ForeColor</em>&nbsp;</td><td>前景色 </td></tr>
+    <tr><td valign=top><em>background</em>&nbsp;</td><td>背景色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a4">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">102</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="FG_Win32DrawInterface::GetTextHeight" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_Win32DrawInterface::GetTextHeight </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的高度 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算高度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的高度的像素数 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a8">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00170">170</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="FG_Win32DrawInterface::GetTextWidth" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_Win32DrawInterface::GetTextWidth </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的宽度 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算宽度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的宽度的像素数 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a7">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00157">157</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="FG_Win32DrawInterface::Line" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::Line </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+画线 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>x2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>y2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+Implements <a class="el" href="classFG__OSDrawInterface.html#a5">FG_OSDrawInterface</a>.
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a>第<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00124">124</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">m_hMemDC</a>及<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="FG_Win32DrawInterface::SetHDC" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32DrawInterface::SetHDC </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const HDC&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>hdc</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置Win32的绘图设备句柄. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>hdc</em>&nbsp;</td><td>要设置的绘图设备句柄 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00064">64</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32DrawInterface_8h-source.html#l00098">m_hDC</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p2" doxytag="FG_Win32DrawInterface::m_hBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HBITMAP <a class="el" href="classFG__Win32DrawInterface.html#p2">FG_Win32DrawInterface::m_hBitmap</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+内存缓冲区所用的位图句柄. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00104">104</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00061">BeginDraw()</a>及<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00052">~FG_Win32DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_Win32DrawInterface::m_hDC" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HDC <a class="el" href="classFG__Win32DrawInterface.html#p0">FG_Win32DrawInterface::m_hDC</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Win32绘图设备句柄. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00098">98</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00061">BeginDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00183">DrawBitmap()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">EndDraw()</a>及<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00064">SetHDC()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p3" doxytag="FG_Win32DrawInterface::m_hFont" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HFONT <a class="el" href="classFG__Win32DrawInterface.html#p3">FG_Win32DrawInterface::m_hFont</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+字体句柄 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00107">107</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00061">BeginDraw()</a>及<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00052">~FG_Win32DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p1" doxytag="FG_Win32DrawInterface::m_hMemDC" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HDC <a class="el" href="classFG__Win32DrawInterface.html#p1">FG_Win32DrawInterface::m_hMemDC</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+兼容的内存绘图设备句柄，用作绘图缓冲区 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a>第<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00101">101</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00061">BeginDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00183">DrawBitmap()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">DrawDotRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00204">DrawPolyLine()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00146">DrawText()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">EndDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8h-source.html#l00053">FG_Win32DrawInterface()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">FillRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00170">GetTextHeight()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00157">GetTextWidth()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00124">Line()</a>及<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00052">~FG_Win32DrawInterface()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Win32DrawInterface_8h-source.html">FG_Win32DrawInterface.h</a><li><a class="el" href="FG__Win32DrawInterface_8cpp-source.html">FG_Win32DrawInterface.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:36 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

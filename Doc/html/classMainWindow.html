@@ -1,0 +1,801 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: MainWindow class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>MainWindow类参考<br>
+<small>
+[<a class="el" href="group__Application.html">应用层（示例应用程序FishGUIDemo）</a>]</small>
+</h1><code>#include &lt;<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>&gt;</code>
+<p>
+<p>继承图，类MainWindow
+<p><center><img src="classMainWindow.png" usemap="#MainWindow_map" border="0" alt=""></center>
+<map name="MainWindow_map">
+<area href="classFG__Window.html" alt="FG_Window" shape="rect" coords="0,112,91,136">
+<area href="classFG__Container.html" alt="FG_Container" shape="rect" coords="0,56,91,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,91,24">
+</map>
+MainWindow合作图：<p><center><img src="classMainWindow__coll__graph.png" border="0" usemap="#MainWindow__coll__map" alt="Collaboration graph"></center>
+<map name="MainWindow__coll__map">
+<area href="classFG__Window.html" shape="rect" coords="116,369,241,705" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="255,209,383,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="79,17,220,145" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classMainWindow-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+用户定义的主窗口类. 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00046">46</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom>{ <br>
+&nbsp;&nbsp;<a class="el" href="classMainWindow.html#w15w0">ID_RADIO1</a> =  1, 
+<a class="el" href="classMainWindow.html#w15w1">ID_RADIO2</a>, 
+<a class="el" href="classMainWindow.html#w15w2">ID_RADIO3</a>, 
+<a class="el" href="classMainWindow.html#w15w3">ID_RADIO4</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classMainWindow.html#w15w4">ID_RADIO5</a>, 
+<a class="el" href="classMainWindow.html#w15w5">ID_RADIO6</a>, 
+<a class="el" href="classMainWindow.html#w15w6">ID_EDIT1</a>, 
+<a class="el" href="classMainWindow.html#w15w7">ID_CHECK1</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classMainWindow.html#w15w8">ID_CHECK2</a>, 
+<a class="el" href="classMainWindow.html#w15w9">ID_EDIT2</a>, 
+<a class="el" href="classMainWindow.html#w15w10">ID_OPEN</a>, 
+<a class="el" href="classMainWindow.html#w15w11">ID_FACTORY</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classMainWindow.html#w15w12">ID_START</a>, 
+<a class="el" href="classMainWindow.html#w15w13">ID_STOP</a>, 
+<a class="el" href="classMainWindow.html#w15w14">ID_BITMAP</a>
+<br>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">主窗口上的控件ID.  <a href="#w15">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#a0">MainWindow</a> (<a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">主窗口的构造函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom>{ <a class="el" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a> =  1
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">主窗口上的动画1控件的定时器ID.  <a href="#x1">更多...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b0">OnRadioChecked</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">收音机按钮选中通知消息的处理函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b1">OnCheckChanged</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">选择按钮选中或取消选中通知消息的处理函数.  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b2">OnStart</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">“启动”按钮通知消息的处理函数  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b3">OnStop</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">“停止”按钮通知消息的处理函数  <a href="#b3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b4">OnOpen</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">“打开窗口1”按钮通知消息的处理函数  <a href="#b4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b5">OnFactory</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">“圆角按钮”和“方角按钮”切换按钮通知消息的处理函数  <a href="#b5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b6">OnTimer</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定时器（<a class="el" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>）消息的处理函数  <a href="#b6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#b7">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b7"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#p0">m_iBmpNum</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">当前显示的动画帧数  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#p1">m_bStart</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">动画是否启动，true表示启动，false表示停止  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#p2">m_bNewFactory</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">当前使用的工厂类的标志，true表示使用用户定义的工厂类，false表示使用缺省工厂类  <a href="#p2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__Window.html">FG_Window</a> ::<a class="el" href="classMainWindow.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classMainWindow.html">MainWindow</a> ::<a class="el" href="classMainWindow.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMainWindow.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>成员枚举类型文档</h2>
+<a class="anchor" name="w15" doxytag="MainWindow::@0" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> anonymous enum
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+主窗口上的控件ID. 
+<p>
+<dl compact><dt><b>枚举值: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="w15w0" doxytag="ID_RADIO1" ></a>ID_RADIO1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w1" doxytag="ID_RADIO2" ></a>ID_RADIO2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w2" doxytag="ID_RADIO3" ></a>ID_RADIO3</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w3" doxytag="ID_RADIO4" ></a>ID_RADIO4</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w4" doxytag="ID_RADIO5" ></a>ID_RADIO5</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w5" doxytag="ID_RADIO6" ></a>ID_RADIO6</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w6" doxytag="ID_EDIT1" ></a>ID_EDIT1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w7" doxytag="ID_CHECK1" ></a>ID_CHECK1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w8" doxytag="ID_CHECK2" ></a>ID_CHECK2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w9" doxytag="ID_EDIT2" ></a>ID_EDIT2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w10" doxytag="ID_OPEN" ></a>ID_OPEN</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w11" doxytag="ID_FACTORY" ></a>ID_FACTORY</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w12" doxytag="ID_START" ></a>ID_START</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w13" doxytag="ID_STOP" ></a>ID_STOP</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="w15w14" doxytag="ID_BITMAP" ></a>ID_BITMAP</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00052">52</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="x1" doxytag="MainWindow::@1" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> anonymous enum<code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+主窗口上的动画1控件的定时器ID. 
+<p>
+<dl compact><dt><b>枚举值: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="x1x0" doxytag="ID_ANIMATION_TIMER" ></a>ID_ANIMATION_TIMER</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00083">83</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="MainWindow::MainWindow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> MainWindow::MainWindow </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wID</em> = 0          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+主窗口的构造函数. 
+<p>
+创建所有的控件，注册快捷键 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>主窗口的唯一标识，缺省为0 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00095">95</a>行定义。
+<p>
+参考 <a class="el" href="FG__Window_8cpp-source.html#l00063">FG_Window::AddWidget()</a>、<a class="el" href="FG__Factory_8h-source.html#l00077">FG_Factory::CreateBitmap()</a>、<a class="el" href="FG__Factory_8h-source.html#l00090">FG_Factory::CreateButton()</a>、<a class="el" href="FG__Factory_8h-source.html#l00103">FG_Factory::CreateCheckBox()</a>、<a class="el" href="FG__Factory_8h-source.html#l00118">FG_Factory::CreateEdit()</a>、<a class="el" href="FG__Factory_8h-source.html#l00131">FG_Factory::CreateGroup()</a>、<a class="el" href="FG__Factory_8h-source.html#l00145">FG_Factory::CreateLabel()</a>、<a class="el" href="FG__Factory_8h-source.html#l00159">FG_Factory::CreateRadioButton()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00064">FG_GetFactory()</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Message_8h-source.html#l00101">FVK_ENTER</a>、<a class="el" href="classMainWindow.html#w15w14">ID_BITMAP</a>、<a class="el" href="classMainWindow.html#w15w7">ID_CHECK1</a>、<a class="el" href="classMainWindow.html#w15w8">ID_CHECK2</a>、<a class="el" href="classMainWindow.html#w15w6">ID_EDIT1</a>、<a class="el" href="classMainWindow.html#w15w9">ID_EDIT2</a>、<a class="el" href="classMainWindow.html#w15w11">ID_FACTORY</a>、<a class="el" href="classMainWindow.html#w15w10">ID_OPEN</a>、<a class="el" href="classMainWindow.html#w15w0">ID_RADIO1</a>、<a class="el" href="classMainWindow.html#w15w1">ID_RADIO2</a>、<a class="el" href="classMainWindow.html#w15w2">ID_RADIO3</a>、<a class="el" href="classMainWindow.html#w15w3">ID_RADIO4</a>、<a class="el" href="classMainWindow.html#w15w4">ID_RADIO5</a>、<a class="el" href="classMainWindow.html#w15w5">ID_RADIO6</a>、<a class="el" href="classMainWindow.html#w15w12">ID_START</a>、<a class="el" href="classMainWindow.html#w15w13">ID_STOP</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="group__MainWindow__Rect.html#ga18">RECT_Bitmap</a>、<a class="el" href="group__MainWindow__Rect.html#ga11">RECT_Check1</a>、<a class="el" href="group__MainWindow__Rect.html#ga12">RECT_Check2</a>、<a class="el" href="group__MainWindow__Rect.html#ga9">RECT_Edit1</a>、<a class="el" href="group__MainWindow__Rect.html#ga14">RECT_Edit2</a>、<a class="el" href="group__MainWindow__Rect.html#ga16">RECT_Factory</a>、<a class="el" href="group__MainWindow__Rect.html#ga1">RECT_Group1</a>、<a class="el" href="group__MainWindow__Rect.html#ga10">RECT_Group2</a>、<a class="el" href="group__MainWindow__Rect.html#ga17">RECT_Group3</a>、<a class="el" href="group__MainWindow__Rect.html#ga8">RECT_Label1</a>、<a class="el" href="group__MainWindow__Rect.html#ga13">RECT_Label2</a>、<a class="el" href="group__MainWindow__Rect.html#ga0">RECT_MainWindow</a>、<a class="el" href="group__MainWindow__Rect.html#ga15">RECT_Open</a>、<a class="el" href="group__MainWindow__Rect.html#ga2">RECT_Radio1</a>、<a class="el" href="group__MainWindow__Rect.html#ga3">RECT_Radio2</a>、<a class="el" href="group__MainWindow__Rect.html#ga4">RECT_Radio3</a>、<a class="el" href="group__MainWindow__Rect.html#ga5">RECT_Radio4</a>、<a class="el" href="group__MainWindow__Rect.html#ga6">RECT_Radio5</a>、<a class="el" href="group__MainWindow__Rect.html#ga7">RECT_Radio6</a>、<a class="el" href="group__MainWindow__Rect.html#ga19">RECT_Start</a>、<a class="el" href="group__MainWindow__Rect.html#ga20">RECT_Stop</a>、<a class="el" href="FG__Window_8cpp-source.html#l00126">FG_Window::RegisterKey()</a>、<a class="el" href="FG__Rect_8h-source.html#l00082">FG_Rect::Set()</a>、<a class="el" href="FG__RadioButton_8h-source.html#l00077">FG_RadioButton::SetChecked()</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>.
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00202">OnFactory()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_a0_cgraph.png" border="0" usemap="#classMainWindow_a0_cgraph_map" alt=""></center>
+<map name="classMainWindow_a0_cgraph_map">
+<area href="classFG__Window.html#a2" shape="rect" coords="253,133,403,160" alt="">
+<area href="classFG__Factory.html#a2" shape="rect" coords="247,311,409,337" alt="">
+<area href="classFG__Factory.html#a3" shape="rect" coords="248,361,408,388" alt="">
+<area href="classFG__Factory.html#a4" shape="rect" coords="237,412,419,439" alt="">
+<area href="classFG__Factory.html#a5" shape="rect" coords="255,463,401,489" alt="">
+<area href="classFG__Factory.html#a6" shape="rect" coords="249,513,407,540" alt="">
+<area href="classFG__Factory.html#a7" shape="rect" coords="251,564,405,591" alt="">
+<area href="classFG__Factory.html#a8" shape="rect" coords="231,615,425,641" alt="">
+<area href="group__Framework.html#ga1" shape="rect" coords="279,665,377,692" alt="">
+<area href="classFG__Window.html#a5" shape="rect" coords="249,260,407,287" alt="">
+<area href="structFG__Rect.html#a2" shape="rect" coords="284,716,372,743" alt="">
+<area href="classFG__RadioButton.html#a2" shape="rect" coords="237,209,419,236" alt="">
+<area href="classFG__Container.html#b0" shape="rect" coords="492,57,639,84" alt="">
+<area href="classFG__Widget.html#a1" shape="rect" coords="705,108,868,135" alt="">
+<area href="classFG__Window.html#a6" shape="rect" coords="483,159,648,185" alt="">
+<area href="classFG__BList.html#a6" shape="rect" coords="740,7,833,33" alt="">
+<area href="classFG__Object.html#a11" shape="rect" coords="728,57,845,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="721,159,852,185" alt="">
+<area href="classFG__Screen.html#a3" shape="rect" coords="492,691,639,717" alt="">
+<area href="classFG__Screen.html#e0" shape="rect" coords="493,640,637,667" alt="">
+<area href="classFG__Screen.html#b3" shape="rect" coords="713,640,860,667" alt="">
+<area href="classFG__Container.html#a3" shape="rect" coords="492,260,639,287" alt="">
+<area href="classFG__KeyMap.html#a1" shape="rect" coords="485,311,645,337" alt="">
+<area href="classFG__Widget.html#a2" shape="rect" coords="475,361,656,388" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="740,209,833,236" alt="">
+<area href="classFG__BList.html#a3" shape="rect" coords="739,260,835,287" alt="">
+<area href="classFG__SList.html#a4" shape="rect" coords="740,311,833,337" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="487,209,644,236" alt="">
+</map>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="b7" doxytag="MainWindow::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * MainWindow::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Window.html#b5">FG_Window</a>。
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00047">47</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="b1" doxytag="MainWindow::OnCheckChanged" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnCheckChanged </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+选择按钮选中或取消选中通知消息的处理函数. 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00153">153</a>行定义。
+<p>
+参考 <a class="el" href="FG__Container_8cpp-source.html#l00047">FG_Container::GetChild()</a>、<a class="el" href="classMainWindow.html#w15w7">ID_CHECK1</a>、<a class="el" href="classMainWindow.html#w15w8">ID_CHECK2</a>、<a class="el" href="classMainWindow.html#w15w9">ID_EDIT2</a>、<a class="el" href="FG__CheckBox_8h-source.html#l00067">FG_CheckBox::IsChecked()</a>及<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b1_cgraph.png" border="0" usemap="#classMainWindow_b1_cgraph_map" alt=""></center>
+<map name="classMainWindow_b1_cgraph_map">
+<area href="classFG__Container.html#a3" shape="rect" coords="268,32,414,59" alt="">
+<area href="classFG__CheckBox.html#a1" shape="rect" coords="260,83,422,109" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="266,133,416,160" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="502,7,596,33" alt="">
+<area href="classFG__BList.html#a3" shape="rect" coords="501,57,597,84" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="677,7,808,33" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="488,108,610,135" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="470,159,628,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="677,159,808,185" alt="">
+</map>
+<a class="anchor" name="b5" doxytag="MainWindow::OnFactory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnFactory </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+“圆角按钮”和“方角按钮”切换按钮通知消息的处理函数 
+<p>
+切换当前使用的工厂类 
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00202">202</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00119">FG_Screen::AddWindow()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00059">FG_GetScreen()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00069">FG_SetFactory()</a>、<a class="el" href="FG__Container_8cpp-source.html#l00047">FG_Container::GetChild()</a>、<a class="el" href="classMainWindow.html#w15w11">ID_FACTORY</a>、<a class="el" href="MainWindow_8h-source.html#l00132">m_bNewFactory</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00140">FG_Screen::RemoveWindow()</a>及<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b5_cgraph.png" border="0" usemap="#classMainWindow_b5_cgraph_map" alt=""></center>
+<map name="classMainWindow_b5_cgraph_map">
+<area href="classFG__Screen.html#a0" shape="rect" coords="229,7,381,33" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="258,57,352,84" alt="">
+<area href="group__Framework.html#ga2" shape="rect" coords="257,108,353,135" alt="">
+<area href="classFG__Container.html#a3" shape="rect" coords="232,159,378,185" alt="">
+<area href="classMainWindow.html#a0" shape="rect" coords="222,209,388,236" alt="">
+<area href="classFG__Screen.html#a1" shape="rect" coords="218,260,392,287" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="230,311,380,337" alt="">
+</map>
+<a class="anchor" name="b4" doxytag="MainWindow::OnOpen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnOpen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+“打开窗口1”按钮通知消息的处理函数 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00196">196</a>行定义。
+<p>
+参考 <a class="el" href="FG__Screen_8cpp-source.html#l00119">FG_Screen::AddWindow()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00059">FG_GetScreen()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b4_cgraph.png" border="0" usemap="#classMainWindow_b4_cgraph_map" alt=""></center>
+<map name="classMainWindow_b4_cgraph_map">
+<area href="classFG__Screen.html#a0" shape="rect" coords="204,57,356,84" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="233,108,327,135" alt="">
+<area href="classFG__Container.html#b0" shape="rect" coords="405,57,552,84" alt="">
+<area href="classFG__BList.html#a6" shape="rect" coords="629,7,723,33" alt="">
+<area href="classFG__Object.html#a11" shape="rect" coords="617,57,735,84" alt="">
+<area href="classFG__Screen.html#e0" shape="rect" coords="407,108,551,135" alt="">
+<area href="classFG__Screen.html#b3" shape="rect" coords="603,108,749,135" alt="">
+</map>
+<a class="anchor" name="b0" doxytag="MainWindow::OnRadioChecked" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnRadioChecked </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+收音机按钮选中通知消息的处理函数. 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00142">142</a>行定义。
+<p>
+参考 <a class="el" href="FG__Container_8cpp-source.html#l00047">FG_Container::GetChild()</a>、<a class="el" href="classMainWindow.html#w15w6">ID_EDIT1</a>、<a class="el" href="classMainWindow.html#w15w0">ID_RADIO1</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>及<a class="el" href="FG__Message_8h-source.html#l00196">FG_Message::wID</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b0_cgraph.png" border="0" usemap="#classMainWindow_b0_cgraph_map" alt=""></center>
+<map name="classMainWindow_b0_cgraph_map">
+<area href="classFG__Container.html#a3" shape="rect" coords="260,57,407,84" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="259,108,408,135" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="489,7,583,33" alt="">
+<area href="classFG__BList.html#a3" shape="rect" coords="488,57,584,84" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="664,7,795,33" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="475,108,597,135" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="457,159,615,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="664,159,795,185" alt="">
+</map>
+<a class="anchor" name="b2" doxytag="MainWindow::OnStart" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnStart </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+“启动”按钮通知消息的处理函数 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00176">176</a>行定义。
+<p>
+参考 <a class="el" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>、<a class="el" href="MainWindow_8h-source.html#l00130">m_bStart</a>及<a class="el" href="FG__Object_8h-source.html#l00241">FG_Object::StartTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b2_cgraph.png" border="0" usemap="#classMainWindow_b2_cgraph_map" alt=""></center>
+<map name="classMainWindow_b2_cgraph_map">
+<area href="classFG__Object.html#b0" shape="rect" coords="202,59,341,85" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="414,20,550,47" alt="">
+<area href="classFG__TimerManager.html#a0" shape="rect" coords="390,96,574,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="622,7,849,33" alt="">
+<area href="classFG__SList.html#a4" shape="rect" coords="689,57,782,84" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="689,108,782,135" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="688,159,784,185" alt="">
+</map>
+<a class="anchor" name="b3" doxytag="MainWindow::OnStop" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnStop </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+“停止”按钮通知消息的处理函数 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00186">186</a>行定义。
+<p>
+参考 <a class="el" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>、<a class="el" href="FG__Object_8h-source.html#l00254">FG_Object::KillTimer()</a>及<a class="el" href="MainWindow_8h-source.html#l00130">m_bStart</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b3_cgraph.png" border="0" usemap="#classMainWindow_b3_cgraph_map" alt=""></center>
+<map name="classMainWindow_b3_cgraph_map">
+<area href="classFG__Object.html#b1" shape="rect" coords="201,59,332,85" alt="">
+<area href="group__Framework.html#ga0" shape="rect" coords="400,20,536,47" alt="">
+<area href="classFG__TimerManager.html#a1" shape="rect" coords="381,96,555,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="604,7,831,33" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="671,57,764,84" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="669,108,765,135" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="659,159,776,185" alt="">
+</map>
+<a class="anchor" name="b6" doxytag="MainWindow::OnTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MainWindow::OnTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定时器（<a class="el" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a>）消息的处理函数 
+<p>
+显示下一帧位图 
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00235">235</a>行定义。
+<p>
+参考 <a class="el" href="FG__Container_8cpp-source.html#l00047">FG_Container::GetChild()</a>、<a class="el" href="classMainWindow.html#w15w14">ID_BITMAP</a>、<a class="el" href="MainWindow_8h-source.html#l00130">m_bStart</a>、<a class="el" href="MainWindow_8h-source.html#l00128">m_iBmpNum</a>及<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMainWindow_b6_cgraph.png" border="0" usemap="#classMainWindow_b6_cgraph_map" alt=""></center>
+<map name="classMainWindow_b6_cgraph_map">
+<area href="classFG__Container.html#a3" shape="rect" coords="209,57,356,84" alt="">
+<area href="classFG__TextWidget.html#a2" shape="rect" coords="208,108,357,135" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="438,7,532,33" alt="">
+<area href="classFG__BList.html#a3" shape="rect" coords="437,57,533,84" alt="">
+<area href="classFG__ListCheck.html#a0" shape="rect" coords="613,7,744,33" alt="">
+<area href="classFG__String.html#a3" shape="rect" coords="424,108,546,135" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="406,159,564,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="613,159,744,185" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p2" doxytag="MainWindow::m_bNewFactory" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classMainWindow.html#p2">MainWindow::m_bNewFactory</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+当前使用的工厂类的标志，true表示使用用户定义的工厂类，false表示使用缺省工厂类 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00132">132</a>行定义。
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00202">OnFactory()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p1" doxytag="MainWindow::m_bStart" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classMainWindow.html#p1">MainWindow::m_bStart</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+动画是否启动，true表示启动，false表示停止 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00130">130</a>行定义。
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00176">OnStart()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00186">OnStop()</a>及<a class="el" href="MainWindow_8cpp-source.html#l00235">OnTimer()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="MainWindow::m_iBmpNum" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classMainWindow.html#p0">MainWindow::m_iBmpNum</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+当前显示的动画帧数 
+<p>
+
+<p>
+在文件<a class="el" href="MainWindow_8h-source.html">MainWindow.h</a>第<a class="el" href="MainWindow_8h-source.html#l00128">128</a>行定义。
+<p>
+参考自 <a class="el" href="MainWindow_8cpp-source.html#l00235">OnTimer()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="v0" doxytag="MainWindow::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classMainWindow.html#v0">MainWindow::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a41">FRN_CHECKED</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classMainWindow.html#b0">MainWindow::OnRadioChecked</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a39">FCN_CHECKED</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classMainWindow.html#b1">MainWindow::OnCheckChanged</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a40">FCN_UNCHECKED</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classMainWindow.html#b1">MainWindow::OnCheckChanged</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a38">FBN_PRESSED</a> ,  <a class="code" href="classMainWindow.html#w15w12">ID_START</a> , (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classMainWindow.html#b2">MainWindow::OnStart</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a38">FBN_PRESSED</a> ,  <a class="code" href="classMainWindow.html#w15w13">ID_STOP</a> , (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classMainWindow.html#b3">MainWindow::OnStop</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a38">FBN_PRESSED</a> ,  <a class="code" href="classMainWindow.html#w15w10">ID_OPEN</a> , (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classMainWindow.html#b4">MainWindow::OnOpen</a>  },
+    { <a class="code" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>,  <a class="code" href="group__Utility.html#gga16a38">FBN_PRESSED</a> ,  <a class="code" href="classMainWindow.html#w15w11">ID_FACTORY</a> , (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classMainWindow.html#b5">MainWindow::OnFactory</a>  },
+    { <a class="code" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>,  <a class="code" href="classMainWindow.html#x1x0">ID_ANIMATION_TIMER</a> , 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp;  <a class="code" href="classMainWindow.html#b6">MainWindow::OnTimer</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Window.html#v0">FG_Window</a>。
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00047">47</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="MainWindow::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classMainWindow.html#t0">MainWindow::m_MsgMap</a> = { &amp; <a class="el" href="classFG__Window.html">FG_Window</a> ::<a class="el" href="classMainWindow.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classMainWindow.html">MainWindow</a> ::<a class="el" href="classMainWindow.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Window.html#t0">FG_Window</a>。
+<p>
+在文件<a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a>第<a class="el" href="MainWindow_8cpp-source.html#l00047">47</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="MainWindow_8h-source.html">MainWindow.h</a><li><a class="el" href="MainWindow_8cpp-source.html">MainWindow.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:12 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

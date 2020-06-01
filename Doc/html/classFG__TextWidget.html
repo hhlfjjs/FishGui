@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_TextWidget class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_TextWidget类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_TextWidget
+<p><center><img src="classFG__TextWidget.png" usemap="#FG_TextWidget_map" border="0" alt=""></center>
+<map name="FG_TextWidget_map">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="282,56,385,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="282,0,385,24">
+<area href="classFG__Bitmap.html" alt="FG_Bitmap" shape="rect" coords="0,168,103,192">
+<area href="classFG__Button.html" alt="FG_Button" shape="rect" coords="113,168,216,192">
+<area href="classFG__CheckBox.html" alt="FG_CheckBox" shape="rect" coords="226,168,329,192">
+<area href="classFG__Group.html" alt="FG_Group" shape="rect" coords="339,168,442,192">
+<area href="classFG__Label.html" alt="FG_Label" shape="rect" coords="452,168,555,192">
+<area href="classFG__RadioButton.html" alt="FG_RadioButton" shape="rect" coords="565,168,668,192">
+<area href="classMyButton.html" alt="MyButton" shape="rect" coords="113,224,216,248">
+<area href="classFG__Edit.html" alt="FG_Edit" shape="rect" coords="452,224,555,248">
+</map>
+FG_TextWidget合作图：<p><center><img src="classFG__TextWidget__coll__graph.png" border="0" usemap="#FG__TextWidget__coll__map" alt="Collaboration graph"></center>
+<map name="FG__TextWidget__coll__map">
+<area href="classFG__Widget.html" shape="rect" coords="141,385,269,545" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="255,209,383,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="79,17,220,145" alt="">
+<area href="classFG__String.html" shape="rect" coords="407,369,505,561" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__TextWidget-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+文本控件抽象类的头文件. 
+<p>
+该类的派生类具有处理文本的能力 
+<p>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00049">49</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#a0">FG_TextWidget</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文本控件抽象类的构造函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>char *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#a1">GetText</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到该控件的文本  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#a2">SetText</a> (char *const Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置该控件的文本.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#a3">TextLength</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到该控件的文本的长度  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#a4">DrawTextFocus</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *const pAdaptor, const <a class="el" href="group__Utility.html#ga1">WORD</a> x, const <a class="el" href="group__Utility.html#ga1">WORD</a> y)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制文本的焦点框  <a href="#a4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#b0">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__String.html">FG_String</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#p0">m_Text</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">该控件中保存的文本  <a href="#p0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__Widget.html">FG_Widget</a> ::<a class="el" href="classFG__TextWidget.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__TextWidget.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__TextWidget.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_TextWidget::FG_TextWidget" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_TextWidget::FG_TextWidget </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+文本控件抽象类的构造函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>文本控件抽象类的文本 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>文本控件抽象类所占据的屏幕矩形 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>文本控件抽象类的唯一标识 </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>文本控件抽象类的<a class="el" href="group__Style.html">风格</a> </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00060">60</a>行定义。
+<p>
+参考 <a class="el" href="FG__TextWidget_8h-source.html#l00097">m_Text</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a4" doxytag="FG_TextWidget::DrawTextFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_TextWidget::DrawTextFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *const&nbsp;</td>
+          <td class="mdname" nowrap> <em>pAdaptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制文本的焦点框 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器对象的指针 </td></tr>
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>焦点框的左上角横坐标 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>焦点框的左上角纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8cpp-source.html">FG_TextWidget.cpp</a>第<a class="el" href="FG__TextWidget_8cpp-source.html#l00046">46</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00180">FG_OSAdaptor::DrawDotRect()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">GetText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">FG_OSAdaptor::GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">FG_OSAdaptor::GetTextWidth()</a>、<a class="el" href="FG__Object_8h-source.html#l00217">FG_Object::IsFocus()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>及<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TextWidget_a4_cgraph.png" border="0" usemap="#classFG__TextWidget_a4_cgraph_map" alt=""></center>
+<map name="classFG__TextWidget_a4_cgraph_map">
+<area href="classFG__OSAdaptor.html#a12" shape="rect" coords="263,6,444,33" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="279,57,428,84" alt="">
+<area href="classFG__OSAdaptor.html#a9" shape="rect" coords="260,108,447,134" alt="">
+<area href="classFG__OSAdaptor.html#a8" shape="rect" coords="261,158,445,185" alt="">
+<area href="classFG__Object.html#a19" shape="rect" coords="291,209,416,236" alt="">
+<area href="classFG__OSDrawInterface.html#a11" shape="rect" coords="499,6,712,33" alt="">
+<area href="classFG__String.html#a4" shape="rect" coords="544,57,667,84" alt="">
+<area href="classFG__OSDrawInterface.html#a8" shape="rect" coords="496,108,715,134" alt="">
+<area href="classFG__OSDrawInterface.html#a7" shape="rect" coords="497,158,713,185" alt="">
+</map>
+<a class="anchor" name="b0" doxytag="FG_TextWidget::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_TextWidget::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Widget.html#b0">FG_Widget</a>。
+<p>
+被<a class="el" href="classMyButton.html#b1">MyButton</a>、<a class="el" href="classFG__Bitmap.html#b1">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#b6">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#b3">FG_CheckBox</a>、<a class="el" href="classFG__Edit.html#b5">FG_Edit</a>、<a class="el" href="classFG__Group.html#b1">FG_Group</a>、<a class="el" href="classFG__Label.html#b1">FG_Label</a>及<a class="el" href="classFG__RadioButton.html#b3">FG_RadioButton</a>重载。
+<p>
+在文件<a class="el" href="FG__TextWidget_8cpp-source.html">FG_TextWidget.cpp</a>第<a class="el" href="FG__TextWidget_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_TextWidget::GetText" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> char* FG_TextWidget::GetText </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到该控件的文本 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>该控件的文本 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00069">69</a>行定义。
+<p>
+参考 <a class="el" href="FG__String_8h-source.html#l00082">FG_String::DataGet()</a>及<a class="el" href="FG__TextWidget_8h-source.html#l00097">m_Text</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00191">FG_Edit::DeleteChar()</a>、<a class="el" href="FG__TextWidget_8cpp-source.html#l00046">DrawTextFocus()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00174">FG_Edit::InsertChar()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TextWidget_a1_cgraph.png" border="0" usemap="#classFG__TextWidget_a1_cgraph_map" alt=""></center>
+<map name="classFG__TextWidget_a1_cgraph_map">
+<area href="classFG__String.html#a4" shape="rect" coords="217,7,340,33" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_TextWidget::SetText" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_TextWidget::SetText </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置该控件的文本. 
+<p>
+需要重画该控件 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要设置的文本 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00077">77</a>行定义。
+<p>
+参考 <a class="el" href="FG__String_8cpp-source.html#l00086">FG_String::DataSet()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00097">m_Text</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">FG_Object::RequestDraw()</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00174">FG_Edit::InsertChar()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00153">MainWindow::OnCheckChanged()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00202">MainWindow::OnFactory()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00142">MainWindow::OnRadioChecked()</a>、<a class="el" href="Win1_8cpp-source.html#l00126">Win1::OnTimer()</a>及<a class="el" href="MainWindow_8cpp-source.html#l00235">MainWindow::OnTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TextWidget_a2_cgraph.png" border="0" usemap="#classFG__TextWidget_a2_cgraph_map" alt=""></center>
+<map name="classFG__TextWidget_a2_cgraph_map">
+<area href="classFG__String.html#a3" shape="rect" coords="235,7,357,33" alt="">
+<area href="classFG__Object.html#b4" shape="rect" coords="217,57,375,84" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="424,57,555,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="655,7,753,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="604,57,804,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="615,108,793,135" alt="">
+</map>
+<a class="anchor" name="a3" doxytag="FG_TextWidget::TextLength" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_TextWidget::TextLength </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到该控件的文本的长度 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>该控件的文本的长度 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00084">84</a>行定义。
+<p>
+参考 <a class="el" href="FG__String_8h-source.html#l00089">FG_String::Length()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00097">m_Text</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00191">FG_Edit::DeleteChar()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00174">FG_Edit::InsertChar()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>、<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00108">FG_Edit::OnKeyDown()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__TextWidget_a3_cgraph.png" border="0" usemap="#classFG__TextWidget_a3_cgraph_map" alt=""></center>
+<map name="classFG__TextWidget_a3_cgraph_map">
+<area href="classFG__String.html#a5" shape="rect" coords="236,7,351,33" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v0" doxytag="FG_TextWidget::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__TextWidget.html#v0">FG_TextWidget::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Widget.html#v0">FG_Widget</a>。
+<p>
+被<a class="el" href="classMyButton.html#v0">MyButton</a>、<a class="el" href="classFG__Bitmap.html#v0">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#v0">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#v0">FG_CheckBox</a>、<a class="el" href="classFG__Edit.html#v0">FG_Edit</a>、<a class="el" href="classFG__Group.html#v0">FG_Group</a>、<a class="el" href="classFG__Label.html#v0">FG_Label</a>及<a class="el" href="classFG__RadioButton.html#v0">FG_RadioButton</a>重载。
+<p>
+在文件<a class="el" href="FG__TextWidget_8cpp-source.html">FG_TextWidget.cpp</a>第<a class="el" href="FG__TextWidget_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_TextWidget::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__TextWidget.html#t0">FG_TextWidget::m_MsgMap</a> = { &amp; <a class="el" href="classFG__Widget.html">FG_Widget</a> ::<a class="el" href="classFG__TextWidget.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__TextWidget.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Widget.html#t0">FG_Widget</a>。
+<p>
+被<a class="el" href="classMyButton.html#t0">MyButton</a>、<a class="el" href="classFG__Bitmap.html#t0">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#t0">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#t0">FG_CheckBox</a>、<a class="el" href="classFG__Edit.html#t0">FG_Edit</a>、<a class="el" href="classFG__Group.html#t0">FG_Group</a>、<a class="el" href="classFG__Label.html#t0">FG_Label</a>及<a class="el" href="classFG__RadioButton.html#t0">FG_RadioButton</a>重载。
+<p>
+在文件<a class="el" href="FG__TextWidget_8cpp-source.html">FG_TextWidget.cpp</a>第<a class="el" href="FG__TextWidget_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_TextWidget::m_Text" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__String.html">FG_String</a> <a class="el" href="classFG__TextWidget.html#p0">FG_TextWidget::m_Text</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+该控件中保存的文本 
+<p>
+
+<p>
+在文件<a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a>第<a class="el" href="FG__TextWidget_8h-source.html#l00097">97</a>行定义。
+<p>
+参考自 <a class="el" href="FG__TextWidget_8h-source.html#l00060">FG_TextWidget()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">GetText()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00077">SetText()</a>及<a class="el" href="FG__TextWidget_8h-source.html#l00084">TextLength()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__TextWidget_8h-source.html">FG_TextWidget.h</a><li><a class="el" href="FG__TextWidget_8cpp-source.html">FG_TextWidget.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:02 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

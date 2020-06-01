@@ -1,0 +1,702 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Win32Adaptor class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Win32Adaptor类参考<br>
+<small>
+[<a class="el" href="group__OSAdaptor.html">操作系统适配层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Win32Adaptor
+<p><center><img src="classFG__Win32Adaptor.png" usemap="#FG_Win32Adaptor_map" border="0" alt=""></center>
+<map name="FG_Win32Adaptor_map">
+<area href="classFG__OSAdaptor.html" alt="FG_OSAdaptor" shape="rect" coords="0,0,116,24">
+</map>
+FG_Win32Adaptor合作图：<p><center><img src="classFG__Win32Adaptor__coll__graph.png" border="0" usemap="#FG__Win32Adaptor__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Win32Adaptor__coll__map">
+<area href="classFG__OSAdaptor.html" shape="rect" coords="12,17,135,401" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Win32Adaptor-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+Win32的适配器类. 
+<p>
+该类封装Win32操作系统的程序启动和运行过程 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00050">50</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a0">InitInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序初始化  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a1">ExitInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序退出  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a2">Execute</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序运行过程，执行消息循环  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a3">SetInst</a> (HINSTANCE hInst)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置当前应用程序的实例句柄.  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a4">SetPrevInst</a> (HINSTANCE hPrevInst)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置前一个应用程序的实例句柄.  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a5">SetCmdShow</a> (int nCmdShow)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口的显示方式.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a6">SetBmpPath</a> (char *pPath, int len)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置位图文件所在目录的绝对路径.  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#a7">DrawBitmap</a> (const char *pBmpName, const short x1, const short y1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制位图  <a href="#a7"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#b0">FG_Win32Adaptor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Win32适配器类的缺省构造函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long FAR WINAPI&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#f0">WndProc</a> (HWND hWnd, UINT uMessage, UINT wParam, LONG lParam)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Win32窗口函数.  <a href="#f0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HINSTANCE&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#p0">m_hInst</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">当前应用程序的实例句柄  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>HINSTANCE&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#p1">m_hPrevInst</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">当前应用程序的实例句柄 前一个应用程序的实例句柄  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#p2">m_nCmdShow</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">窗口的显示方式  <a href="#p2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>char&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#p3">m_BmpPath</a> [MAX_PATH+1]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">位图文件所在目录的绝对路径.  <a href="#p3"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>友元</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Win32Adaptor.html#n0">FG_OSAdaptor</a></td></tr>
+
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="b0" doxytag="FG_Win32Adaptor::FG_Win32Adaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Win32Adaptor::FG_Win32Adaptor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Win32适配器类的缺省构造函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00128">128</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hInst</a>、<a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hPrevInst</a>及<a class="el" href="FG__Win32Adaptor_8h-source.html#l00135">m_nCmdShow</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a7" doxytag="FG_Win32Adaptor::DrawBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32Adaptor::DrawBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pBmpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制位图 
+<p>
+Win32适配器类覆盖该函数，把位图名组合成位图文件的绝对路径名，然后代理调用<a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pBmpName</em>&nbsp;</td><td>要绘制的位图名 </td></tr>
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>位图左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>位图左上角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__OSAdaptor.html#a10">FG_OSAdaptor</a>。
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00130">130</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap()</a>及<a class="el" href="FG__Win32Adaptor_8h-source.html#l00138">m_BmpPath</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Win32Adaptor_a7_cgraph.png" border="0" usemap="#classFG__Win32Adaptor_a7_cgraph_map" alt=""></center>
+<map name="classFG__Win32Adaptor_a7_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a9" shape="rect" coords="260,7,468,33" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_Win32Adaptor::Execute" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Win32Adaptor::Execute </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序运行过程，执行消息循环 
+<p>
+执行Win32的消息循环 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b3">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00110">110</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Win32Adaptor::ExitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Win32Adaptor::ExitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序退出 
+<p>
+发送<a class="el" href="group__Utility.html#gga12a18">FG_MSG_HALT</a>消息，释放对象 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b2">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00096">96</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a18">FG_MSG_HALT</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Win32Adaptor_a1_cgraph.png" border="0" usemap="#classFG__Win32Adaptor_a1_cgraph_map" alt=""></center>
+<map name="classFG__Win32Adaptor_a1_cgraph_map">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="260,7,420,33" alt="">
+</map>
+<a class="anchor" name="a0" doxytag="FG_Win32Adaptor::InitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Win32Adaptor::InitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序初始化 
+<p>
+调用Win32函数注册窗口类，创建窗口，刷新窗口<br>
+ 发送<a class="el" href="group__Utility.html#gga12a17">FG_MSG_STARTUP</a>消息 <dl compact><dt><b>返回:</b></dt><dd>初始化是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b1">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">54</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a17">FG_MSG_STARTUP</a>、<a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hInst</a>、<a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hPrevInst</a>、<a class="el" href="FG__Win32Adaptor_8h-source.html#l00135">m_nCmdShow</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="FG__Common_8h-source.html#l00062">SCREEN_HEIGHT</a>、<a class="el" href="FG__Common_8h-source.html#l00061">SCREEN_WIDTH</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>及<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00138">WndProc()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Win32Adaptor_a0_cgraph.png" border="0" usemap="#classFG__Win32Adaptor_a0_cgraph_map" alt=""></center>
+<map name="classFG__Win32Adaptor_a0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="481,32,641,58" alt="">
+<area href="classFG__Win32Adaptor.html#f0" shape="rect" coords="256,57,432,84" alt="">
+</map>
+<a class="anchor" name="a6" doxytag="FG_Win32Adaptor::SetBmpPath" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32Adaptor::SetBmpPath </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>len</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置位图文件所在目录的绝对路径. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pPath</em>&nbsp;</td><td>FishGUI主目录的绝对路径，通过GetModuleFileName函数调用得到 </td></tr>
+    <tr><td valign=top><em>len</em>&nbsp;</td><td>字符串pPath的长度，字符串不保证有0结束符 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00122">122</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00138">m_BmpPath</a>.
+<p>
+参考自 <a class="el" href="WinMain_8cpp-source.html#l00053">WinMain()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_Win32Adaptor::SetCmdShow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32Adaptor::SetCmdShow </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nCmdShow</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口的显示方式. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nCmdShow</em>&nbsp;</td><td>窗口的显示方式 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00103">103</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00135">m_nCmdShow</a>.
+<p>
+参考自 <a class="el" href="WinMain_8cpp-source.html#l00053">WinMain()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="FG_Win32Adaptor::SetInst" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32Adaptor::SetInst </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">HINSTANCE&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>hInst</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置当前应用程序的实例句柄. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>hInst</em>&nbsp;</td><td>当前应用程序的实例句柄 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00089">89</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hInst</a>.
+<p>
+参考自 <a class="el" href="WinMain_8cpp-source.html#l00053">WinMain()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_Win32Adaptor::SetPrevInst" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Win32Adaptor::SetPrevInst </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">HINSTANCE&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>hPrevInst</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置前一个应用程序的实例句柄. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>hPrevInst</em>&nbsp;</td><td>前一个应用程序的实例句柄 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00096">96</a>行定义。
+<p>
+参考 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">m_hPrevInst</a>.
+<p>
+参考自 <a class="el" href="WinMain_8cpp-source.html#l00053">WinMain()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="f0" doxytag="FG_Win32Adaptor::WndProc" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long FAR WINAPI FG_Win32Adaptor::WndProc </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">HWND&nbsp;</td>
+          <td class="mdname" nowrap> <em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>UINT&nbsp;</td>
+          <td class="mdname" nowrap> <em>uMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>UINT&nbsp;</td>
+          <td class="mdname" nowrap> <em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>LONG&nbsp;</td>
+          <td class="mdname" nowrap> <em>lParam</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [static, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Win32窗口函数. 
+<p>
+必须静态函数，该函数接收系统消息，然后通过观查者模式发送给框架层 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>hWnd</em>&nbsp;</td><td>窗口句柄 </td></tr>
+    <tr><td valign=top><em>uMessage</em>&nbsp;</td><td>消息类型 </td></tr>
+    <tr><td valign=top><em>wParam</em>&nbsp;</td><td>消息参数 </td></tr>
+    <tr><td valign=top><em>lParam</em>&nbsp;</td><td>消息参数 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>long 消息处理结果 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a>第<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00138">138</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>、<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>、<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>、<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>、<a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>、<a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>、<a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>、<a class="el" href="FG__Message_8h-source.html#l00102">FVK_DELETE</a>、<a class="el" href="FG__Message_8h-source.html#l00101">FVK_ENTER</a>、<a class="el" href="FG__Message_8h-source.html#l00103">FVK_LEFT</a>、<a class="el" href="FG__Message_8h-source.html#l00104">FVK_RIGHT</a>、<a class="el" href="FG__Message_8h-source.html#l00105">FVK_TAB</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>、<a class="el" href="FG__Message_8h-source.html#l00201">FG_Message::Point</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.
+<p>
+参考自 <a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">InitInstance()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Win32Adaptor_f0_cgraph.png" border="0" usemap="#classFG__Win32Adaptor_f0_cgraph_map" alt=""></center>
+<map name="classFG__Win32Adaptor_f0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="244,7,404,33" alt="">
+</map>
+<hr><h2>友元及相关函数文档</h2>
+<a class="anchor" name="n0" doxytag="FG_Win32Adaptor::FG_OSAdaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> friend class <a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a><code> [friend]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00124">124</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p3" doxytag="FG_Win32Adaptor::m_BmpPath" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> char <a class="el" href="classFG__Win32Adaptor.html#p3">FG_Win32Adaptor::m_BmpPath</a>[MAX_PATH + 1]<code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+位图文件所在目录的绝对路径. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00138">138</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00130">DrawBitmap()</a>及<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00122">SetBmpPath()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_Win32Adaptor::m_hInst" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HINSTANCE <a class="el" href="classFG__Win32Adaptor.html#p0">FG_Win32Adaptor::m_hInst</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+当前应用程序的实例句柄 
+<p>
+&lt; 
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">132</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00128">FG_Win32Adaptor()</a>、<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">InitInstance()</a>及<a class="el" href="FG__Win32Adaptor_8h-source.html#l00089">SetInst()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p1" doxytag="FG_Win32Adaptor::m_hPrevInst" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> HINSTANCE <a class="el" href="classFG__Win32Adaptor.html#p1">FG_Win32Adaptor::m_hPrevInst</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+当前应用程序的实例句柄 前一个应用程序的实例句柄 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00132">132</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00128">FG_Win32Adaptor()</a>、<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">InitInstance()</a>及<a class="el" href="FG__Win32Adaptor_8h-source.html#l00096">SetPrevInst()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p2" doxytag="FG_Win32Adaptor::m_nCmdShow" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classFG__Win32Adaptor.html#p2">FG_Win32Adaptor::m_nCmdShow</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+窗口的显示方式 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a>第<a class="el" href="FG__Win32Adaptor_8h-source.html#l00135">135</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Win32Adaptor_8h-source.html#l00128">FG_Win32Adaptor()</a>、<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">InitInstance()</a>及<a class="el" href="FG__Win32Adaptor_8h-source.html#l00103">SetCmdShow()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Win32Adaptor_8h-source.html">FG_Win32Adaptor.h</a><li><a class="el" href="FG__Win32Adaptor_8cpp-source.html">FG_Win32Adaptor.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:01 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

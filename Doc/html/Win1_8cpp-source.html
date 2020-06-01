@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: Win1.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>Win1.cpp</h1><a href="Win1_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        Win1.cpp - 用户定义的窗口1类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00040 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+00041 <span class="preprocessor">#include &lt;string.h&gt;</span>
+00042 <span class="preprocessor">#include "<a class="code" href="Win1_8h.html">Win1.h</a>"</span>
+00043 <span class="preprocessor">#include "<a class="code" href="Win2_8h.html">Win2.h</a>"</span>
+00044 
+<a name="l00045"></a><a class="code" href="classWin1.html#b5">00045</a> <a class="code" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>(<a class="code" href="classWin1.html">Win1</a>, <a class="code" href="classFG__Window.html">FG_Window</a>)
+00046     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_START, Win1::OnStart)
+00047     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_STOP, Win1::OnStop)
+00048     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_OPEN, Win1::OnOpen)
+00049     <a class="code" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>    (FBN_PRESSED, ID_CLOSE, Win1::OnClose)
+00050     <a class="code" href="group__MsgMap__Define.html#ga10">ON_TIMER</a>        (ID_ANIMATION_TIMER, Win1::OnTimer)
+00051 <a class="code" href="group__MsgMap__Define.html#ga15">END_MESSAGE_MAP</a>()
+00052 
+00053 
+00060 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga0">RECT_Win1</a>(150, 180, 445, 460);
+00061 
+00062 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win2__Rect.html#ga1">RECT_Group1</a>(165, 210, 430, 400);
+00063 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga2">RECT_Bitmap</a>(235, 229, 356, 350);
+00064 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga3">RECT_Start</a>(205, 360, 285, 385);
+00065 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga4">RECT_Stop</a>(305, 360, 385, 385);
+00066 
+00067 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga5">RECT_Open</a>(175, 415, 285, 440);
+00068 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> <a class="code" href="group__Win1__Rect.html#ga6">RECT_Close</a>(305, 415, 425, 440);
+00073 <span class="comment">//##ModelId=3F71AB0400CA</span>
+<a name="l00074"></a><a class="code" href="classWin1.html#a0">00074</a> <a class="code" href="classWin1.html#a0">Win1::Win1</a>(<a class="code" href="group__Utility.html#ga1">WORD</a> wID) : m_iBmpNum(0), m_bStart(false), <a class="code" href="classFG__Window.html">FG_Window</a>("窗口1", wID, <a class="code" href="group__Frame__Style.html#ga2">FS_RAISED</a>)
+00075 {
+00076     m_Rect.<a class="code" href="structFG__Rect.html#a2">Set</a>(<a class="code" href="group__Win1__Rect.html#ga0">RECT_Win1</a>.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, <a class="code" href="group__Win1__Rect.html#ga0">RECT_Win1</a>.<a class="code" href="structFG__Rect.html#o1">wTop</a>, <a class="code" href="group__Win1__Rect.html#ga0">RECT_Win1</a>.<a class="code" href="structFG__Rect.html#o2">wRight</a>, <a class="code" href="group__Win1__Rect.html#ga0">RECT_Win1</a>.<a class="code" href="structFG__Rect.html#o3">wBottom</a>);
+00077 
+00078     <a class="code" href="classFG__Factory.html">FG_Factory</a> * pF = <a class="code" href="group__Framework.html#ga1">FG_GetFactory</a>();
+00079     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a6">CreateGroup</a>(<span class="stringliteral">"动画2"</span>, <a class="code" href="group__Win1__Rect.html#ga1">RECT_Group1</a>));
+00080     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a2">CreateBitmap</a>(<span class="stringliteral">"UnderSea"</span>, <a class="code" href="group__Win1__Rect.html#ga2">RECT_Bitmap</a>, ID_BITMAP, <a class="code" href="group__Frame__Style.html#ga1">FS_THIN</a>));
+00081     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"启动 [S]"</span>, <a class="code" href="group__Win1__Rect.html#ga3">RECT_Start</a>, ID_START));
+00082     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"停止 [T]"</span>, <a class="code" href="group__Win1__Rect.html#ga4">RECT_Stop</a>, ID_STOP));
+00083 
+00084     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"打开窗口2 [O]"</span>, <a class="code" href="group__Win1__Rect.html#ga5">RECT_Open</a>, ID_OPEN));
+00085     <a class="code" href="classFG__Window.html#a2">AddWidget</a>(pF-&gt;<a class="code" href="classFG__Factory.html#a3">CreateButton</a>(<span class="stringliteral">"关闭 [C]"</span>, <a class="code" href="group__Win1__Rect.html#ga6">RECT_Close</a>, <a class="code" href="classWin1.html#w5w4">ID_CLOSE</a>));
+00086 
+00087     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'S'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, ID_START);
+00088     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'T'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, ID_STOP);
+00089     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'O'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, ID_OPEN);
+00090     <a class="code" href="classFG__Window.html#a5">RegisterKey</a>(<span class="charliteral">'C'</span>, <a class="code" href="group__Virtual__Key.html#ga12">FVK_ENTER</a>, <a class="code" href="classWin1.html#w5w4">ID_CLOSE</a>);
+00091 }
+00092 
+00093 <span class="comment">//##ModelId=3F71AB0400DE</span>
+<a name="l00094"></a><a class="code" href="classWin1.html#b0">00094</a> <span class="keywordtype">void</span> <a class="code" href="classWin1.html#b0">Win1::OnStart</a>(<span class="keywordtype">void</span>)
+00095 {
+00096     <span class="keywordflow">if</span> (! m_bStart)
+00097     {
+00098         <a class="code" href="classFG__Object.html#b0">StartTimer</a>(ID_ANIMATION_TIMER, 500);
+00099         m_bStart = <span class="keyword">true</span>;
+00100     }
+00101 }
+00102 
+00103 <span class="comment">//##ModelId=3F71AB0400E9</span>
+<a name="l00104"></a><a class="code" href="classWin1.html#b1">00104</a> <span class="keywordtype">void</span> <a class="code" href="classWin1.html#b1">Win1::OnStop</a>(<span class="keywordtype">void</span>)
+00105 {
+00106     <span class="keywordflow">if</span> (m_bStart)
+00107     {
+00108         <a class="code" href="classFG__Object.html#b1">KillTimer</a>(ID_ANIMATION_TIMER);
+00109         m_bStart = <span class="keyword">false</span>;
+00110     }
+00111 }
+00112 
+00113 <span class="comment">//##ModelId=3F71AB0400FD</span>
+<a name="l00114"></a><a class="code" href="classWin1.html#b2">00114</a> <span class="keywordtype">void</span> <a class="code" href="classWin1.html#b2">Win1::OnOpen</a>(<span class="keywordtype">void</span>)
+00115 {
+00116     <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a0">AddWindow</a>(<span class="keyword">new</span> <a class="code" href="classWin2.html">Win2</a>());
+00117 }
+00118 
+00119 <span class="comment">//##ModelId=3F71AB040110</span>
+<a name="l00120"></a><a class="code" href="classWin1.html#b3">00120</a> <span class="keywordtype">void</span> <a class="code" href="classWin1.html#b3">Win1::OnClose</a>(<span class="keywordtype">void</span>)
+00121 {
+00122     <a class="code" href="group__Framework.html#ga0">FG_GetScreen</a>()-&gt;<a class="code" href="classFG__Screen.html#a1">RemoveWindow</a>(<span class="keyword">this</span>);
+00123 }
+00124 
+00125 <span class="comment">//##ModelId=3F71AB040124</span>
+<a name="l00126"></a><a class="code" href="classWin1.html#b4">00126</a> <span class="keywordtype">void</span> <a class="code" href="classWin1.html#b4">Win1::OnTimer</a>(<span class="keywordtype">void</span>)
+00127 {
+00128     <span class="keywordflow">if</span> (m_bStart)
+00129     {
+00130         <span class="keywordflow">if</span> (++ m_iBmpNum &gt;= 2)
+00131             m_iBmpNum = 0;
+00132         <a class="code" href="classFG__Bitmap.html">FG_Bitmap</a> * pBitmap = (<a class="code" href="classFG__Bitmap.html">FG_Bitmap</a> *)<a class="code" href="classFG__Container.html#a3">GetChild</a>(ID_BITMAP);
+00133         <span class="keywordflow">switch</span> (m_iBmpNum)
+00134         {
+00135         <span class="keywordflow">case</span> 0:
+00136             pBitmap-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"UnderSea"</span>);
+00137             <span class="keywordflow">break</span>;
+00138         <span class="keywordflow">case</span> 1:
+00139             pBitmap-&gt;<a class="code" href="classFG__TextWidget.html#a2">SetText</a>(<span class="stringliteral">"UnderSea1"</span>);
+00140             <span class="keywordflow">break</span>;
+00141         }
+00142     }
+00143 }
+00144 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:42 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Model class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Model类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>&gt;</code>
+<p>
+FG_Model合作图：<p><center><img src="classFG__Model__coll__graph.png" border="0" usemap="#FG__Model__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Model__coll__map">
+<area href="classFG__SList.html" shape="rect" coords="7,17,124,193" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Model-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+MVC模式中的模型类. 
+<p>
+该类的派生类可以作为MVC模式中的模型类 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>第<a class="el" href="FG__Model_8h-source.html#l00047">47</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Model.html#a0">RegisterView</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *const pView)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">在模型中注册视图.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Model.html#a1">UpdateView</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">给所有注册的视图发送<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>  <a href="#a1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有类型</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classFG__SList.html">FG_SList</a>&lt; <a class="el" href="classFG__Object.html">FG_Object</a> &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Model.html#y0">FG_VIEWLIST</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">保存所有注册的视图的指针的容器类型  <a href="#y0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__SList.html">FG_VIEWLIST</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Model.html#r0">m_ViewList</a></td></tr>
+
+</table>
+<hr><h2>成员类型定义文档</h2>
+<a class="anchor" name="y0" doxytag="FG_Model::FG_VIEWLIST" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classFG__SList.html">FG_SList</a>&lt;<a class="el" href="classFG__Object.html">FG_Object</a>&gt; <a class="el" href="classFG__SList.html">FG_Model::FG_VIEWLIST</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保存所有注册的视图的指针的容器类型 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>第<a class="el" href="FG__Model_8h-source.html#l00083">83</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Model::RegisterView" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Model::RegisterView </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pView</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+在模型中注册视图. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pView</em>&nbsp;</td><td>要注册的视图指针，试图必须是<a class="el" href="classFG__Object.html">FG_Object</a>的派生类 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>注册操作是否成功<br>
+ true　 成功<br>
+ false　失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>第<a class="el" href="FG__Model_8h-source.html#l00058">58</a>行定义。
+<p>
+参考 <a class="el" href="FG__List_8h-source.html#l00565">FG_SList&lt; ITEM &gt;::Add()</a>及<a class="el" href="FG__Model_8h-source.html#l00086">m_ViewList</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Model_a0_cgraph.png" border="0" usemap="#classFG__Model_a0_cgraph_map" alt=""></center>
+<map name="classFG__Model_a0_cgraph_map">
+<area href="classFG__SList.html#a4" shape="rect" coords="221,7,315,33" alt="">
+</map>
+<a class="anchor" name="a1" doxytag="FG_Model::UpdateView" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Model::UpdateView </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+给所有注册的视图发送<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a> 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>第<a class="el" href="FG__Model_8h-source.html#l00070">70</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>、<a class="el" href="FG__List_8h-source.html#l00545">FG_SList&lt; ITEM &gt;::First()</a>及<a class="el" href="FG__Model_8h-source.html#l00086">m_ViewList</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Model_a1_cgraph.png" border="0" usemap="#classFG__Model_a1_cgraph_map" alt=""></center>
+<map name="classFG__Model_a1_cgraph_map">
+<area href="classFG__SList.html#a2" shape="rect" coords="213,7,309,33" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="r0" doxytag="FG_Model::m_ViewList" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__SList.html">FG_VIEWLIST</a> <a class="el" href="classFG__Model.html#r0">FG_Model::m_ViewList</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+保存所有注册的视图的指针的容器变量 
+<p>
+在文件<a class="el" href="FG__Model_8h-source.html">FG_Model.h</a>第<a class="el" href="FG__Model_8h-source.html#l00086">86</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Model_8h-source.html#l00058">RegisterView()</a>及<a class="el" href="FG__Model_8h-source.html#l00070">UpdateView()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Model_8h-source.html">FG_Model.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:34 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

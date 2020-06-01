@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Group class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Group类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Group_8h-source.html">FG_Group.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Group
+<p><center><img src="classFG__Group.png" usemap="#FG_Group_map" border="0" alt=""></center>
+<map name="FG_Group_map">
+<area href="classFG__TextWidget.html" alt="FG_TextWidget" shape="rect" coords="0,112,97,136">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="0,56,97,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,97,24">
+</map>
+FG_Group合作图：<p><center><img src="classFG__Group__coll__graph.png" border="0" usemap="#FG__Group__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Group__coll__map">
+<area href="classFG__TextWidget.html" shape="rect" coords="247,625,372,817" alt="">
+<area href="classFG__Widget.html" shape="rect" coords="83,385,211,545" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="7,209,135,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="297,17,439,145" alt="">
+<area href="classFG__String.html" shape="rect" coords="399,369,497,561" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Group-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+分组控件类 
+<p>
+该控件放置在窗口上，显示为静态的矩形区域，用于把控件分组 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Group_8h-source.html">FG_Group.h</a>第<a class="el" href="FG__Group_8h-source.html#l00048">48</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#a0">FG_Group</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">分组控件的构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#a1">CanGetFocus</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回控件能否得到焦点的标志  <a href="#a1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#b0">OnDraw</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#b1">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__Group.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Group.html">FG_Group</a> ::<a class="el" href="classFG__Group.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Group.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Group::FG_Group" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Group::FG_Group </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+分组控件的构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>分组控件左上角显示的标题，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束的字符串 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>分组控件占据的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>分组控件的唯一标识，缺省为0</td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Group_8h-source.html">FG_Group.h</a>第<a class="el" href="FG__Group_8h-source.html#l00058">58</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00113">FS_NONE</a>、<a class="el" href="FG__Common_8h-source.html#l00107">GS_TRANSPARENT</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a1" doxytag="FG_Group::CanGetFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Group::CanGetFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回控件能否得到焦点的标志 
+<p>
+分组控件永远不能得到焦点 <dl compact><dt><b>返回:</b></dt><dd>false 该控件不能得到焦点 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Widget.html#a1">FG_Widget</a>。
+<p>
+在文件<a class="el" href="FG__Group_8h-source.html">FG_Group.h</a>第<a class="el" href="FG__Group_8h-source.html#l00067">67</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="b1" doxytag="FG_Group::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_Group::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#b0">FG_TextWidget</a>。
+<p>
+在文件<a class="el" href="FG__Group_8cpp-source.html">FG_Group.cpp</a>第<a class="el" href="FG__Group_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="b0" doxytag="FG_Group::OnDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Group::OnDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__Object.html#b6">FG_Object</a>。
+<p>
+在文件<a class="el" href="FG__Group_8cpp-source.html">FG_Group.cpp</a>第<a class="el" href="FG__Group_8cpp-source.html#l00047">47</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00061">COLOR_DARKGRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00060">COLOR_WHITE</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00173">FG_OSAdaptor::DrawPolyLine()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00141">FG_OSAdaptor::DrawText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">FG_Object::GetClientRect()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">FG_OSAdaptor::GetTextWidth()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00134">FG_OSAdaptor::Line()</a>、<a class="el" href="FG__Object_8h-source.html#l00320">FG_Object::OnDraw()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>、<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Group_b0_cgraph.png" border="0" usemap="#classFG__Group_b0_cgraph_map" alt=""></center>
+<map name="classFG__Group_b0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="196,7,364,33" alt="">
+<area href="classFG__OSAdaptor.html#a11" shape="rect" coords="188,57,372,84" alt="">
+<area href="classFG__OSAdaptor.html#a7" shape="rect" coords="201,108,359,135" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="201,159,359,185" alt="">
+<area href="classFG__Object.html#a3" shape="rect" coords="200,209,360,236" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="205,260,355,287" alt="">
+<area href="classFG__OSAdaptor.html#a8" shape="rect" coords="188,311,372,337" alt="">
+<area href="classFG__OSAdaptor.html#a6" shape="rect" coords="216,361,344,388" alt="">
+<area href="classFG__Object.html#b6" shape="rect" coords="217,412,343,439" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="196,463,364,489" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v0" doxytag="FG_Group::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__Group.html#v0">FG_Group::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp;  <a class="code" href="classFG__Group.html#b0">FG_Group::OnDraw</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#v0">FG_TextWidget</a>。
+<p>
+在文件<a class="el" href="FG__Group_8cpp-source.html">FG_Group.cpp</a>第<a class="el" href="FG__Group_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_Group::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__Group.html#t0">FG_Group::m_MsgMap</a> = { &amp; <a class="el" href="classFG__TextWidget.html">FG_TextWidget</a> ::<a class="el" href="classFG__Group.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classFG__Group.html">FG_Group</a> ::<a class="el" href="classFG__Group.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__TextWidget.html#t0">FG_TextWidget</a>。
+<p>
+在文件<a class="el" href="FG__Group_8cpp-source.html">FG_Group.cpp</a>第<a class="el" href="FG__Group_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Group_8h-source.html">FG_Group.h</a><li><a class="el" href="FG__Group_8cpp-source.html">FG_Group.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:21 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

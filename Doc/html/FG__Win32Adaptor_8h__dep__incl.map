@@ -1,0 +1,4 @@
+base referer
+rect $FG__OSAdaptor_8cpp.html 7,17 127,44
+rect $FG__Win32Adaptor_8cpp.html 151,17 289,44
+rect $WinMain_8cpp.html 313,17 399,44

@@ -1,0 +1,9 @@
+base referer
+rect $FG__OSAdaptor_8h.html 6,167 193,193
+rect $FG__Utility_8h.html 92,17 217,44
+rect $FG__OSDrawInterface_8h.html 84,92 225,119
+rect $FG__Framework_8h.html 249,92 436,119
+rect $MyFactory_8h.html 210,241 290,268
+rect $MyButton_8h.html 268,167 342,193
+rect $MainWindow_8h.html 314,241 405,268
+rect $Win1_8h.html 417,167 468,193

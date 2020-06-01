@@ -1,0 +1,12 @@
+FG_String.o : \
+ ../Source/Utility/FG_String.cpp \
+ ../Source/Utility/FG_String.h ../Source/Utility/FG_Common.h \
+ /usr/include/string.h /usr/include/iso/string_iso.h \
+ /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h
+../Source/Utility/FG_String.cpp :
+../Source/Utility/FG_String.h :
+../Source/Utility/FG_Common.h :
+/usr/include/string.h :
+/usr/include/iso/string_iso.h :
+/usr/include/sys/feature_tests.h :
+/usr/include/sys/isa_defs.h :

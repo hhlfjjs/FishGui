@@ -1,0 +1,1703 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Object class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Object类参考<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_Object
+<p><center><img src="classFG__Object.png" usemap="#FG_Object_map" border="0" alt=""></center>
+<map name="FG_Object_map">
+<area href="classFG__Container.html" alt="FG_Container" shape="rect" coords="56,56,159,80">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="339,56,442,80">
+<area href="classFG__Screen.html" alt="FG_Screen" shape="rect" coords="0,112,103,136">
+<area href="classFG__Window.html" alt="FG_Window" shape="rect" coords="113,112,216,136">
+<area href="classFG__TextWidget.html" alt="FG_TextWidget" shape="rect" coords="339,112,442,136">
+<area href="classMainWindow.html" alt="MainWindow" shape="rect" coords="226,168,329,192">
+<area href="classWin1.html" alt="Win1" shape="rect" coords="226,224,329,248">
+<area href="classWin2.html" alt="Win2" shape="rect" coords="226,280,329,304">
+<area href="classFG__Bitmap.html" alt="FG_Bitmap" shape="rect" coords="452,168,555,192">
+<area href="classFG__Button.html" alt="FG_Button" shape="rect" coords="452,224,555,248">
+<area href="classFG__CheckBox.html" alt="FG_CheckBox" shape="rect" coords="452,280,555,304">
+<area href="classFG__Group.html" alt="FG_Group" shape="rect" coords="452,336,555,360">
+<area href="classFG__Label.html" alt="FG_Label" shape="rect" coords="452,392,555,416">
+<area href="classFG__RadioButton.html" alt="FG_RadioButton" shape="rect" coords="452,448,555,472">
+</map>
+FG_Object合作图：<p><center><img src="classFG__Object__coll__graph.png" border="0" usemap="#FG__Object__coll__map" alt="Collaboration graph"></center>
+<map name="FG__Object__coll__map">
+<area href="structFG__MSGMAP.html" shape="rect" coords="148,393,276,489" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="29,17,171,145" alt="">
+<area href="structFG__Rect.html" shape="rect" coords="427,209,523,673" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__Object-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+窗口元素类 
+<p>
+窗口元素类是所有可以在屏幕上显示的窗口、空间等类的基类 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00051">51</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a0">FG_Object</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数，可以作为缺省构造函数使用  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a1">FG_Object</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0, const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle=<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a>)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a2">~FG_Object</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">析构函数.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a3">GetClientRect</a> (<a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到该窗口元素的客户区矩形  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a4">IsContains</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> Test) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">判断某一个像素点是否在本窗口元素中.  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a5">ForeColor</a> (const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的前景色.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a6">ForeColor</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到窗口元素的前景色  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a7">BGColor</a> (const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的背景色.  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a8">BGColor</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到窗口元素的背景色  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a9">ID</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> wID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的唯一标识值.  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a10">ID</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到窗口元素的唯一标识值  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a11">Parent</a> (<a class="el" href="classFG__Object.html">FG_Object</a> *const object)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置指向父窗口元素的指针.  <a href="#a11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a12">Parent</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">返回指向父窗口元素的指针  <a href="#a12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a13">FrameStyle</a> (<a class="el" href="group__Utility.html#ga1">WORD</a> wStyle)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的边框风格.  <a href="#a13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a14">FrameStyle</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到窗口元素的边框风格  <a href="#a14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a15">Style</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> wStyle)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的风格.  <a href="#a15"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a16">Style</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到窗口元素的风格  <a href="#a16"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a17">SetFocus</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置窗口元素的风格中的焦点位，即把该窗口元素设置为焦点窗口或焦点控件.  <a href="#a17"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a18">ResetFocus</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">清除窗口元素的风格中的焦点位，即把该窗口元素设置为非焦点窗口或非焦点控件.  <a href="#a18"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a19">IsFocus</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">该窗口元素是否为当前焦点窗口元素  <a href="#a19"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#a20">Message</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息分发函数.  <a href="#a20"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b0">StartTimer</a> (const <a class="el" href="group__Utility.html#ga0">BYTE</a> timerID, const <a class="el" href="group__Utility.html#ga1">WORD</a> dwInterval)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">为当前窗口元素启动一个定时器.  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b1">KillTimer</a> (const <a class="el" href="group__Utility.html#ga0">BYTE</a> timerID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">删除当前窗口元素的定时器.  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b2">DrawBorder</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制窗口元素的边框  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b3">NotifyParent</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> wNotification)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">发送通知消息给该窗口元素的父窗口  <a href="#b3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b4">RequestDraw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">发送要求重画消息给该窗口元素的父窗口  <a href="#b4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b5">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b6">OnDraw</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数.  <a href="#b6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#b7">OnFocus</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">焦点切换消息<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>的处理函数  <a href="#b7"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p0">m_ForeColor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">前景色.  <a href="#p0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p1">m_Background</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">背景色  <a href="#p1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p2">m_Rect</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本窗口元素占据的矩形区域  <a href="#p2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p3">m_wStyle</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本窗口元素的边框风格  <a href="#p3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p4">m_wID</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本窗口元素的唯一标识  <a href="#p4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__Object.html">FG_Object</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#p5">m_pParent</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向本窗口元素的父窗口的指针.  <a href="#p5"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#t0">m_MsgMap</a> = { 0 , &amp; <a class="el" href="classFG__Object.html#v0">FG_Object::m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__Object.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Object::FG_Object" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Object::FG_Object </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数，可以作为缺省构造函数使用 
+<p>
+前景色和背景色缺省为黑色（<a class="el" href="group__Color.html#ga1">COLOR_BLACK</a>）和灰色（<a class="el" href="group__Color.html#ga2">COLOR_GRAY</a>） 父窗口指针缺省为<a class="el" href="group__Utility.html#ga11">NULL</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>该窗口元素的唯一标识，缺省值0（0为无效标识） </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>该窗口元素的边框风格，缺省值为<a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a> </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00062">62</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00059">COLOR_GRAY</a>、<a class="el" href="FG__Object_8h-source.html#l00283">m_Background</a>、<a class="el" href="FG__Object_8h-source.html#l00281">m_ForeColor</a>、<a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Object::FG_Object" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Object::FG_Object </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wStyle</em> = <a class="el" href="group__Frame__Style.html#ga0">FS_NONE</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数 
+<p>
+前景色和背景色缺省为黑色（<a class="el" href="group__Color.html#ga1">COLOR_BLACK</a>）和灰色（<a class="el" href="group__Color.html#ga2">COLOR_GRAY</a>） 父窗口指针缺省为<a class="el" href="group__Utility.html#ga11">NULL</a><p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>该窗口元素的边框矩形 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>该窗口元素的唯一标识，缺省值0（0为无效标识） </td></tr>
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>该窗口元素的边框风格，缺省值 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00076">76</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00059">COLOR_GRAY</a>、<a class="el" href="FG__Object_8h-source.html#l00283">m_Background</a>、<a class="el" href="FG__Object_8h-source.html#l00281">m_ForeColor</a>、<a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>、<a class="el" href="FG__Object_8h-source.html#l00285">m_Rect</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="FG_Object::~FG_Object" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual FG_Object::~<a class="el" href="classFG__Object.html">FG_Object</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+析构函数. 
+<p>
+必须为虚函数，删除该窗口元素申请的所有定时器 
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00086">86</a>行定义。
+<p>
+参考 <a class="el" href="FG__TimerManager_8cpp-source.html#l00051">FG_GetTimerManager()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00129">FG_TimerManager::KillObjectTimer()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_a2_cgraph.png" border="0" usemap="#classFG__Object_a2_cgraph_map" alt=""></center>
+<map name="classFG__Object_a2_cgraph_map">
+<area href="group__Framework.html#ga0" shape="rect" coords="256,7,392,33" alt="">
+<area href="classFG__TimerManager.html#a2" shape="rect" coords="218,57,429,84" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="478,7,705,33" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="544,57,640,84" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="533,108,650,135" alt="">
+</map>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a8" doxytag="FG_Object::BGColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Color.html#ga0">COLORVAL</a> FG_Object::BGColor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到窗口元素的背景色 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>本窗口元素的背景色 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00132">132</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>及<a class="el" href="FG__Object_8h-source.html#l00283">m_Background</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00060">FG_Edit::FG_Edit()</a>及<a class="el" href="FG__Screen_8cpp-source.html#l00101">FG_Screen::FG_Screen()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_Object::BGColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::BGColor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>color</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的背景色. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>背景色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00125">125</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>及<a class="el" href="FG__Object_8h-source.html#l00283">m_Background</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b2" doxytag="FG_Object::DrawBorder" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::DrawBorder </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制窗口元素的边框 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00061">61</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00061">COLOR_DARKGRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00059">COLOR_GRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00060">COLOR_WHITE</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00173">FG_OSAdaptor::DrawPolyLine()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00127">FG_OSAdaptor::FillRect()</a>、<a class="el" href="FG__Common_8h-source.html#l00117">FS_MASK</a>、<a class="el" href="FG__Common_8h-source.html#l00113">FS_NONE</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Common_8h-source.html#l00114">FS_THIN</a>、<a class="el" href="FG__Common_8h-source.html#l00107">GS_TRANSPARENT</a>、<a class="el" href="FG__Object_8h-source.html#l00283">m_Background</a>、<a class="el" href="FG__Object_8h-source.html#l00285">m_Rect</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00320">OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b2_cgraph.png" border="0" usemap="#classFG__Object_b2_cgraph_map" alt=""></center>
+<map name="classFG__Object_b2_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="220,7,388,33" alt="">
+<area href="classFG__OSAdaptor.html#a11" shape="rect" coords="212,57,396,84" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="225,108,383,135" alt="">
+<area href="classFG__OSAdaptor.html#a5" shape="rect" coords="229,159,379,185" alt="">
+<area href="classFG__OSDrawInterface.html#a2" shape="rect" coords="453,7,653,33" alt="">
+<area href="classFG__OSDrawInterface.html#a10" shape="rect" coords="445,57,661,84" alt="">
+<area href="classFG__OSDrawInterface.html#a3" shape="rect" coords="459,108,648,135" alt="">
+<area href="classFG__OSDrawInterface.html#a4" shape="rect" coords="463,159,644,185" alt="">
+</map>
+<a class="anchor" name="a6" doxytag="FG_Object::ForeColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Color.html#ga0">COLORVAL</a> FG_Object::ForeColor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到窗口元素的前景色 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>本窗口元素的前景色 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00118">118</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>及<a class="el" href="FG__Object_8h-source.html#l00281">m_ForeColor</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_Object::ForeColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::ForeColor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>color</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的前景色. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>前景色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00111">111</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>及<a class="el" href="FG__Object_8h-source.html#l00281">m_ForeColor</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a14" doxytag="FG_Object::FrameStyle" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_Object::FrameStyle </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到窗口元素的边框风格 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>本窗口元素的边框风格 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00179">179</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00117">FS_MASK</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Button_8cpp-source.html#l00078">FG_Button::OnKeyDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00093">FG_Button::OnKeyUp()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00109">FG_Button::OnLButtonDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00121">FG_Button::OnLButtonUp()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00134">FG_Button::OnTimerUp()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a13" doxytag="FG_Object::FrameStyle" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::FrameStyle </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wStyle</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的边框风格. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td>边框风格 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00167">167</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00117">FS_MASK</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="FG_Object::GetClientRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::GetClientRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到该窗口元素的客户区矩形 
+<p>
+根据边框风格除去不同的边框大小，客户区矩形可能小于边框矩形， 某一个具体的窗口元素可以覆盖此函数,以确定自己的客户区矩形 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>返回该窗口元素的客户区矩形 </td></tr>
+  </table>
+</dl>
+
+<p>
+被<a class="el" href="classFG__Window.html#a4">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00147">147</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00117">FS_MASK</a>、<a class="el" href="FG__Common_8h-source.html#l00113">FS_NONE</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Common_8h-source.html#l00114">FS_THIN</a>、<a class="el" href="FG__Object_8h-source.html#l00285">m_Rect</a>、<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>及<a class="el" href="FG__Rect_8h-source.html#l00082">FG_Rect::Set()</a>.
+<p>
+参考自 <a class="el" href="FG__Window_8cpp-source.html#l00097">FG_Window::GetClientRect()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_a3_cgraph.png" border="0" usemap="#classFG__Object_a3_cgraph_map" alt=""></center>
+<map name="classFG__Object_a3_cgraph_map">
+<area href="structFG__Rect.html#a2" shape="rect" coords="225,7,313,33" alt="">
+</map>
+<a class="anchor" name="b5" doxytag="FG_Object::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * FG_Object::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+被<a class="el" href="classMainWindow.html#b7">MainWindow</a>、<a class="el" href="classMyButton.html#b1">MyButton</a>、<a class="el" href="classWin1.html#b5">Win1</a>、<a class="el" href="classWin2.html#b2">Win2</a>、<a class="el" href="classFG__Bitmap.html#b1">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#b6">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#b3">FG_CheckBox</a>、<a class="el" href="classFG__Container.html#b3">FG_Container</a>、<a class="el" href="classFG__Edit.html#b5">FG_Edit</a>、<a class="el" href="classFG__Group.html#b1">FG_Group</a>、<a class="el" href="classFG__Label.html#b1">FG_Label</a>、<a class="el" href="classFG__RadioButton.html#b3">FG_RadioButton</a>、<a class="el" href="classFG__Screen.html#b5">FG_Screen</a>、<a class="el" href="classFG__TextWidget.html#b0">FG_TextWidget</a>、<a class="el" href="classFG__Widget.html#b0">FG_Widget</a>及<a class="el" href="classFG__Window.html#b5">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00056">56</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8cpp-source.html#l00046">m_MsgMap</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00170">Message()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a10" doxytag="FG_Object::ID" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_Object::ID </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到窗口元素的唯一标识值 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>本窗口元素的唯一标识值 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00146">146</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00230">NotifyParent()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="FG_Object::ID" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::ID </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wID</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的唯一标识值. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>唯一标识值 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00139">139</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00357">FG_CheckObjectID::FindIt()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_Object::IsContains" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Object::IsContains </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Test</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+判断某一个像素点是否在本窗口元素中. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Test</em>&nbsp;</td><td>被测试的像素点 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 表示像素点在本窗口元素中 false 表示像素点不在本窗口元素中 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00104">104</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8cpp-source.html#l00043">FG_Rect::Contains()</a>及<a class="el" href="FG__Object_8h-source.html#l00285">m_Rect</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_a4_cgraph.png" border="0" usemap="#classFG__Object_a4_cgraph_map" alt=""></center>
+<map name="classFG__Object_a4_cgraph_map">
+<area href="structFG__Rect.html#a4" shape="rect" coords="208,7,325,33" alt="">
+</map>
+<a class="anchor" name="a19" doxytag="FG_Object::IsFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Object::IsFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+该窗口元素是否为当前焦点窗口元素 
+<p>
+<ul>
+<li>对于窗口，焦点窗口指最上面的窗口</li><li>对于控件，焦点控件指当前接受输入的控件 </li></ul>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00217">217</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00108">GS_FOCUS</a>及<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>.
+<p>
+参考自 <a class="el" href="FG__TextWidget_8cpp-source.html#l00046">FG_TextWidget::DrawTextFocus()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00145">FG_Edit::OnCursorTimer()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Window_8cpp-source.html#l00173">FG_Window::OnDrawRequest()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b1" doxytag="FG_Object::KillTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Object::KillTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga0">BYTE</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>timerID</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+删除当前窗口元素的定时器. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>timerID</em>&nbsp;</td><td>定时器的唯一标识（对于当前窗口元素唯一） </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>定时器是否成功删除 true 成功 false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00254">254</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00051">BYTE</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00051">FG_GetTimerManager()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00113">FG_TimerManager::KillTimer()</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00188">FG_Screen::OnDrawTimer()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00121">FG_Button::OnLButtonUp()</a>、<a class="el" href="Win1_8cpp-source.html#l00104">Win1::OnStop()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00186">MainWindow::OnStop()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00134">FG_Button::OnTimerUp()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b1_cgraph.png" border="0" usemap="#classFG__Object_b1_cgraph_map" alt=""></center>
+<map name="classFG__Object_b1_cgraph_map">
+<area href="group__Framework.html#ga0" shape="rect" coords="216,20,352,47" alt="">
+<area href="classFG__TimerManager.html#a1" shape="rect" coords="197,96,371,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="420,7,647,33" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="487,57,580,84" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="485,108,581,135" alt="">
+<area href="classFG__SList.html#a3" shape="rect" coords="475,159,592,185" alt="">
+</map>
+<a class="anchor" name="a20" doxytag="FG_Object::Message" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Object::Message </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+消息分发函数. 
+<p>
+首先得到消息映射表的指针，从本类直到基类的消息映射表中寻找该消息， 然后，根据消息类型分发消息 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>要分发的消息指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>该消息是否已被处理 true 该消息已被处理 false 该消息未被处理 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00170">170</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>、<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>、<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>、<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>、<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>、<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00177">FG_PMSG_bm</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00154">FG_PMSG_vd</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00164">FG_PMSG_vm</a>、<a class="el" href="FG__MsgMap_8cpp-source.html#l00043">FG_MSGMAP::FindMsgCallback()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00056">GetMessageMap()</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00202">FG_MSGMAP_ENTRY::m_Callback</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00213">FG_MSGMAP::m_pBaseMsgMap</a>、<a class="el" href="FG__MsgMap_8h-source.html#l00199">FG_MSGMAP_ENTRY::m_wID</a>、<a class="el" href="FG__Message_8h-source.html#l00194">FG_Message::wData</a>、<a class="el" href="FG__Message_8h-source.html#l00196">FG_Message::wID</a>及<a class="el" href="FG__Message_8h-source.html#l00192">FG_Message::wType</a>.
+<p>
+参考自 <a class="el" href="FG__Window_8cpp-source.html#l00105">FG_Window::ChangeFocus()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00230">NotifyParent()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00173">FG_Window::OnDrawRequest()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00240">FG_Window::OnFocus()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00192">FG_Window::OnKey()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00239">RequestDraw()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00057">FG_Timer::Tick()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_a20_cgraph.png" border="0" usemap="#classFG__Object_a20_cgraph_map" alt=""></center>
+<map name="classFG__Object_a20_cgraph_map">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="249,7,348,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="199,57,399,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="209,108,388,135" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="448,7,619,33" alt="">
+</map>
+<a class="anchor" name="b3" doxytag="FG_Object::NotifyParent" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::NotifyParent </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wNotification</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+发送通知消息给该窗口元素的父窗口 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wNotification</em>&nbsp;</td><td>通知消息的类型 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00230">230</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>、<a class="el" href="FG__Object_8h-source.html#l00146">ID()</a>、<a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>、<a class="el" href="FG__Object_8cpp-source.html#l00170">Message()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__RadioButton_8cpp-source.html#l00092">FG_RadioButton::OnKeyDown()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00077">FG_CheckBox::OnKeyDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00093">FG_Button::OnKeyUp()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00107">FG_RadioButton::OnLButtonDown()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00094">FG_CheckBox::OnLButtonDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00121">FG_Button::OnLButtonUp()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00134">FG_Button::OnTimerUp()</a>及<a class="el" href="FG__RadioButton_8cpp-source.html#l00117">FG_RadioButton::UncheckGroup()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b3_cgraph.png" border="0" usemap="#classFG__Object_b3_cgraph_map" alt=""></center>
+<map name="classFG__Object_b3_cgraph_map">
+<area href="classFG__Object.html#a10" shape="rect" coords="239,7,329,33" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="219,57,349,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="449,7,548,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="399,57,599,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="409,108,588,135" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="648,7,819,33" alt="">
+</map>
+<a class="anchor" name="b6" doxytag="FG_Object::OnDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::OnDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数. 
+<p>
+按照窗口元素的边框风格绘制边框 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+被<a class="el" href="classMyButton.html#b0">MyButton</a>、<a class="el" href="classFG__Bitmap.html#b0">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#b0">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#b0">FG_CheckBox</a>、<a class="el" href="classFG__Edit.html#b0">FG_Edit</a>、<a class="el" href="classFG__Group.html#b0">FG_Group</a>、<a class="el" href="classFG__Label.html#b0">FG_Label</a>、<a class="el" href="classFG__RadioButton.html#b0">FG_RadioButton</a>及<a class="el" href="classFG__Window.html#b0">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00320">320</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8cpp-source.html#l00061">DrawBorder()</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00195">FG_Screen::DrawAllWindow()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b6_cgraph.png" border="0" usemap="#classFG__Object_b6_cgraph_map" alt=""></center>
+<map name="classFG__Object_b6_cgraph_map">
+<area href="classFG__Object.html#b2" shape="rect" coords="193,83,340,109" alt="">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="396,7,564,33" alt="">
+<area href="classFG__OSAdaptor.html#a11" shape="rect" coords="388,57,572,84" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="401,108,559,135" alt="">
+<area href="classFG__OSAdaptor.html#a5" shape="rect" coords="405,159,555,185" alt="">
+<area href="classFG__OSDrawInterface.html#a2" shape="rect" coords="629,7,829,33" alt="">
+<area href="classFG__OSDrawInterface.html#a10" shape="rect" coords="621,57,837,84" alt="">
+<area href="classFG__OSDrawInterface.html#a3" shape="rect" coords="635,108,824,135" alt="">
+<area href="classFG__OSDrawInterface.html#a4" shape="rect" coords="639,159,820,185" alt="">
+</map>
+<a class="anchor" name="b7" doxytag="FG_Object::OnFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::OnFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+焦点切换消息<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>的处理函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向焦点切换消息结构的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+被<a class="el" href="classFG__Edit.html#b4">FG_Edit</a>及<a class="el" href="classFG__Window.html#b4">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00250">250</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga15a36">FFS_LOSE</a>、<a class="el" href="FG__Object_8cpp-source.html#l00239">RequestDraw()</a>、<a class="el" href="FG__Object_8h-source.html#l00209">ResetFocus()</a>、<a class="el" href="FG__Object_8h-source.html#l00201">SetFocus()</a>及<a class="el" href="FG__Message_8h-source.html#l00194">FG_Message::wData</a>.
+<p>
+参考自 <a class="el" href="FG__Window_8cpp-source.html#l00240">FG_Window::OnFocus()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00155">FG_Edit::OnFocus()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b7_cgraph.png" border="0" usemap="#classFG__Object_b7_cgraph_map" alt=""></center>
+<map name="classFG__Object_b7_cgraph_map">
+<area href="classFG__Object.html#b4" shape="rect" coords="198,57,356,84" alt="">
+<area href="classFG__Object.html#a18" shape="rect" coords="202,108,352,135" alt="">
+<area href="classFG__Object.html#a17" shape="rect" coords="210,159,344,185" alt="">
+<area href="classFG__Object.html#a20" shape="rect" coords="405,57,536,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="636,7,734,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="585,57,785,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="596,108,774,135" alt="">
+</map>
+<a class="anchor" name="a12" doxytag="FG_Object::Parent" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Object.html">FG_Object</a>* FG_Object::Parent </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+返回指向父窗口元素的指针 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>指向父窗口元素的指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00160">160</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a11" doxytag="FG_Object::Parent" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::Parent </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__Object.html">FG_Object</a> *const&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>object</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置指向父窗口元素的指针. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>object</em>&nbsp;</td><td>指向父窗口元素的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00153">153</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>.
+<p>
+参考自 <a class="el" href="FG__Container_8cpp-source.html#l00059">FG_Container::AddChild()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b4" doxytag="FG_Object::RequestDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::RequestDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+发送要求重画消息给该窗口元素的父窗口 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00239">239</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00059">DWORD</a>、<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>、<a class="el" href="FG__Object_8h-source.html#l00294">m_pParent</a>及<a class="el" href="FG__Object_8cpp-source.html#l00170">Message()</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00214">FG_Edit::DrawWithCursor()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00145">FG_Edit::OnCursorTimer()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00173">FG_Window::OnDrawRequest()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00250">OnFocus()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00092">FG_RadioButton::OnKeyDown()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00077">FG_CheckBox::OnKeyDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00078">FG_Button::OnKeyDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00093">FG_Button::OnKeyUp()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00107">FG_RadioButton::OnLButtonDown()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00094">FG_CheckBox::OnLButtonDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00109">FG_Button::OnLButtonDown()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00121">FG_Button::OnLButtonUp()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00134">FG_Button::OnTimerUp()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00078">FG_Window::RemoveWidget()</a>、<a class="el" href="FG__RadioButton_8h-source.html#l00077">FG_RadioButton::SetChecked()</a>、<a class="el" href="FG__CheckBox_8h-source.html#l00077">FG_CheckBox::SetChecked()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00077">FG_TextWidget::SetText()</a>及<a class="el" href="FG__RadioButton_8cpp-source.html#l00117">FG_RadioButton::UncheckGroup()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b4_cgraph.png" border="0" usemap="#classFG__Object_b4_cgraph_map" alt=""></center>
+<map name="classFG__Object_b4_cgraph_map">
+<area href="classFG__Object.html#a20" shape="rect" coords="224,57,354,84" alt="">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="454,7,553,33" alt="">
+<area href="structFG__MSGMAP.html#a0" shape="rect" coords="404,57,604,84" alt="">
+<area href="classFG__Object.html#b5" shape="rect" coords="414,108,593,135" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="653,7,824,33" alt="">
+</map>
+<a class="anchor" name="a18" doxytag="FG_Object::ResetFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::ResetFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+清除窗口元素的风格中的焦点位，即把该窗口元素设置为非焦点窗口或非焦点控件. 
+<p>
+焦点位为1，表示该窗口元素为焦点窗口或焦点控件，即可以得到当前的键盘输入 否则该窗口元素不是输入焦点 
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00209">209</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00108">GS_FOCUS</a>及<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00250">OnFocus()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a17" doxytag="FG_Object::SetFocus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::SetFocus </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的风格中的焦点位，即把该窗口元素设置为焦点窗口或焦点控件. 
+<p>
+焦点位<a class="el" href="group__General__Style.html#ga1">GS_FOCUS</a>为1，表示该窗口元素为焦点窗口或焦点控件，即可以得到当前的键盘输入 否则该窗口元素不是输入焦点 
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00201">201</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00108">GS_FOCUS</a>及<a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00250">OnFocus()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b0" doxytag="FG_Object::StartTimer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Object::StartTimer </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga0">BYTE</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>timerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>dwInterval</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+为当前窗口元素启动一个定时器. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>timerID</em>&nbsp;</td><td>定时器的唯一标识（对于当前窗口元素唯一） </td></tr>
+    <tr><td valign=top><em>dwInterval</em>&nbsp;</td><td>定时器的到期时间 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>定时器是否成功启动 true 成功 false 失败 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00241">241</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00051">BYTE</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00051">FG_GetTimerManager()</a>、<a class="el" href="FG__TimerManager_8cpp-source.html#l00097">FG_TimerManager::StartTimer()</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Edit_8cpp-source.html#l00060">FG_Edit::FG_Edit()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00179">FG_Screen::OnDrawRequest()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00109">FG_Button::OnLButtonDown()</a>、<a class="el" href="Win1_8cpp-source.html#l00094">Win1::OnStart()</a>及<a class="el" href="MainWindow_8cpp-source.html#l00176">MainWindow::OnStart()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__Object_b0_cgraph.png" border="0" usemap="#classFG__Object_b0_cgraph_map" alt=""></center>
+<map name="classFG__Object_b0_cgraph_map">
+<area href="group__Framework.html#ga0" shape="rect" coords="230,20,366,47" alt="">
+<area href="classFG__TimerManager.html#a0" shape="rect" coords="206,96,390,123" alt="">
+<area href="classFG__TimerManager.html#e0" shape="rect" coords="438,7,665,33" alt="">
+<area href="classFG__SList.html#a4" shape="rect" coords="505,57,598,84" alt="">
+<area href="group__Utility.html#ga10" shape="rect" coords="505,108,598,135" alt="">
+<area href="classFG__SList.html#a2" shape="rect" coords="504,159,600,185" alt="">
+</map>
+<a class="anchor" name="a16" doxytag="FG_Object::Style" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_Object::Style </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到窗口元素的风格 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>本窗口元素的<a class="el" href="group__Style.html">风格</a> </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00193">193</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a15" doxytag="FG_Object::Style" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Object::Style </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>wStyle</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置窗口元素的风格. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>wStyle</em>&nbsp;</td><td><a class="el" href="group__Style.html">风格</a> </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00186">186</a>行定义。
+<p>
+参考 <a class="el" href="FG__Object_8h-source.html#l00288">m_wStyle</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="p1" doxytag="FG_Object::m_Background" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Color.html#ga0">COLORVAL</a> <a class="el" href="classFG__Object.html#p1">FG_Object::m_Background</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+背景色 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00283">283</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00125">BGColor()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00061">DrawBorder()</a>及<a class="el" href="FG__Object_8h-source.html#l00062">FG_Object()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_Object::m_ForeColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Color.html#ga0">COLORVAL</a> <a class="el" href="classFG__Object.html#p0">FG_Object::m_ForeColor</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+前景色. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00281">281</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00062">FG_Object()</a>及<a class="el" href="FG__Object_8h-source.html#l00111">ForeColor()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="v0" doxytag="FG_Object::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classFG__Object.html#v0">FG_Object::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>
+{ 
+    { <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp;  <a class="code" href="classFG__Object.html#b6">FG_Object::OnDraw</a>  },
+    { <a class="code" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp;  <a class="code" href="classFG__Object.html#b7">FG_Object::OnFocus</a>  },
+    { <span class="keyword">false</span>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  } 
+}
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+被<a class="el" href="classMainWindow.html#v0">MainWindow</a>、<a class="el" href="classMyButton.html#v0">MyButton</a>、<a class="el" href="classWin1.html#v0">Win1</a>、<a class="el" href="classWin2.html#v0">Win2</a>、<a class="el" href="classFG__Bitmap.html#v0">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#v0">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#v0">FG_CheckBox</a>、<a class="el" href="classFG__Container.html#v0">FG_Container</a>、<a class="el" href="classFG__Edit.html#v0">FG_Edit</a>、<a class="el" href="classFG__Group.html#v0">FG_Group</a>、<a class="el" href="classFG__Label.html#v0">FG_Label</a>、<a class="el" href="classFG__RadioButton.html#v0">FG_RadioButton</a>、<a class="el" href="classFG__Screen.html#v1">FG_Screen</a>、<a class="el" href="classFG__TextWidget.html#v0">FG_TextWidget</a>、<a class="el" href="classFG__Widget.html#v0">FG_Widget</a>及<a class="el" href="classFG__Window.html#v0">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00048">48</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_Object::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classFG__Object.html#t0">FG_Object::m_MsgMap</a> = { 0 , &amp; <a class="el" href="classFG__Object.html#v0">FG_Object::m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+被<a class="el" href="classMainWindow.html#t0">MainWindow</a>、<a class="el" href="classMyButton.html#t0">MyButton</a>、<a class="el" href="classWin1.html#t0">Win1</a>、<a class="el" href="classWin2.html#t0">Win2</a>、<a class="el" href="classFG__Bitmap.html#t0">FG_Bitmap</a>、<a class="el" href="classFG__Button.html#t0">FG_Button</a>、<a class="el" href="classFG__CheckBox.html#t0">FG_CheckBox</a>、<a class="el" href="classFG__Container.html#t0">FG_Container</a>、<a class="el" href="classFG__Edit.html#t0">FG_Edit</a>、<a class="el" href="classFG__Group.html#t0">FG_Group</a>、<a class="el" href="classFG__Label.html#t0">FG_Label</a>、<a class="el" href="classFG__RadioButton.html#t0">FG_RadioButton</a>、<a class="el" href="classFG__Screen.html#t0">FG_Screen</a>、<a class="el" href="classFG__TextWidget.html#t0">FG_TextWidget</a>、<a class="el" href="classFG__Widget.html#t0">FG_Widget</a>及<a class="el" href="classFG__Window.html#t0">FG_Window</a>重载。
+<p>
+在文件<a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a>第<a class="el" href="FG__Object_8cpp-source.html#l00046">46</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00056">GetMessageMap()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p5" doxytag="FG_Object::m_pParent" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__Object.html">FG_Object</a>* <a class="el" href="classFG__Object.html#p5">FG_Object::m_pParent</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向本窗口元素的父窗口的指针. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00294">294</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00062">FG_Object()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00230">NotifyParent()</a>、<a class="el" href="FG__Object_8h-source.html#l00153">Parent()</a>及<a class="el" href="FG__Object_8cpp-source.html#l00239">RequestDraw()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p2" doxytag="FG_Object::m_Rect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> <a class="el" href="classFG__Object.html#p2">FG_Object::m_Rect</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本窗口元素占据的矩形区域 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00285">285</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00061">DrawBorder()</a>、<a class="el" href="FG__Object_8h-source.html#l00076">FG_Object()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">GetClientRect()</a>及<a class="el" href="FG__Object_8h-source.html#l00104">IsContains()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p4" doxytag="FG_Object::m_wID" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> <a class="el" href="classFG__Object.html#p4">FG_Object::m_wID</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本窗口元素的唯一标识 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00291">291</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="p3" doxytag="FG_Object::m_wStyle" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> <a class="el" href="classFG__Object.html#p3">FG_Object::m_wStyle</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本窗口元素的边框风格 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Object_8h-source.html">FG_Object.h</a>第<a class="el" href="FG__Object_8h-source.html#l00288">288</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00061">DrawBorder()</a>、<a class="el" href="FG__Object_8h-source.html#l00062">FG_Object()</a>、<a class="el" href="FG__Object_8h-source.html#l00167">FrameStyle()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">GetClientRect()</a>、<a class="el" href="FG__Object_8h-source.html#l00217">IsFocus()</a>、<a class="el" href="FG__Object_8h-source.html#l00209">ResetFocus()</a>、<a class="el" href="FG__Object_8h-source.html#l00201">SetFocus()</a>及<a class="el" href="FG__Object_8h-source.html#l00186">Style()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Object_8h-source.html">FG_Object.h</a><li><a class="el" href="FG__Object_8cpp-source.html">FG_Object.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:41 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

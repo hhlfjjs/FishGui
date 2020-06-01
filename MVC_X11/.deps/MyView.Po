@@ -1,0 +1,69 @@
+MyView.o : \
+ ../Source/MVC_Application/MyView.cpp \
+ ../Source/MVC_Application/MyView.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Framework.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Utility.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Common.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Point.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Rect.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_String.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_List.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_Message.h \
+ ../Source/MVC_Application/../../Source/Framework/../Utility/FG_OSMsgObserver.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Application.h \
+ ../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSAdaptor.h \
+ ../Source/MVC_Application/../../Source/Framework/../OSAdaptor/../Utility/FG_Utility.h \
+ ../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSDrawInterface.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Object.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_MsgMap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_TimerManager.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Window.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Container.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Widget.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_KeyMap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Screen.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_TextWidget.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Button.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Bitmap.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Label.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Group.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Edit.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_CheckBox.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_RadioButton.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Factory.h \
+ ../Source/MVC_Application/../../Source/Framework/FG_Model.h \
+ ../Source/MVC_Application/MyModel.h
+../Source/MVC_Application/MyView.cpp :
+../Source/MVC_Application/MyView.h :
+../Source/MVC_Application/../../Source/Framework/FG_Framework.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Utility.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Common.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Point.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Rect.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_String.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_List.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_Message.h :
+../Source/MVC_Application/../../Source/Framework/../Utility/FG_OSMsgObserver.h :
+../Source/MVC_Application/../../Source/Framework/FG_Application.h :
+../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSAdaptor.h :
+../Source/MVC_Application/../../Source/Framework/../OSAdaptor/../Utility/FG_Utility.h :
+../Source/MVC_Application/../../Source/Framework/../OSAdaptor/FG_OSDrawInterface.h :
+../Source/MVC_Application/../../Source/Framework/FG_Object.h :
+../Source/MVC_Application/../../Source/Framework/FG_MsgMap.h :
+../Source/MVC_Application/../../Source/Framework/FG_TimerManager.h :
+../Source/MVC_Application/../../Source/Framework/FG_Window.h :
+../Source/MVC_Application/../../Source/Framework/FG_Container.h :
+../Source/MVC_Application/../../Source/Framework/FG_Widget.h :
+../Source/MVC_Application/../../Source/Framework/FG_KeyMap.h :
+../Source/MVC_Application/../../Source/Framework/FG_Screen.h :
+../Source/MVC_Application/../../Source/Framework/FG_TextWidget.h :
+../Source/MVC_Application/../../Source/Framework/FG_Button.h :
+../Source/MVC_Application/../../Source/Framework/FG_Bitmap.h :
+../Source/MVC_Application/../../Source/Framework/FG_Label.h :
+../Source/MVC_Application/../../Source/Framework/FG_Group.h :
+../Source/MVC_Application/../../Source/Framework/FG_Edit.h :
+../Source/MVC_Application/../../Source/Framework/FG_CheckBox.h :
+../Source/MVC_Application/../../Source/Framework/FG_RadioButton.h :
+../Source/MVC_Application/../../Source/Framework/FG_Factory.h :
+../Source/MVC_Application/../../Source/Framework/FG_Model.h :
+../Source/MVC_Application/MyModel.h :

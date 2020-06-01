@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OS Startup Source Files">
+      <UniqueIdentifier>{e7e422f8-f060-4653-8cef-9fc62c303a0c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="FishGUI OSAdaptor Source files">
+      <UniqueIdentifier>{f6bf65aa-299b-4c69-8ce2-df2a90de728a}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="FishGUI OSAdaptor Header files">
+      <UniqueIdentifier>{3a9335cd-f163-400b-8e69-eff4c2c2aca6}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="FishGUI Utility Source files">
+      <UniqueIdentifier>{6a9d5c4a-a796-4ced-b43d-f19edb78cd6a}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="FishGUI Utility Header files">
+      <UniqueIdentifier>{dd4679ef-4a1d-471f-b9e6-b54365bf2b15}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="FishGUI Framework Source files">
+      <UniqueIdentifier>{a6351abc-4e1b-4906-b942-5e2f466c78aa}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="FishGUI Framework Header files">
+      <UniqueIdentifier>{29247c30-0bb2-4eb3-980a-2641746ec98c}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="FishGUI MVC Application Source files">
+      <UniqueIdentifier>{f0b1b921-52b9-4dfd-93cf-3f56ff973e70}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="FishGUI MVC Application Header files">
+      <UniqueIdentifier>{cf3ad31a-e8c9-483d-9ba5-b4537328dc4e}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\OSStartup\WinMain.cpp">
+      <Filter>OS Startup Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\OSAdaptor\FG_OSAdaptor.cpp">
+      <Filter>FishGUI OSAdaptor Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\OSAdaptor\FG_Win32Adaptor.cpp">
+      <Filter>FishGUI OSAdaptor Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\OSAdaptor\FG_Win32DrawInterface.cpp">
+      <Filter>FishGUI OSAdaptor Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Utility\FG_Rect.cpp">
+      <Filter>FishGUI Utility Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Utility\FG_String.cpp">
+      <Filter>FishGUI Utility Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Application.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Bitmap.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Button.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_CheckBox.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Container.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Edit.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Group.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_KeyMap.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Label.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_MsgMap.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Object.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_RadioButton.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Screen.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_TextWidget.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_TimerManager.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Widget.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Framework\FG_Window.cpp">
+      <Filter>FishGUI Framework Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\MVC_Application\MainWindow.cpp">
+      <Filter>FishGUI MVC Application Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\MVC_Application\MyApp.cpp">
+      <Filter>FishGUI MVC Application Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\MVC_Application\MyModel.cpp">
+      <Filter>FishGUI MVC Application Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\MVC_Application\MyView.cpp">
+      <Filter>FishGUI MVC Application Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\MVC_Application\Win1.cpp">
+      <Filter>FishGUI MVC Application Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\OSAdaptor\FG_OSAdaptor.h">
+      <Filter>FishGUI OSAdaptor Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\OSAdaptor\FG_OSDrawInterface.h">
+      <Filter>FishGUI OSAdaptor Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\OSAdaptor\FG_OSMsgObserver.h">
+      <Filter>FishGUI OSAdaptor Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\OSAdaptor\FG_Win32Adaptor.h">
+      <Filter>FishGUI OSAdaptor Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\OSAdaptor\FG_Win32DrawInterface.h">
+      <Filter>FishGUI OSAdaptor Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_Common.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_List.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_Message.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_Point.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_Rect.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_String.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utility\FG_Utility.h">
+      <Filter>FishGUI Utility Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Application.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Bitmap.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Button.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_CheckBox.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Container.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Edit.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Factory.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Framework.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Group.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_KeyMap.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Label.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Model.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_MsgMap.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Object.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_RadioButton.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Screen.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_TextWidget.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_TimerManager.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Widget.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Framework\FG_Window.h">
+      <Filter>FishGUI Framework Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\MainWindow.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\MyApp.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\MyFactory.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\MyModel.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\MyView.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\MVC_Application\Win1.h">
+      <Filter>FishGUI MVC Application Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

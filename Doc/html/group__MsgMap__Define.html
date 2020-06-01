@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: 消息映射表定义宏</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>消息映射表定义宏<br>
+<small>
+[<a class="el" href="group__Framework.html">框架层</a>]</small>
+</h1>
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>宏定义</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga0">DECLARE_MESSAGE_MAP</a>()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义消息映射表的宏  <a href="#ga0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>(theClass, baseClass)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">为消息映射表赋初值的宏.  <a href="#ga1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga2">ON_DRAW</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_DRAW, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp; msgCallback },                   \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>消息和处理函数的对应关系的宏  <a href="#ga2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga3">ON_DRAWREQUEST</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_DRAW_REQUEST, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },           \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>消息和处理函数的对应关系的宏  <a href="#ga3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga4">ON_KEY</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },                    \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>消息和处理函数的对应关系的宏  <a href="#ga4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga5">ON_KEYDOWN</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, FKS_DOWN, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },             \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>消息和处理函数的对应关系的宏  <a href="#ga5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga6">ON_KEYUP</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, FKS_UP, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },               \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>消息和处理函数的对应关系的宏  <a href="#ga6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga7">ON_MOUSE</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },                  \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>消息和处理函数的对应关系的宏  <a href="#ga7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga8">ON_LBUTTONDOWN</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, FMS_LBUTTONDOWN, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },    \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>消息和处理函数的对应关系的宏  <a href="#ga8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga9">ON_LBUTTONUP</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, FMS_LBUTTONUP, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },      \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>消息和处理函数的对应关系的宏  <a href="#ga9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga10">ON_TIMER</a>(timerID, msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_TIMER, timerID, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                        \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>, timerID消息和处理函数的对应关系的宏  <a href="#ga10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga11">ON_FOCUS</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_FOCUS, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },                  \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>消息和处理函数的对应关系的宏  <a href="#ga11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga12">ON_NOTIFY</a>(notifyID, msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_NOTIFY, notifyID, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },          \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, <a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>消息和处理函数的对应关系的宏  <a href="#ga12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga13">ON_ID_NOTIFY</a>(notifyID, id, msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_NOTIFY, notifyID, id, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                     \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, <a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>, id消息和处理函数的对应关系的宏  <a href="#ga13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga14">ON_UPDATE_VIEW</a>(msgCallback)&nbsp;&nbsp;&nbsp;{ FG_MSG_UPDATE_VIEW, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                        \</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">定义<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>消息和处理函数的对应关系的宏  <a href="#ga14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group__MsgMap__Define.html#ga15">END_MESSAGE_MAP</a>()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表结束项.  <a href="#ga15"></a><br><br></td></tr>
+</table>
+<hr><h2>宏定义文档</h2>
+<a class="anchor" name="ga1" doxytag="FG_MsgMap.h::BEGIN_MESSAGE_MAP" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define BEGIN_MESSAGE_MAP</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">theClass,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>baseClass&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>值:</b><div class="fragment"><pre><span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> * theClass::GetMessageMap() <span class="keyword">const</span>                                   \
+        { <span class="keywordflow">return</span> &amp; theClass::m_MsgMap; }                                                \
+    <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> theClass::m_MsgMap =                                                \
+        { &amp; baseClass::m_MsgMap, &amp; theClass::m_MsgEntries[0] };                         \
+    <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> theClass::m_MsgEntries[] =                                    \
+    {                                                                                   \
+</pre></div>为消息映射表赋初值的宏. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00056">56</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga0" doxytag="FG_MsgMap.h::DECLARE_MESSAGE_MAP" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DECLARE_MESSAGE_MAP</td>
+          <td class="md" valign="top">(&nbsp;</td>
+&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>值:</b><div class="fragment"><pre><span class="keyword">private</span>:                                                                                \
+    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> m_MsgEntries[];                                        \
+<span class="keyword">protected</span>:                                                                              \
+    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> m_MsgMap;                                                    \
+    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="structFG__MSGMAP.html">FG_MSGMAP</a> * GetMessageMap() <span class="keyword">const</span>;                                    \
+</pre></div>定义消息映射表的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00048">48</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga15" doxytag="FG_MsgMap.h::END_MESSAGE_MAP" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define END_MESSAGE_MAP</td>
+          <td class="md" valign="top">(&nbsp;</td>
+&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>值:</b><div class="fragment"><pre>{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)<a class="code" href="group__Utility.html#ga11">NULL</a> }                                                   \
+    };                                                                                  \
+</pre></div>消息映射表结束项. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00126">126</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga2" doxytag="FG_MsgMap.h::ON_DRAW" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_DRAW</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_DRAW, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp; msgCallback },                   \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00065">65</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga3" doxytag="FG_MsgMap.h::ON_DRAWREQUEST" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_DRAWREQUEST</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_DRAW_REQUEST, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },           \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a24">FG_MSG_DRAW_REQUEST</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00069">69</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga11" doxytag="FG_MsgMap.h::ON_FOCUS" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_FOCUS</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_FOCUS, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },                  \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a25">FG_MSG_FOCUS</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00104">104</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga13" doxytag="FG_MsgMap.h::ON_ID_NOTIFY" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_ID_NOTIFY</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">notifyID,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>id,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_NOTIFY, notifyID, id, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                     \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, <a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>, id消息和处理函数的对应关系的宏 
+<p>
+即ID为<a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>的通知消息，发送通知消息的控件的唯一标识为为id 
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00118">118</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga4" doxytag="FG_MsgMap.h::ON_KEY" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_KEY</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },                    \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00073">73</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga5" doxytag="FG_MsgMap.h::ON_KEYDOWN" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_KEYDOWN</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, FKS_DOWN, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },             \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00077">77</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga6" doxytag="FG_MsgMap.h::ON_KEYUP" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_KEYUP</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_KEY, FKS_UP, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },               \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>, <a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00081">81</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga8" doxytag="FG_MsgMap.h::ON_LBUTTONDOWN" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_LBUTTONDOWN</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, FMS_LBUTTONDOWN, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },    \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00089">89</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga9" doxytag="FG_MsgMap.h::ON_LBUTTONUP" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_LBUTTONUP</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, FMS_LBUTTONUP, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },      \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>, <a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00093">93</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga7" doxytag="FG_MsgMap.h::ON_MOUSE" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_MOUSE</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_MOUSE, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga3">FG_PMSG_bm</a>)&amp; msgCallback },                  \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00085">85</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga12" doxytag="FG_MsgMap.h::ON_NOTIFY" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_NOTIFY</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">notifyID,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_NOTIFY, notifyID, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="el" href="group__MsgHandler__Type.html#ga2">FG_PMSG_vm</a>)&amp; msgCallback },          \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a26">FG_MSG_NOTIFY</a>, <a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>消息和处理函数的对应关系的宏 
+<p>
+即ID为<a class="el" href="group__Utility.html#ga16">FG_NOTIFY_ID</a>的通知消息 
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00111">111</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga10" doxytag="FG_MsgMap.h::ON_TIMER" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_TIMER</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">timerID,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_TIMER, timerID, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                        \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>, timerID消息和处理函数的对应关系的宏 
+<p>
+即标识为timerID的通知消息 
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00100">100</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="ga14" doxytag="FG_MsgMap.h::ON_UPDATE_VIEW" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ON_UPDATE_VIEW</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">msgCallback&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>&nbsp;&nbsp;&nbsp;{ FG_MSG_UPDATE_VIEW, 0, 0, (<a class="el" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)&amp; msgCallback },                        \
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+定义<a class="el" href="group__Utility.html#gga12a27">FG_MSG_UPDATE_VIEW</a>消息和处理函数的对应关系的宏 
+<p>
+
+<p>
+在文件<a class="el" href="FG__MsgMap_8h-source.html">FG_MsgMap.h</a>第<a class="el" href="FG__MsgMap_8h-source.html#l00122">122</a>行定义。    </td>
+  </tr>
+</table>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:39:15 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

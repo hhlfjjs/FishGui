@@ -1,0 +1,5 @@
+base referer
+rect $classFG__Widget.html 141,385 269,545
+rect $structFG__MSGMAP.html 255,209 383,305
+rect $structFG__MSGMAP__ENTRY.html 79,17 220,145
+rect $classFG__String.html 407,369 505,561

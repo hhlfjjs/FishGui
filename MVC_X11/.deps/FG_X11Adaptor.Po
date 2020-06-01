@@ -1,0 +1,72 @@
+FG_X11Adaptor.o : \
+ ../Source/OSAdaptor/FG_X11Adaptor.cpp \
+ /usr/include/stdio.h /usr/include/iso/stdio_iso.h \
+ /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h \
+ /usr/include/sys/va_list.h /usr/include/stdio_tag.h \
+ /usr/include/stdio_impl.h /usr/include/stdlib.h \
+ /usr/include/iso/stdlib_iso.h /usr/include/string.h \
+ /usr/include/iso/string_iso.h /usr/include/unistd.h \
+ /usr/include/sys/types.h /usr/include/sys/machtypes.h \
+ /usr/include/sys/int_types.h /usr/include/sys/select.h \
+ /usr/include/sys/time.h /usr/include/time.h \
+ /usr/include/iso/time_iso.h /usr/include/sys/time_impl.h \
+ /usr/include/sys/unistd.h /usr/include/X11/keysym.h \
+ /usr/include/X11/keysymdef.h /usr/include/X11/Xlib.h \
+ /usr/include/X11/X.h /usr/include/X11/Xfuncproto.h \
+ /usr/include/X11/Xosdefs.h \
+ /GNU/2000/5.7/lib/gcc-lib/sparc-sun-solaris2.7/2.95.2/include/stddef.h \
+ /usr/include/X11/Xutil.h ../Source/OSAdaptor/FG_X11DrawInterface.h \
+ ../Source/OSAdaptor/../Utility/FG_Utility.h \
+ ../Source/OSAdaptor/../Utility/FG_Common.h \
+ ../Source/OSAdaptor/../Utility/FG_Point.h \
+ ../Source/OSAdaptor/../Utility/FG_Rect.h \
+ ../Source/OSAdaptor/../Utility/FG_String.h \
+ ../Source/OSAdaptor/../Utility/FG_List.h \
+ ../Source/OSAdaptor/../Utility/FG_Message.h \
+ ../Source/OSAdaptor/../Utility/FG_OSMsgObserver.h \
+ ../Source/OSAdaptor/FG_OSDrawInterface.h \
+ ../Source/OSAdaptor/FG_X11Adaptor.h /usr/include/sys/param.h \
+ ../Source/OSAdaptor/FG_OSAdaptor.h
+../Source/OSAdaptor/FG_X11Adaptor.cpp :
+/usr/include/stdio.h :
+/usr/include/iso/stdio_iso.h :
+/usr/include/sys/feature_tests.h :
+/usr/include/sys/isa_defs.h :
+/usr/include/sys/va_list.h :
+/usr/include/stdio_tag.h :
+/usr/include/stdio_impl.h :
+/usr/include/stdlib.h :
+/usr/include/iso/stdlib_iso.h :
+/usr/include/string.h :
+/usr/include/iso/string_iso.h :
+/usr/include/unistd.h :
+/usr/include/sys/types.h :
+/usr/include/sys/machtypes.h :
+/usr/include/sys/int_types.h :
+/usr/include/sys/select.h :
+/usr/include/sys/time.h :
+/usr/include/time.h :
+/usr/include/iso/time_iso.h :
+/usr/include/sys/time_impl.h :
+/usr/include/sys/unistd.h :
+/usr/include/X11/keysym.h :
+/usr/include/X11/keysymdef.h :
+/usr/include/X11/Xlib.h :
+/usr/include/X11/X.h :
+/usr/include/X11/Xfuncproto.h :
+/usr/include/X11/Xosdefs.h :
+/GNU/2000/5.7/lib/gcc-lib/sparc-sun-solaris2.7/2.95.2/include/stddef.h :
+/usr/include/X11/Xutil.h :
+../Source/OSAdaptor/FG_X11DrawInterface.h :
+../Source/OSAdaptor/../Utility/FG_Utility.h :
+../Source/OSAdaptor/../Utility/FG_Common.h :
+../Source/OSAdaptor/../Utility/FG_Point.h :
+../Source/OSAdaptor/../Utility/FG_Rect.h :
+../Source/OSAdaptor/../Utility/FG_String.h :
+../Source/OSAdaptor/../Utility/FG_List.h :
+../Source/OSAdaptor/../Utility/FG_Message.h :
+../Source/OSAdaptor/../Utility/FG_OSMsgObserver.h :
+../Source/OSAdaptor/FG_OSDrawInterface.h :
+../Source/OSAdaptor/FG_X11Adaptor.h :
+/usr/include/sys/param.h :
+../Source/OSAdaptor/FG_OSAdaptor.h :

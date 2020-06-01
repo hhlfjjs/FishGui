@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: MyButton class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>MyButton类参考<br>
+<small>
+[<a class="el" href="group__Application.html">应用层（示例应用程序FishGUIDemo）</a>]</small>
+</h1><code>#include &lt;<a class="el" href="MyButton_8h-source.html">MyButton.h</a>&gt;</code>
+<p>
+<p>继承图，类MyButton
+<p><center><img src="classMyButton.png" usemap="#MyButton_map" border="0" alt=""></center>
+<map name="MyButton_map">
+<area href="classFG__Button.html" alt="FG_Button" shape="rect" coords="0,168,97,192">
+<area href="classFG__TextWidget.html" alt="FG_TextWidget" shape="rect" coords="0,112,97,136">
+<area href="classFG__Widget.html" alt="FG_Widget" shape="rect" coords="0,56,97,80">
+<area href="classFG__Object.html" alt="FG_Object" shape="rect" coords="0,0,97,24">
+</map>
+MyButton合作图：<p><center><img src="classMyButton__coll__graph.png" border="0" usemap="#MyButton__coll__map" alt="Collaboration graph"></center>
+<map name="MyButton__coll__map">
+<area href="classFG__Button.html" shape="rect" coords="240,625,365,833" alt="">
+<area href="classFG__TextWidget.html" shape="rect" coords="240,369,365,561" alt="">
+<area href="structFG__MSGMAP.html" shape="rect" coords="6,209,134,305" alt="">
+<area href="structFG__MSGMAP__ENTRY.html" shape="rect" coords="297,17,438,145" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classMyButton-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+用户定义的圆角矩形按钮类. 
+<p>
+
+<p>
+在文件<a class="el" href="MyButton_8h-source.html">MyButton.h</a>第<a class="el" href="MyButton_8h-source.html#l00046">46</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMyButton.html#a0">MyButton</a> (const char *Text, const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect, const <a class="el" href="group__Utility.html#ga1">WORD</a> wID=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMyButton.html#b0">OnDraw</a> (<a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *pAdaptor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMyButton.html#b1">GetMessageMap</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到本类的消息映射表指针  <a href="#b1"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMyButton.html#t0">m_MsgMap</a> = { &amp; <a class="el" href="classFG__Button.html">FG_Button</a> ::<a class="el" href="classMyButton.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classMyButton.html">MyButton</a> ::<a class="el" href="classMyButton.html#v0">m_MsgEntries</a>[0] }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">本类的消息映射表  <a href="#t0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classMyButton.html#v0">m_MsgEntries</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">消息映射表项数组.  <a href="#v0"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="MyButton::MyButton" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> MyButton::MyButton </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>Rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>wID</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>圆角矩形按钮控件的标题 </td></tr>
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>圆角矩形按钮控件占据的矩形区域 </td></tr>
+    <tr><td valign=top><em>wID</em>&nbsp;</td><td>圆角矩形按钮控件的唯一标识 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="MyButton_8h-source.html">MyButton.h</a>第<a class="el" href="MyButton_8h-source.html#l00056">56</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="b1" doxytag="MyButton::GetMessageMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> * MyButton::GetMessageMap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到本类的消息映射表指针 
+<p>
+虚函数，派生类覆盖该函数，来返回自己的消息映射表指针，通过宏<a class="el" href="group__MsgMap__Define.html#ga1">BEGIN_MESSAGE_MAP</a>生成 <dl compact><dt><b>返回:</b></dt><dd>本类的消息映射表指针 </dd></dl>
+
+<p>
+重载<a class="el" href="classFG__Button.html#b6">FG_Button</a>。
+<p>
+在文件<a class="el" href="MyButton_8cpp-source.html">MyButton.cpp</a>第<a class="el" href="MyButton_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="b0" doxytag="MyButton::OnDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void MyButton::OnDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAdaptor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重画消息<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>的处理函数. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAdaptor</em>&nbsp;</td><td>指向操作系统适配器的指针 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__Button.html#b0">FG_Button</a>。
+<p>
+在文件<a class="el" href="MyButton_8cpp-source.html">MyButton.cpp</a>第<a class="el" href="MyButton_8cpp-source.html#l00047">47</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">FG_OSAdaptor::BeginDraw()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00058">COLOR_BLACK</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00061">COLOR_DARKGRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00059">COLOR_GRAY</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00060">COLOR_WHITE</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00180">FG_OSAdaptor::DrawDotRect()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00173">FG_OSAdaptor::DrawPolyLine()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00141">FG_OSAdaptor::DrawText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">FG_OSAdaptor::EndDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00127">FG_OSAdaptor::FillRect()</a>、<a class="el" href="FG__Common_8h-source.html#l00117">FS_MASK</a>、<a class="el" href="FG__Common_8h-source.html#l00115">FS_RAISED</a>、<a class="el" href="FG__Common_8h-source.html#l00116">FS_RECESSED</a>、<a class="el" href="FG__Object_8cpp-source.html#l00147">FG_Object::GetClientRect()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00069">FG_TextWidget::GetText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">FG_OSAdaptor::GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">FG_OSAdaptor::GetTextWidth()</a>、<a class="el" href="FG__Object_8h-source.html#l00217">FG_Object::IsFocus()</a>、<a class="el" href="FG__TextWidget_8h-source.html#l00084">FG_TextWidget::TextLength()</a>、<a class="el" href="FG__Rect_8h-source.html#l00059">FG_Rect::wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">FG_Rect::wLeft</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">FG_Rect::wRight</a>、<a class="el" href="FG__Rect_8h-source.html#l00055">FG_Rect::wTop</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classMyButton_b0_cgraph.png" border="0" usemap="#classMyButton_b0_cgraph_map" alt=""></center>
+<map name="classMyButton_b0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a3" shape="rect" coords="194,7,362,33" alt="">
+<area href="classFG__OSAdaptor.html#a12" shape="rect" coords="188,57,369,84" alt="">
+<area href="classFG__OSAdaptor.html#a11" shape="rect" coords="186,108,370,135" alt="">
+<area href="classFG__OSAdaptor.html#a7" shape="rect" coords="200,159,357,185" alt="">
+<area href="classFG__OSAdaptor.html#a4" shape="rect" coords="200,209,357,236" alt="">
+<area href="classFG__OSAdaptor.html#a5" shape="rect" coords="204,260,353,287" alt="">
+<area href="classFG__Object.html#a3" shape="rect" coords="198,311,358,337" alt="">
+<area href="classFG__TextWidget.html#a1" shape="rect" coords="204,361,353,388" alt="">
+<area href="classFG__OSAdaptor.html#a9" shape="rect" coords="185,412,372,439" alt="">
+<area href="classFG__OSAdaptor.html#a8" shape="rect" coords="186,463,370,489" alt="">
+<area href="classFG__Object.html#a19" shape="rect" coords="216,513,341,540" alt="">
+<area href="classFG__TextWidget.html#a3" shape="rect" coords="194,564,362,591" alt="">
+<area href="classFG__OSDrawInterface.html#a2" shape="rect" coords="430,7,630,33" alt="">
+<area href="classFG__OSDrawInterface.html#a11" shape="rect" coords="424,57,637,84" alt="">
+<area href="classFG__OSDrawInterface.html#a10" shape="rect" coords="422,108,638,135" alt="">
+<area href="classFG__OSDrawInterface.html#a6" shape="rect" coords="436,159,625,185" alt="">
+<area href="classFG__OSDrawInterface.html#a3" shape="rect" coords="436,209,625,236" alt="">
+<area href="classFG__OSDrawInterface.html#a4" shape="rect" coords="440,260,621,287" alt="">
+<area href="structFG__Rect.html#a2" shape="rect" coords="486,311,574,337" alt="">
+<area href="classFG__String.html#a4" shape="rect" coords="469,361,592,388" alt="">
+<area href="classFG__OSDrawInterface.html#a8" shape="rect" coords="421,412,640,439" alt="">
+<area href="classFG__OSDrawInterface.html#a7" shape="rect" coords="422,463,638,489" alt="">
+<area href="classFG__String.html#a5" shape="rect" coords="473,564,588,591" alt="">
+</map>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="v0" doxytag="MyButton::m_MsgEntries" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP__ENTRY.html">FG_MSGMAP_ENTRY</a> <a class="el" href="classMyButton.html#v0">MyButton::m_MsgEntries</a><code> [static, private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>初始化序列：</b><div class="fragment"><pre>   {
+    { <a class="code" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>)(<a class="code" href="group__MsgHandler__Type.html#ga1">FG_PMSG_vd</a>)&amp;  <a class="code" href="classMyButton.html#b0">MyButton::OnDraw</a>  },
+{ 0, 0, 0, (<a class="code" href="group__MsgHandler__Type.html#ga0">FG_PMSG_vv</a>) 0  }   }
+</pre></div>消息映射表项数组. 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Button.html#v0">FG_Button</a>。
+<p>
+在文件<a class="el" href="MyButton_8cpp-source.html">MyButton.cpp</a>第<a class="el" href="MyButton_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="MyButton::m_MsgMap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__MSGMAP.html">FG_MSGMAP</a> <a class="el" href="classMyButton.html#t0">MyButton::m_MsgMap</a> = { &amp; <a class="el" href="classFG__Button.html">FG_Button</a> ::<a class="el" href="classMyButton.html#t0">m_MsgMap</a>, &amp; <a class="el" href="classMyButton.html">MyButton</a> ::<a class="el" href="classMyButton.html#v0">m_MsgEntries</a>[0] }<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+本类的消息映射表 
+<p>
+
+<p>
+重载<a class="el" href="classFG__Button.html#t0">FG_Button</a>。
+<p>
+在文件<a class="el" href="MyButton_8cpp-source.html">MyButton.cpp</a>第<a class="el" href="MyButton_8cpp-source.html#l00042">42</a>行定义。    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="MyButton_8h-source.html">MyButton.h</a><li><a class="el" href="MyButton_8cpp-source.html">MyButton.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:36:55 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

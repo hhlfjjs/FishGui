@@ -1,0 +1,1194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_Rect struct Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_Rect结构参考<br>
+<small>
+[<a class="el" href="group__Utility.html">应用包</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>&gt;</code>
+<p>
+<a href="structFG__Rect-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+矩形结构 
+<p>
+定义屏幕上使用的矩形结构 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00050">50</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a0">FG_Rect</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形结构的缺省构造函数  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a1">FG_Rect</a> (const short x1, const short y1, const short x2, const short y2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形结构的构造函数  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a2">Set</a> (const short x1, const short y1, const short x2, const short y2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置新的矩形坐标.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a3">Set</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> ul, const <a class="el" href="structFG__Point.html">FG_Point</a> br)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置新的矩形坐标.  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a4">Contains</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> Test) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">判断像素点是否位于本矩形内.  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a5">Contains</a> (const short x, const short y) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">判断像素点是否位于本矩形内.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a6">Contains</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">判断某矩形是否完全位于本矩形内.  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a7">Overlap</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">判断某矩形是否和本矩形互相重载.  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a8">MoveTo</a> (const short x, const short y)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">平移矩形.  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a9">Shift</a> (const short xShift, const short yShift)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">平移矩形.  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a10">operator &amp;=</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Other)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载&amp;=运算符.  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a11">operator|=</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Other)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载|=运算符.  <a href="#a11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a12">operator &amp;</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载&amp;运算符.  <a href="#a12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a13">operator+</a> (const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;Point) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载+运算符.  <a href="#a13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__Rect.html">FG_Rect</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a14">operator++</a> (int)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载后置++运算符.  <a href="#a14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a15">operator+=</a> (const int x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载+=运算符.  <a href="#a15"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="structFG__Rect.html">FG_Rect</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a16">operator--</a> (int)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载后置--运算符.  <a href="#a16"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a17">operator-=</a> (const int x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载-=运算符.  <a href="#a17"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a18">operator!=</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载!=运算符.  <a href="#a18"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a19">operator==</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;Rect) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">重载==运算符.  <a href="#a19"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a20">Width</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到矩形的宽度  <a href="#a20"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#a21">Height</a> (void) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到矩形的高度  <a href="#a21"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>公有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#o0">wLeft</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形左上角的横坐标  <a href="#o0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#o1">wTop</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形左上角的纵坐标  <a href="#o1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#o2">wRight</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形右下角的横坐标  <a href="#o2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>short&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="structFG__Rect.html#o3">wBottom</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">矩形右下角的纵坐标  <a href="#o3"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_Rect::FG_Rect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Rect::FG_Rect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形结构的缺省构造函数 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00064">64</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_Rect::FG_Rect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_Rect::FG_Rect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y2</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形结构的构造函数 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>矩形左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>矩形左上角的纵坐标 </td></tr>
+    <tr><td valign=top><em>x2</em>&nbsp;</td><td>矩形右下角的横坐标 </td></tr>
+    <tr><td valign=top><em>y2</em>&nbsp;</td><td>矩形右下角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00072">72</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a6" doxytag="FG_Rect::Contains" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::Contains </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+判断某矩形是否完全位于本矩形内. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>要测试的矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 矩形是否位于本矩形内 false 矩形不在本矩形内 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00069">69</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_Rect::Contains" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::Contains </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+判断像素点是否位于本矩形内. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>要测试的像素点的横坐标 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>要测试的像素点的纵坐标 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 像素点是否位于本矩形内 false 像素点不在本矩形内 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00056">56</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="FG_Rect::Contains" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::Contains </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a>&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Test</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+判断像素点是否位于本矩形内. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Test</em>&nbsp;</td><td>要测试的像素点 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 像素点是否位于本矩形内 false 像素点不在本矩形内 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00043">43</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>、<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8h-source.html#l00104">FG_Object::IsContains()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a21" doxytag="FG_Rect::Height" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short FG_Rect::Height </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到矩形的高度 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>矩形的高度 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00254">254</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">FG_X11DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">FG_X11DrawInterface::EndDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">FG_Win32DrawInterface::EndDraw()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FG_X11DrawInterface::FillRect()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="FG_Rect::MoveTo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Rect::MoveTo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+平移矩形. 
+<p>
+横坐标移动到x，纵坐标移动到y <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>矩形要移动到的横坐标位置 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>矩形要移动到的纵坐标位置 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00095">95</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8cpp-source.html#l00103">Shift()</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="structFG__Rect_a8_cgraph.png" border="0" usemap="#structFG__Rect_a8_cgraph_map" alt=""></center>
+<map name="structFG__Rect_a8_cgraph_map">
+<area href="structFG__Rect.html#a9" shape="rect" coords="178,7,272,33" alt="">
+</map>
+<a class="anchor" name="a12" doxytag="FG_Rect::operator &" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> FG_Rect::operator &amp; </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载&amp;运算符. 
+<p>
+两个矩形执行&amp;运算，即取两个矩形相交的部分 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>执行&amp;运算的另一个矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00157">157</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a10" doxytag="FG_Rect::operator &=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp; FG_Rect::operator &amp;= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Other</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载&amp;=运算符. 
+<p>
+两个矩形执行&amp;=运算，即取两个矩形相交的部分 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Other</em>&nbsp;</td><td>执行&amp;=运算的另一个矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00112">112</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a18" doxytag="FG_Rect::operator!=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::operator!= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载!=运算符. 
+<p>
+比较两个矩形是否不同 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>要比较的矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 不同 false 相同 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00247">247</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a13" doxytag="FG_Rect::operator+" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> FG_Rect::operator+ </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Point</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载+运算符. 
+<p>
+矩形的x轴方向向左右扩大Poing.x个像素，矩形的y轴方向向上下扩大Poing.y个像素 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Point</em>&nbsp;</td><td>执行+运算的参数 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00180">180</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>、<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a14" doxytag="FG_Rect::operator++" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__Rect.html">FG_Rect</a> FG_Rect::operator++ </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载后置++运算符. 
+<p>
+矩形的x轴和y轴方向各扩大一个像素 <dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00190">190</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a15" doxytag="FG_Rect::operator+=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp; FG_Rect::operator+= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>x</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载+=运算符. 
+<p>
+矩形的x轴和y轴方向各扩大x个像素 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>要扩大的像素数 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00200">200</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a16" doxytag="FG_Rect::operator--" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="structFG__Rect.html">FG_Rect</a> FG_Rect::operator-- </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载后置--运算符. 
+<p>
+矩形的x轴和y轴方向各缩小一个像素 <dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00209">209</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a17" doxytag="FG_Rect::operator-=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp; FG_Rect::operator-= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>x</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载-=运算符. 
+<p>
+矩形的x轴和y轴方向各缩小x个像素 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>要缩小的像素数 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00229">229</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a19" doxytag="FG_Rect::operator==" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::operator== </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载==运算符. 
+<p>
+比较两个矩形是否相同 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>要比较的矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 相同 false 不同 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00260">260</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a11" doxytag="FG_Rect::operator|=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp; FG_Rect::operator|= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Other</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+重载|=运算符. 
+<p>
+两个矩形执行|=运算，即能包含两个矩形的最小矩形 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Other</em>&nbsp;</td><td>执行|=运算的另一个矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>返回结果矩形 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00134">134</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="FG_Rect::Overlap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_Rect::Overlap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+判断某矩形是否和本矩形互相重载. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Rect</em>&nbsp;</td><td>要测试的矩形 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>true 两个矩形互相重载 false 两个矩形不互相重载 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00082">82</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="FG_Rect::Set" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Rect::Set </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Point.html">FG_Point</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>ul</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Point.html">FG_Point</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>br</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置新的矩形坐标. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ul</em>&nbsp;</td><td>新矩形左上角的坐标 </td></tr>
+    <tr><td valign=top><em>br</em>&nbsp;</td><td>新矩形右下角的坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00095">95</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>、<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="FG_Rect::Set" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Rect::Set </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y2</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置新的矩形坐标. 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>新矩形左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>新矩形左上角的纵坐标 </td></tr>
+    <tr><td valign=top><em>x2</em>&nbsp;</td><td>新矩形右下角的横坐标 </td></tr>
+    <tr><td valign=top><em>y2</em>&nbsp;</td><td>新矩形右下角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00082">82</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00147">FG_Object::GetClientRect()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="FG_Rect::Shift" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_Rect::Shift </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>xShift</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>yShift</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+平移矩形. 
+<p>
+横坐标平移x点，纵坐标平移y点 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>xShift</em>&nbsp;</td><td>横坐标平移的像素数 </td></tr>
+    <tr><td valign=top><em>yShift</em>&nbsp;</td><td>纵坐标平移的像素数 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a>第<a class="el" href="FG__Rect_8cpp-source.html#l00103">103</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00059">wBottom</a>、<a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>、<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>及<a class="el" href="FG__Rect_8h-source.html#l00055">wTop</a>.
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00095">MoveTo()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a20" doxytag="FG_Rect::Width" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short FG_Rect::Width </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到矩形的宽度 
+<p>
+<dl compact><dt><b>返回:</b></dt><dd>矩形的宽度 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00247">247</a>行定义。
+<p>
+参考 <a class="el" href="FG__Rect_8h-source.html#l00053">wLeft</a>及<a class="el" href="FG__Rect_8h-source.html#l00057">wRight</a>.
+<p>
+参考自 <a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">FG_X11DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">FG_X11DrawInterface::EndDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">FG_Win32DrawInterface::EndDraw()</a>及<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FG_X11DrawInterface::FillRect()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="o3" doxytag="FG_Rect::wBottom" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Rect.html#o3">FG_Rect::wBottom</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形右下角的纵坐标 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00059">59</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">Contains()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">FG_Win32DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__Rect_8h-source.html#l00064">FG_Rect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">FG_Win32DrawInterface::FillRect()</a>、<a class="el" href="FG__Rect_8h-source.html#l00254">Height()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00157">operator &amp;()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00112">operator &amp;=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00247">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">operator+()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00190">operator++()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00200">operator+=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00209">operator--()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00229">operator-=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00260">operator==()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00134">operator|=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00082">Overlap()</a>、<a class="el" href="FG__Rect_8h-source.html#l00082">Set()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00103">Shift()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="o0" doxytag="FG_Rect::wLeft" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Rect.html#o0">FG_Rect::wLeft</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形左上角的横坐标 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00053">53</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">Contains()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">FG_X11DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">FG_Win32DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">FG_X11DrawInterface::EndDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">FG_Win32DrawInterface::EndDraw()</a>、<a class="el" href="FG__Rect_8h-source.html#l00064">FG_Rect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FG_X11DrawInterface::FillRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">FG_Win32DrawInterface::FillRect()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00095">MoveTo()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>、<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00157">operator &amp;()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00112">operator &amp;=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00247">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">operator+()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00190">operator++()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00200">operator+=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00209">operator--()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00229">operator-=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00260">operator==()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00134">operator|=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00082">Overlap()</a>、<a class="el" href="FG__Rect_8h-source.html#l00082">Set()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00103">Shift()</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">Width()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="o2" doxytag="FG_Rect::wRight" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Rect.html#o2">FG_Rect::wRight</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形右下角的横坐标 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00057">57</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">Contains()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">FG_Win32DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__Rect_8h-source.html#l00064">FG_Rect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">FG_Win32DrawInterface::FillRect()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00157">operator &amp;()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00112">operator &amp;=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00247">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">operator+()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00190">operator++()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00200">operator+=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00209">operator--()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00229">operator-=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00260">operator==()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00134">operator|=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00082">Overlap()</a>、<a class="el" href="FG__Rect_8h-source.html#l00082">Set()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00103">Shift()</a>、<a class="el" href="FG__Rect_8h-source.html#l00247">Width()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="o1" doxytag="FG_Rect::wTop" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> short <a class="el" href="structFG__Rect.html#o1">FG_Rect::wTop</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+矩形左上角的纵坐标 
+<p>
+
+<p>
+在文件<a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a>第<a class="el" href="FG__Rect_8h-source.html#l00055">55</a>行定义。
+<p>
+参考自 <a class="el" href="FG__Rect_8cpp-source.html#l00043">Contains()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00214">FG_X11DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00232">FG_Win32DrawInterface::DrawDotRect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00112">FG_X11DrawInterface::EndDraw()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00090">FG_Win32DrawInterface::EndDraw()</a>、<a class="el" href="FG__Rect_8h-source.html#l00064">FG_Rect()</a>、<a class="el" href="FG__X11DrawInterface_8cpp-source.html#l00125">FG_X11DrawInterface::FillRect()</a>、<a class="el" href="FG__Win32DrawInterface_8cpp-source.html#l00102">FG_Win32DrawInterface::FillRect()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00097">FG_Window::GetClientRect()</a>、<a class="el" href="FG__Rect_8h-source.html#l00254">Height()</a>、<a class="el" href="MainWindow_8cpp-source.html#l00095">MainWindow::MainWindow()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00095">MoveTo()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>、<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00157">operator &amp;()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00112">operator &amp;=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00247">operator!=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00180">operator+()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00190">operator++()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00200">operator+=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00209">operator--()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00229">operator-=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00260">operator==()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00134">operator|=()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00082">Overlap()</a>、<a class="el" href="FG__Rect_8h-source.html#l00082">Set()</a>、<a class="el" href="FG__Rect_8cpp-source.html#l00103">Shift()</a>、<a class="el" href="Win1_8cpp-source.html#l00074">Win1::Win1()</a>及<a class="el" href="Win2_8cpp-source.html#l00081">Win2::Win2()</a>.    </td>
+  </tr>
+</table>
+<hr>该结构的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__Rect_8h-source.html">FG_Rect.h</a><li><a class="el" href="FG__Rect_8cpp-source.html">FG_Rect.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:12 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

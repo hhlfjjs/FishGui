@@ -1,0 +1,1115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_OSAdaptor class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_OSAdaptor类参考<br>
+<small>
+[<a class="el" href="group__OSAdaptor.html">操作系统适配层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__OSAdaptor_8h-source.html">FG_OSAdaptor.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_OSAdaptor
+<p><center><img src="classFG__OSAdaptor.png" usemap="#FG_OSAdaptor_map" border="0" alt=""></center>
+<map name="FG_OSAdaptor_map">
+<area href="classFG__Win32Adaptor.html" alt="FG_Win32Adaptor" shape="rect" coords="0,56,116,80">
+<area href="classFG__X11Adaptor.html" alt="FG_X11Adaptor" shape="rect" coords="126,56,242,80">
+</map>
+FG_OSAdaptor合作图：<p><center><img src="classFG__OSAdaptor__coll__graph.png" border="0" usemap="#FG__OSAdaptor__coll__map" alt="Collaboration graph"></center>
+<map name="FG__OSAdaptor__coll__map">
+<area href="classFG__OSDrawInterface.html" shape="rect" coords="7,17,164,289" alt="">
+<area href="classFG__OSMsgObserver.html" shape="rect" coords="188,105,343,201" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__OSAdaptor-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+操作系统适配器抽象类 
+<p>
+该类为抽象类，不能实例化，该类的派生类为具体的操作系统的适配器，为单件类。 抽象类为这些单件类提供统一的访问点，它还为操作系统适配层提供统一的接口 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8h-source.html">FG_OSAdaptor.h</a>第<a class="el" href="FG__OSAdaptor_8h-source.html#l00050">50</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a0">Run</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">系统运行.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a1">SetMsgObserver</a> (const <a class="el" href="group__Utility.html#ga1">WORD</a> type, <a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> *const pObserver)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">注册系统消息的观察者  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a2">SendMsg</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">发送系统消息给注册的观察者  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a3">BeginDraw</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">开始重画  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a4">EndDraw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">结束重画  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a5">FillRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> ForeColor, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> background)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">填充矩形.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a6">Line</a> (const short x1, const short y1, const short x2, const short y2, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">画线  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a7">DrawText</a> (const char *Text, const short x, const short y, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制文本  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a8">GetTextWidth</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的宽度  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a9">GetTextHeight</a> (const char *Text)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">得到文本的高度  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a10">DrawBitmap</a> (const char *pBmpName, const short x1, const short y1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制位图  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a11">DrawPolyLine</a> (const short n, const <a class="el" href="structFG__Point.html">FG_Point</a> *vert, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制折线  <a href="#a11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#a12">DrawDotRect</a> (const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;rect, const <a class="el" href="group__Color.html#ga0">COLORVAL</a> color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制点划线矩形  <a href="#a12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#e0">GetAdaptor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">具体的操作系统适配器对象的全局访问点函数  <a href="#e0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#b0">FG_OSAdaptor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">构造函数，用户不能直接调用  <a href="#b0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#b1">InitInstance</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序初始化  <a href="#b1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#b2">ExitInstance</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序退出  <a href="#b2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#b3">Execute</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序运行过程，执行消息循环  <a href="#b3"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#p0">m_ppObserver</a> [FG_MAX_SYS_MSG]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">记录所有的系统消息的观察者的数组  <a href="#p0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>静态保护属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__OSDrawInterface.html">FG_OSDrawInterface</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#t0">m_pDraw</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向唯一的绘图接口类的指针.  <a href="#t0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSAdaptor.html#t1">m_pAdaptor</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指向唯一的操作系统适配器的指针，用于实现单件类.  <a href="#t1"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="b0" doxytag="FG_OSAdaptor::FG_OSAdaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_OSAdaptor::FG_OSAdaptor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+构造函数，用户不能直接调用 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00069">69</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a23">FG_MAX_SYS_MSG</a>、<a class="el" href="FG__OSAdaptor_8h-source.html#l00223">m_ppObserver</a>及<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a3" doxytag="FG_OSAdaptor::BeginDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::BeginDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>rect</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+开始重画 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a2">FG_OSDrawInterface::BeginDraw</a><br>
+ 该函数执行之后，所有的绘图操作都在一个缓冲区上进行，直到对应的<a class="el" href="classFG__OSAdaptor.html#a4">FG_OSAdaptor::EndDraw</a>调用才把缓冲区内容刷新到屏幕上 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>需要重画的无效区域 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">113</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a2">FG_OSDrawInterface::BeginDraw()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00195">FG_Screen::DrawAllWindow()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a3_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a3_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a3_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a2" shape="rect" coords="235,7,435,33" alt="">
+</map>
+<a class="anchor" name="a10" doxytag="FG_OSAdaptor::DrawBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::DrawBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pBmpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制位图 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pBmpName</em>&nbsp;</td><td>要绘制的位图名 </td></tr>
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>位图左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>位图左上角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+被<a class="el" href="classFG__Win32Adaptor.html#a7">FG_Win32Adaptor</a>及<a class="el" href="classFG__X11Adaptor.html#a4">FG_X11Adaptor</a>重载。
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00166">166</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a10_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a10_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a10_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a9" shape="rect" coords="241,7,449,33" alt="">
+</map>
+<a class="anchor" name="a12" doxytag="FG_OSAdaptor::DrawDotRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::DrawDotRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制点划线矩形 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a11">FG_OSDrawInterface::DrawDotRect</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要绘制的矩形 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>矩形的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00180">180</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="classFG__OSDrawInterface.html#a11">FG_OSDrawInterface::DrawDotRect()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__TextWidget_8cpp-source.html#l00046">FG_TextWidget::DrawTextFocus()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a12_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a12_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a12_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a11" shape="rect" coords="248,7,461,33" alt="">
+</map>
+<a class="anchor" name="a11" doxytag="FG_OSAdaptor::DrawPolyLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::DrawPolyLine </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="structFG__Point.html">FG_Point</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>vert</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制折线 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a10">FG_OSDrawInterface::DrawPolyLine</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>n</em>&nbsp;</td><td>该折线包含的点数 </td></tr>
+    <tr><td valign=top><em>vert</em>&nbsp;</td><td>所有点的数组 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>折线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00173">173</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="classFG__OSDrawInterface.html#a10">FG_OSDrawInterface::DrawPolyLine()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>及<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a11_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a11_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a11_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a10" shape="rect" coords="251,7,467,33" alt="">
+</map>
+<a class="anchor" name="a7" doxytag="FG_OSAdaptor::DrawText" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::DrawText </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制文本 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a6">FG_OSDrawInterface::DrawText</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要绘制的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>文本左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>文本左上角的纵坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>文本的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00141">141</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="classFG__OSDrawInterface.html#a6">FG_OSDrawInterface::DrawText()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a7_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a7_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a7_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a6" shape="rect" coords="226,7,416,33" alt="">
+</map>
+<a class="anchor" name="a4" doxytag="FG_OSAdaptor::EndDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::EndDraw </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+结束重画 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface::EndDraw</a>，该函数把缓冲区内容刷新到屏幕上 
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">120</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a3">FG_OSDrawInterface::EndDraw()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__Screen_8cpp-source.html#l00195">FG_Screen::DrawAllWindow()</a>、<a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>、<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>及<a class="el" href="FG__Bitmap_8cpp-source.html#l00047">FG_Bitmap::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a4_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a4_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a4_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a3" shape="rect" coords="226,7,416,33" alt="">
+</map>
+<a class="anchor" name="b3" doxytag="FG_OSAdaptor::Execute" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual bool FG_OSAdaptor::Execute </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected, pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序运行过程，执行消息循环 
+<p>
+该函数为模板方法，由派生类实现 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implemented in <a class="el" href="classFG__Win32Adaptor.html#a2">FG_Win32Adaptor</a>, and <a class="el" href="classFG__X11Adaptor.html#a2">FG_X11Adaptor</a>.
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00090">Run()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="b2" doxytag="FG_OSAdaptor::ExitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual bool FG_OSAdaptor::ExitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected, pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序退出 
+<p>
+该函数为模板方法，由派生类实现 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implemented in <a class="el" href="classFG__Win32Adaptor.html#a1">FG_Win32Adaptor</a>, and <a class="el" href="classFG__X11Adaptor.html#a1">FG_X11Adaptor</a>.
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00090">Run()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="FG_OSAdaptor::FillRect" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::FillRect </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="structFG__Rect.html">FG_Rect</a> &amp;&nbsp;</td>
+          <td class="mdname" nowrap> <em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>ForeColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>background</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+填充矩形. 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a4">FG_OSDrawInterface::FillRect</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>rect</em>&nbsp;</td><td>要填充的矩形 </td></tr>
+    <tr><td valign=top><em>ForeColor</em>&nbsp;</td><td>前景色 </td></tr>
+    <tr><td valign=top><em>background</em>&nbsp;</td><td>背景色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00127">127</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="classFG__OSDrawInterface.html#a4">FG_OSDrawInterface::FillRect()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__Object_8cpp-source.html#l00061">FG_Object::DrawBorder()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>及<a class="el" href="FG__Window_8cpp-source.html#l00145">FG_Window::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a5_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a5_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a5_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a4" shape="rect" coords="216,7,397,33" alt="">
+</map>
+<a class="anchor" name="e0" doxytag="FG_OSAdaptor::GetAdaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * FG_OSAdaptor::GetAdaptor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [static]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+具体的操作系统适配器对象的全局访问点函数 
+<p>
+<ul>
+<li>如果<a class="el" href="classFG__OSAdaptor.html#t1">FG_OSAdaptor::m_pAdaptor</a>为<a class="el" href="group__Utility.html#ga11">NULL</a><ul>
+<li>如果是Win32系统<ul>
+<li>创建<a class="el" href="classFG__Win32Adaptor.html">FG_Win32Adaptor</a>的唯一实例对象</li></ul>
+</li><li>如果是X11系统<ul>
+<li>创建<a class="el" href="classFG__X11Adaptor.html">FG_X11Adaptor</a>的唯一实例对象</li></ul>
+</li><li>让<a class="el" href="classFG__OSAdaptor.html#t1">FG_OSAdaptor::m_pAdaptor</a>指向创建的对象</li></ul>
+</li><li>返回<a class="el" href="classFG__OSAdaptor.html#t1">FG_OSAdaptor::m_pAdaptor</a> </li></ul>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00076">76</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00066">m_pAdaptor</a>.
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="FG_OSAdaptor::GetTextHeight" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_OSAdaptor::GetTextHeight </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的高度 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a8">FG_OSDrawInterface::GetTextHeight</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算高度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的高度的像素数 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">157</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a8">FG_OSDrawInterface::GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__TextWidget_8cpp-source.html#l00046">FG_TextWidget::DrawTextFocus()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__RadioButton_8cpp-source.html#l00064">FG_RadioButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>、<a class="el" href="FG__CheckBox_8cpp-source.html#l00049">FG_CheckBox::OnDraw()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a9_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a9_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a9_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a8" shape="rect" coords="253,7,472,33" alt="">
+</map>
+<a class="anchor" name="a8" doxytag="FG_OSAdaptor::GetTextWidth" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="group__Utility.html#ga1">WORD</a> FG_OSAdaptor::GetTextWidth </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Text</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+得到文本的宽度 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a7">FG_OSDrawInterface::GetTextWidth</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Text</em>&nbsp;</td><td>要计算宽度的字符串，以<a class="el" href="group__Utility.html#ga11">NULL</a>结束 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>文本的宽度的像素数 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">148</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a7">FG_OSDrawInterface::GetTextWidth()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__TextWidget_8cpp-source.html#l00046">FG_TextWidget::DrawTextFocus()</a>、<a class="el" href="MyButton_8cpp-source.html#l00047">MyButton::OnDraw()</a>、<a class="el" href="FG__Label_8cpp-source.html#l00047">FG_Label::OnDraw()</a>、<a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>、<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>及<a class="el" href="FG__Button_8cpp-source.html#l00053">FG_Button::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a8_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a8_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a8_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a7" shape="rect" coords="251,7,467,33" alt="">
+</map>
+<a class="anchor" name="b1" doxytag="FG_OSAdaptor::InitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual bool FG_OSAdaptor::InitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected, pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序初始化 
+<p>
+该函数为模板方法，由派生类实现 <dl compact><dt><b>返回:</b></dt><dd>初始化是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implemented in <a class="el" href="classFG__Win32Adaptor.html#a0">FG_Win32Adaptor</a>, and <a class="el" href="classFG__X11Adaptor.html#a0">FG_X11Adaptor</a>.
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00090">Run()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="FG_OSAdaptor::Line" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::Line </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="group__Color.html#ga0">COLORVAL</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>color</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+画线 
+<p>
+代理调用<a class="el" href="classFG__OSDrawInterface.html#a5">FG_OSDrawInterface::Line</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>第一点的横坐标 </td></tr>
+    <tr><td valign=top><em>x2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>y2</em>&nbsp;</td><td>第二点的横坐标 </td></tr>
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>线的颜色 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00134">134</a>行定义。
+<p>
+参考 <a class="el" href="FG__Common_8h-source.html#l00072">COLORVAL</a>、<a class="el" href="classFG__OSDrawInterface.html#a5">FG_OSDrawInterface::Line()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">m_pDraw</a>.
+<p>
+参考自 <a class="el" href="FG__Group_8cpp-source.html#l00047">FG_Group::OnDraw()</a>及<a class="el" href="FG__Edit_8cpp-source.html#l00073">FG_Edit::OnDraw()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a6_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a6_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a6_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a5" shape="rect" coords="196,7,359,33" alt="">
+</map>
+<a class="anchor" name="a0" doxytag="FG_OSAdaptor::Run" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::Run </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+系统运行. 
+<p>
+依次调用<a class="el" href="classFG__OSAdaptor.html#b1">FG_OSAdaptor::InitInstance</a>、<a class="el" href="classFG__OSAdaptor.html#b3">FG_OSAdaptor::Execute</a>和<a class="el" href="classFG__OSAdaptor.html#b2">FG_OSAdaptor::ExitInstance</a> 
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00090">90</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSAdaptor.html#b3">Execute()</a>、<a class="el" href="classFG__OSAdaptor.html#b2">ExitInstance()</a>及<a class="el" href="classFG__OSAdaptor.html#b1">InitInstance()</a>.
+<p>
+参考自 <a class="el" href="main_8cpp-source.html#l00045">main()</a>及<a class="el" href="WinMain_8cpp-source.html#l00053">WinMain()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__OSAdaptor_a0_cgraph.png" border="0" usemap="#classFG__OSAdaptor_a0_cgraph_map" alt=""></center>
+<map name="classFG__OSAdaptor_a0_cgraph_map">
+<area href="classFG__OSAdaptor.html#b3" shape="rect" coords="207,7,359,33" alt="">
+<area href="classFG__OSAdaptor.html#b2" shape="rect" coords="195,57,371,84" alt="">
+<area href="classFG__OSAdaptor.html#b1" shape="rect" coords="197,108,368,135" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_OSAdaptor::SendMsg" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_OSAdaptor::SendMsg </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+发送系统消息给注册的观察者 
+<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMsg</em>&nbsp;</td><td>指向要发送的系统消息，由于是同步消息，发送者必须负责分配和释放该消息 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">106</a>行定义。
+<p>
+参考 <a class="el" href="group__Utility.html#gga12a23">FG_MAX_SYS_MSG</a>、<a class="el" href="FG__OSAdaptor_8h-source.html#l00223">m_ppObserver</a>及<a class="el" href="FG__Message_8h-source.html#l00192">FG_Message::wType</a>.
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00112">FG_X11Adaptor::Execute()</a>、<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00096">FG_Win32Adaptor::ExitInstance()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00067">FG_X11Adaptor::InitInstance()</a>、<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00054">FG_Win32Adaptor::InitInstance()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00190">FG_X11Adaptor::process_event()</a>及<a class="el" href="FG__Win32Adaptor_8cpp-source.html#l00138">FG_Win32Adaptor::WndProc()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="FG_OSAdaptor::SetMsgObserver" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> * FG_OSAdaptor::SetMsgObserver </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="group__Utility.html#ga1">WORD</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> *const&nbsp;</td>
+          <td class="mdname" nowrap> <em>pObserver</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+注册系统消息的观察者 
+<p>
+每个系统消息只能有一个观察者（即消息接受者，<a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a>的子类） <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>type</em>&nbsp;</td><td>系统消息类型 </td></tr>
+    <tr><td valign=top><em>pObserver</em>&nbsp;</td><td>注册的系统消息的观察者指针 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>返回:</b></dt><dd>该消息以前设置的观察者指针 </dd></dl>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00098">98</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8h-source.html#l00223">m_ppObserver</a>及<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>.
+<p>
+参考自 <a class="el" href="FG__Application_8cpp-source.html#l00045">FG_Application::FG_Application()</a>、<a class="el" href="FG__Screen_8cpp-source.html#l00101">FG_Screen::FG_Screen()</a>及<a class="el" href="FG__TimerManager_8cpp-source.html#l00092">FG_TimerManager::FG_TimerManager()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="t1" doxytag="FG_OSAdaptor::m_pAdaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a> * <a class="el" href="classFG__OSAdaptor.html#t1">FG_OSAdaptor::m_pAdaptor</a> = 0<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向唯一的操作系统适配器的指针，用于实现单件类. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00066">66</a>行定义。
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00076">GetAdaptor()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="t0" doxytag="FG_OSAdaptor::m_pDraw" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__OSDrawInterface.html">FG_OSDrawInterface</a> * <a class="el" href="classFG__OSAdaptor.html#t0">FG_OSAdaptor::m_pDraw</a> = 0<code> [static, protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+指向唯一的绘图接口类的指针. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a>第<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00067">67</a>行定义。
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00113">BeginDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00166">DrawBitmap()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00180">DrawDotRect()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00173">DrawPolyLine()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00141">DrawText()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00120">EndDraw()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00127">FillRect()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00157">GetTextHeight()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00148">GetTextWidth()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00134">Line()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="p0" doxytag="FG_OSAdaptor::m_ppObserver" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a>* <a class="el" href="classFG__OSAdaptor.html#p0">FG_OSAdaptor::m_ppObserver</a>[FG_MAX_SYS_MSG]<code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+记录所有的系统消息的观察者的数组 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSAdaptor_8h-source.html">FG_OSAdaptor.h</a>第<a class="el" href="FG__OSAdaptor_8h-source.html#l00223">223</a>行定义。
+<p>
+参考自 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00069">FG_OSAdaptor()</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">SendMsg()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00098">SetMsgObserver()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__OSAdaptor_8h-source.html">FG_OSAdaptor.h</a><li><a class="el" href="FG__OSAdaptor_8cpp-source.html">FG_OSAdaptor.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:43 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

@@ -1,0 +1,4 @@
+base referer
+rect $classFG__OSAdaptor.html 17,32 116,58
+rect $classFG__Win32Adaptor.html 165,6 280,33
+rect $classFG__X11Adaptor.html 173,57 272,84

@@ -1,0 +1,5 @@
+base referer
+rect $classFG__Button.html 240,625 365,833
+rect $classFG__TextWidget.html 240,369 365,561
+rect $structFG__MSGMAP.html 6,209 134,305
+rect $structFG__MSGMAP__ENTRY.html 297,17 438,145

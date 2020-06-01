@@ -1,0 +1,6 @@
+FG_Rect.o : \
+ ../Source/Utility/FG_Rect.cpp ../Source/Utility/FG_Rect.h \
+ ../Source/Utility/FG_Point.h
+../Source/Utility/FG_Rect.cpp :
+../Source/Utility/FG_Rect.h :
+../Source/Utility/FG_Point.h :

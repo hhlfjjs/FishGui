@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_X11Adaptor class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_X11Adaptor类参考<br>
+<small>
+[<a class="el" href="group__OSAdaptor.html">操作系统适配层</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_X11Adaptor
+<p><center><img src="classFG__X11Adaptor.png" usemap="#FG_X11Adaptor_map" border="0" alt=""></center>
+<map name="FG_X11Adaptor_map">
+<area href="classFG__OSAdaptor.html" alt="FG_OSAdaptor" shape="rect" coords="0,0,104,24">
+</map>
+FG_X11Adaptor合作图：<p><center><img src="classFG__X11Adaptor__coll__graph.png" border="0" usemap="#FG__X11Adaptor__coll__map" alt="Collaboration graph"></center>
+<map name="FG__X11Adaptor__coll__map">
+<area href="classFG__OSAdaptor.html" shape="rect" coords="113,353,236,737" alt="">
+<area href="classFG__OSDrawInterface.html" shape="rect" coords="7,17,164,289" alt="">
+<area href="classFG__OSMsgObserver.html" shape="rect" coords="188,105,343,201" alt="">
+</map>
+<center><font size="2">[<a target="top" href="graph_legend.html">图例</a>]</font></center><a href="classFG__X11Adaptor-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+X11的适配器类. 
+<p>
+该类封装X11操作系统的程序启动和运行过程 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00053">53</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#a0">InitInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序初始化  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#a1">ExitInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序退出  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#a2">Execute</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">程序运行过程，执行消息循环  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#a3">SetXpmPath</a> (const char *pPath)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">设置位图文件所在目录的绝对路径.  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#a4">DrawBitmap</a> (const char *pBmpName, const short x1, const short y1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">绘制位图  <a href="#a4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>保护成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#b0">FG_X11Adaptor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11适配器类的缺省构造函数.  <a href="#b0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#d0">process_event</a> (XEvent report)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11事件处理函数.  <a href="#d0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>私有属性</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Display *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#r0">display</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11显示设备.  <a href="#r0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#r1">screen</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11缺省屏幕号.  <a href="#r1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>Window&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#r2">win</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">X11窗口结构.  <a href="#r2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>char&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#r3">XpmPath</a> [MAXPATHLEN+1]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">位图文件所在目录的绝对路径.  <a href="#r3"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>友元</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__X11Adaptor.html#n0">FG_OSAdaptor</a></td></tr>
+
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="b0" doxytag="FG_X11Adaptor::FG_X11Adaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> FG_X11Adaptor::FG_X11Adaptor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11适配器类的缺省构造函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00116">116</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a4" doxytag="FG_X11Adaptor::DrawBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11Adaptor::DrawBitmap </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pBmpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const short&nbsp;</td>
+          <td class="mdname" nowrap> <em>y1</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+绘制位图 
+<p>
+X11适配器类覆盖该函数，把位图名组合成位图文件的绝对路径名，然后代理调用<a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap</a> <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pBmpName</em>&nbsp;</td><td>要绘制的位图名 </td></tr>
+    <tr><td valign=top><em>x1</em>&nbsp;</td><td>位图左上角的横坐标 </td></tr>
+    <tr><td valign=top><em>y1</em>&nbsp;</td><td>位图左上角的纵坐标 </td></tr>
+  </table>
+</dl>
+
+<p>
+重载<a class="el" href="classFG__OSAdaptor.html#a10">FG_OSAdaptor</a>。
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00181">181</a>行定义。
+<p>
+参考 <a class="el" href="classFG__OSDrawInterface.html#a9">FG_OSDrawInterface::DrawBitmap()</a>及<a class="el" href="FG__X11Adaptor_8h-source.html#l00137">XpmPath</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11Adaptor_a4_cgraph.png" border="0" usemap="#classFG__X11Adaptor_a4_cgraph_map" alt=""></center>
+<map name="classFG__X11Adaptor_a4_cgraph_map">
+<area href="classFG__OSDrawInterface.html#a9" shape="rect" coords="241,7,449,33" alt="">
+</map>
+<a class="anchor" name="a2" doxytag="FG_X11Adaptor::Execute" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_X11Adaptor::Execute </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序运行过程，执行消息循环 
+<p>
+执行X11的消息循环 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b3">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00112">112</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8h-source.html#l00128">display</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a22">FG_MSG_TIMER</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00190">process_event()</a>及<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11Adaptor_a2_cgraph.png" border="0" usemap="#classFG__X11Adaptor_a2_cgraph_map" alt=""></center>
+<map name="classFG__X11Adaptor_a2_cgraph_map">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="488,32,587,59" alt="">
+<area href="classFG__X11Adaptor.html#d0" shape="rect" coords="220,57,409,84" alt="">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="457,95,617,121" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="667,32,837,59" alt="">
+</map>
+<a class="anchor" name="a1" doxytag="FG_X11Adaptor::ExitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_X11Adaptor::ExitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序退出 
+<p>
+关闭X11显示设备，释放对象 <dl compact><dt><b>返回:</b></dt><dd>退出是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b2">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00104">104</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8h-source.html#l00128">display</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="a0" doxytag="FG_X11Adaptor::InitInstance" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool FG_X11Adaptor::InitInstance </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+程序初始化 
+<p>
+调用X11函数打开X11显示设备，创建窗口<br>
+ 发送<a class="el" href="group__Utility.html#gga12a17">FG_MSG_STARTUP</a>消息 <dl compact><dt><b>返回:</b></dt><dd>初始化是否成功<br>
+ true 成功<br>
+ false 失败 </dd></dl>
+
+<p>
+Implements <a class="el" href="classFG__OSAdaptor.html#b1">FG_OSAdaptor</a>.
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00067">67</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8h-source.html#l00128">display</a>、<a class="el" href="group__Utility.html#gga12a17">FG_MSG_STARTUP</a>、<a class="el" href="FG__Common_8h-source.html#l00046">NULL</a>、<a class="el" href="FG__X11Adaptor_8h-source.html#l00131">screen</a>、<a class="el" href="FG__Common_8h-source.html#l00062">SCREEN_HEIGHT</a>、<a class="el" href="FG__Common_8h-source.html#l00061">SCREEN_WIDTH</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>及<a class="el" href="FG__X11Adaptor_8h-source.html#l00134">win</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11Adaptor_a0_cgraph.png" border="0" usemap="#classFG__X11Adaptor_a0_cgraph_map" alt=""></center>
+<map name="classFG__X11Adaptor_a0_cgraph_map">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="239,7,399,33" alt="">
+</map>
+<a class="anchor" name="d0" doxytag="FG_X11Adaptor::process_event" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11Adaptor::process_event </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">XEvent&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>report</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11事件处理函数. 
+<p>
+该函数接收系统消息，然后通过观查者模式发送给框架层 <dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>report</em>&nbsp;</td><td>接收到的事件 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00190">190</a>行定义。
+<p>
+参考 <a class="el" href="FG__OSAdaptor_8cpp-source.html#l00061">FG_GetAdaptor()</a>、<a class="el" href="group__Utility.html#gga12a19">FG_MSG_DRAW</a>、<a class="el" href="group__Utility.html#gga12a20">FG_MSG_KEY</a>、<a class="el" href="group__Utility.html#gga12a21">FG_MSG_MOUSE</a>、<a class="el" href="group__Utility.html#gga13a29">FKS_DOWN</a>、<a class="el" href="group__Utility.html#gga13a30">FKS_UP</a>、<a class="el" href="group__Utility.html#gga14a32">FMS_LBUTTONDOWN</a>、<a class="el" href="group__Utility.html#gga14a33">FMS_LBUTTONUP</a>、<a class="el" href="FG__Message_8h-source.html#l00102">FVK_DELETE</a>、<a class="el" href="FG__Message_8h-source.html#l00101">FVK_ENTER</a>、<a class="el" href="FG__Message_8h-source.html#l00103">FVK_LEFT</a>、<a class="el" href="FG__Message_8h-source.html#l00104">FVK_RIGHT</a>、<a class="el" href="FG__Message_8h-source.html#l00105">FVK_TAB</a>、<a class="el" href="FG__Message_8h-source.html#l00200">FG_Message::lData</a>、<a class="el" href="FG__Message_8h-source.html#l00201">FG_Message::Point</a>、<a class="el" href="FG__OSAdaptor_8cpp-source.html#l00106">FG_OSAdaptor::SendMsg()</a>、<a class="el" href="FG__Common_8h-source.html#l00055">WORD</a>、<a class="el" href="FG__Point_8h-source.html#l00051">FG_Point::x</a>及<a class="el" href="FG__Point_8h-source.html#l00053">FG_Point::y</a>.
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00112">Execute()</a>.    </td>
+  </tr>
+</table>
+
+<p>
+Here is the call graph for this function:<p><center><img src="classFG__X11Adaptor_d0_cgraph.png" border="0" usemap="#classFG__X11Adaptor_d0_cgraph_map" alt=""></center>
+<map name="classFG__X11Adaptor_d0_cgraph_map">
+<area href="group__OSAdaptor.html#ga1" shape="rect" coords="285,6,384,33" alt="">
+<area href="classFG__OSAdaptor.html#a2" shape="rect" coords="255,57,415,84" alt="">
+<area href="classFG__OSAdaptor.html#e0" shape="rect" coords="464,6,635,33" alt="">
+</map>
+<a class="anchor" name="a3" doxytag="FG_X11Adaptor::SetXpmPath" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FG_X11Adaptor::SetXpmPath </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pPath</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+设置位图文件所在目录的绝对路径. 
+<p>
+两种方法得到FishGUI主目录的绝对路径<ul>
+<li>从环境变量HOME_FISHGUI中得到</li><li>从程序运行时argv[0]所带的运行程序路径和当前路径组合得到<br>
+</li></ul>
+<p>
+第二种方法在不同的环境中不能保证一定能得到位图文件所在目录的绝对路径， 这种情况下用户必须设置环境变量HOME_FISHGUI<p>
+<dl compact><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pPath</em>&nbsp;</td><td>argv[0]所带的运行程序路径 </td></tr>
+  </table>
+</dl>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a>第<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00141">141</a>行定义。
+<p>
+参考 <a class="el" href="FG__X11Adaptor_8h-source.html#l00137">XpmPath</a>.
+<p>
+参考自 <a class="el" href="main_8cpp-source.html#l00045">main()</a>.    </td>
+  </tr>
+</table>
+<hr><h2>友元及相关函数文档</h2>
+<a class="anchor" name="n0" doxytag="FG_X11Adaptor::FG_OSAdaptor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> friend class <a class="el" href="classFG__OSAdaptor.html">FG_OSAdaptor</a><code> [friend]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00112">112</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员数据文档</h2>
+<a class="anchor" name="r0" doxytag="FG_X11Adaptor::display" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Display* <a class="el" href="classFG__X11Adaptor.html#r0">FG_X11Adaptor::display</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11显示设备. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00128">128</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00112">Execute()</a>、<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00104">ExitInstance()</a>及<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00067">InitInstance()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="r1" doxytag="FG_X11Adaptor::screen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classFG__X11Adaptor.html#r1">FG_X11Adaptor::screen</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11缺省屏幕号. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00131">131</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00067">InitInstance()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="r2" doxytag="FG_X11Adaptor::win" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> Window <a class="el" href="classFG__X11Adaptor.html#r2">FG_X11Adaptor::win</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+X11窗口结构. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00134">134</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00067">InitInstance()</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="r3" doxytag="FG_X11Adaptor::XpmPath" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> char <a class="el" href="classFG__X11Adaptor.html#r3">FG_X11Adaptor::XpmPath</a>[MAXPATHLEN + 1]<code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+位图文件所在目录的绝对路径. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a>第<a class="el" href="FG__X11Adaptor_8h-source.html#l00137">137</a>行定义。
+<p>
+参考自 <a class="el" href="FG__X11Adaptor_8cpp-source.html#l00181">DrawBitmap()</a>及<a class="el" href="FG__X11Adaptor_8cpp-source.html#l00141">SetXpmPath()</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__X11Adaptor_8h-source.html">FG_X11Adaptor.h</a><li><a class="el" href="FG__X11Adaptor_8cpp-source.html">FG_X11Adaptor.cpp</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:37:57 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

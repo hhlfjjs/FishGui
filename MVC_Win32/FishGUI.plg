@@ -1,0 +1,147 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FishGUI - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/FishGUI.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\wangyw\writing\OODialectic\FishGUI\Source\OSStartup\WinMain.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\OSAdaptor\FG_OSAdaptor.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\OSAdaptor\FG_Win32Adaptor.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\OSAdaptor\FG_Win32DrawInterface.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Utility\FG_Rect.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Utility\FG_String.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Application.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Bitmap.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Button.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_CheckBox.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Container.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Edit.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Group.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_KeyMap.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Label.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_MsgMap.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Object.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_RadioButton.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Screen.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_TextWidget.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_TimerManager.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Widget.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\Framework\FG_Window.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\MVC_Application\MainWindow.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\MVC_Application\MyApp.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\MVC_Application\MyModel.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\MVC_Application\MyView.cpp"
+"D:\wangyw\writing\OODialectic\FishGUI\Source\MVC_Application\Win1.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP16.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP17.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/FishGUI.pdb" /debug /machine:I386 /out:"Debug/FishGUI.exe" /pdbtype:sept 
+.\Debug\WinMain.obj
+.\Debug\FG_OSAdaptor.obj
+.\Debug\FG_Win32Adaptor.obj
+.\Debug\FG_Win32DrawInterface.obj
+.\Debug\FG_Rect.obj
+.\Debug\FG_String.obj
+.\Debug\FG_Application.obj
+.\Debug\FG_Bitmap.obj
+.\Debug\FG_Button.obj
+.\Debug\FG_CheckBox.obj
+.\Debug\FG_Container.obj
+.\Debug\FG_Edit.obj
+.\Debug\FG_Group.obj
+.\Debug\FG_KeyMap.obj
+.\Debug\FG_Label.obj
+.\Debug\FG_MsgMap.obj
+.\Debug\FG_Object.obj
+.\Debug\FG_RadioButton.obj
+.\Debug\FG_Screen.obj
+.\Debug\FG_TextWidget.obj
+.\Debug\FG_TimerManager.obj
+.\Debug\FG_Widget.obj
+.\Debug\FG_Window.obj
+.\Debug\MainWindow.obj
+.\Debug\MyApp.obj
+.\Debug\MyModel.obj
+.\Debug\MyView.obj
+.\Debug\Win1.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP17.tmp"
+<h3>Output Window</h3>
+Compiling...
+WinMain.cpp
+FG_OSAdaptor.cpp
+FG_Win32Adaptor.cpp
+FG_Win32DrawInterface.cpp
+FG_Rect.cpp
+FG_String.cpp
+FG_Application.cpp
+FG_Bitmap.cpp
+FG_Button.cpp
+FG_CheckBox.cpp
+FG_Container.cpp
+FG_Edit.cpp
+FG_Group.cpp
+FG_KeyMap.cpp
+FG_Label.cpp
+FG_MsgMap.cpp
+FG_Object.cpp
+FG_RadioButton.cpp
+FG_Screen.cpp
+FG_TextWidget.cpp
+FG_TimerManager.cpp
+FG_Widget.cpp
+FG_Window.cpp
+MainWindow.cpp
+MyApp.cpp
+MyModel.cpp
+MyView.cpp
+Win1.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP19.tmp" with contents
+[
+/nologo /o"Debug/FishGUI.bsc" 
+.\Debug\WinMain.sbr
+.\Debug\FG_OSAdaptor.sbr
+.\Debug\FG_Win32Adaptor.sbr
+.\Debug\FG_Win32DrawInterface.sbr
+.\Debug\FG_Rect.sbr
+.\Debug\FG_String.sbr
+.\Debug\FG_Application.sbr
+.\Debug\FG_Bitmap.sbr
+.\Debug\FG_Button.sbr
+.\Debug\FG_CheckBox.sbr
+.\Debug\FG_Container.sbr
+.\Debug\FG_Edit.sbr
+.\Debug\FG_Group.sbr
+.\Debug\FG_KeyMap.sbr
+.\Debug\FG_Label.sbr
+.\Debug\FG_MsgMap.sbr
+.\Debug\FG_Object.sbr
+.\Debug\FG_RadioButton.sbr
+.\Debug\FG_Screen.sbr
+.\Debug\FG_TextWidget.sbr
+.\Debug\FG_TimerManager.sbr
+.\Debug\FG_Widget.sbr
+.\Debug\FG_Window.sbr
+.\Debug\MainWindow.sbr
+.\Debug\MyApp.sbr
+.\Debug\MyModel.sbr
+.\Debug\MyView.sbr
+.\Debug\Win1.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP19.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+FishGUI.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

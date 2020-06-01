@@ -1,0 +1,82 @@
+Win1.o : \
+ ../Source/Application/Win1.cpp /usr/include/stdio.h \
+ /usr/include/iso/stdio_iso.h /usr/include/sys/feature_tests.h \
+ /usr/include/sys/isa_defs.h /usr/include/sys/va_list.h \
+ /usr/include/stdio_tag.h /usr/include/stdio_impl.h \
+ /usr/include/string.h /usr/include/iso/string_iso.h \
+ ../Source/Application/Win1.h \
+ ../Source/Application/../Framework/FG_Framework.h \
+ ../Source/Application/../Framework/../Utility/FG_Utility.h \
+ ../Source/Application/../Framework/../Utility/FG_Common.h \
+ ../Source/Application/../Framework/../Utility/FG_Point.h \
+ ../Source/Application/../Framework/../Utility/FG_Rect.h \
+ ../Source/Application/../Framework/../Utility/FG_String.h \
+ ../Source/Application/../Framework/../Utility/FG_List.h \
+ ../Source/Application/../Framework/../Utility/FG_Message.h \
+ ../Source/Application/../Framework/../Utility/FG_OSMsgObserver.h \
+ ../Source/Application/../Framework/FG_Application.h \
+ ../Source/Application/../Framework/../OSAdaptor/FG_OSAdaptor.h \
+ ../Source/Application/../Framework/../OSAdaptor/../Utility/FG_Utility.h \
+ ../Source/Application/../Framework/../OSAdaptor/FG_OSDrawInterface.h \
+ ../Source/Application/../Framework/FG_Object.h \
+ ../Source/Application/../Framework/FG_MsgMap.h \
+ ../Source/Application/../Framework/FG_TimerManager.h \
+ ../Source/Application/../Framework/FG_Window.h \
+ ../Source/Application/../Framework/FG_Container.h \
+ ../Source/Application/../Framework/FG_Widget.h \
+ ../Source/Application/../Framework/FG_KeyMap.h \
+ ../Source/Application/../Framework/FG_Screen.h \
+ ../Source/Application/../Framework/FG_TextWidget.h \
+ ../Source/Application/../Framework/FG_Button.h \
+ ../Source/Application/../Framework/FG_Bitmap.h \
+ ../Source/Application/../Framework/FG_Label.h \
+ ../Source/Application/../Framework/FG_Group.h \
+ ../Source/Application/../Framework/FG_Edit.h \
+ ../Source/Application/../Framework/FG_CheckBox.h \
+ ../Source/Application/../Framework/FG_RadioButton.h \
+ ../Source/Application/../Framework/FG_Factory.h \
+ ../Source/Application/../Framework/FG_Model.h \
+ ../Source/Application/Win2.h
+../Source/Application/Win1.cpp :
+/usr/include/stdio.h :
+/usr/include/iso/stdio_iso.h :
+/usr/include/sys/feature_tests.h :
+/usr/include/sys/isa_defs.h :
+/usr/include/sys/va_list.h :
+/usr/include/stdio_tag.h :
+/usr/include/stdio_impl.h :
+/usr/include/string.h :
+/usr/include/iso/string_iso.h :
+../Source/Application/Win1.h :
+../Source/Application/../Framework/FG_Framework.h :
+../Source/Application/../Framework/../Utility/FG_Utility.h :
+../Source/Application/../Framework/../Utility/FG_Common.h :
+../Source/Application/../Framework/../Utility/FG_Point.h :
+../Source/Application/../Framework/../Utility/FG_Rect.h :
+../Source/Application/../Framework/../Utility/FG_String.h :
+../Source/Application/../Framework/../Utility/FG_List.h :
+../Source/Application/../Framework/../Utility/FG_Message.h :
+../Source/Application/../Framework/../Utility/FG_OSMsgObserver.h :
+../Source/Application/../Framework/FG_Application.h :
+../Source/Application/../Framework/../OSAdaptor/FG_OSAdaptor.h :
+../Source/Application/../Framework/../OSAdaptor/../Utility/FG_Utility.h :
+../Source/Application/../Framework/../OSAdaptor/FG_OSDrawInterface.h :
+../Source/Application/../Framework/FG_Object.h :
+../Source/Application/../Framework/FG_MsgMap.h :
+../Source/Application/../Framework/FG_TimerManager.h :
+../Source/Application/../Framework/FG_Window.h :
+../Source/Application/../Framework/FG_Container.h :
+../Source/Application/../Framework/FG_Widget.h :
+../Source/Application/../Framework/FG_KeyMap.h :
+../Source/Application/../Framework/FG_Screen.h :
+../Source/Application/../Framework/FG_TextWidget.h :
+../Source/Application/../Framework/FG_Button.h :
+../Source/Application/../Framework/FG_Bitmap.h :
+../Source/Application/../Framework/FG_Label.h :
+../Source/Application/../Framework/FG_Group.h :
+../Source/Application/../Framework/FG_Edit.h :
+../Source/Application/../Framework/FG_CheckBox.h :
+../Source/Application/../Framework/FG_RadioButton.h :
+../Source/Application/../Framework/FG_Factory.h :
+../Source/Application/../Framework/FG_Model.h :
+../Source/Application/Win2.h :

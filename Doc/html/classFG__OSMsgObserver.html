@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_OSMsgObserver class Reference</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_OSMsgObserver类参考<br>
+<small>
+[<a class="el" href="group__Utility.html">应用包</a>]</small>
+</h1><code>#include &lt;<a class="el" href="FG__OSMsgObserver_8h-source.html">FG_OSMsgObserver.h</a>&gt;</code>
+<p>
+<p>继承图，类FG_OSMsgObserver
+<p><center><img src="classFG__OSMsgObserver.png" usemap="#FG_OSMsgObserver_map" border="0" alt=""></center>
+<map name="FG_OSMsgObserver_map">
+<area href="classFG__Application.html" alt="FG_Application" shape="rect" coords="0,56,132,80">
+<area href="classFG__Screen.html" alt="FG_Screen" shape="rect" coords="142,56,274,80">
+<area href="classFG__TimerManager.html" alt="FG_TimerManager" shape="rect" coords="284,56,416,80">
+<area href="classMyApp.html" alt="MyApp" shape="rect" coords="0,112,132,136">
+</map>
+<a href="classFG__OSMsgObserver-members.html">所有成员的列表。</a><hr><a name="_details"></a><h2>详细描述</h2>
+操作系统消息的观察者接口 
+<p>
+实现了该接口的类可以从操作系统适配层接收操作系统消息 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSMsgObserver_8h-source.html">FG_OSMsgObserver.h</a>第<a class="el" href="FG__OSMsgObserver_8h-source.html#l00047">47</a>行定义。<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSMsgObserver.html#a0">~FG_OSMsgObserver</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">虚析构函数.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classFG__OSMsgObserver.html#a1">OSMessage</a> (<a class="el" href="structFG__Message.html">FG_Message</a> *pMsg)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">用于接收系统消息的接口.  <a href="#a1"></a><br><br></td></tr>
+</table>
+<hr><h2>构造及析构函数文档</h2>
+<a class="anchor" name="a0" doxytag="FG_OSMsgObserver::~FG_OSMsgObserver" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual FG_OSMsgObserver::~<a class="el" href="classFG__OSMsgObserver.html">FG_OSMsgObserver</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+虚析构函数. 
+<p>
+
+<p>
+在文件<a class="el" href="FG__OSMsgObserver_8h-source.html">FG_OSMsgObserver.h</a>第<a class="el" href="FG__OSMsgObserver_8h-source.html#l00054">54</a>行定义。    </td>
+  </tr>
+</table>
+<hr><h2>成员函数文档</h2>
+<a class="anchor" name="a1" doxytag="FG_OSMsgObserver::OSMessage" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void FG_OSMsgObserver::OSMessage </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structFG__Message.html">FG_Message</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMsg</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+用于接收系统消息的接口. 
+<p>
+注册为操作系统的接收者的对象通过该接口来接收系统消息 
+<p>
+Implemented in <a class="el" href="classFG__Application.html#a1">FG_Application</a>, <a class="el" href="classFG__Screen.html#a2">FG_Screen</a>, and <a class="el" href="classFG__TimerManager.html#a5">FG_TimerManager</a>.    </td>
+  </tr>
+</table>
+<hr>该类的文档由以下文件生成：<ul>
+<li><a class="el" href="FG__OSMsgObserver_8h-source.html">FG_OSMsgObserver.h</a></ul>
+<hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:38:21 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>

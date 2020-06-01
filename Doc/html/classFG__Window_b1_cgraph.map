@@ -1,0 +1,11 @@
+base referer
+rect $classFG__Window.html#a6 195,25 360,52
+rect $classFG__Object.html#a20 425,69 556,96
+rect $group__Utility.html#ga10 444,152 537,179
+rect $classFG__KeyMap.html#a2 207,177 348,204
+rect $classFG__Widget.html#a1 409,19 572,45
+rect $group__OSAdaptor.html#ga1 671,7 769,33
+rect $structFG__MSGMAP.html#a0 620,57 820,84
+rect $classFG__Object.html#b5 631,108 809,135
+rect $classFG__ListCheck.html#a0 655,159 785,185
+rect $classFG__SList.html#a2 443,203 539,229

@@ -1,0 +1,9 @@
+base referer
+rect $FG__Framework_8h.html 281,17 388,44
+rect $FG__Button_8h.html 81,92 164,118
+rect $FG__Bitmap_8h.html 188,92 273,118
+rect $FG__Label_8h.html 297,92 372,118
+rect $FG__Group_8h.html 396,92 473,118
+rect $FG__CheckBox_8h.html 497,92 601,118
+rect $FG__RadioButton_8h.html 625,92 740,118
+rect $FG__TextWidget_8cpp.html 764,92 887,118

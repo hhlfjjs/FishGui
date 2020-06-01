@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<title>FishGUI: FG_X11DrawInterface.cpp Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 制作者 Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindex" href="main.html">首页</a> | <a class="qindex" href="modules.html">模块</a> | <a class="qindex" href="hierarchy.html">类继承关系</a> | <a class="qindex" href="classes.html">按字典顺序排序的列表</a> | <a class="qindex" href="annotated.html">组合类型列表</a> | <a class="qindex" href="files.html">文件列表</a> | <a class="qindex" href="functions.html">组合类型成员</a> | <a class="qindex" href="globals.html">文件成员</a></div>
+<h1>FG_X11DrawInterface.cpp</h1><a href="FG__X11DrawInterface_8cpp.html">浏览该文件的文档。</a><div class="fragment"><pre>00001 <span class="comment">/*--------------------------------------------------------------------------</span>
+00002 <span class="comment"></span>
+00003 <span class="comment">        FG_X11DrawInterface.cpp - X11的绘图接口类的实现文件</span>
+00004 <span class="comment"></span>
+00005 <span class="comment">        本程序是FishGUI软件的一部分</span>
+00006 <span class="comment"></span>
+00007 <span class="comment">        版权所有 (C) 2003,2004 王咏武</span>
+00008 <span class="comment">        http://www.contextfree.net/wangyw/</span>
+00009 <span class="comment"></span>
+00010 <span class="comment">----------------------------------------------------------------------------</span>
+00011 <span class="comment"></span>
+00012 <span class="comment">        作者对 FishGUI 软件及其所有源代码授权如下：</span>
+00013 <span class="comment"></span>
+00014 <span class="comment">        允许任何个人、组织、机构、企业无偿获得、修改、使用、重新发布 FishGUI 软</span>
+00015 <span class="comment">        件及其源代码，或按照有偿或者无偿的方式发行基于 FishGUI 源代码的全部或部</span>
+00016 <span class="comment">        分内容开发的软件产品，——但行使以上权利时，须遵守以下约定：</span>
+00017 <span class="comment"></span>
+00018 <span class="comment">        1、重新发布 FishGUI 软件及其源代码时，不得隐去软件及其源代码中原有的版</span>
+00019 <span class="comment">           权信息和开发者标识。</span>
+00020 <span class="comment"></span>
+00021 <span class="comment">        2、发行基于 FishGUI 源代码的全部或部分内容开发的软件产品时，必须在产品</span>
+00022 <span class="comment">           的显著位置标明以下字样：</span>
+00023 <span class="comment"></span>
+00024 <span class="comment">           【本产品的一部分功能是基于王咏武在 FishGUI 软件中的工作完成的】</span>
+00025 <span class="comment"></span>
+00026 <span class="comment">        3、在正式出版物中引用 FishGUI 的文档、源代码或注释内容的，应注明软件的</span>
+00027 <span class="comment">           原作者为王咏武。</span>
+00028 <span class="comment"></span>
+00029 <span class="comment">--------------------------------------------------------------------------*/</span>
+00040 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+00041 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+00042 <span class="preprocessor">#include &lt;string.h&gt;</span>
+00043 <span class="preprocessor">#include &lt;X11/Xlib.h&gt;</span>
+00044 <span class="preprocessor">#include &lt;X11/Xutil.h&gt;</span>
+00045 <span class="preprocessor">#include &lt;X11/xpm.h&gt;</span>
+00046 <span class="preprocessor">#include "<a class="code" href="FG__X11DrawInterface_8h.html">FG_X11DrawInterface.h</a>"</span>
+00047 
+00048 <span class="comment">//##ModelId=3F6EB0010086</span>
+<a name="l00049"></a><a class="code" href="classFG__X11DrawInterface.html#a0">00049</a> <a class="code" href="classFG__X11DrawInterface.html#a0">FG_X11DrawInterface::FG_X11DrawInterface</a>(Window win, Display * display, <span class="keywordtype">int</span> screen)
+00050 : m_Win(win), m_Display(display)
+00051 {
+00052     <a class="code" href="classFG__X11DrawInterface.html#p2">m_Depth</a>     = DefaultDepth(display, screen);
+00053     <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>      = DefaultColormap(display, screen);
+00054     <span class="comment">// m_Visual    = DefaultVisual(display, screen);</span>
+00055     <span class="comment">// 使用缺省颜色表</span>
+00056     XSetWindowColormap(display, win, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>);
+00057     
+00058     <span class="comment">// 得到需要的颜色</span>
+00059     XColor e, s;
+00060     <a class="code" href="FG__X11Adaptor_8cpp.html#a0">COLOR_BLACK</a>     = BlackPixel(display, screen);
+00061     XLookupColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, <span class="stringliteral">"#c0c0c0"</span>, &amp; e, &amp; s);
+00062     XAllocColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, &amp;s);
+00063     <a class="code" href="FG__X11Adaptor_8cpp.html#a1">COLOR_GRAY</a>      = s.pixel;
+00064     <a class="code" href="FG__X11Adaptor_8cpp.html#a2">COLOR_WHITE</a>     = WhitePixel(display, screen);
+00065     XLookupColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, <span class="stringliteral">"#808080"</span>, &amp; e, &amp; s);
+00066     XAllocColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, &amp;s);
+00067     <a class="code" href="FG__X11Adaptor_8cpp.html#a3">COLOR_DARKGRAY</a>  = s.pixel;
+00068     XLookupColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, <span class="stringliteral">"#0000bf"</span>, &amp; e, &amp; s);
+00069     XAllocColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, &amp;s);
+00070     <a class="code" href="FG__X11Adaptor_8cpp.html#a4">COLOR_BLUE</a>      = s.pixel;
+00071     XLookupColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, <span class="stringliteral">"#0000ff"</span>, &amp; e, &amp; s);
+00072     XAllocColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, &amp;s);
+00073     <a class="code" href="FG__X11Adaptor_8cpp.html#a5">COLOR_BLUE1</a>     = s.pixel;
+00074     XLookupColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, <span class="stringliteral">"#ff0000"</span>, &amp; e, &amp; s);
+00075     XAllocColor(display, <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>, &amp;s);
+00076     <a class="code" href="FG__X11Adaptor_8cpp.html#a6">COLOR_RED</a>       = s.pixel;
+00077 
+00078         <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a> = XCreateGC(display, win, 0, <a class="code" href="group__Utility.html#ga11">NULL</a>);
+00079     <a class="code" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a> = XCreateGC(display, win, 0, <a class="code" href="group__Utility.html#ga11">NULL</a>);
+00080 
+00081     <span class="comment">// 创建字体组</span>
+00082     <span class="keywordtype">char</span> *fontset_name, **missing_charset_list, *def_string; 
+00083     <span class="keywordtype">int</span> missing_charset_count; 
+00084     fontset_name = <span class="stringliteral">"-*-*-*-*-*-*-*-*-*-*-*-*-iso8859-1, -*-*-*-*-*-*-*-*-*-*-*-*-gb2312.1980-0"</span>;
+00085     <a class="code" href="classFG__X11DrawInterface.html#p7">m_FontSet</a> = XCreateFontSet(display, fontset_name, &amp; missing_charset_list,
+00086                                 &amp; missing_charset_count, &amp; def_string);         
+00087 
+00088     <span class="comment">// 创建缓冲区位图</span>
+00089     <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a> = XCreatePixmap(display, win, <a class="code" href="group__Utility.html#ga3">SCREEN_WIDTH</a>, <a class="code" href="group__Utility.html#ga4">SCREEN_HEIGHT</a>, <a class="code" href="classFG__X11DrawInterface.html#p2">m_Depth</a>);
+00090 }
+00091 
+00092 <span class="comment">//##ModelId=40925CB00334</span>
+<a name="l00093"></a><a class="code" href="classFG__X11DrawInterface.html#a1">00093</a> <a class="code" href="classFG__X11DrawInterface.html#a1">FG_X11DrawInterface::~FG_X11DrawInterface</a>()
+00094 {
+00095     XFreePixmap(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>);
+00096     XFreeFontSet(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p7">m_FontSet</a>);
+00097         XFreeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>);
+00098         XFreeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a>);
+00099 }
+00100 
+00101 <span class="comment">//##ModelId=3F6EB0010090</span>
+<a name="l00102"></a><a class="code" href="classFG__X11DrawInterface.html#a2">00102</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a2">FG_X11DrawInterface::BeginDraw</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect)
+00103 {
+00104     <span class="keywordflow">if</span> (! m_iDrawCount)
+00105         m_Invalid = rect;
+00106     <span class="keywordflow">else</span>
+00107         m_Invalid |= rect;
+00108     m_iDrawCount ++;
+00109 }
+00110 
+00111 <span class="comment">//##ModelId=3F6EB0010092</span>
+<a name="l00112"></a><a class="code" href="classFG__X11DrawInterface.html#a3">00112</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a3">FG_X11DrawInterface::EndDraw</a>()
+00113 {
+00114     m_iDrawCount --;
+00115     <span class="keywordflow">if</span> (! m_iDrawCount)
+00116     {
+00117         <span class="comment">// 把缓冲区内容刷新到屏幕上</span>
+00118         XSetFillStyle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a>, FillTiled);
+00119             XSetTile(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>);
+00120         XFillRectangle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p0">m_Win</a>, <a class="code" href="classFG__X11DrawInterface.html#p4">m_CopyGC</a>, m_Invalid.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, m_Invalid.<a class="code" href="structFG__Rect.html#o1">wTop</a>, m_Invalid.<a class="code" href="structFG__Rect.html#a20">Width</a>(), m_Invalid.<a class="code" href="structFG__Rect.html#a21">Height</a>());
+00121     }
+00122 }
+00123 
+00124 <span class="comment">//##ModelId=3F6EB001009A</span>
+<a name="l00125"></a><a class="code" href="classFG__X11DrawInterface.html#a4">00125</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a4">FG_X11DrawInterface::FillRect</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> ForeColor, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> background)
+00126 {
+00127         XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, background);
+00128         XFillRectangle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, rect.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, rect.<a class="code" href="structFG__Rect.html#o1">wTop</a>, rect.<a class="code" href="structFG__Rect.html#a20">Width</a>(), rect.<a class="code" href="structFG__Rect.html#a21">Height</a>());
+00129         <span class="keywordflow">if</span> (ForeColor != background)
+00130         {
+00131         XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, ForeColor);
+00132             XDrawRectangle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, rect.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, rect.<a class="code" href="structFG__Rect.html#o1">wTop</a>, rect.<a class="code" href="structFG__Rect.html#a20">Width</a>(), rect.<a class="code" href="structFG__Rect.html#a21">Height</a>());
+00133         }
+00134 }
+00135 
+00136 <span class="comment">//##ModelId=3F6EB00100A4</span>
+<a name="l00137"></a><a class="code" href="classFG__X11DrawInterface.html#a5">00137</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a5">FG_X11DrawInterface::Line</a>(<span class="keyword">const</span> <span class="keywordtype">short</span> x1, <span class="keyword">const</span> <span class="keywordtype">short</span> y1, <span class="keyword">const</span> <span class="keywordtype">short</span> x2, <span class="keyword">const</span> <span class="keywordtype">short</span> y2, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00138 {
+00139         XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, color);
+00140         XDrawLine(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, x1, y1, x2, y2);
+00141 }
+00142 
+00143 <span class="comment">//##ModelId=3F6EB00100B1</span>
+<a name="l00144"></a><a class="code" href="classFG__X11DrawInterface.html#a6">00144</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a6">FG_X11DrawInterface::DrawText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text, <span class="keyword">const</span> <span class="keywordtype">short</span> x, <span class="keyword">const</span> <span class="keywordtype">short</span> y, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00145 {
+00146         XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, color);
+00147         <span class="keywordtype">short</span> my = y + <a class="code" href="classFG__X11DrawInterface.html#a8">GetTextHeight</a>(Text);
+00148     XmbDrawString(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p7">m_FontSet</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, x, my, Text, strlen(Text));
+00149 }
+00150 
+00151 <span class="comment">//##ModelId=3F6EB00100C3</span>
+<a name="l00152"></a><a class="code" href="classFG__X11DrawInterface.html#a7">00152</a> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__X11DrawInterface.html#a7">FG_X11DrawInterface::GetTextWidth</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text)
+00153 {
+00154     XRectangle ink, logical;
+00155     XmbTextExtents(<a class="code" href="classFG__X11DrawInterface.html#p7">m_FontSet</a>, Text, strlen(Text), &amp; ink, &amp; logical);
+00156 
+00157     <span class="keywordflow">return</span> logical.width;
+00158 }
+00159 
+00160 <span class="comment">//##ModelId=3F6EB00100CC</span>
+<a name="l00161"></a><a class="code" href="classFG__X11DrawInterface.html#a8">00161</a> <a class="code" href="group__Utility.html#ga1">WORD</a> <a class="code" href="classFG__X11DrawInterface.html#a8">FG_X11DrawInterface::GetTextHeight</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * Text)
+00162 {
+00163     XRectangle ink, logical;
+00164     XmbTextExtents(<a class="code" href="classFG__X11DrawInterface.html#p7">m_FontSet</a>, Text, strlen(Text), &amp; ink, &amp; logical);
+00165 
+00166     <span class="keywordflow">return</span> logical.height;
+00167 }
+00168 
+00169 <span class="comment">//##ModelId=3F6EB00100CE</span>
+<a name="l00170"></a><a class="code" href="classFG__X11DrawInterface.html#a9">00170</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a9">FG_X11DrawInterface::DrawBitmap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * pBmpName, <span class="keyword">const</span> <span class="keywordtype">short</span> x1, <span class="keyword">const</span> <span class="keywordtype">short</span> y1)
+00171 {
+00172         <span class="keywordtype">int</span> status;
+00173         XpmAttributes attributes;
+00174 
+00175         attributes.valuemask = XpmColormap | XpmCloseness;
+00176         attributes.colormap = <a class="code" href="classFG__X11DrawInterface.html#p6">m_CMap</a>;
+00177         attributes.closeness = 65535;
+00178         
+00179   Pixmap pix, mask;
+00180     <span class="comment">// 读取xpm文件</span>
+00181     <span class="keywordflow">if</span> (XpmReadFileToPixmap(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, (<span class="keywordtype">char</span> *)pBmpName, &amp; pix, &amp; mask, &amp; attributes) == XpmSuccess)
+00182     {
+00183         <span class="keywordtype">int</span> width = attributes.width;
+00184             <span class="keywordtype">int</span> height = attributes.height;
+00185             GC gc = XCreateGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, 0, <a class="code" href="group__Utility.html#ga11">NULL</a>);
+00186             XSetFillStyle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, gc, FillTiled);
+00187             XSetTile(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, gc, pix);
+00188             
+00189             XGCValues xgcv;
+00190             xgcv.ts_y_origin = y1;
+00191             xgcv.ts_x_origin = x1;
+00192             xgcv.clip_y_origin = y1;
+00193             xgcv.clip_x_origin = x1;
+00194             XChangeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, gc, GCClipXOrigin | GCClipYOrigin | GCTileStipXOrigin | GCTileStipYOrigin, &amp; xgcv);
+00195             XFillRectangle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, gc, x1, y1, width, height);
+00196             
+00197             XFreePixmap(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, pix);
+00198             XFreeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, gc);
+00199     }
+00200 }
+00201 
+00202 <span class="comment">//##ModelId=3F6EB00100D8</span>
+<a name="l00203"></a><a class="code" href="classFG__X11DrawInterface.html#a10">00203</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a10">FG_X11DrawInterface::DrawPolyLine</a>(<span class="keyword">const</span> <span class="keywordtype">short</span> n, <span class="keyword">const</span> <a class="code" href="structFG__Point.html">FG_Point</a> * vert, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00204 {
+00205         <span class="keywordflow">if</span> (n &gt; 1)
+00206         {
+00207         XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, color);
+00208         <span class="keywordflow">for</span> (<span class="keywordtype">short</span> i = 0; i &lt; n - 1; i ++)
+00209             XDrawLine(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, vert[i].x, vert[i].y, vert[i + 1].x, vert[i + 1].y);
+00210     }
+00211 }
+00212 
+00213 <span class="comment">//##ModelId=3F6EB00100E3</span>
+<a name="l00214"></a><a class="code" href="classFG__X11DrawInterface.html#a11">00214</a> <span class="keywordtype">void</span> <a class="code" href="classFG__X11DrawInterface.html#a11">FG_X11DrawInterface::DrawDotRect</a>(<span class="keyword">const</span> <a class="code" href="structFG__Rect.html">FG_Rect</a> &amp; rect, <span class="keyword">const</span> <a class="code" href="group__Color.html#ga0">COLORVAL</a> color)
+00215 {
+00216     XSetForeground(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, color);
+00217 
+00218     XGCValues xgcv;
+00219     xgcv.line_style = LineOnOffDash;
+00220     XChangeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, GCLineStyle, &amp; xgcv);
+00221 
+00222     XDrawRectangle(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p5">m_Buffer</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, rect.<a class="code" href="structFG__Rect.html#o0">wLeft</a>, rect.<a class="code" href="structFG__Rect.html#o1">wTop</a>, rect.<a class="code" href="structFG__Rect.html#a20">Width</a>(), rect.<a class="code" href="structFG__Rect.html#a21">Height</a>());
+00223 
+00224     xgcv.line_style = LineSolid;
+00225     XChangeGC(<a class="code" href="classFG__X11DrawInterface.html#p1">m_Display</a>, <a class="code" href="classFG__X11DrawInterface.html#p3">m_GC</a>, GCLineStyle, &amp; xgcv);
+00226 }
+00227 
+</pre></div><hr><center>由 DoxyGen 1.3.6 于 Wed Jun 9 22:34:41 2004 生成<br>版权所有 (C) 2003,2004 王咏武</body></html>
